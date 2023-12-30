@@ -1,9 +1,10 @@
 ---
 name: Chip Effect Repair
 about: Request a chip's effect be repaired
-title: 'Chip [CHIP_ID] Effect Repair'
+title: 'Chip #### Effect Repair'
 labels: effect
-projects: ["SitekickRemastered/3"]
+assignees: ''
+
 ---
 
 **Chip ID**
