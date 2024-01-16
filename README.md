@@ -18,6 +18,6 @@ If you are capable and comfortable working in Flash Professional, please review 
 # Required Software
 - [JPEXS Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)
 
-- Flash Professional
+- Adobe Animate or Flash Professional
 
 - Photoshop (for resizing only)
