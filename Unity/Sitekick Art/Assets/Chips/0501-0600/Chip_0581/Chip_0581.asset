@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0581
   m_EditorClassIdentifier: 
   id: 581
-  displayName: FlashyEyesRed
-  description: Red Alert!
-  icon: {fileID: 21300000, guid: 29efe6973d12e894e871f152f003e2a2, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e1521fe677c1c4a44aa26c235bcfbf72
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

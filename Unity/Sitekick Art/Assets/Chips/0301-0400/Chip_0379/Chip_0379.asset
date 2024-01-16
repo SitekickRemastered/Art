@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0379
   m_EditorClassIdentifier: 
   id: 379
-  displayName: FootyFiend
-  description: "F\xFAtbol is life."
-  icon: {fileID: 21300000, guid: 76b1c90bfe90b1c449b2e703fd8ca5ca, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 55b71d2ff000278449e5472b7cfdf991
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

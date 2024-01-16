@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0692
   m_EditorClassIdentifier: 
   id: 692
-  displayName: NoodleDo
-  description: A hairstyle that is quite positively Grilled to the Mac!
-  icon: {fileID: 21300000, guid: 3642a8fa593ea4c41a706e339c8fb79b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 657d52bb78bff7944b79575892e3b3a2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0106
   m_EditorClassIdentifier: 
   id: 106
-  displayName: Toothy
-  description: Durrrr
-  icon: {fileID: 21300000, guid: 1476d43ed6e76ef4c9b8e816a4aa90f1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ccafd3c59efcb894b909d661df0f91a8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

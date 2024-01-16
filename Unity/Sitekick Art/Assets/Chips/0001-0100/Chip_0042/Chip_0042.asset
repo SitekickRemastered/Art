@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0042
   m_EditorClassIdentifier: 
   id: 42
-  displayName: NorseHelm
-  description: This belongs to the Nords!
-  icon: {fileID: 21300000, guid: cd1f374612a971d4cba9e92bbc536e25, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 75c8350714293bd41a4fb3086e725d79
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

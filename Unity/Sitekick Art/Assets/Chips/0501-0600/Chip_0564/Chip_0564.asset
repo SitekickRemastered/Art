@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0564
   m_EditorClassIdentifier: 
   id: 564
-  displayName: PinataMug
-  description: There's no candy here.
-  icon: {fileID: 21300000, guid: 82d5d0c60c1ba13478b46e3a70636db1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: df5122e8871b4a444980ee175f627332
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

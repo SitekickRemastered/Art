@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0777
   m_EditorClassIdentifier: 
   id: 777
-  displayName: QuickBite
-  description: Mmmm . . . Nothin' to see here.
-  icon: {fileID: 21300000, guid: 8ae7ea5f80a740e4ca1a44f6491489ab, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f0c44c1dc01ef434ca09842c05c87943
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

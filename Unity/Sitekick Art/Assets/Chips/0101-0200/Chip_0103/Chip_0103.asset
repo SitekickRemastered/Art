@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0103
   m_EditorClassIdentifier: 
   id: 103
-  displayName: Bonnet
-  description: Baby's headdress
-  icon: {fileID: 21300000, guid: 6d83c7b58ef8f9744b9837904a0f1ae4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bbe1406fd4f9fcb4dbdcfd0fdf09ec5e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

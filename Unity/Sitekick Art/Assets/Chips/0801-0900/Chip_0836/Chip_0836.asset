@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0836
   m_EditorClassIdentifier: 
   id: 836
-  displayName: Talon1
-  description: Biomechanical Melee.
-  icon: {fileID: 21300000, guid: 0102cdc95a99bb24bbd746a3f49adb66, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2b250f9b34929ec4bb6ed2211e0c5585
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

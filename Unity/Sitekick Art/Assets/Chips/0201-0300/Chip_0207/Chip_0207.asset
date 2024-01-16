@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0207
   m_EditorClassIdentifier: 
   id: 207
-  displayName: Rainbow
-  description: A mighty arch of colors from cloud to cloud
-  icon: {fileID: 21300000, guid: d9e49b82b786c7a41b873eaf0a87cbbe, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 148e01042c9d5c3418d9e0f0236ebab9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

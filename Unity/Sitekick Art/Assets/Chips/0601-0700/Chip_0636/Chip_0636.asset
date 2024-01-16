@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0636
   m_EditorClassIdentifier: 
   id: 636
-  displayName: BobbyLid2
-  description: It's Officer Sitekick.
-  icon: {fileID: 21300000, guid: 0092b03d69449644da1d570fe83c61a8, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 8b4bcc3b9d0373543be31b1273ad5c4b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

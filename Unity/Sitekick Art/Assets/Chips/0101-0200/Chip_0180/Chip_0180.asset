@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0180
   m_EditorClassIdentifier: 
   id: 180
-  displayName: AniEyes3
-  description: I can't take it anymore.
-  icon: {fileID: 21300000, guid: 02bb44f158f043443a2c9def2fc555d5, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 34e7abd243efd7f43a3785d6f1839bcc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

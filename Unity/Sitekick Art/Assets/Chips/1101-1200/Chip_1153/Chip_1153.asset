@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1153
   m_EditorClassIdentifier: 
   id: 1153
-  displayName: Catapult
-  description: Possession of a prohibited beverage? A slap on the wrist, for sure.
-  icon: {fileID: 21300000, guid: 8cf9063fb46f5c4469e4ab834afac331, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e42e7b2ea920db340b6e5a36e23b0099
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

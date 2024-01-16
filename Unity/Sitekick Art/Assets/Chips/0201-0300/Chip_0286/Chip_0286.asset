@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0286
   m_EditorClassIdentifier: 
   id: 286
-  displayName: Beachery
-  description: I want Borneo too. White sand, palms.
-  icon: {fileID: 21300000, guid: 39f6b2553c874f146a0db5bf5e3f38b3, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 1209ff1a9cd109d46bada184b151f9f1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

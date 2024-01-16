@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0369
   m_EditorClassIdentifier: 
   id: 369
-  displayName: MechWing
-  description: Used by robotic flying insects.
-  icon: {fileID: 21300000, guid: a1d1e03e8b57eb54c97cb53b5a603e7b, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 1f2eaf071d0c03b4690a7618f4680b1b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

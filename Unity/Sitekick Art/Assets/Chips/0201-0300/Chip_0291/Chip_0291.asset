@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0291
   m_EditorClassIdentifier: 
   id: 291
-  displayName: HawkEyeHelm
-  description: In my scope.
-  icon: {fileID: 21300000, guid: d16a647d7b1a0d94a8ed5e98d8581f46, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: d3d232c5d3c013e43b22c28a0095f4a6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1189
   m_EditorClassIdentifier: 
   id: 1189
-  displayName: HeroProjecto
-  description: The legs of justice.
-  icon: {fileID: 21300000, guid: 537550b35fc35cf4cb98ce114d030231, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f3142f2ff54751741a3594c15af39241
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

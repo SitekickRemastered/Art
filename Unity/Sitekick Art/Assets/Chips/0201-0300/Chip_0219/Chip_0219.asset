@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0219
   m_EditorClassIdentifier: 
   id: 219
-  displayName: BunnyTail
-  description: Rabbit Tales by Bob Mcbobbob.
-  icon: {fileID: 21300000, guid: 3ea5f7958d2adbf4a979cdd21a379086, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 84f1b7e43a220eb44a7a327ef118f91a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

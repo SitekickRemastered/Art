@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0188
   m_EditorClassIdentifier: 
   id: 188
-  displayName: AniMouth2
-  description: '*gasp!* Kawaii.'
-  icon: {fileID: 21300000, guid: f3fbc1a4759a4f34ea1545363dfa6a74, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b7db0a70cffe87141b10823381f781ce
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

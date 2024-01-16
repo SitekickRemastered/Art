@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0060
   m_EditorClassIdentifier: 
   id: 60
-  displayName: Fro
-  description: One dynamite do.
-  icon: {fileID: 21300000, guid: aef0c8a214c69624ebf002141214fa7e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a5ef9bc9e75769548861e671107e6d2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

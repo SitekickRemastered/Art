@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0488
   m_EditorClassIdentifier: 
   id: 488
-  displayName: FlamingoGloves
-  description: Milo Powell is Captain Flamingo.
-  icon: {fileID: 21300000, guid: 45ba15556eead44488d5180dba569b36, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9099f733a596c8d4a8ee5bae378a4b6a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

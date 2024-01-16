@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0007
   m_EditorClassIdentifier: 
   id: 7
-  displayName: Butterfly
-  description: Transforms your Sitekick into a beautiful butterfly.
-  icon: {fileID: 21300000, guid: d8a611c962a118940a01270524c57ecd, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: d554c063d7a060d4ab8b99c2b0d5c2de
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

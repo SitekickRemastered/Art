@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1087
   m_EditorClassIdentifier: 
   id: 1087
-  displayName: SweetShield
-  description: Defend the Om Nom with this shield.
-  icon: {fileID: 21300000, guid: b0ba46f54acdc454e9801a2cc6bb39e1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d07821fc0dd2cf4419ca167c0ebf69f8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

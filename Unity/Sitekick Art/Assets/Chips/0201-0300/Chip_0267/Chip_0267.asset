@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0267
   m_EditorClassIdentifier: 
   id: 267
-  displayName: WizBeard
-  description: With this beard; yer a wizard, Sitekick.
-  icon: {fileID: 21300000, guid: 781b64aadebb0b24fa00aa3ab83038e6, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: a371101b011e23a4eb7c34c0b610a1b2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

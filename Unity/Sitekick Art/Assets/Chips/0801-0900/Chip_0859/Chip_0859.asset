@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0859
   m_EditorClassIdentifier: 
   id: 859
-  displayName: RoboCowBoyLegs
-  description: My name's not Shane, kid.
-  icon: {fileID: 21300000, guid: 36721971829459a409aa5d136b568d27, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 294ded0f2359a9c449a1929f22c7dc72
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

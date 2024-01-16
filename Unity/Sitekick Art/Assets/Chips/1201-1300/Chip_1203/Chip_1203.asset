@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1203
   m_EditorClassIdentifier: 
   id: 1203
-  displayName: Snowman2
-  description: Customization Friendly!
-  icon: {fileID: 21300000, guid: 737c40365791b0f40b44472852606601, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: da2bba6a221997e49a27b3766d8d511f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

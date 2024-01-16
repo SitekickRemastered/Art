@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0860
   m_EditorClassIdentifier: 
   id: 860
-  displayName: EagleWings
-  description: Airazor, Maximize!
-  icon: {fileID: 21300000, guid: 607cfcf30f3115d4580b3d1ddd222802, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: a5aba697cc8b6e04cb7e3b82a9551f8c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

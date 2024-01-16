@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0321
   m_EditorClassIdentifier: 
   id: 321
-  displayName: Camera
-  description: Back in the day this was the only way to get an avatar for a heavily-moderated
-    kids' forum.
-  icon: {fileID: 21300000, guid: bd9295f6e14e27848a5211b19c48967e, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 37dc945650ac1e34ab0e99e785a4e2a7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

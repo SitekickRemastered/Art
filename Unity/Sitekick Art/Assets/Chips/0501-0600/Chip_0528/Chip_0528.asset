@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0528
   m_EditorClassIdentifier: 
   id: 528
-  displayName: AztecPaint
-  description: Imagine a tattoo that evolves with you as your skills increase. This
-    isn't that one.
-  icon: {fileID: 21300000, guid: bf3403bcc95db4b40b96eb1ceff16cf7, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 820ba83b20412bb41b6208c3f45a5738
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

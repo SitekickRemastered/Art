@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0208
   m_EditorClassIdentifier: 
   id: 208
-  displayName: PixelKick
-  description: Become 8-bit
-  icon: {fileID: 21300000, guid: 36f3c832763336440b32a685a6f47e33, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 33bfc62de59a519428e1fad5aa5c2a26
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

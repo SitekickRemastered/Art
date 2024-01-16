@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0256
   m_EditorClassIdentifier: 
   id: 256
-  displayName: YetiArm1
-  description: Ugga!
-  icon: {fileID: 21300000, guid: 1c04c3591e367ea4eae75ab28709de31, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: cac8d00a336c243458277d3124fa02d5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

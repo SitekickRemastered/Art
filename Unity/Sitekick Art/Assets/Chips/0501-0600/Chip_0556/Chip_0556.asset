@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0556
   m_EditorClassIdentifier: 
   id: 556
-  displayName: BleakFace
-  description: Victims. Aren't we all...?
-  icon: {fileID: 21300000, guid: bf2c20a041f34be4e929890e9f92da5c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 7e1955bb38a88f743b9c0d25784d0289
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

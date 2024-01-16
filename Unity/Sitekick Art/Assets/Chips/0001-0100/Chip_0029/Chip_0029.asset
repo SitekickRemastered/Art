@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0029
   m_EditorClassIdentifier: 
   id: 29
-  displayName: BigJaw
-  description: The Crimson Chin's favorite chip.
-  icon: {fileID: 21300000, guid: 8702233a301cdd643bb0363a7433aa73, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ffab788ef76cb1c40a968abaf11407d2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

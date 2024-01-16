@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0967
   m_EditorClassIdentifier: 
   id: 967
-  displayName: MetalLegs2
-  description: Hydraulic Power!
-  icon: {fileID: 21300000, guid: fb5fc0e9a54b05747a19cf1b78959a48, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f0683cc84913ad64ea0f11ef6d5896de
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

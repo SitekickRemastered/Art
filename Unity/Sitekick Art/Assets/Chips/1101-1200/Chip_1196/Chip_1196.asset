@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1196
   m_EditorClassIdentifier: 
   id: 1196
-  displayName: LycanArms
-  description: Hey, ladies.
-  icon: {fileID: 21300000, guid: c63a1b1309f1197489cc6b60b48604de, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ac6a1a1872c64c34eacd79e4cca5db46
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

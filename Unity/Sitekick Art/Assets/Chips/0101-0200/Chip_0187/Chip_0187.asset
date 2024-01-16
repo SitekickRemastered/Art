@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0187
   m_EditorClassIdentifier: 
   id: 187
-  displayName: AniMouth
-  description: Wah! I'm so over this!
-  icon: {fileID: 21300000, guid: 610e7b3c10b01954c99f23c055b74022, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 911dffe2ad0f9b644817cd850fd696d3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

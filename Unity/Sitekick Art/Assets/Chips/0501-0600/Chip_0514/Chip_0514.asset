@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0514
   m_EditorClassIdentifier: 
   id: 514
-  displayName: Pandaize
-  description: Feeling Bamboozled?
-  icon: {fileID: 21300000, guid: 17d2bdb1dc3772e40ae68f4b246eab8f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 3adc6ad6ef4e2034ab1592e83eb89d89
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

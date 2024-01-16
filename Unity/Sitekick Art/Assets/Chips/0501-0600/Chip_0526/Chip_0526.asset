@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0526
   m_EditorClassIdentifier: 
   id: 526
-  displayName: TribalPaint
-  description: This chip was here first.
-  icon: {fileID: 21300000, guid: 5f18f4d256a87eb4694027976a8694d1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 8dd9cfc6ee3fa97409da1090064a1ded
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

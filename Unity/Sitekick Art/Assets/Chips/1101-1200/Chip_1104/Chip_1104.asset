@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1104
   m_EditorClassIdentifier: 
   id: 1104
-  displayName: AardMug
-  description: Ants, crunchy but tasty.
-  icon: {fileID: 21300000, guid: 0ff9b1a3942232844af0a98d5b299162, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f70974a1d503a2948ac48add3dc1eff8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0141
   m_EditorClassIdentifier: 
   id: 141
-  displayName: Nervous
-  description: Maybe? No. Hmm--What if?! Huh? Oh.
-  icon: {fileID: 21300000, guid: 65d34f634fc549c4291c290c7c362953, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 71595da5c77f17d46b69ac20933cf750
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

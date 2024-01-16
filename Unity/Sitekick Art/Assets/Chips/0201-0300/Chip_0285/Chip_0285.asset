@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0285
   m_EditorClassIdentifier: 
   id: 285
-  displayName: SpikerPurple
-  description: Saturday-Morning Cartoon Punk
-  icon: {fileID: 21300000, guid: ea21426e05f83c74eb801a4c1396cf34, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 20cac566ad62e8f45b9f881c13a67ab2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

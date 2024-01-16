@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1041
   m_EditorClassIdentifier: 
   id: 1041
-  displayName: Mask
-  description: Ring in 1959 with style.
-  icon: {fileID: 21300000, guid: 014b668a4f12afe48be4b14fcf26fb5f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 825757d769527224182ac4fa74b6f8ed
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

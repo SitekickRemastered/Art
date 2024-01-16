@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0309
   m_EditorClassIdentifier: 
   id: 309
-  displayName: OctoArm7
-  description: Hates Job.
-  icon: {fileID: 21300000, guid: 8af76d26d638b5e4ba48384124030cb5, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 8f94ddd5f7b073d4194c9e42fe1408ac
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

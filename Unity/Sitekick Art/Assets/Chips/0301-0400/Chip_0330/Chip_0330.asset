@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0330
   m_EditorClassIdentifier: 
   id: 330
-  displayName: KneckKnot
-  description: It's not what it sounds like, I promise.
-  icon: {fileID: 21300000, guid: 23ffcce214b96a94cb39cd0f565ff84d, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 12b3a32b572d27747adde10c0358a897
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

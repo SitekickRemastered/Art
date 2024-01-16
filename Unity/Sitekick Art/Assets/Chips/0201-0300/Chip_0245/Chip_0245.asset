@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0245
   m_EditorClassIdentifier: 
   id: 245
-  displayName: PuffBalls
-  description: Go School Spirit!
-  icon: {fileID: 21300000, guid: bedb0847863f45c48aca8f6b5bc8aee7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ce610a9123dc2da40886d7d0042ae559
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

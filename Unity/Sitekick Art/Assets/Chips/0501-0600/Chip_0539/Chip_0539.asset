@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0539
   m_EditorClassIdentifier: 
   id: 539
-  displayName: HagCloak
-  description: EeeHeeHeeHeeHeeHeHeeeee!
-  icon: {fileID: 21300000, guid: e9a1f7aa98592924b9b5f6a8855ea140, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 811ad4c3521787f419b5c62c7c208de8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

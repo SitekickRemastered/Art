@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0087
   m_EditorClassIdentifier: 
   id: 87
-  displayName: Tarah
-  description: Don't let my horns fool you. I'm really very nice.
-  icon: {fileID: 21300000, guid: 6472608c33c5b5b4a9acb65d7eea8d3c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a79d8716ddce3f34fa5014df07da67d5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

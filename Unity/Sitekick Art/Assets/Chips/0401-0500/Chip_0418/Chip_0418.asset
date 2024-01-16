@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0418
   m_EditorClassIdentifier: 
   id: 418
-  displayName: JumboEars
-  description: Elephant ears that may or may not grant flight.
-  icon: {fileID: 21300000, guid: f10b3a7e64b55f044bc5cac2a4eb483b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2fb745db738fc024ba04d5df961ca51b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

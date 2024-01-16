@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0573
   m_EditorClassIdentifier: 
   id: 573
-  displayName: BowTop
-  description: Leave this on long enough, and your Sitekick may believe it's being
-    given away.
-  icon: {fileID: 21300000, guid: ccc18339562f99048a2b550aa3a45db3, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2b9bbeff28c19144d94f7b1f87843e48
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0956
   m_EditorClassIdentifier: 
   id: 956
-  displayName: PrincessDo
-  description: The blushing damsel or the brave heroine.
-  icon: {fileID: 21300000, guid: 8be42f5a2d8803b4ebb106bc1b01b60a, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: fb17823a619f16247b5ef9d273a1261f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

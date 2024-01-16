@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0714
   m_EditorClassIdentifier: 
   id: 714
-  displayName: CowBell
-  description: More of this please.
-  icon: {fileID: 21300000, guid: 9c47e00258a27d64e808784a5e1251af, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3c02be07519e004428ad1d7485cbfd6a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

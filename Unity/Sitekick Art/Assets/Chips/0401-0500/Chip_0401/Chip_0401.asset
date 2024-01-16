@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0401
   m_EditorClassIdentifier: 
   id: 401
-  displayName: HorseyFace
-  description: Reee-heehee!
-  icon: {fileID: 21300000, guid: 249bf6256445c9942959f1c49030acd5, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: cf615b1a23e397647a7a349a3ed83679
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

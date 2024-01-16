@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0135
   m_EditorClassIdentifier: 
   id: 135
-  displayName: CatsEyes
-  description: Meow
-  icon: {fileID: 21300000, guid: 0355685b6bc0ab24288cf93914a3c436, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: f884b5fa0eb73254d8a67b7201861acc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

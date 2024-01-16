@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0894
   m_EditorClassIdentifier: 
   id: 894
-  displayName: BuzzSawLegs
-  description: Robotnik bought in bulk.
-  icon: {fileID: 21300000, guid: e7d6e4478c48f264caff61df629bd975, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: a4f12cf2e50c947449d6e232d7525d76
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

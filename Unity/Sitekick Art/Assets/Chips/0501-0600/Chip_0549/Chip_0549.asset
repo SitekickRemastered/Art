@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0549
   m_EditorClassIdentifier: 
   id: 549
-  displayName: BadLid
-  description: Dastardly Headgear!
-  icon: {fileID: 21300000, guid: 446bc8f43eabc95419e4936554993cf2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fbecb8d6c105a954895e948a2477a800
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

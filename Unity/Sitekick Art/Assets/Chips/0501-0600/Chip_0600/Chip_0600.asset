@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0600
   m_EditorClassIdentifier: 
   id: 600
-  displayName: StrataFlag
-  description: The Property Management Man never ever wore a monocle.
-  icon: {fileID: 21300000, guid: 1dc4fad8ed28bcb46a5474b56eabd884, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 235c2691fbca9994a8874f642ab2ac73
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

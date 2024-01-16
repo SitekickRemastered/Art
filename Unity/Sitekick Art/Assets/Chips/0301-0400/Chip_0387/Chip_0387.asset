@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0387
   m_EditorClassIdentifier: 
   id: 387
-  displayName: Racer2
-  description: Go With the Winner
-  icon: {fileID: 21300000, guid: e253ded23e99b8f459945af3d4a5ab22, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 462702b9c88f7eb4db15fda27f975527
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

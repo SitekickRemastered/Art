@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0296
   m_EditorClassIdentifier: 
   id: 296
-  displayName: MechLid
-  description: The future of hardhats
-  icon: {fileID: 21300000, guid: d3e36ea7a771c884eb0ae5408744876d, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 8a5dd184e5435844ab91470e3d61c4c5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

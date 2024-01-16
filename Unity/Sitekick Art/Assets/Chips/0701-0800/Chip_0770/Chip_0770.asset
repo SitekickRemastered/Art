@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0770
   m_EditorClassIdentifier: 
   id: 770
-  displayName: MultiEyes
-  description: "The Ten-Eyed Sitekick with 360\xB0 vision."
-  icon: {fileID: 21300000, guid: 3e3ddb839cfb73d468f644bfbc3ed27d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: dedc6def58bc0994098bb9477922bcf8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

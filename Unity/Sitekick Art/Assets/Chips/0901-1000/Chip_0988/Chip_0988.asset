@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0988
   m_EditorClassIdentifier: 
   id: 988
-  displayName: FishHat
-  description: Time for some battered fish feast.
-  icon: {fileID: 21300000, guid: fea4d2f2cfce4e541bbb47d1c7568406, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4c4a52103f15eb044a55001c0be02798
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

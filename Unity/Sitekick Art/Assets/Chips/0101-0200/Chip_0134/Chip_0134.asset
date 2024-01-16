@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0134
   m_EditorClassIdentifier: 
   id: 134
-  displayName: DinoEyes
-  description: Clever girl . . .
-  icon: {fileID: 21300000, guid: 2e2ecb932b393bf40af72ee8eed65f4c, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 9a8da2af55a5edf42a4d0a41d840e6dc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

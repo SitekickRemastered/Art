@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0670
   m_EditorClassIdentifier: 
   id: 670
-  displayName: ScorpionArm1
-  description: Scorponok! Terrorize!
-  icon: {fileID: 21300000, guid: fc827328eeb2601418a2ac5f913a4144, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 0d756188ba376f143910f87a1eb6dd57
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0024
   m_EditorClassIdentifier: 
   id: 24
-  displayName: BozoLid
-  description: Usually doesn't stay on for long.
-  icon: {fileID: 21300000, guid: b90ca68d01dfdd243984945e75b180b6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e3ec2c07c0e76234e9ef89cc6cf99b48
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

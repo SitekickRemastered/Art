@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0067
   m_EditorClassIdentifier: 
   id: 67
-  displayName: Mandy
-  description: A fiery hairstyle
-  icon: {fileID: 21300000, guid: c13fff4005bf6284591d6a4cbaf88efd, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0217a06255bb33240922473eff550ba8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

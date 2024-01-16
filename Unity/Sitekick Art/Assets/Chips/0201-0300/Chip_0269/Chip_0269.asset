@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0269
   m_EditorClassIdentifier: 
   id: 269
-  displayName: DragonWings2
-  description: The Wings of Hungarian Dragons.
-  icon: {fileID: 21300000, guid: 0ec801a5a7c1f194999173eaf68bcc46, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: eff9f2d97567e4849b8b71c0f83bab3f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

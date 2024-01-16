@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0835
   m_EditorClassIdentifier: 
   id: 835
-  displayName: ClawWing2
-  description: '"In a time before time . . ."'
-  icon: {fileID: 21300000, guid: 31ace9a8aadcd344a875bbdd6bd1206d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: db96019519390474eb115cc77befe5f8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

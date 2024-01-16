@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1074
   m_EditorClassIdentifier: 
   id: 1074
-  displayName: Toque
-  description: For retaining precious cranial heat.
-  icon: {fileID: 21300000, guid: f4beef5ad7234ec4cb5ceeab3944efb1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0b3daab4f74e9c84a94a096fb1c2cdf5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

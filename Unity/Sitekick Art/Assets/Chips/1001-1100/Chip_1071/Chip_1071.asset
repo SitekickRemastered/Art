@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1071
   m_EditorClassIdentifier: 
   id: 1071
-  displayName: FrauMuffins
-  description: Muffin paper is edible, right?
-  icon: {fileID: 21300000, guid: 23bc62e70e279a045988a2cd272da04b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: adaca014b4820e847b7e0cff26bdb47e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

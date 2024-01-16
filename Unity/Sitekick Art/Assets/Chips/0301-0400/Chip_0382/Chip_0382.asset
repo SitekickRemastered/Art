@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0382
   m_EditorClassIdentifier: 
   id: 382
-  displayName: Earth
-  description: Doesn't everyone wish their Sitekick was a globe?
-  icon: {fileID: 21300000, guid: 1ef4b4ecc6b89bf4aa916a0fae2ad20c, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e1c3435c6c8a4094ea3001da4a825fcf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 3

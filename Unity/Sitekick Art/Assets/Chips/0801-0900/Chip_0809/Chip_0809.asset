@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0809
   m_EditorClassIdentifier: 
   id: 809
-  displayName: DerbyLegs
-  description: These skates will never touch the ground!
-  icon: {fileID: 21300000, guid: 94413a2bfae9c7b46a3348aa418d1ff5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ca4f4ffb47d37a3458421474910938d2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0671
   m_EditorClassIdentifier: 
   id: 671
-  displayName: ScorpionArm2
-  description: That clicking's making me nervous.
-  icon: {fileID: 21300000, guid: 5d2cb23bd1441f3438ef0763d11eecfe, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 324ac44cd9d8a634f9978eca185bdfb8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

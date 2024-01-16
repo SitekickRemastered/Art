@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0419
   m_EditorClassIdentifier: 
   id: 419
-  displayName: JumboTrunk
-  description: Useful for grasping, smelling, or making noise.
-  icon: {fileID: 21300000, guid: 946552cf3766989419962eec2781bc64, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3e8c64a649b33b343b76715d395184dd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

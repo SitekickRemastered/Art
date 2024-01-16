@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1056
   m_EditorClassIdentifier: 
   id: 1056
-  displayName: FranticGoggles
-  description: '"Eee Eee Ah Aw," said the creator of Sitekick.'
-  icon: {fileID: 21300000, guid: 6ced8c2b348885147887d82fb6c942f4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 708d9c1a5cb31d447b95fc5728def9d2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

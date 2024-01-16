@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0056
   m_EditorClassIdentifier: 
   id: 56
-  displayName: Flame
-  description: Word on the street is that flames make your Sitekick go faster!
-  icon: {fileID: 21300000, guid: 9c0f59b0a19d3c4488d6ce479e50f580, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d3508fa6b715b8447868fc234a253c20
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 3

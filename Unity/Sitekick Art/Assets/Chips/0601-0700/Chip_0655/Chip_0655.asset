@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0655
   m_EditorClassIdentifier: 
   id: 655
-  displayName: LipStrip
-  description: Thanks for patching me--Mmmmph!
-  icon: {fileID: 21300000, guid: 8bcffe18860d4a7419ec70cf2dee3b4b, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: db1222cd9031cd54caff134f26267ff5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

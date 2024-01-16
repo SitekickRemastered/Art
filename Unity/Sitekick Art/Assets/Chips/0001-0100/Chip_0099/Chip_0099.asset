@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0099
   m_EditorClassIdentifier: 
   id: 99
-  displayName: Mosquito
-  description: Become a cybernetic long-nosed flying insect.
-  icon: {fileID: 21300000, guid: 822cb5a4389d08341a37af3b0d106935, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 3b887f13e1c113e4bbf69b79dd0011f3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

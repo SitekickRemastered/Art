@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0128
   m_EditorClassIdentifier: 
   id: 128
-  displayName: CustomEyes
-  description: These eyes will match the tone of the Sitekick's current color
-  icon: {fileID: 21300000, guid: faf4199b754bd3740875a7b3e23a4a10, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 731c0c9184647f744b440b8b335664a5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

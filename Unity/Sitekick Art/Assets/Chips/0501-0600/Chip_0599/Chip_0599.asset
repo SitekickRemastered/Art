@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0599
   m_EditorClassIdentifier: 
   id: 599
-  displayName: ThermaFlag
-  description: Cobra Wrap is very fashionable.
-  icon: {fileID: 21300000, guid: 56a1aa8e477ef9a42ba8223c48b335ed, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 8f6e475f93a529847b530c4e3d4279db
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

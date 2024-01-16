@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0181
   m_EditorClassIdentifier: 
   id: 181
-  displayName: AniEyes4
-  description: Dead anime eyes
-  icon: {fileID: 21300000, guid: bed16a237a3d77140872b6400fd9e541, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b24c09ce1e0f6ca48a23d728f1813187
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

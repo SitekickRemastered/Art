@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0131
   m_EditorClassIdentifier: 
   id: 131
-  displayName: HypnoEyes
-  description: You are getting very sleepy . . .
-  icon: {fileID: 21300000, guid: 395c67cd8f68c0a4e934ba0e0a5b9bd8, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: ab5299c31ebc9f84baf69bd083ffefe3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

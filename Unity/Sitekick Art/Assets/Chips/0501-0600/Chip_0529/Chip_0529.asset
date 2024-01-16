@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0529
   m_EditorClassIdentifier: 
   id: 529
-  displayName: CyVisorRed
-  description: In the future, this visor lost its power, and nobody reset its clock.
-  icon: {fileID: 21300000, guid: a0462fa7268a76e4eabe147e1a4fd467, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 3a5e5f70b618acb4d828aa25719cca41
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

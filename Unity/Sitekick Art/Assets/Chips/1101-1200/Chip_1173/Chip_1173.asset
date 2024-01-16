@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1173
   m_EditorClassIdentifier: 
   id: 1173
-  displayName: SolarGrip
-  description: First the Solar System, then the entire Milky Way!
-  icon: {fileID: 21300000, guid: 97e934bfb37aac343a6fb5997a539a4b, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 60fd786b3e4b6f743b5c368ced317935
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0270
   m_EditorClassIdentifier: 
   id: 270
-  displayName: DragonWings3
-  description: Dragon's Halloween.
-  icon: {fileID: 21300000, guid: 4180d4df135b72143a30f71c4ced91ba, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: ef96e80e155fc864ca211b31bb8f87b0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

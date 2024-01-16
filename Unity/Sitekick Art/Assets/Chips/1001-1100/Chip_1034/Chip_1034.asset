@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1034
   m_EditorClassIdentifier: 
   id: 1034
-  displayName: RubyEyes
-  description: This is how Fantasy characters express their greedy intents.
-  icon: {fileID: 21300000, guid: 7dd0f082bbdb4f9429432ee7e40c3ee2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f41ea2e7f21e72d4990aa0e0fa0c3877
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

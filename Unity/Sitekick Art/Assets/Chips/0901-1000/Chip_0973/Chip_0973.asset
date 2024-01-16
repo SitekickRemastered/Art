@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0973
   m_EditorClassIdentifier: 
   id: 973
-  displayName: Boa
-  description: A Reptile Fashion Statement.
-  icon: {fileID: 21300000, guid: 7bc68a44967549f4db70db6e73e32f00, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: aa5f7a8c6b9f66342a7bea8cd4c95a14
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

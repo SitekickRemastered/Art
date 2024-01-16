@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0591
   m_EditorClassIdentifier: 
   id: 591
-  displayName: ImpWings
-  description: DACE - Ryuyasha11
-  icon: {fileID: 21300000, guid: d38248394a9ea9342a374c5fa671932b, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: eeea248aef537bd408f8d2ff41668fe0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

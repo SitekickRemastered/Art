@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0184
   m_EditorClassIdentifier: 
   id: 184
-  displayName: AniEyes7
-  description: Standard anime eyes.
-  icon: {fileID: 21300000, guid: edc447beca77fd047b06fc4057984512, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 55e169fcd3725414f8c96300715e8084
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

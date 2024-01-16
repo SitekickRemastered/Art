@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0595
   m_EditorClassIdentifier: 
   id: 595
-  displayName: Therma
-  description: '"When pigs fly . . ." Ugh! That''s so overused.'
-  icon: {fileID: 21300000, guid: 42d02a7a3f1e068468f482e7c7c15820, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: af78e5a838507ad4290c13a2761f3e40
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

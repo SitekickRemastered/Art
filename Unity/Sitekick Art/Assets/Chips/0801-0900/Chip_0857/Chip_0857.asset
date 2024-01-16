@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0857
   m_EditorClassIdentifier: 
   id: 857
-  displayName: GasMask
-  description: Don't forget to change the cartridge every once in a while.
-  icon: {fileID: 21300000, guid: 8666bf81f70c1774bac6bcc68e75d312, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 29cdf549836a39449ac56163836bfa7a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

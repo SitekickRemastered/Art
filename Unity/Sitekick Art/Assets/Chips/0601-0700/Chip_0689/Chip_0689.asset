@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0689
   m_EditorClassIdentifier: 
   id: 689
-  displayName: 8BallKick
-  description: 8-Ball, corner pocket . . . Scratch!
-  icon: {fileID: 21300000, guid: f445ebf3c858b024db228edb8ff8ed18, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b593a54d98b3a6445aa9bda5c6e2f546
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

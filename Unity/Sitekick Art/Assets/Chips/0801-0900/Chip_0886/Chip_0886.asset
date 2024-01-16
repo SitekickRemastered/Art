@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0886
   m_EditorClassIdentifier: 
   id: 886
-  displayName: SKSDApr2009
-  description: MaltShopMayhem
-  icon: {fileID: 21300000, guid: b396719b78896564da7157b25a21cde1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a0ab4c17d45353e498c8b3595b1def97
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

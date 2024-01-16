@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0034
   m_EditorClassIdentifier: 
   id: 34
-  displayName: GagEars
-  description: The ears always give me away.
-  icon: {fileID: 21300000, guid: 1f6ad39d8e4cc3041882ee23b9234889, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1044fe27ff41a624db2795dc1b98d842
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

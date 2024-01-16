@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0144
   m_EditorClassIdentifier: 
   id: 144
-  displayName: Smiley
-  description: A goofy grin that knows what you don't.
-  icon: {fileID: 21300000, guid: 2c49019c1d796e5438893fa3022e6aa4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 57552433180904744bf3e8617d08a8a5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

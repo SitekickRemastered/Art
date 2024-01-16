@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0583
   m_EditorClassIdentifier: 
   id: 583
-  displayName: FlashyEyesBlue
-  description: Blue Blinkers.
-  icon: {fileID: 21300000, guid: c5c5f221b7cba8549807a28cd9a090f1, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 90495a9b68c00c64fa486a6c5bc5bd37
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

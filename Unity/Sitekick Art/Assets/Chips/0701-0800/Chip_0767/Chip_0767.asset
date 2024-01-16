@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0767
   m_EditorClassIdentifier: 
   id: 767
-  displayName: DadHair
-  description: Are ya winning, son?
-  icon: {fileID: 21300000, guid: bb4055f8b97b9cc45a4d162019f7625f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 724eb0cc6deba1641bfc354262c84c3b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

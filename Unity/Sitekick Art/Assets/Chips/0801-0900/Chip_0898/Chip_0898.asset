@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0898
   m_EditorClassIdentifier: 
   id: 898
-  displayName: FlightMachine
-  description: SteamPunk Flight-Tech at its finest.
-  icon: {fileID: 21300000, guid: 81b074f9e8d74e1468a8bf2d0b101c0b, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: e6db82ebc371cb442a9d72ed642e068c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

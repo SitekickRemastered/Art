@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0646
   m_EditorClassIdentifier: 
   id: 646
-  displayName: FlameHawk
-  description: The Lethal Demolition Derby Clown Special.
-  icon: {fileID: 21300000, guid: 6b45c1f6ebb6be040abd9e90c325d788, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 556c57ac9bf498a41a3b1906ea77fd85
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

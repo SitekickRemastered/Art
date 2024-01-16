@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0304
   m_EditorClassIdentifier: 
   id: 304
-  displayName: OctoArm2
-  description: Cashier.
-  icon: {fileID: 21300000, guid: 18d381605bf610f469eb10e481df723a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d66233091c29a884687705be03add108
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0450
   m_EditorClassIdentifier: 
   id: 450
-  displayName: SpongeBoy
-  description: Who lives in a screen inside a device? SpongeKick RoundPants!
-  icon: {fileID: 21300000, guid: f4640ecaaecdb3e4ea14d9fd8ce081d8, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 44964a78c486c2c48813bfc5dace7ec0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 5

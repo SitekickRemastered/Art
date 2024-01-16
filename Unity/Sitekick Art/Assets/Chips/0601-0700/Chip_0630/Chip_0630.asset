@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0630
   m_EditorClassIdentifier: 
   id: 630
-  displayName: DinoTail3
-  description: A Defensive Tail.
-  icon: {fileID: 21300000, guid: 49c758a95a9f3ce46933003952c206b1, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 2e87bbea82bea454f90fa5ed25e72fb7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

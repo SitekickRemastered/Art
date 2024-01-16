@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0287
   m_EditorClassIdentifier: 
   id: 287
-  displayName: BlasterHelm
-  description: Rip and Tear.
-  icon: {fileID: 21300000, guid: 4a475443df4228a4fa353847406e1a77, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: a94260167523043499281efdcd3b9f26
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

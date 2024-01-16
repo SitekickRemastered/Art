@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0182
   m_EditorClassIdentifier: 
   id: 182
-  displayName: AniEyes5
-  description: Anime Wink
-  icon: {fileID: 21300000, guid: 99438ddc72bb38d45905a9e4fcdbd5eb, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: a76b3f8b13a655547af4570adbc55b0a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

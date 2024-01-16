@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0634
   m_EditorClassIdentifier: 
   id: 634
-  displayName: DinoMouth2
-  description: YAWN!
-  icon: {fileID: 21300000, guid: 7863bd54c59696b4288f39432a078e90, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2ec9e8ec1ae04cf4eb42abc707c5de99
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

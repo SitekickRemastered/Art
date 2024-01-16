@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1163
   m_EditorClassIdentifier: 
   id: 1163
-  displayName: Hammerhead
-  description: There's only one man I respect enough to fear.
-  icon: {fileID: 21300000, guid: 22a65a3cd6c588142abf47d0d05000bd, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f599f8fa86af885409b068751e30015b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

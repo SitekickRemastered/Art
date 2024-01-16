@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0628
   m_EditorClassIdentifier: 
   id: 628
-  displayName: DinoTail2
-  description: An attack tail.
-  icon: {fileID: 21300000, guid: 02c3220bdcef6d646a8612b5d2886846, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 12dce3c4064081a43971e4f45144079d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

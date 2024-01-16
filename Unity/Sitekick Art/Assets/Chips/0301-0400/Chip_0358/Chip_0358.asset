@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0358
   m_EditorClassIdentifier: 
   id: 358
-  displayName: LazerBladeRed
-  description: The space sword of the bad guys.
-  icon: {fileID: 21300000, guid: 5d34e6a6191f3284a979a25077c0e7f2, type: 3}
-  rarity: 4
-  effectPrefabRef:
-    m_AssetGUID: f056cafc6dd328746921c0b101c6fde6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0407
   m_EditorClassIdentifier: 
   id: 407
-  displayName: HoneyLegs
-  description: Bees communicate via dancing.
-  icon: {fileID: 21300000, guid: 5a3b2676d33b9914dac051e2ff7d748e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 73db3858ed6a13d46ba3501d5d8b6104
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0616
   m_EditorClassIdentifier: 
   id: 616
-  displayName: HeroMask5
-  description: The kindest, most chill of the bunch uses this one.
-  icon: {fileID: 21300000, guid: 530b29467ac4a0047b5bf66b39aa66b1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 16915d858a3d9e54b9047adf11357729
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

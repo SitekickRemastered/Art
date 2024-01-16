@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0800
   m_EditorClassIdentifier: 
   id: 800
-  displayName: SkunkTail
-  description: What's that funky smell?
-  icon: {fileID: 21300000, guid: 25935ce7bf1298740a02e32975af89ce, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 145a6e87af99b0143b4995086f3544eb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

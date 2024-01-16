@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0074
   m_EditorClassIdentifier: 
   id: 74
-  displayName: MechLegs
-  description: Evoke the amazing agility of the Metal Beetle.
-  icon: {fileID: 21300000, guid: aed3edd6466633f498ca1a25d9e18976, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 6a232fdf8fc65d0469321d9f764aeb0b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

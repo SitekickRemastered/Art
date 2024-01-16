@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0565
   m_EditorClassIdentifier: 
   id: 565
-  displayName: PinataLegs
-  description: And arms!
-  icon: {fileID: 21300000, guid: f4c1e378bee99834e84f773ebcfaf769, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: da86948907e879043ad8dc90e491d2ff
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

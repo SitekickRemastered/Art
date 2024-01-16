@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0839
   m_EditorClassIdentifier: 
   id: 839
-  displayName: Doupod
-  description: '"United in duty. Bound in Destiny."'
-  icon: {fileID: 21300000, guid: a66f50cb928f0b84285d162f52130aba, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 71542ab6f005e634189849accbe7c340
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

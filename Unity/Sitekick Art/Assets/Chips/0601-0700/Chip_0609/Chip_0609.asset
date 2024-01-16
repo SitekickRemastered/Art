@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0609
   m_EditorClassIdentifier: 
   id: 609
-  displayName: TheKatKap
-  description: Show off your inner neko.
-  icon: {fileID: 21300000, guid: 56b6f3f9b19c8044c9ac5b2558ae1da0, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 3afe84b46dc444d46b089fc8303deecc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

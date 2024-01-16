@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0495
   m_EditorClassIdentifier: 
   id: 495
-  displayName: X2Hair
-  description: Trudy X's hairstyle.
-  icon: {fileID: 21300000, guid: c02c49261d59d9445965f17887079a7e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fa73a2e2642d4a941b7abed1db79c0a4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0372
   m_EditorClassIdentifier: 
   id: 372
-  displayName: MechShield
-  description: Grey-Goo armor.
-  icon: {fileID: 21300000, guid: c7a038e54b1474649a9796eeb57a82e1, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 0ad794de4fd0f08408b226048163688a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

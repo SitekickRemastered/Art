@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0036
   m_EditorClassIdentifier: 
   id: 36
-  displayName: Ninja
-  description: 'The Legend itself: Shinobi.'
-  icon: {fileID: 21300000, guid: 687b54f046f47be48b5bbafb380999ab, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 63851bbc2479acd4a8cee915e58f969e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0648
   m_EditorClassIdentifier: 
   id: 648
-  displayName: NoobLid
-  description: A Dunce Hat for Gamers.
-  icon: {fileID: 21300000, guid: 6202e6806a07c6e41bf9c59035c0f51c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8e6cb96ff0b134d4e9c2839832be4e58
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

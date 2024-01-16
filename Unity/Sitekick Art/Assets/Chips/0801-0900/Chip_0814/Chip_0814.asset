@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0814
   m_EditorClassIdentifier: 
   id: 814
-  displayName: CowUdders
-  description: Get your 2% SK Milk only from Yap Farms.
-  icon: {fileID: 21300000, guid: 4772dd67e0cb9c1478f3793e7f661840, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: a01c2ff75a97ad040bf6f8e91b3a4e71
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

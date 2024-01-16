@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1219
   m_EditorClassIdentifier: 
   id: 1219
-  displayName: CORPsHelm
-  description: Never let the enemy go over your head.
-  icon: {fileID: 21300000, guid: 53908c6b6c0180843a59ae306bd583b5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1cea11361c34af64cb274693920a7698
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

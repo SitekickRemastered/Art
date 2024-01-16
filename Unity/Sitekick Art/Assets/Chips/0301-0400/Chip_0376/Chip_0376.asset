@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0376
   m_EditorClassIdentifier: 
   id: 376
-  displayName: FlutterFiend
-  description: These floaties and flippers would look great with Snorkel and SnorkelGogs.
-  icon: {fileID: 21300000, guid: 0a37f5865f1f7b24e9053be90ef36ad1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 466b0994b253bc54f90118dbfd06176f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

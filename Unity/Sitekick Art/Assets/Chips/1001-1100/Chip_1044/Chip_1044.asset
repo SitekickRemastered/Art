@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1044
   m_EditorClassIdentifier: 
   id: 1044
-  displayName: ScareLid
-  description: Behold the Face of Fear.
-  icon: {fileID: 21300000, guid: 662297d5db6fe2544bf71c0919e13d66, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 53e54dfb89441924db18484fb4062e18
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

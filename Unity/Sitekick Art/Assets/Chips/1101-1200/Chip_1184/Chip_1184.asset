@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1184
   m_EditorClassIdentifier: 
   id: 1184
-  displayName: GhoulDuel
-  description: They took my baby.
-  icon: {fileID: 21300000, guid: 76786b07a3bc8754da33e6350e6742e1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b2a5369d41f69554d897a5999ca00ad0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

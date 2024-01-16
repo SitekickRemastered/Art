@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0815
   m_EditorClassIdentifier: 
   id: 815
-  displayName: CowSkin
-  description: Look like the Big Bad Bessie. Moooo!
-  icon: {fileID: 21300000, guid: ccd30bd8645c2cb459e6c6ac6a305af2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 155b14beb646d714a9ba7746f52c5666
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

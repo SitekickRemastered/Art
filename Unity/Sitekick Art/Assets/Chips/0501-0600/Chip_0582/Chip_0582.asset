@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0582
   m_EditorClassIdentifier: 
   id: 582
-  displayName: FlashyEyesGreen
-  description: Alternating Alerts.
-  icon: {fileID: 21300000, guid: 6137ba9c13976c5438075ef6a48806e3, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e12c1e158dc26b44d9ba1af9f21d75ba
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

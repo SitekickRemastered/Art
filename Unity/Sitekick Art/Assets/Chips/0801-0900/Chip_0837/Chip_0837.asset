@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0837
   m_EditorClassIdentifier: 
   id: 837
-  displayName: Talon2
-  description: Biomechanical Firearm.
-  icon: {fileID: 21300000, guid: 70e911aacbf1207429cc7676b37d4930, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ce2720397295814448a31f6854104a62
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0370
   m_EditorClassIdentifier: 
   id: 370
-  displayName: MechWing2
-  description: Don't leave home without it.
-  icon: {fileID: 21300000, guid: 3bde61247d08ab946bb6d0310ea575e0, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: be2b073fbdc9864438ad4eb0269dc2e0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1068
   m_EditorClassIdentifier: 
   id: 1068
-  displayName: AntlerLid
-  description: It's Reindeer Season.
-  icon: {fileID: 21300000, guid: 92e7fcddda80f2045b35b93ab9eb355f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 801e1340f7604f0479b77d281c72e80d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

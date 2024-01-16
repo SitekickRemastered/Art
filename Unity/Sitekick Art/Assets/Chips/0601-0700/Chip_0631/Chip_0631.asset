@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0631
   m_EditorClassIdentifier: 
   id: 631
-  displayName: DinoNose
-  description: Drooling Lizard
-  icon: {fileID: 21300000, guid: e20699e240262594e9545b5bcc82701d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f2e43b1d05aa76e408985ebbb1014ffb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

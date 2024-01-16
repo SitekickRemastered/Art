@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0072
   m_EditorClassIdentifier: 
   id: 72
-  displayName: MechArm
-  description: Used to have a Laser Cannon/Submachine Gun.
-  icon: {fileID: 21300000, guid: 0ac19d080c2e18444a08e0183fa6b4e9, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: fc04bdebe9d818e4ea5c6d012bffa1a3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

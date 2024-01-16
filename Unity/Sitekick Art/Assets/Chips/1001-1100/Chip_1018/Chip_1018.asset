@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1018
   m_EditorClassIdentifier: 
   id: 1018
-  displayName: TigerArm
-  description: That's French Fry.
-  icon: {fileID: 21300000, guid: 1c8a45309bf4fa048a49c45319132762, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f9fcae431b8b89f45a7d68c3e0e5ad3d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

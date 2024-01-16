@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0976
   m_EditorClassIdentifier: 
   id: 976
-  displayName: AquaArms
-  description: Fear my Fish-Powered Claws!
-  icon: {fileID: 21300000, guid: 561d3fd7bb59640469d15fb5236cb852, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 042d236248adaea46bc79b44f97c28f5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

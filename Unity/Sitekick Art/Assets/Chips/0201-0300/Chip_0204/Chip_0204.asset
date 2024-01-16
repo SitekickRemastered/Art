@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0204
   m_EditorClassIdentifier: 
   id: 204
-  displayName: LepreLeaf
-  description: Lucky 4-leaf clover for your antenna
-  icon: {fileID: 21300000, guid: 67fd482758cb71d4abccff3b2c50eba1, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 972ecc4a0e58b6641b76bb4d05b39297
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

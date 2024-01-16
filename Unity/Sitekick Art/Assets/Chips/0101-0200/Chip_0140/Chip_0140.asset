@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0140
   m_EditorClassIdentifier: 
   id: 140
-  displayName: SquintEyes
-  description: Squint to see.
-  icon: {fileID: 21300000, guid: aefeffa962c337f46b206865cb96569c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c613dbec7774b6b42a4902ad0e7bc315
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

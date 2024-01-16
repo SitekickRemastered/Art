@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0702
   m_EditorClassIdentifier: 
   id: 702
-  displayName: ShredStick
-  description: DACE - Ryuyasha11
-  icon: {fileID: 21300000, guid: 36ed25e75995098489f5e67f9a9d8f8d, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: fdcc166e045ed0e41a8660651270cbca
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

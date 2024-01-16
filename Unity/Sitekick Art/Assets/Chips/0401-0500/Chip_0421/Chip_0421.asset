@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0421
   m_EditorClassIdentifier: 
   id: 421
-  displayName: GatorLegs
-  description: Alligator legs for your Sitekick!  Neat!
-  icon: {fileID: 21300000, guid: 04f951b6fc4d65746ba3bb234c013ccb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 01e2fa341b7e5c0408689ff73115c47a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0244
   m_EditorClassIdentifier: 
   id: 244
-  displayName: CinnaDo
-  description: CinnaKick's Cinnamon Surprise.
-  icon: {fileID: 21300000, guid: 80fdd8b2a74c5e94b91c02f4378b8e15, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a70501ef049f28640b5819da763a25e5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

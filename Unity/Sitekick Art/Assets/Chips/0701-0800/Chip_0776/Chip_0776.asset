@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0776
   m_EditorClassIdentifier: 
   id: 776
-  displayName: MechMonocle
-  description: Cybernetic wealthy sophistication.
-  icon: {fileID: 21300000, guid: b564ef722a60e5e42a4fe101ecc7a679, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 7f2621e934619ca45beac21693c95329
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0625
   m_EditorClassIdentifier: 
   id: 625
-  displayName: DinoFace
-  description: Triceratops Power!
-  icon: {fileID: 21300000, guid: dd8c777e69daf7643a9b0ca41867a2b1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8e85be4bd2d32ee47a7944cff055a9cb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

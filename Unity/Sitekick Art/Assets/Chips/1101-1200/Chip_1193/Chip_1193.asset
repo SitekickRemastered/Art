@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1193
   m_EditorClassIdentifier: 
   id: 1193
-  displayName: GlassEyes
-  description: I have no eyes, yet I can see.
-  icon: {fileID: 21300000, guid: 604ecdf1bb039c44aa18b5e544e155d1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3370caed96060ac42b3ccc27e9c16339
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

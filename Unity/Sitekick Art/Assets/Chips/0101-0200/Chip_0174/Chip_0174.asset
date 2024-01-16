@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0174
   m_EditorClassIdentifier: 
   id: 174
-  displayName: Bangs2
-  description: More bangs for your buck ie. LongHair
-  icon: {fileID: 21300000, guid: 25b493e464e5a6043b3622142896895d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b6fcb5a1ab8aeb04aa58778832510fe5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

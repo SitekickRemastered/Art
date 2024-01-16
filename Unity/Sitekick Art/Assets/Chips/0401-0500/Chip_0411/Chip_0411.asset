@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0411
   m_EditorClassIdentifier: 
   id: 411
-  displayName: FlewyTwirlies
-  description: Kablooey Flew Throughy with these in a dark mysterious cave.
-  icon: {fileID: 21300000, guid: d9eabbefa34175d46908e858eeb44355, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 1cebd961fd4ca604dac363316ab70230
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

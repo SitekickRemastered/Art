@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0198
   m_EditorClassIdentifier: 
   id: 198
-  displayName: Bandana
-  description: Silly Silly Sitekick.
-  icon: {fileID: 21300000, guid: 0640db065fb22874d8536c3a62572500, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d9291da279bb33741a369004c7c66e34
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

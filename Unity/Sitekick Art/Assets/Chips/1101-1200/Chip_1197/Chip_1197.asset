@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1197
   m_EditorClassIdentifier: 
   id: 1197
-  displayName: LycanLetterman
-  description: Jock Wolf Style.
-  icon: {fileID: 21300000, guid: 867da022fa5aec042897d7d8f87ea7f9, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 857941239875ce3439d164082932ccc0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

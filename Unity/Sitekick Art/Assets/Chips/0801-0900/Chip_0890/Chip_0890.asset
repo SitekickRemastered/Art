@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0890
   m_EditorClassIdentifier: 
   id: 890
-  displayName: SKSDAug2009
-  description: ToilBod
-  icon: {fileID: 21300000, guid: a0474014de7354646abaec1718c8297b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 85004d87d13cae840b71624027ca6a01
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0049
   m_EditorClassIdentifier: 
   id: 49
-  displayName: ScurvyScruff
-  description: Pirate Facial Hair, Ya-Hargh!
-  icon: {fileID: 21300000, guid: f65b2c364531636478bd9824621f0dda, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e2cbb4390b4a45748bcdbce1cc242c12
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

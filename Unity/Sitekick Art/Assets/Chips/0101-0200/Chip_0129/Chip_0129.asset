@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0129
   m_EditorClassIdentifier: 
   id: 129
-  displayName: GreedyEyes
-  description: Lottery Winner incoming.
-  icon: {fileID: 21300000, guid: c85531a068807464fac85748497c22ba, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 75f512dc0adb3044a903676971e6f10e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

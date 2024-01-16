@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0017
   m_EditorClassIdentifier: 
   id: 17
-  displayName: BigMouth
-  description: HEY GUYS! UH-HehHa!
-  icon: {fileID: 21300000, guid: 34ebda9300426e24ea4ea01a3e89fd34, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: de3e202f8dd99c84c924f5725b31edb5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

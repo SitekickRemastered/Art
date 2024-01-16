@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1078
   m_EditorClassIdentifier: 
   id: 1078
-  displayName: ZoeWings
-  description: Save checkpoints in style.
-  icon: {fileID: 21300000, guid: 66a8d9f756eac4d4aae53c5891c285ec, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c118d0c2f60204b41a6df402dfb18afe
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

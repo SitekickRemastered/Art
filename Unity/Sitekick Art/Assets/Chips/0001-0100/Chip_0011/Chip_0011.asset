@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0011
   m_EditorClassIdentifier: 
   id: 11
-  displayName: Monster
-  description: Grrrrrrrrrrrrrrrr...
-  icon: {fileID: 21300000, guid: 68788394c55dada42b1927b2a721c5b6, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e7677ed862e328749972940e9d345904
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

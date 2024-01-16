@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1164
   m_EditorClassIdentifier: 
   id: 1164
-  displayName: PollyTopper
-  description: RrrAWWW!
-  icon: {fileID: 21300000, guid: 3c8a7c0b28a3dd34eacfaa400f6d000f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b257ea2fac539b54fa32b243b4352604
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

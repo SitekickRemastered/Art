@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1144
   m_EditorClassIdentifier: 
   id: 1144
-  displayName: Koala
-  description: That Eucalyptus suits you.
-  icon: {fileID: 21300000, guid: 792dcc603fad5954ea5f949e2e7ac9f9, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 18181f73813db9c44af927b694353f68
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

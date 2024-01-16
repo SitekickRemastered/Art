@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1092
   m_EditorClassIdentifier: 
   id: 1092
-  displayName: ChillHood
-  description: Stay warm by being cool.
-  icon: {fileID: 21300000, guid: 5a80fc7db911dff4d8447b9f8eae6dfe, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3f98d26fb3a4c7c458f4fc2eafc0adf6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

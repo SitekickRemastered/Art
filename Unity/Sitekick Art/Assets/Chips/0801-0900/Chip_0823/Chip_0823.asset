@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0823
   m_EditorClassIdentifier: 
   id: 823
-  displayName: TentacleDo
-  description: Hexadecimal, the Queen of Chaos.
-  icon: {fileID: 21300000, guid: 3a9a2d03b23219d489204927af8af324, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d04f999a6c7eef94c938ef98b7e0e2e3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

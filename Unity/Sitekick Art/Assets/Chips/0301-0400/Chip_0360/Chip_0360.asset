@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0360
   m_EditorClassIdentifier: 
   id: 360
-  displayName: AniDo
-  description: Fantasy Soldier's hairstyle
-  icon: {fileID: 21300000, guid: bf940ddb32b68c04d90094e72e6f74e2, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 962d3ca0c5cad8c4e854958064523810
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

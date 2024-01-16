@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1143
   m_EditorClassIdentifier: 
   id: 1143
-  displayName: ChiefLid
-  description: The Tribal Leader has Spoken.
-  icon: {fileID: 21300000, guid: 5551278a24ec02f438fdc7ac4155168c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: db4c9bc2c41d6944394c4040feaa80af
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

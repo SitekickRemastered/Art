@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0537
   m_EditorClassIdentifier: 
   id: 537
-  displayName: HagLid
-  description: The perfect hat for brewing up the witch's cauldron.
-  icon: {fileID: 21300000, guid: 0497b534ec1288042a737aaafff82243, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: eda92093dbe277842a96fe7ea89ffbb5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

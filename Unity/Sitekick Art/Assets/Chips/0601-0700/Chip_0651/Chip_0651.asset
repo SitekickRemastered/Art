@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0651
   m_EditorClassIdentifier: 
   id: 651
-  displayName: HulaSkirt
-  description: May or may not summon rain.
-  icon: {fileID: 21300000, guid: 4ebca12972dc1a546964af6f0e4d83f4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4aaf4fe9a2d989540978dec3e54e9bc2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

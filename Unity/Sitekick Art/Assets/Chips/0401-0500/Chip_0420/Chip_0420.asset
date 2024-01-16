@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0420
   m_EditorClassIdentifier: 
   id: 420
-  displayName: GatorTail
-  description: An alligator tail for your Sitekick!  Cool!
-  icon: {fileID: 21300000, guid: 6c5398a87e650a74797e526b831dee85, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 550da55ea5a3a4442ad4da52d1e19eda
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

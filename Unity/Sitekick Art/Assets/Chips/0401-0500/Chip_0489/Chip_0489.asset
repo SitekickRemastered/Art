@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0489
   m_EditorClassIdentifier: 
   id: 489
-  displayName: FlamingoCape
-  description: Lizbeth is the Captain's best friend who has a not-so-secret crush
-    on him.
-  icon: {fileID: 21300000, guid: b39759c599a62a74bb5cbd7a3f88ac61, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 89b057b48ce7e4c4e928432ce14cf2e9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

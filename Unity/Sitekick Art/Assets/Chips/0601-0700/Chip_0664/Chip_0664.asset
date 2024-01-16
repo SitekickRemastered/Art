@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0664
   m_EditorClassIdentifier: 
   id: 664
-  displayName: JellyLegs
-  description: . . . where the Jellyfish jelly.
-  icon: {fileID: 21300000, guid: 8a97f382fa1438245ab001699732c019, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3b54c7f16ff179d4f801242b75f3e5f5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

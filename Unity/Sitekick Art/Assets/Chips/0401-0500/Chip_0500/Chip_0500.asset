@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0500
   m_EditorClassIdentifier: 
   id: 500
-  displayName: EasterTopper
-  description: Celebrate the April long weekend with this colorful Antenna Topper.
-  icon: {fileID: 21300000, guid: dceebd4c3d9a1e84891e085a4a97f6ea, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e1c328b0db73d39488bcbee3a9a5636e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

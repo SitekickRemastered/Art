@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0527
   m_EditorClassIdentifier: 
   id: 527
-  displayName: FeralPaint
-  description: Your free will shatters, as you embrace your pure instincts.
-  icon: {fileID: 21300000, guid: 19a73fa3d13f93f40bca5d963d596455, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b06159d196027474fb678321f7099b52
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

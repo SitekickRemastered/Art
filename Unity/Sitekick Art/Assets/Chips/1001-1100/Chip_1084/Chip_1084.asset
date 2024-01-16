@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1084
   m_EditorClassIdentifier: 
   id: 1084
-  displayName: SweetHelm
-  description: Become a Candy Crusader by donning this helmet.
-  icon: {fileID: 21300000, guid: f9d050cfce08e774ca23b2a56d12ee16, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8505ec74b45437a4d88b097fd1bba6a4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

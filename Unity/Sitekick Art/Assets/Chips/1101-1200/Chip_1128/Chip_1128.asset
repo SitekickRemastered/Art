@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1128
   m_EditorClassIdentifier: 
   id: 1128
-  displayName: Jessie
-  description: I'll stay in, but that's alright.
-  icon: {fileID: 21300000, guid: 6d2b90514a309f949b638fe8a03fb1ff, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9fea54cbd4edb464ab2fb38e279fb133
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

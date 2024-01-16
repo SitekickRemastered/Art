@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0865
   m_EditorClassIdentifier: 
   id: 865
-  displayName: InspectorStache
-  description: This is a Children's game, so this pipe is filled with bubble solution.
-  icon: {fileID: 21300000, guid: ce05ad8932c5f144b9aca297019cac38, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 79b9ec639191ca74eb3faabe933e530f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

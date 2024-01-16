@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0353
   m_EditorClassIdentifier: 
   id: 353
-  displayName: JungleCamo
-  description: Man we're lost, we're super lost!
-  icon: {fileID: 21300000, guid: 22df3b767d9040e43b3d26796bcb2590, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: b8a5c3cd08900de4b9eff3c1ca9e3e9a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 3

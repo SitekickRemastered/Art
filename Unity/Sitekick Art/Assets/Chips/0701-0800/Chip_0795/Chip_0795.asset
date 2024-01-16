@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0795
   m_EditorClassIdentifier: 
   id: 795
-  displayName: BrollyTopper
-  description: One of the most practical Antenna Toppers.
-  icon: {fileID: 21300000, guid: 2d95e0c3d269da146b2f8cf9a36f14a4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f61790e500a3b74458e1d3dfbbd1ac3b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

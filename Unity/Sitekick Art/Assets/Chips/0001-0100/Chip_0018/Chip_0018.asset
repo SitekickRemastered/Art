@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0018
   m_EditorClassIdentifier: 
   id: 18
-  displayName: Wubble
-  description: I have no idea what this hat is.
-  icon: {fileID: 21300000, guid: 1a5b76fd5b4234a4ba658135a5f96c7a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4b90e4eb8f9674041a0a1a1d708c7e07
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

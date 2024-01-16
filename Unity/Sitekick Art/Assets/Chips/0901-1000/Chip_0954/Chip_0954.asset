@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0954
   m_EditorClassIdentifier: 
   id: 954
-  displayName: VikingArm
-  description: Useful as a weapon or farming equipment.
-  icon: {fileID: 21300000, guid: a3e5f27602fb7c347a19f27e4b3ad87d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 29ac8c35c9196764bb6b2d55c40b9a09
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

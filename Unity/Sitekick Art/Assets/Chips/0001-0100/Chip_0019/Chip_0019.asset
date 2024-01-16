@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0019
   m_EditorClassIdentifier: 
   id: 19
-  displayName: PuckBucket
-  description: Shoot, Score; Stay Safe.
-  icon: {fileID: 21300000, guid: ddb66ce6c581a564eb6b5dd07b0ac5cc, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e2e822073e00bac4192ea1b9d8c3b636
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

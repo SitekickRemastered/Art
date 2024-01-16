@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0740
   m_EditorClassIdentifier: 
   id: 740
-  displayName: Sparklers
-  description: Mmmmm--Ouch!
-  icon: {fileID: 21300000, guid: b15cd8a2285a930469256f35f3739758, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 20143d96c16338241978745887dc5b87
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0708
   m_EditorClassIdentifier: 
   id: 708
-  displayName: FairyWings
-  description: DACE - Ember_dragon
-  icon: {fileID: 21300000, guid: a4adf3dbbd9a8f340b9481b60c47daf6, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: efc4d64e1e76d374c86ebb88223701e5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

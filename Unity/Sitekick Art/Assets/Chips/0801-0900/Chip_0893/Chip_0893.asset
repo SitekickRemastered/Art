@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0893
   m_EditorClassIdentifier: 
   id: 893
-  displayName: BackHoeLegs
-  description: Hey Scavenger! Wanna go catch some MiniCons?
-  icon: {fileID: 21300000, guid: facaa1375c36b764e96b889276b7e086, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 83f7bfb002b074745bd31441e94709a1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

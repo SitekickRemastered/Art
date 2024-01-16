@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0252
   m_EditorClassIdentifier: 
   id: 252
-  displayName: YetiEyes
-  description: Snow-Vision Enabled.
-  icon: {fileID: 21300000, guid: 3341204ab61193a41ae030e5fc9f601e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c969ee228a959804ab48fe7bb5ab2fcb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0686
   m_EditorClassIdentifier: 
   id: 686
-  displayName: PotLid
-  description: The preferred helmet of any Treehouse Warrior.
-  icon: {fileID: 21300000, guid: 7c2e2ea832fc8e549bb0f70a9bf2c159, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ffa8f95857c8c6749a8f64f060b00134
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

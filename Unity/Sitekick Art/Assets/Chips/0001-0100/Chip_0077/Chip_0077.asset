@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0077
   m_EditorClassIdentifier: 
   id: 77
-  displayName: AngelWings
-  description: Good things happen.
-  icon: {fileID: 21300000, guid: 59e7f20917e504149abbaf1e932fde28, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4f9d822639e584848a0120dfae4ea0da
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

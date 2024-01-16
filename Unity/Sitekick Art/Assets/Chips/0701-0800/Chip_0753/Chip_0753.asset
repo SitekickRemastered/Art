@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0753
   m_EditorClassIdentifier: 
   id: 753
-  displayName: GoldBucket
-  description: Looks like you reached the rainbow's end.
-  icon: {fileID: 21300000, guid: 2a872c44dd20d29429ebf7547928786d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 62219ac82896b4841be23565695c8f33
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

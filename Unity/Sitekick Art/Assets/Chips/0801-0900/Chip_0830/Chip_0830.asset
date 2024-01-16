@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0830
   m_EditorClassIdentifier: 
   id: 830
-  displayName: SpaceDo2
-  description: Put out my flames with gasoline.
-  icon: {fileID: 21300000, guid: 5336ab8346686c24a9075deeaa526f25, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 26bfaa91107817642ab9fbdcf2481cdb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

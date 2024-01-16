@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0951
   m_EditorClassIdentifier: 
   id: 951
-  displayName: VikingLid
-  description: Push - Unrelenting Force.
-  icon: {fileID: 21300000, guid: 24bd2b645c2714441b3fe1b4b0c49d32, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f7726a514feb9204790517e364803fc4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

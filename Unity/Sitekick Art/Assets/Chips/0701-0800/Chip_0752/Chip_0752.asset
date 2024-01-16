@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0752
   m_EditorClassIdentifier: 
   id: 752
-  displayName: ShoulderBlades
-  description: Enhanced comm-link antennae.
-  icon: {fileID: 21300000, guid: a82ebaf106c5eed4eb908945567fdbb9, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cd29866ff68750d428bf4d2125a5187a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

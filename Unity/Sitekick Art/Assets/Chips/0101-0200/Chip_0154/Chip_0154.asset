@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0154
   m_EditorClassIdentifier: 
   id: 154
-  displayName: BubbleMouth
-  description: How long can you hold that bubble?
-  icon: {fileID: 21300000, guid: 0c5abfccc649cfb498b23d6ba37483ee, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6985cb96c34781a419a64675e4e64b26
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

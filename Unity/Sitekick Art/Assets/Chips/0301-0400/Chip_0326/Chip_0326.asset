@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0326
   m_EditorClassIdentifier: 
   id: 326
-  displayName: Bucktooth
-  description: Honestly, we're not even sure why you'd want this.  Maybe to open
-    bottles?
-  icon: {fileID: 21300000, guid: 1be8333539471b94bb4b11b7b852081d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f85f735174240de48a68eabb868ec6e7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

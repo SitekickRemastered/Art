@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0650
   m_EditorClassIdentifier: 
   id: 650
-  displayName: MimeMug
-  description: The makeup of a silent street performer.
-  icon: {fileID: 21300000, guid: ebe4afbb261d1db4c9b5bb8cbc88e0e7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 14ac4aa34f76ade4bbb45d23fffae4b6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

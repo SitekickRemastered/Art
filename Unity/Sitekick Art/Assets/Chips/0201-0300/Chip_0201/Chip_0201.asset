@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0201
   m_EditorClassIdentifier: 
   id: 201
-  displayName: GrizzlyMech
-  description: A mech suit with traits of a bear
-  icon: {fileID: 21300000, guid: d8e0d6ad0105219469a414b2e4b8b7e4, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 375ac331e40de0444a9d10f4c5c68348
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

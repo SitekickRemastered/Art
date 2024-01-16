@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0779
   m_EditorClassIdentifier: 
   id: 779
-  displayName: Sunlid
-  description: I also like tending the garden at sunset.
-  icon: {fileID: 21300000, guid: 7c3585e1987a3594fafe672a2fd50cf7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6dce07b7e2c643a4291fe78db98d4d79
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

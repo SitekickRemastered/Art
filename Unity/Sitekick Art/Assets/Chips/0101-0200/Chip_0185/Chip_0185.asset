@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0185
   m_EditorClassIdentifier: 
   id: 185
-  displayName: AniEyes8
-  description: Irritated anime eyes
-  icon: {fileID: 21300000, guid: a8d6639c18931c84ea3323e9eb8154f1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 1d003b62be0ee6b44a0300502ad866c9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

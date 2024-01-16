@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0145
   m_EditorClassIdentifier: 
   id: 145
-  displayName: Grouchy
-  description: A storm cloud to rain on your parade.
-  icon: {fileID: 21300000, guid: 3c06df515108baf4eb719e0129f49443, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4b8960096157f84489098438606226dc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

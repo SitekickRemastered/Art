@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0194
   m_EditorClassIdentifier: 
   id: 194
-  displayName: AniMouth8
-  description: I've got a lightbulb for a head, and it's running out of electricity.
-  icon: {fileID: 21300000, guid: 90f110a05f6bae047a8ff4a2fcd49da3, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 05fe0a9798a6d6246821b6857eb47517
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

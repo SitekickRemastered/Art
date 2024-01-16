@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0373
   m_EditorClassIdentifier: 
   id: 373
-  displayName: PuckFiend
-  description: Sitekicks are actually from Canada.  They LOVE hockey.
-  icon: {fileID: 21300000, guid: 013ca1c4e8b56b443a9ed6dbc61a9f1c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 32b81660ff1161e43a7bb5af66f71877
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

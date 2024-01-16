@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0553
   m_EditorClassIdentifier: 
   id: 553
-  displayName: BadHands
-  description: Excellent.
-  icon: {fileID: 21300000, guid: 6f21ad13c9e3a394fbf9d623f7b2f39c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 8e98f35cc9a8dc4489ce92a434cb27ba
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

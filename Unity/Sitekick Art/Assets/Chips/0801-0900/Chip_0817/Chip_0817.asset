@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0817
   m_EditorClassIdentifier: 
   id: 817
-  displayName: ImpFork2
-  description: This actually is two forks.
-  icon: {fileID: 21300000, guid: f495dec5aaade754c89ac536af753f25, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d4b94cfc893419342bd5313ed7507cba
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

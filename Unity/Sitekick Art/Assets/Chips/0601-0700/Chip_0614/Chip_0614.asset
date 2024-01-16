@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0614
   m_EditorClassIdentifier: 
   id: 614
-  displayName: HeroMask3
-  description: For the leader of the team.
-  icon: {fileID: 21300000, guid: c8baf8c0e8cce7e428aeadfa8835210e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 81d37262488d46a44b1b073fcff08a2d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

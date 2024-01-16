@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0555
   m_EditorClassIdentifier: 
   id: 555
-  displayName: BleakCollar
-  description: You can't tame the sorrow.
-  icon: {fileID: 21300000, guid: ad5b20aa80c40ad469e7b989d6838e55, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a3058e90e78c069408f1d1141c5e3436
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

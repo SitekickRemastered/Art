@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0148
   m_EditorClassIdentifier: 
   id: 148
-  displayName: Vampire
-  description: Bleh Bleh!
-  icon: {fileID: 21300000, guid: 39497963615f71d4b9480825d7518f04, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9ebcff7bea89bf04faae7195ad80a2b7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

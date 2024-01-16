@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0031
   m_EditorClassIdentifier: 
   id: 31
-  displayName: Arrow
-  description: Comedic Arrow Headband
-  icon: {fileID: 21300000, guid: 5ed7a4f3c4940ea4cb9d67bda925357c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 085062ab7d67c2241baff4bf9f01cf22
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

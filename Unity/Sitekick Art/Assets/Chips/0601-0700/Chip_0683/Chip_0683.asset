@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0683
   m_EditorClassIdentifier: 
   id: 683
-  displayName: KittyFace
-  description: A very tempting look.
-  icon: {fileID: 21300000, guid: 8d43ffa122347ec448f74c7a01400b7a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 75157d226e7922e43ad242fceed85815
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

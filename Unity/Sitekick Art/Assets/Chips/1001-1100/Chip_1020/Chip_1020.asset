@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1020
   m_EditorClassIdentifier: 
   id: 1020
-  displayName: TigerTail
-  description: Dare you to pull it.
-  icon: {fileID: 21300000, guid: e925d9b5fa58f264280eb824d20a3799, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ffdfed6e1ee728146aa87827ad7de6e5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

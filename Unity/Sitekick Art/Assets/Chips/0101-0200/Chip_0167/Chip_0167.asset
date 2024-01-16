@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0167
   m_EditorClassIdentifier: 
   id: 167
-  displayName: BootsySpecs
-  description: Eyewear of the Movie Star.
-  icon: {fileID: 21300000, guid: 10d540d4d7c103840a4ea5571f19fea2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4b8e86d31205420428392e04cf864751
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

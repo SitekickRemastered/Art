@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0166
   m_EditorClassIdentifier: 
   id: 166
-  displayName: Muffler
-  description: Sleepy Time Scarf.
-  icon: {fileID: 21300000, guid: 0f2b99ec78c891c4492312a20b39466e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bbd66f792f644264b9046ba5d662f0ff
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

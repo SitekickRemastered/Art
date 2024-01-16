@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0523
   m_EditorClassIdentifier: 
   id: 523
-  displayName: CheckStripe
-  description: The default cosmetic in SK Squad Racing.
-  icon: {fileID: 21300000, guid: d15821133b0f3894bac5160d8aad197d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ba2c98be894aa694a82a1c9f8db9c679
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0294
   m_EditorClassIdentifier: 
   id: 294
-  displayName: CDEyes
-  description: Ever wondered what having compact discs for eyes would look like?
-  icon: {fileID: 21300000, guid: fa30b42058529bd40a78771e547dc341, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1c9906fdce5cacc4bb3e28f59fefadf3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

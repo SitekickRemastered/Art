@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0509
   m_EditorClassIdentifier: 
   id: 509
-  displayName: Speedster
-  description: The Flashmobile!
-  icon: {fileID: 21300000, guid: a8bed2a18093c294bb21c00b07f87cf0, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 0b02625a96228234e94918874a8b9b6b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

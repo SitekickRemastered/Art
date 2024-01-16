@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0391
   m_EditorClassIdentifier: 
   id: 391
-  displayName: ReboundFiend
-  description: Nothin' but net!
-  icon: {fileID: 21300000, guid: a60eb3dd12bc0fe4695e1b1b2bbfd392, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b6f4d20d0a53ee740bbf2fc16db0fa3b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0604
   m_EditorClassIdentifier: 
   id: 604
-  displayName: TheGraduate
-  description: This cap is guaranteed to make your future dreams come true.
-  icon: {fileID: 21300000, guid: b9d682a8769c96b4f86bf3a344d29679, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: da8c69b0cfb00d84eae83ce7822fbe3e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

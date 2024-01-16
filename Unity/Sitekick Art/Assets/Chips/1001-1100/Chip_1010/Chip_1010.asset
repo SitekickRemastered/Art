@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1010
   m_EditorClassIdentifier: 
   id: 1010
-  displayName: NoteTopper
-  description: For the music.ly inclined Sitekick
-  icon: {fileID: 21300000, guid: a4bc62ba5bd6c1947979c30eb620d219, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1761d60f90fc66040be0e97715b8f859
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0554
   m_EditorClassIdentifier: 
   id: 554
-  displayName: BleakLips
-  description: Dark, poisonous, and deadly.
-  icon: {fileID: 21300000, guid: db2c023fcb5b66e4189a1b0e904bf048, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fe4852d022677db44b8d10333276b68d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

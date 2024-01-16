@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0496
   m_EditorClassIdentifier: 
   id: 496
-  displayName: X3Mouth
-  description: Truman X's mouth.
-  icon: {fileID: 21300000, guid: d8291bad500f8d74fb3a07776ce0b927, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 687f354e6c06f3840880d3425986d9f4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

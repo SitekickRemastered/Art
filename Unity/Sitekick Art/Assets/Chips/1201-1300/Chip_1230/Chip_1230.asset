@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1230
   m_EditorClassIdentifier: 
   id: 1230
-  displayName: StechHelm
-  description: Orbital Jousting at its finest.
-  icon: {fileID: 21300000, guid: 1d1683227021fe54a87de4173d3349d2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1e5f7a9d7188f1e438f35e3b6d7f2346
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

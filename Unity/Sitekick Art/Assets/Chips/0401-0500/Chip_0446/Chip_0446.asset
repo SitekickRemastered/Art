@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0446
   m_EditorClassIdentifier: 
   id: 446
-  displayName: Beret
-  description: A hat used by the artistic and militaristic alike.
-  icon: {fileID: 21300000, guid: b0aa07c5e37a003469eca2702710dfcb, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9f5475b4177a56f4d94ef50cabb51647
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

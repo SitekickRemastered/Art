@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0199
   m_EditorClassIdentifier: 
   id: 199
-  displayName: Fuse
-  description: Kablooey's signature chip
-  icon: {fileID: 21300000, guid: b3bebbcd38f57584a868134f8021d480, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: e5b2a7b3042827144b726e5995dc9f5a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0805
   m_EditorClassIdentifier: 
   id: 805
-  displayName: SparkleHorse
-  description: Your ride to a magical adventure.
-  icon: {fileID: 21300000, guid: 49f1f95af300baf45818d47f2ae92eae, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 933ca10d4b892734bbb3fbd48bcfc291
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

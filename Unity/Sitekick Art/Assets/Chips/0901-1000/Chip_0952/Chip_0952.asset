@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0952
   m_EditorClassIdentifier: 
   id: 952
-  displayName: VikingMouth
-  description: A mouth fit for Yapping or Shouting.
-  icon: {fileID: 21300000, guid: 0e7a963fd235d544fbf0d927d356dadc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 5784e1eab004fdf448df5ee9da04937f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

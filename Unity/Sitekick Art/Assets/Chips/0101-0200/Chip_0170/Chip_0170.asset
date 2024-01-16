@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0170
   m_EditorClassIdentifier: 
   id: 170
-  displayName: BowlCut
-  description: Jinkies!
-  icon: {fileID: 21300000, guid: 58f44a44e5978ca489e713994d6358d6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0045f3caaf0529e419bca0d79c186a58
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

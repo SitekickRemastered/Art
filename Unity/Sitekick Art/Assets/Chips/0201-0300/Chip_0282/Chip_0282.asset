@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0282
   m_EditorClassIdentifier: 
   id: 282
-  displayName: SpikerOrange
-  description: The safest mohawk around.
-  icon: {fileID: 21300000, guid: 3b5ac94a54d57954db33429f2f921743, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a6dcbd0e1663dab4ea2e41174191b433
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

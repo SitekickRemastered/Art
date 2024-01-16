@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0310
   m_EditorClassIdentifier: 
   id: 310
-  displayName: OctoArm8
-  description: Firmly Grasp It.
-  icon: {fileID: 21300000, guid: 86015de365892bd4285f9d63a6ed764f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 1c92c16d72d6ecb4ebf37753c5004a6c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

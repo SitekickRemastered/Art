@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0602
   m_EditorClassIdentifier: 
   id: 602
-  displayName: SubterraFlag
-  description: Apparently this skinless tambourine is referred to as "headless."
-    Imagine that.
-  icon: {fileID: 21300000, guid: 68262ced31a434848a441bfb39a18d58, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 16dbf58fedd669a4cb66ecbb171d0b2d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

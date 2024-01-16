@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0038
   m_EditorClassIdentifier: 
   id: 38
-  displayName: Deadeye
-  description: Got my eye on you.
-  icon: {fileID: 21300000, guid: abce2e57d51854242997536abe9dbabf, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8a94e66b354621a468796da74fc4be9e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

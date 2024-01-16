@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0048
   m_EditorClassIdentifier: 
   id: 48
-  displayName: ScurvyLid
-  description: Pirate Hat, Argh!
-  icon: {fileID: 21300000, guid: a205710a3d8d3be408fb295945378bb3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1edcea995c2de194fa8bb37cedd7079c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0640
   m_EditorClassIdentifier: 
   id: 640
-  displayName: Phoenix
-  description: DACE - LilAngelXD
-  icon: {fileID: 21300000, guid: 42345edaa3950ab4689ba7717bdd35b3, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 0d744e0b98c442042a41414d49337d34
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

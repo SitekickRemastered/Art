@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0806
   m_EditorClassIdentifier: 
   id: 806
-  displayName: PineappleDo
-  description: This is not a hat. It's a hairdo.
-  icon: {fileID: 21300000, guid: 635c56d16d432c94d9119c62e647b2fc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a4c40d27009a4f84c86a7413145b1bbf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

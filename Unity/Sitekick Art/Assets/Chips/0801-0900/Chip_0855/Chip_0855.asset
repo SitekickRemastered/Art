@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0855
   m_EditorClassIdentifier: 
   id: 855
-  displayName: BallCap3
-  description: Alphanumeric!
-  icon: {fileID: 21300000, guid: 0349bf6e4277eea4582ab78ca53ea87b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e0ec11eb755dd864ca70dd37315c920a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

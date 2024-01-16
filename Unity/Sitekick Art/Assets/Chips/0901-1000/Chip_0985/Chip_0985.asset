@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0985
   m_EditorClassIdentifier: 
   id: 985
-  displayName: TreeTrunk
-  description: You found your roots yet?
-  icon: {fileID: 21300000, guid: b71e4f42b4d623a47820b84ee24a32de, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1e7cda2e2d72c2e48b1faf6400ddfe42
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0757
   m_EditorClassIdentifier: 
   id: 757
-  displayName: QueenLid
-  description: The crown worn by Canadian coins' heads.
-  icon: {fileID: 21300000, guid: 1ca69b9d289a53d45b565e0292795883, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 81b2d7c1c5d48f744a525bf5261d4c04
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1073
   m_EditorClassIdentifier: 
   id: 1073
-  displayName: FrauDress
-  description: Bonbon fashion sense.
-  icon: {fileID: 21300000, guid: 11fd8a79bbb5c9d43bb4284b35d13e35, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9c5b05d8a435b1e478367156c2ac0e6d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

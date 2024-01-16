@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0260
   m_EditorClassIdentifier: 
   id: 260
-  displayName: Racer
-  description: Beat that!
-  icon: {fileID: 21300000, guid: 39b22d6f436102f4ab016d569f811ac7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e5c58ab189bf08c469fcdae322a05ec5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

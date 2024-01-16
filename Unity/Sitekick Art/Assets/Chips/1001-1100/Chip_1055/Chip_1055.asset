@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1055
   m_EditorClassIdentifier: 
   id: 1055
-  displayName: FoxyPaws
-  description: The quick brown fox jumps over the lazy dog.
-  icon: {fileID: 21300000, guid: 907a79d745c44724598478c37dbd85b0, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4020cd77ccc1d0d46bfaae657b4a4dea
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

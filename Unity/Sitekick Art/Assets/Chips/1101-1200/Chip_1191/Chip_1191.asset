@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1191
   m_EditorClassIdentifier: 
   id: 1191
-  displayName: ImpHood
-  description: Cloaked Canday.
-  icon: {fileID: 21300000, guid: da5bd9dce25faa8479980047182bf4a0, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1fc21e503dd6f9e43bc3e465379e3923
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0277
   m_EditorClassIdentifier: 
   id: 277
-  displayName: CarnoEyes
-  description: Angry alien eyes
-  icon: {fileID: 21300000, guid: 948966e60939ef549944afdc4d1a456c, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 6c271b96802784841935eb934f68fd67
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

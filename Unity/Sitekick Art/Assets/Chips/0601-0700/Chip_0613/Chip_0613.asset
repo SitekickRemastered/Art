@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0613
   m_EditorClassIdentifier: 
   id: 613
-  displayName: HeroMask2
-  description: Worn by the inventor in the group.
-  icon: {fileID: 21300000, guid: 93532ea02989b584cb4689dd136416cf, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4f8f0f7b3bb311e4cba53d64b19c4645
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

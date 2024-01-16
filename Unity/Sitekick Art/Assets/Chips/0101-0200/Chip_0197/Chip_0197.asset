@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0197
   m_EditorClassIdentifier: 
   id: 197
-  displayName: AniEffect2
-  description: Ikatteiru.
-  icon: {fileID: 21300000, guid: 23184917678a4f14ea6e877e149d995a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: dfcc593f59b354f42b6d5cfa61b277ea
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

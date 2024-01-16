@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0415
   m_EditorClassIdentifier: 
   id: 415
-  displayName: GorillaMug
-  description: Optimus Primal! Maximize!
-  icon: {fileID: 21300000, guid: 6c104598ec5fe4c4d9145c30d293dc35, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 16762d9e2fcdb9a4f8db6ad35c1f378e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

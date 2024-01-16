@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0494
   m_EditorClassIdentifier: 
   id: 494
-  displayName: X2Mouth
-  description: Trudy X's mouth.
-  icon: {fileID: 21300000, guid: 6fa43337ee867d840a253b9400fe9c39, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 69484d36763d0434ba700c1062e6f35d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

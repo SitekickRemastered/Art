@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0115
   m_EditorClassIdentifier: 
   id: 115
-  displayName: RedEyes
-  description: Not necessarily always evil.
-  icon: {fileID: 21300000, guid: fa07b737b77986b41878bd71f27b525f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e3d4af05321a0b14e8c7ba69a1eeacf8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

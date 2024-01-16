@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0981
   m_EditorClassIdentifier: 
   id: 981
-  displayName: Heather
-  description: No! Please, Heather, not like this.
-  icon: {fileID: 21300000, guid: 47927db9b646d7141aaac39532c5a488, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: eeab4f6ea2ebea840981841a9f419a4e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

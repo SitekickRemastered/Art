@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0709
   m_EditorClassIdentifier: 
   id: 709
-  displayName: Tractor
-  description: Guaranteed to ruin any commute through country roads.
-  icon: {fileID: 21300000, guid: e944d5e7524318041b94f3ce7d701e38, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7e7ecd97f36a91144973580bdee20ed7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

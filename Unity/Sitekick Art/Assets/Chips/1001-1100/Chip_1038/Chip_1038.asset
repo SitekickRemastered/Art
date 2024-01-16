@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1038
   m_EditorClassIdentifier: 
   id: 1038
-  displayName: CandyKick
-  description: Mmmm. Candy.
-  icon: {fileID: 21300000, guid: a53ae8c96a7b72940bac93d4556f1882, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 402fb86ee1489fd4692b517d07aca7b6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

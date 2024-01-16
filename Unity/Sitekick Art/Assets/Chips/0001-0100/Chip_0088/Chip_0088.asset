@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0088
   m_EditorClassIdentifier: 
   id: 88
-  displayName: Grace
-  description: She's seen it all.
-  icon: {fileID: 21300000, guid: 197179574bd980d4084aed8dae5d228f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6e48e6b33ac748e4face995da6fcdccd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

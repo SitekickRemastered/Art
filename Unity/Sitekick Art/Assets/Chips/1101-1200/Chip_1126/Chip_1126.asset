@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1126
   m_EditorClassIdentifier: 
   id: 1126
-  displayName: VeggieArma
-  description: This one's for all the house plants out there.
-  icon: {fileID: 21300000, guid: c35de5970bab7934dad07bbfb0713190, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a96ae9744e4a57543b0de6441cd52972
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

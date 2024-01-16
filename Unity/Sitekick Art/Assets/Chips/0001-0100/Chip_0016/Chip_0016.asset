@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0016
   m_EditorClassIdentifier: 
   id: 16
-  displayName: Snowman
-  description: Site-kick the snow man was a jolly robot soul.
-  icon: {fileID: 21300000, guid: 7aff13c1241e820479ddf1c9638fa4dc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c19e73d05e5b0484a9f5ff15c3c7b555
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

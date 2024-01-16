@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0649
   m_EditorClassIdentifier: 
   id: 649
-  displayName: Candle
-  description: Find your Zen. Keep the candle lit by staying perfectly still.
-  icon: {fileID: 21300000, guid: 9a222d0f26fc7e747afa7d562f9ea029, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 24e5258105e386842a6f90cd262376a2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

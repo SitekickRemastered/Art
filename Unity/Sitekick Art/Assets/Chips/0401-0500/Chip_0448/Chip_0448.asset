@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0448
   m_EditorClassIdentifier: 
   id: 448
-  displayName: SirHelm
-  description: Son, have you been reading heresy?
-  icon: {fileID: 21300000, guid: a305001fe1540c84090bb56818ea26fb, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 0aa372fa32395da44a369bc8e9abd82f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0265
   m_EditorClassIdentifier: 
   id: 265
-  displayName: SnorkelGogs
-  description: Do you see me? I see you.
-  icon: {fileID: 21300000, guid: 0aec8bd171e189149be1ac81b960a47a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 71826cf22f2ec2449a2907caaad6dbe8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1177
   m_EditorClassIdentifier: 
   id: 1177
-  displayName: ThunderHelm
-  description: Surely you're worthy?
-  icon: {fileID: 21300000, guid: 8a3b749eda6d17547a6f63d98e5a3221, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 56b24af7d2af4bd4fa039dd4140257b9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

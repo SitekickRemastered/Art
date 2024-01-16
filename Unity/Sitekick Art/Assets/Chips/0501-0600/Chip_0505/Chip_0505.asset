@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0505
   m_EditorClassIdentifier: 
   id: 505
-  displayName: Adrenilini1
-  description: "Xan Adrenilini and his brothers hail from the mysterious land of
-    R\xE9nd\xF8os\xEEa."
-  icon: {fileID: 21300000, guid: 73e3b176abe46914399b27341ffaa6a2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a9ee21ac5d6d4c6418a5eb76c8831a16
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0026
   m_EditorClassIdentifier: 
   id: 26
-  displayName: Scarf
-  description: The perfect winter accessory for any student of magic.
-  icon: {fileID: 21300000, guid: 101678e972423bc428a324d5e435bfe2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 26898e32170644c459f6398881d5eeb3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

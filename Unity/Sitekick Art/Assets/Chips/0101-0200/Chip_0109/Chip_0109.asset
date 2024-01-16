@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0109
   m_EditorClassIdentifier: 
   id: 109
-  displayName: Jimmy
-  description: A haircut befitting of any comic book photographer.
-  icon: {fileID: 21300000, guid: 45f524f36e7021445b534b0f28d59720, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 58e1dd0307f4ebb41b1880daf4cc15dc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1220
   m_EditorClassIdentifier: 
   id: 1220
-  displayName: SiteZooka
-  description: Unleash brutal rocket barrages with this SK-sized "Lawn Chair."
-  icon: {fileID: 21300000, guid: 005abb33baabb334282e97fe5c3c25cb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 841b5239899c2104d82dc12a49301491
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

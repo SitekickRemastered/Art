@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1051
   m_EditorClassIdentifier: 
   id: 1051
-  displayName: SpiderMug
-  description: Tarantulas, terrorize!
-  icon: {fileID: 21300000, guid: f12413edf2d49dd4ead547e69cf1fa38, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6684071da9b9c4a42963dc80f83ea033
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

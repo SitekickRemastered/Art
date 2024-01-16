@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0868
   m_EditorClassIdentifier: 
   id: 868
-  displayName: WolfSwordB
-  description: DACE - Stoor/BeachMan95
-  icon: {fileID: 21300000, guid: ea49105fae893024a91a6a0c8b0b9540, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 6f515665597b4aa469428a3c1ee42584
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

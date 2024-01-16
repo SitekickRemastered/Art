@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1077
   m_EditorClassIdentifier: 
   id: 1077
-  displayName: C7Eyes
-  description: The superior festive light bulb.
-  icon: {fileID: 21300000, guid: 0e225500d534fec45b45b942e31d1e23, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 39f07aed66fbcb94ebd8498fda89bc92
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

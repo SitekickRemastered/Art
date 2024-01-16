@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0425
   m_EditorClassIdentifier: 
   id: 425
-  displayName: ButtKick3
-  description: A right hook to help you with all the buttkicking you're going to
-    be doing.
-  icon: {fileID: 21300000, guid: 7691f5707600fe745bbd47c1d0f3a70c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4a940ea6dcd04894d9fe0005bceefb38
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

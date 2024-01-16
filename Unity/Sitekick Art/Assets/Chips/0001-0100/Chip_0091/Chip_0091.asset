@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0091
   m_EditorClassIdentifier: 
   id: 91
-  displayName: Bailey
-  description: It may look like gum, but chewing this will turn you into a kitty
-    cat--meow.
-  icon: {fileID: 21300000, guid: 84da5b9a25c78bc4896cf0d74bc5350d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a4d20ea4ada68fb4fab25c3fbb5690b7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

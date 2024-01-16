@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0261
   m_EditorClassIdentifier: 
   id: 261
-  displayName: ChopSueyHair
-  description: Sticky Rice styled bun.
-  icon: {fileID: 21300000, guid: db2ade20ab68e974982f613c6c5d12f6, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f3dbd96df7147e0459d8644a4774fc2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

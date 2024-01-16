@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0846
   m_EditorClassIdentifier: 
   id: 846
-  displayName: MetalWings
-  description: DACE - MetalMadness
-  icon: {fileID: 21300000, guid: adbcdf9eba44fc440b9c7770bcc9e03b, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 8405d2127cd24ea4a9a2e3ffefc27928
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

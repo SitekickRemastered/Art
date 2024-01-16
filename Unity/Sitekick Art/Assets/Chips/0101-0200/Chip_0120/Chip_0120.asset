@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0120
   m_EditorClassIdentifier: 
   id: 120
-  displayName: PinkEyes
-  description: A pair of pink eyes--not contagious; trust me
-  icon: {fileID: 21300000, guid: 7033e9b03388b5a4b82e0435d3e28d29, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 127d47457e46b284dab5df00051b367b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0718
   m_EditorClassIdentifier: 
   id: 718
-  displayName: Parachute
-  description: The best part of elementary school.
-  icon: {fileID: 21300000, guid: b31eb163fcd688d4ebae5a75c8ba479b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 182bd42fcd6aad84c9f061d774663a9c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

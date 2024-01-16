@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0413
   m_EditorClassIdentifier: 
   id: 413
-  displayName: GorillaLid
-  description: Feeling Primal yet?
-  icon: {fileID: 21300000, guid: 75ab7c5bbc1e3cc4ba0f77b769390bde, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0296af86dcc0894478bac8bd16047d2b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

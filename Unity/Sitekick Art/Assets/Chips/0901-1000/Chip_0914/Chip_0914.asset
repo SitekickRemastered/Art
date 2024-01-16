@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0914
   m_EditorClassIdentifier: 
   id: 914
-  displayName: BeeSwarm
-  description: Ah! A Bee! It's gonna get me!
-  icon: {fileID: 21300000, guid: 0af01f7cd36d56f469eb4321c906f65f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 453775d89e976cc4280bfcaca57c6ce6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

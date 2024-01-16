@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0329
   m_EditorClassIdentifier: 
   id: 329
-  displayName: Antyfeelers
-  description: Ant-lers.  Get it?  Get it?  I'll show myself out.
-  icon: {fileID: 21300000, guid: a78817ceeb2e6bd41bcf49b31f402365, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 60c7b65d8e83eab44a22aaefbd4c2c1e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

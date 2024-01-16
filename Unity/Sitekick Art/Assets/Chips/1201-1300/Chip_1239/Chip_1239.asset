@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1239
   m_EditorClassIdentifier: 
   id: 1239
-  displayName: BatKick
-  description: What a vengeful night to have a crusade.
-  icon: {fileID: 21300000, guid: fdce9d494fe7012499e8874ec1d9a6ba, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d09ce45db1f80404bb365e3cad58fe1e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

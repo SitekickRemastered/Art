@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0808
   m_EditorClassIdentifier: 
   id: 808
-  displayName: DerbyLid
-  description: Brain Cap, Cranium Bucket.
-  icon: {fileID: 21300000, guid: a86f7c836a2302542983856efb4908d2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 23680859521dbc74aa4c455bd4fa1e05
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0787
   m_EditorClassIdentifier: 
   id: 787
-  displayName: RecycleMark
-  description: Fair Use, right?
-  icon: {fileID: 21300000, guid: f778e3d9dde22ef4cbdc59f389e67756, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2cb6c0b06417cbe4798a1e83d3ef98b7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0086
   m_EditorClassIdentifier: 
   id: 86
-  displayName: Abby
-  description: Cotton Candy? The carnival's in town.
-  icon: {fileID: 21300000, guid: 8f44c3aafebe3ff40a61d346fecc3331, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6d9cfbf70f208da47bcc163881b7d63b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0254
   m_EditorClassIdentifier: 
   id: 254
-  displayName: YetiBrows
-  description: Wise old brows.
-  icon: {fileID: 21300000, guid: da01a421459de304e8bca391eae379d9, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c07ddd9ae34212e428711befacdf1677
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

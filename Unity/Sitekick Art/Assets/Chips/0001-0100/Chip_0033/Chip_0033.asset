@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0033
   m_EditorClassIdentifier: 
   id: 33
-  displayName: GagNose
-  description: For hiding your mid face.
-  icon: {fileID: 21300000, guid: f7de6a4f4b452924988721f1c76d6444, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a24fe8887cfb87d408eafb6efad86e57
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

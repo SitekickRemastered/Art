@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0190
   m_EditorClassIdentifier: 
   id: 190
-  displayName: AniMouth4
-  description: ~Aww~ Sumimasen.
-  icon: {fileID: 21300000, guid: c80aca5e03a905a4b971bc5f9c400201, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 1166fc113906d034ea492e60c7a415a7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

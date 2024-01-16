@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0892
   m_EditorClassIdentifier: 
   id: 892
-  displayName: TeethTrap
-  description: Atrapa Al Oso!
-  icon: {fileID: 21300000, guid: 151e319f3413a3d44bdede1fd77a96fa, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b534dc86589b7ae4ea89a7e8bf3de645
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

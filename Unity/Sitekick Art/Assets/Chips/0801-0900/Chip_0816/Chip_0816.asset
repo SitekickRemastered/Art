@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0816
   m_EditorClassIdentifier: 
   id: 816
-  displayName: SpaceDo
-  description: Am I floating in a tin can? Far above the clouds.
-  icon: {fileID: 21300000, guid: 6d4cd780a5ee2a64f82e302a287dcfc6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7c9f37e2555c7644bbce512166071f91
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

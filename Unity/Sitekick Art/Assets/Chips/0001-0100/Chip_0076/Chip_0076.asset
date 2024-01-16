@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0076
   m_EditorClassIdentifier: 
   id: 76
-  displayName: AngelHalo
-  description: For all the good Sitekicks
-  icon: {fileID: 21300000, guid: 334a3d8c7562af44baae017d90266418, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9ab1766e2c5c1954cb53a8ce986d245a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0084
   m_EditorClassIdentifier: 
   id: 84
-  displayName: Jenny
-  description: Take a seat. We'll be ready for you shortly.
-  icon: {fileID: 21300000, guid: 5210b1676d00590448c5cce84c865888, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9d43697007788d841ad7f35858719d97
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

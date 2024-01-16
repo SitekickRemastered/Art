@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1105
   m_EditorClassIdentifier: 
   id: 1105
-  displayName: AniDo7
-  description: Running like a ninja? You better believe that's a paddlin.'
-  icon: {fileID: 21300000, guid: 169e5ad884157c042859d664f26f468b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2536fce637795704b80c79bc3b019462
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

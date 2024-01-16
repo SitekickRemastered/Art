@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0186
   m_EditorClassIdentifier: 
   id: 186
-  displayName: AniEyes9
-  description: Serious anime eyes
-  icon: {fileID: 21300000, guid: f196aeb13ad6a964a97db755731c5f41, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 509dba1723289484f99d339f07af43a7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

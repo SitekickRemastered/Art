@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0398
   m_EditorClassIdentifier: 
   id: 398
-  displayName: PoodleEars
-  description: You will surely win the dog show with this style.
-  icon: {fileID: 21300000, guid: b8f01c71f882f7c42b8545635f89de82, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: df85df8a49d841341b8ceecb258355a0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

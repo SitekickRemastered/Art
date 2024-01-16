@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0133
   m_EditorClassIdentifier: 
   id: 133
-  displayName: StarryEyes
-  description: '". . . We''ll always find a way!"'
-  icon: {fileID: 21300000, guid: 0174b082a10f5be4d8c4478bd024712f, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 6f123636df4c1914ea0e6aefa490e4f4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

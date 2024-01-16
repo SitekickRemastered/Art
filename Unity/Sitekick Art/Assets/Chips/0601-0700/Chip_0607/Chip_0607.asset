@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0607
   m_EditorClassIdentifier: 
   id: 607
-  displayName: TheMagistic
-  description: This rabbit has seen things . . .
-  icon: {fileID: 21300000, guid: 85bdfc62ac755b64b812b93fa5265fa7, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9a6a3da861bb24f47843d947e7fef248
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

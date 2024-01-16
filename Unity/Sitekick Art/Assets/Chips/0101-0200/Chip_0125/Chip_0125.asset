@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0125
   m_EditorClassIdentifier: 
   id: 125
-  displayName: CrimsonEyes
-  description: Sanguis Bibimus.
-  icon: {fileID: 21300000, guid: 7e5b2d2802cd78e4ba120aea87d84011, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 0f846af6102d964418d2fdd7095ae8fb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

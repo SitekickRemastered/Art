@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0065
   m_EditorClassIdentifier: 
   id: 65
-  displayName: Moustachio
-  description: It's a me!
-  icon: {fileID: 21300000, guid: 59cb30b4a17e7e4478d3e864d613d8cc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 34fc6d66c615ea64c941163bfefd696f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

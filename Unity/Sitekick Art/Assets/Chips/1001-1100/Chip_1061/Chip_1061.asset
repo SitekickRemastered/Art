@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1061
   m_EditorClassIdentifier: 
   id: 1061
-  displayName: DocLid
-  description: A head mirror, so you can see yourself getting a medical examination.
-  icon: {fileID: 21300000, guid: f1e9ee14bc6762a4184c75a157e59163, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 316dec8d28537484a9a97876454776e7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

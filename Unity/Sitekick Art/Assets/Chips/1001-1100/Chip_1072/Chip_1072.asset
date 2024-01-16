@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1072
   m_EditorClassIdentifier: 
   id: 1072
-  displayName: FrauWand
-  description: Ready to harness some Fairy Tale magic.
-  icon: {fileID: 21300000, guid: 34d7f3489e480e242a1fb06a5997694f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4267c7095ea8f434280cadcd17e76942
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

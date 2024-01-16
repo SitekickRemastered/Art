@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0275
   m_EditorClassIdentifier: 
   id: 275
-  displayName: OuchieNoggin
-  description: Survive to kick another day.
-  icon: {fileID: 21300000, guid: e5589694d6e30204c9d2e22a8d631754, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fcbf4499aaaa8ce4986f6b6f8b3fb8dc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

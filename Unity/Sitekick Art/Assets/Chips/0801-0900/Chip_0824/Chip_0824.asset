@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0824
   m_EditorClassIdentifier: 
   id: 824
-  displayName: DrillerLid
-  description: Lenny Fillgo's Helmet.
-  icon: {fileID: 21300000, guid: bd268d5db1150ff4f9cc05d130888e83, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e977586ca1c5464498b0b1d9bc6dd072
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

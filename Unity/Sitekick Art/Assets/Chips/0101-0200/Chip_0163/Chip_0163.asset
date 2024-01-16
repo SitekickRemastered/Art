@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0163
   m_EditorClassIdentifier: 
   id: 163
-  displayName: PigTail1
-  description: Useful accessory to the LongHair chip.
-  icon: {fileID: 21300000, guid: 541e4015bc1f50442a409a4ce60a39a8, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9ab47a20b7b15874ca75866a45970323
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1079
   m_EditorClassIdentifier: 
   id: 1079
-  displayName: RoyalLid
-  description: Feeling Imperial?
-  icon: {fileID: 21300000, guid: 151faaa3f725d5340ae58e3fa62b8504, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b87361d876e368c4e9b6944300a53083
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

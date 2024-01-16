@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0079
   m_EditorClassIdentifier: 
   id: 79
-  displayName: ImpTail
-  description: '"I dance on your grave!"'
-  icon: {fileID: 21300000, guid: c44ec3ec7c4799444bed60d3780bbe3a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ea5183bd4de5ff447ae4b1f1eddbd040
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

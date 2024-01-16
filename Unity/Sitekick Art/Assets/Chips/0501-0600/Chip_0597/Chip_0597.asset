@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0597
   m_EditorClassIdentifier: 
   id: 597
-  displayName: Luma
-  description: This could be comedy or horror.
-  icon: {fileID: 21300000, guid: 56e1da9a322e3af449513aa6470a2bf1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 282da9055acb680478530d6a7e7d869b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

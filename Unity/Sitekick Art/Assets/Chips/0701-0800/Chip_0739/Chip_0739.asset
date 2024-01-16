@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0739
   m_EditorClassIdentifier: 
   id: 739
-  displayName: Apron
-  description: The splash guard of the chef.
-  icon: {fileID: 21300000, guid: 206f03a774f1d3645848b21f36db047b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6cace237d205b864f87e77c4116f39d2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

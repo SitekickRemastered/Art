@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0062
   m_EditorClassIdentifier: 
   id: 62
-  displayName: Mullet
-  description: Party in the back. Business up front.
-  icon: {fileID: 21300000, guid: 3ac74e710ae409946bfed0af326c0e77, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: da48feb7a76ce5949aae705079aa15e2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

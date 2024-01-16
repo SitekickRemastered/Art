@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0936
   m_EditorClassIdentifier: 
   id: 936
-  displayName: PoobahLid
-  description: '"Kill the Grand Poobah!"'
-  icon: {fileID: 21300000, guid: f1e533fd697b82e4a8490700ce0de476, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 32330404400d157459a5530327c8199a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

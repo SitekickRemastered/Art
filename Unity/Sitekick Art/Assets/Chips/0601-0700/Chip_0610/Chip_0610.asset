@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0610
   m_EditorClassIdentifier: 
   id: 610
-  displayName: TheHareStyle
-  description: Hairstyle? More like beanie.
-  icon: {fileID: 21300000, guid: 6be2740c4420f89468fd2b060cc0dfc7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ec5c6fa494363eb4b84a07bf0a7d10cb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

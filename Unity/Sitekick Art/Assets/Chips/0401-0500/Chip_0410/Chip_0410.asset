@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0410
   m_EditorClassIdentifier: 
   id: 410
-  displayName: SPFZero
-  description: This is one painful-looking tan.
-  icon: {fileID: 21300000, guid: 69dd4c3a8c839ec428fd50444872f37a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6aed58c25f41c6e4c85407903578ab8a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

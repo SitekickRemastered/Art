@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0278
   m_EditorClassIdentifier: 
   id: 278
-  displayName: CarnoMouth
-  description: A very predatory grimace
-  icon: {fileID: 21300000, guid: 9a911a2249e8f844084b5857eade3e7a, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: dae94c42208cdff4b9164ebdaef0301d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

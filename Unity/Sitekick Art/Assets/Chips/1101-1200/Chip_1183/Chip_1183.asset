@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1183
   m_EditorClassIdentifier: 
   id: 1183
-  displayName: FreeDeeSpecs
-  description: Discover a new plane of movement in . . . The Third Dimension!
-  icon: {fileID: 21300000, guid: 9631d90a9c6ee074f9951a87fa6caab0, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9dbb5907e0b5cb540a93ab2e7d391227
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

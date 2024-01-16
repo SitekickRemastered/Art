@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0706
   m_EditorClassIdentifier: 
   id: 706
-  displayName: DarkWings
-  description: DACE - Slashboy2
-  icon: {fileID: 21300000, guid: 4b099d08716c4b245a18c7743a5ec43f, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: e85c862ececc7064aaed549474641854
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

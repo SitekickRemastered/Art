@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0580
   m_EditorClassIdentifier: 
   id: 580
-  displayName: FoxTail
-  description: If you had two of these, your Sitekick could become a helicopter.
-  icon: {fileID: 21300000, guid: ab8a7a04edfd04a48a32a25d830fc679, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b8c28317140d938489da90c77cc2fea0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

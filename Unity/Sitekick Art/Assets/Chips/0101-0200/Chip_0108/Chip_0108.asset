@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0108
   m_EditorClassIdentifier: 
   id: 108
-  displayName: Scotty
-  description: Beam me up.
-  icon: {fileID: 21300000, guid: 84b58f98dbc15c9459c559ee988a7b51, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1c681420d897ece4d9ddd132746d9e46
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

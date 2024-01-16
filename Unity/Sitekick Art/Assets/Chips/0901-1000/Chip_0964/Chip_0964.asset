@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0964
   m_EditorClassIdentifier: 
   id: 964
-  displayName: SquidLid
-  description: There once was a Sid named Squid.
-  icon: {fileID: 21300000, guid: f1d9e4b5828a311458fc336df9e4cbb1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9fde9b8b870623446bfda5beb4253c61
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0827
   m_EditorClassIdentifier: 
   id: 827
-  displayName: DrillerBod
-  description: Yours is the drill that will pierce the heavens!
-  icon: {fileID: 21300000, guid: 497d6caf0411a5b468777742ea809f97, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 85be25add90d7fe41b14f474b7fc0a8e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

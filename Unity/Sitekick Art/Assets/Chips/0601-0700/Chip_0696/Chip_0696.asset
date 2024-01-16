@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0696
   m_EditorClassIdentifier: 
   id: 696
-  displayName: DJNoHands
-  description: On a Tuesday, DJ skills were used to create Chips. Listen to that
-    *Rick Rick Rickah-Ree!*
-  icon: {fileID: 21300000, guid: b4497631ada212644919de7160253676, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: dffba012d97920f47b23717a4de0b216
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

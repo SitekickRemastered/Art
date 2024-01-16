@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1198
   m_EditorClassIdentifier: 
   id: 1198
-  displayName: LycanHinds
-  description: Legs made for lunging at prey and a tail to give away how you're feeling.
-  icon: {fileID: 21300000, guid: b68fee44a06856044a16c2af570248d2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1471189b5c83cbc47ad27a0fc051b495
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

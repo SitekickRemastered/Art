@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0005
   m_EditorClassIdentifier: 
   id: 5
-  displayName: Friday
-  description: To save the Lab, you embark on a journey back in time to harvest valuable
-    scales from the lab's deceased pet fish.
-  icon: {fileID: 21300000, guid: 4ddcdafbf5d6ffc42bc9b5371ab763e3, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b16c966e73cd88e4d82c8d5855d70adf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

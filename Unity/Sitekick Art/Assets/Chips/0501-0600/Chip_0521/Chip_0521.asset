@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0521
   m_EditorClassIdentifier: 
   id: 521
-  displayName: DualStripe2
-  description: This won't show up very well on very dark Sitekicks.
-  icon: {fileID: 21300000, guid: 09867e392804528418b402881aaf67a2, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 006b73c510fa6a846862d707fcdbad4a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

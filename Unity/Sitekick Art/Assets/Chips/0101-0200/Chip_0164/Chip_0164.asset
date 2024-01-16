@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0164
   m_EditorClassIdentifier: 
   id: 164
-  displayName: PigTail2
-  description: Meant to compliment LongHair.
-  icon: {fileID: 21300000, guid: c512be98800dc404cb8b71b1e3fa61ad, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2bc9b96d4c7190d4f8b0a4a3af85ba23
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

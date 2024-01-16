@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1062
   m_EditorClassIdentifier: 
   id: 1062
-  displayName: SapphireEyes
-  description: There's only one outcome in sight.
-  icon: {fileID: 21300000, guid: 621858ef48f083245bbd06b49ed993c6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 179ca92963f9c404e85f68c1585ff431
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

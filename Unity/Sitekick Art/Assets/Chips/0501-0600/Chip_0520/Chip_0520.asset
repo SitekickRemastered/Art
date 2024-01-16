@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0520
   m_EditorClassIdentifier: 
   id: 520
-  displayName: DualStripe
-  description: Works best with any color but White.
-  icon: {fileID: 21300000, guid: 2f915f5fab88935479ed32ab96d5130f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 8ac3cf387ecd88a4bad3432a9b930f9c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

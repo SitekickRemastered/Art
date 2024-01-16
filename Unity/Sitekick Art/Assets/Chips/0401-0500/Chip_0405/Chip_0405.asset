@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0405
   m_EditorClassIdentifier: 
   id: 405
-  displayName: HoneyFeelers
-  description: These are useful for interactions within the hive.
-  icon: {fileID: 21300000, guid: 58780d8771521f747ab2e5b2ab393662, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 288d2b556fe0b4e459b10d17d12db454
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1027
   m_EditorClassIdentifier: 
   id: 1027
-  displayName: DragonflyWings
-  description: Looks like your last hit point.
-  icon: {fileID: 21300000, guid: 098aab44021446a4ea0a6c87a3988198, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 95f705ed7fff06d448bdcc13864cdfff
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

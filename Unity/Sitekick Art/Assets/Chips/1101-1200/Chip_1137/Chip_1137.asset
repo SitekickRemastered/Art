@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1137
   m_EditorClassIdentifier: 
   id: 1137
-  displayName: CuddleEyes
-  description: Hey, Moustache, what's up?
-  icon: {fileID: 21300000, guid: c0226bc778562a140816cd657a832348, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0b3de37c61c4dcf45bdadb17909036c5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

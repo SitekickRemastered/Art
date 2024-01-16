@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0880
   m_EditorClassIdentifier: 
   id: 880
-  displayName: HareTrick
-  description: So that's how it's done.
-  icon: {fileID: 21300000, guid: 24ece448c4fd1004cb8cc56f5e9ded46, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fd749a0cbdf202542a0b06ec16f1e9ed
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

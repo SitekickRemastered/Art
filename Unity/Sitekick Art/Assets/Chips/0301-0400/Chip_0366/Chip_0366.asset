@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0366
   m_EditorClassIdentifier: 
   id: 366
-  displayName: GrizzlyMouth
-  description: ROAAAAAAAAAAAAAAAAAAAAAAAAAAR mouth
-  icon: {fileID: 21300000, guid: 4f2309ee05bfaab4a8d987ed7da285b3, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: fe09ee0a9b8d8e049b7e4c242a81c3db
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

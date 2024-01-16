@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0247
   m_EditorClassIdentifier: 
   id: 247
-  displayName: SidKick
-  description: Grants the body of a pickle . . . or a bitter melon
-  icon: {fileID: 21300000, guid: 4ddb90f33c29c32408d454769ac74f21, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 479512998f6c32a4daf329ec578c58c8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

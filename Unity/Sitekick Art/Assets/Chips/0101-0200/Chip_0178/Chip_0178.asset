@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0178
   m_EditorClassIdentifier: 
   id: 178
-  displayName: AniEyes
-  description: Imagine the awkward anime guy's eyes when his hand goes behind his
-    head.
-  icon: {fileID: 21300000, guid: b8158e91523776444850ed72f2d887c7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e88e45f0a99c9cf4fbeb8b730b7850a9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

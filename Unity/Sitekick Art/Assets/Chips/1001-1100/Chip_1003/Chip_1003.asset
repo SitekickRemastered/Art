@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1003
   m_EditorClassIdentifier: 
   id: 1003
-  displayName: Balloons
-  description: Come float with me.
-  icon: {fileID: 21300000, guid: adb9100363d0803468b2d2a2f77a5dce, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fe0b595cc699f16409693c9012a67df0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

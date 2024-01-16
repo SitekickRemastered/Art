@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0585
   m_EditorClassIdentifier: 
   id: 585
-  displayName: StarryTopper
-  description: Twinkle Twinkle Little Sitekick.
-  icon: {fileID: 21300000, guid: d8015097d1fe8e640ad00a5da0e7a6bd, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 66529dad090c5ae4da5ffd59567759d6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

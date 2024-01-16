@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0130
   m_EditorClassIdentifier: 
   id: 130
-  displayName: KissyEyes
-  description: It was love at first sight.
-  icon: {fileID: 21300000, guid: df1e984bc326e424f8fc8525aa6aff38, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b7def3b7b88708d4eb377c95e2c03e0f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

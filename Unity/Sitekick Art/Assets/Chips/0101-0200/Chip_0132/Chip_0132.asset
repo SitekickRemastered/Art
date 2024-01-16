@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0132
   m_EditorClassIdentifier: 
   id: 132
-  displayName: DizzyEyes
-  description: For when you experience vertigo
-  icon: {fileID: 21300000, guid: 029d9c938fc145e498af98daff510ebb, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: ba375206e6019494cb9d81c5ccea1bc2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

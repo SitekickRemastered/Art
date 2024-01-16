@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0107
   m_EditorClassIdentifier: 
   id: 107
-  displayName: Johnny
-  description: Let's all go to the Malt Shop.
-  icon: {fileID: 21300000, guid: 2e1c916df9a52a348b61318e9a73dc5c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4247efaf1e43cf14ba506a26bb688341
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

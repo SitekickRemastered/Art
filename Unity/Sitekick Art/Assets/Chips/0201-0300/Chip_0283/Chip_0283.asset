@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0283
   m_EditorClassIdentifier: 
   id: 283
-  displayName: SpikerYellow
-  description: Solve mysteries for the agency.
-  icon: {fileID: 21300000, guid: 1dcc98528b1ff054099124b6df07bd47, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 219eca7d9929d684ca2ca3b23d9a8330
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

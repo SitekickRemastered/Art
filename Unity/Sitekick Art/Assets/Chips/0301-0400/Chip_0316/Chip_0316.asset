@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0316
   m_EditorClassIdentifier: 
   id: 316
-  displayName: RocketGear
-  description: A pair of side-mounted rockets for increased propulsion
-  icon: {fileID: 21300000, guid: 7cf7ca05ba92e1a4590ca512f6621b10, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b8e5794a6c5e1094b99c6a3b1d25a12b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

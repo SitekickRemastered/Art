@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0393
   m_EditorClassIdentifier: 
   id: 393
-  displayName: BluePugEyes
-  description: Hauntingly beautiful dog's peepers.
-  icon: {fileID: 21300000, guid: 56892c308f69141469768d3ef501c226, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 90cfa9819c873f94d8f8ffaa28eed70f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

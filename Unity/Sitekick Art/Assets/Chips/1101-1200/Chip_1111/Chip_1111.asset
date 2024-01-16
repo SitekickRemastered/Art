@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1111
   m_EditorClassIdentifier: 
   id: 1111
-  displayName: Hippo
-  description: The hungriest visage.
-  icon: {fileID: 21300000, guid: 818b36201a3516f4bbfd885db3e57436, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8b9ad894b371b4b4186a00fcb74d2fdf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

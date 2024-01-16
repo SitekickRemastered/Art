@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0150
   m_EditorClassIdentifier: 
   id: 150
-  displayName: Mummy
-  description: Mummy cosplay
-  icon: {fileID: 21300000, guid: 5342800c9b048f74fb13c9cb926c0b9b, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 11aada62ded2617408acd2dcfb5c069e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

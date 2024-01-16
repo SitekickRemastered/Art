@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0519
   m_EditorClassIdentifier: 
   id: 519
-  displayName: MonoStripe
-  description: A single racing stripe for your SK.
-  icon: {fileID: 21300000, guid: 05f782dc297196846aba87c342596cbb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bc08a9e509b0e7a4897ff8f32f09e058
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

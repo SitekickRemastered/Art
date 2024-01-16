@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0289
   m_EditorClassIdentifier: 
   id: 289
-  displayName: CySpinL
-  description: Left arm of a Creature X
-  icon: {fileID: 21300000, guid: d597b0e73b982564bb57d982cc94a240, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 6cab5f36b92bb0a49a11f51877403487
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

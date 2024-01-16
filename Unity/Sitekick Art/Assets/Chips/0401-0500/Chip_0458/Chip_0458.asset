@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0458
   m_EditorClassIdentifier: 
   id: 458
-  displayName: MechBWings
-  description: Wings of Glass. Shatter-proof of course.
-  icon: {fileID: 21300000, guid: 420ad6cbfe685094b8752e82971d44ec, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f1636d1074205af4eba7281de4bc141d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

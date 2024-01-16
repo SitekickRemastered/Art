@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0423
   m_EditorClassIdentifier: 
   id: 423
-  displayName: ButtKick1
-  description: Go kick some butt!
-  icon: {fileID: 21300000, guid: 33be9e347627e8441a341b51e67b1f09, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a814dd2a3864d6d4f9d3e4d83e93c4cb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0173
   m_EditorClassIdentifier: 
   id: 173
-  displayName: RudolphNose
-  description: Won't you guide my sleigh tonight?
-  icon: {fileID: 21300000, guid: d00d83fbc109b5a4e913716aee63881e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e60814de8c9cbe44f9a7d21f61d8c095
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

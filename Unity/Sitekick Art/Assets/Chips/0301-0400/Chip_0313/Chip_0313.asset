@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0313
   m_EditorClassIdentifier: 
   id: 313
-  displayName: Snowbelly
-  description: The Sitekick's skin becomes snow. Keep cool at all times.
-  icon: {fileID: 21300000, guid: 2c855c8bdeb97cc47956e03656d1e9fb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2624dc10aa2d8974b9f9e8d2030c36f4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

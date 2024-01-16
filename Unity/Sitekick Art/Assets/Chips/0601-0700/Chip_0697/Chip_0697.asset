@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0697
   m_EditorClassIdentifier: 
   id: 697
-  displayName: Lollipop
-  description: Someone was a brave patient.
-  icon: {fileID: 21300000, guid: 4a91073fc0e48544bb8dc598e9d22a14, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 20246feb51f5e8f499dadb70228866eb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

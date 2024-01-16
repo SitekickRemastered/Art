@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0404
   m_EditorClassIdentifier: 
   id: 404
-  displayName: HoneyWings
-  description: Buzz Buzz! So scary, eh?
-  icon: {fileID: 21300000, guid: e61e0f694255d754aa211a4c14415614, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ab776952aa5d0ce44a283f49d0073320
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

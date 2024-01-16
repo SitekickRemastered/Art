@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0328
   m_EditorClassIdentifier: 
   id: 328
-  displayName: AcneHead
-  description: What are you looking at?
-  icon: {fileID: 21300000, guid: 5dbd7287f7e289f41a9891fbdc3eec7d, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 397d19ab0c2e6e444aa0dff58ed4f065
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

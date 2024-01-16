@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0970
   m_EditorClassIdentifier: 
   id: 970
-  displayName: CrystalCrown
-  description: You'll always save the day.
-  icon: {fileID: 21300000, guid: 7d1f8be307991d34090727f1d4db99d5, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 8582e6f76bff289478c555a75dc0d9c9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0205
   m_EditorClassIdentifier: 
   id: 205
-  displayName: LepreChops
-  description: Lucky facial hair
-  icon: {fileID: 21300000, guid: 3567cd792ee7b914280a2149b9d8bcf3, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 995bc31cfea19bc4a9d2be1a0fababb2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

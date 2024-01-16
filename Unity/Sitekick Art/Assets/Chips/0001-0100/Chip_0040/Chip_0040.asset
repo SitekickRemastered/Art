@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0040
   m_EditorClassIdentifier: 
   id: 40
-  displayName: SoulPatch
-  description: Can you take the heat of this facial hair? Ha-Ha-Ha! Foolish SK.
-  icon: {fileID: 21300000, guid: 4fb72f20cf01fc14085b61068e5ff5d4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6c41857ad2127ca439405ada1560e468
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

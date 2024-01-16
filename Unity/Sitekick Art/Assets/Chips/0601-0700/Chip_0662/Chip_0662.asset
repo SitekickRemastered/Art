@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0662
   m_EditorClassIdentifier: 
   id: 662
-  displayName: PeacockTail
-  description: The Web is out there, Nully.
-  icon: {fileID: 21300000, guid: 941b94073520fc447bc4439799a839ec, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ee415ffc040d8d140b0739f12d734b6c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

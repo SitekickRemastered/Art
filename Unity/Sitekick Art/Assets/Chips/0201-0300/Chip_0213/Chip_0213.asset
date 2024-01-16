@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0213
   m_EditorClassIdentifier: 
   id: 213
-  displayName: Atomic
-  description: SCIENCE!!!
-  icon: {fileID: 21300000, guid: 16b74bd37ed46a44ea2fc62053cd66cd, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 006fe7bd17288ae4fa82bd3ce8123a60
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

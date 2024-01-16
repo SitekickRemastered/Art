@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0993
   m_EditorClassIdentifier: 
   id: 993
-  displayName: RoboguinHead
-  description: This should protect you from explos--KABLAMO!
-  icon: {fileID: 21300000, guid: 6ca739c197daa2042a94e030275da1fc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7057ab3a1bbfbbb43aaa23ca4346eba9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

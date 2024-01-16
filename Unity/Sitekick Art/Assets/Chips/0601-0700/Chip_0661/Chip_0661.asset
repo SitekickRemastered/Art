@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0661
   m_EditorClassIdentifier: 
   id: 661
-  displayName: StarTar
-  description: You're a Rock Star!
-  icon: {fileID: 21300000, guid: 14637507cb1fac24bb81022ecb9fa1d2, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 3b428308c6b12224d94ced9627a64b24
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

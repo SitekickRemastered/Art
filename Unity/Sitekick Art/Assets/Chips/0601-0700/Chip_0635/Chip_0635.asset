@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0635
   m_EditorClassIdentifier: 
   id: 635
-  displayName: BobbyLid
-  description: It's Constable Sitekick.
-  icon: {fileID: 21300000, guid: 5abda8c28e7e0ec4b80ff5737380e8e6, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2d849dfb20de4b1418d09f3dc43a460f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0637
   m_EditorClassIdentifier: 
   id: 637
-  displayName: SteinStache
-  description: E = mc2
-  icon: {fileID: 21300000, guid: 3a8285d6527ebe54a9a0773785b3cc09, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 00740b071a296b64caee61471338b105
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

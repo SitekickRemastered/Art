@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0863
   m_EditorClassIdentifier: 
   id: 863
-  displayName: Rocket
-  description: '"Everybody knows the moon''s made of cheese."'
-  icon: {fileID: 21300000, guid: 38dfb7e66f057954abfb278957f0d774, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0300f182eb883a34ab7e28fdbd7086e1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0818
   m_EditorClassIdentifier: 
   id: 818
-  displayName: Flowerchild
-  description: Whooaa . . . man! Peace and Love.
-  icon: {fileID: 21300000, guid: 07e3c9c5f105c4043b098ee322242372, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2d29227793a23e043a0b61184faca101
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

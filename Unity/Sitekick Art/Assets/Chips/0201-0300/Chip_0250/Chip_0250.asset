@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0250
   m_EditorClassIdentifier: 
   id: 250
-  displayName: OozeLid
-  description: Keep it weird!
-  icon: {fileID: 21300000, guid: 976cf99409461a94bb6816cdb1bacc29, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9a57c7ebd5f05934b9c8763a693adcf4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

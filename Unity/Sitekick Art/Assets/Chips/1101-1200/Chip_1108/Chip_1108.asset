@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1108
   m_EditorClassIdentifier: 
   id: 1108
-  displayName: AniMouth10
-  description: Konnichiwa Ninjutsu!
-  icon: {fileID: 21300000, guid: 397e77d87bfb2ec4f8a09fb285b418a6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0eb21d120f0d8fd4ea3fd541787269e6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

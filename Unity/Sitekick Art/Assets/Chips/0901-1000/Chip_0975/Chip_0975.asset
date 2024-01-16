@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0975
   m_EditorClassIdentifier: 
   id: 975
-  displayName: AniDo6
-  description: '"Every time you compliment me, I get another highlight in my eyes!"'
-  icon: {fileID: 21300000, guid: ba7a24624b010944e8beb47728546de5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a7db50febc5170647ab9f9de03fb1e9f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

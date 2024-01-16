@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0090
   m_EditorClassIdentifier: 
   id: 90
-  displayName: Marilyn
-  description: Darling, you can't possibly understand.
-  icon: {fileID: 21300000, guid: 72d613f40c00df347b814f7e6c2c2df2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 171a59e14c8e3ea42a984d74f8c8d2fe
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

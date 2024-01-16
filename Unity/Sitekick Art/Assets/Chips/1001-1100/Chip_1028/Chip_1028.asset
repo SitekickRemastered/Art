@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1028
   m_EditorClassIdentifier: 
   id: 1028
-  displayName: EagleLegs
-  description: Useful for stealing small animals.
-  icon: {fileID: 21300000, guid: ad97bc2776c63624fa4df6863c86504c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 03ba3bd51ca6a8e4ba55cfb5bea62303
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

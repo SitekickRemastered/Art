@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0490
   m_EditorClassIdentifier: 
   id: 490
-  displayName: Tiara
-  description: In the name of Dr. Frantic, I will punish you!
-  icon: {fileID: 21300000, guid: beaa49a689583e144ab3e046bcb338d1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 934363263d42bbd4baae332539b113bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

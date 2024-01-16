@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0263
   m_EditorClassIdentifier: 
   id: 263
-  displayName: ChopSueyStach
-  description: The 'stach made popular by Fu Manchu, Wreck-Gar, etc.
-  icon: {fileID: 21300000, guid: b41cb45ca30bb2b439bb373474d4d238, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4548a54632f6dac409625efe57f859f6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

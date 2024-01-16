@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0114
   m_EditorClassIdentifier: 
   id: 114
-  displayName: GreenEyes
-  description: No! Don't pinch my eyes.
-  icon: {fileID: 21300000, guid: e556f2e0801f99e47ba5a5e354b1950a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 36de773c2eb9441418633622d1630d61
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

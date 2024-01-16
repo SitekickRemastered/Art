@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0731
   m_EditorClassIdentifier: 
   id: 731
-  displayName: ScurveyFlag
-  description: Pirate flag for your antenna.
-  icon: {fileID: 21300000, guid: 9bd0be63e5659e248af84024d9d772a7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6943552f1dd6495498028a354f0dd2d8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

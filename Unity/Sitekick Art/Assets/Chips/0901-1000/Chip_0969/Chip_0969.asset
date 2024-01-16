@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0969
   m_EditorClassIdentifier: 
   id: 969
-  displayName: BeeHiveHair
-  description: I need you to bring me eggs!
-  icon: {fileID: 21300000, guid: 863b8a70fd09ea54db844a3ab1377754, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d810006693ffd4e43890822b10f815b6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0157
   m_EditorClassIdentifier: 
   id: 157
-  displayName: BRAAAAAAINS
-  description: Expose your Sitekick's gray matter!
-  icon: {fileID: 21300000, guid: 18eeeb17ecd0524499f6a73ace2aef61, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 1fc0c5c30c3ea194b9f155e1f8c04fe9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

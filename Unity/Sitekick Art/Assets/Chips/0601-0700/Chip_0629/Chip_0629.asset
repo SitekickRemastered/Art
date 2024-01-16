@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0629
   m_EditorClassIdentifier: 
   id: 629
-  displayName: DinoFace3
-  description: A Dinosaur-Styled Renaissance Mask.
-  icon: {fileID: 21300000, guid: be5d1884ce1aa1649b38e1b83f24f0ba, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 477a2ec98c1ae4b4988f8b03cbf94bea
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

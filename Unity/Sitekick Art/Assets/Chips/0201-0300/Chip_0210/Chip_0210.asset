@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0210
   m_EditorClassIdentifier: 
   id: 210
-  displayName: Sombrero
-  description: A large hat, nachos not included.
-  icon: {fileID: 21300000, guid: 85f8361b3583bea4b9eb3bb516407a13, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9c7de5cd3f18e9e429b4fecd7ac0b542
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

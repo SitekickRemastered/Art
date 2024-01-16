@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0051
   m_EditorClassIdentifier: 
   id: 51
-  displayName: ScurvyPatch
-  description: Pirate Eyepatch, Ahoy!
-  icon: {fileID: 21300000, guid: 232848b88b82ac74ead9db21e80a7386, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 638a629b38e84694696952ad59df0dcd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

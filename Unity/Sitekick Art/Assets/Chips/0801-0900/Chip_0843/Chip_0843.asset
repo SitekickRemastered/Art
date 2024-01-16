@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0843
   m_EditorClassIdentifier: 
   id: 843
-  displayName: CyberCannons
-  description: DACE - RipCage
-  icon: {fileID: 21300000, guid: be27e5fce6cf1df40b37df5a0c8c29f9, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: b968c5894838a1c4bbee5b38551775db
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

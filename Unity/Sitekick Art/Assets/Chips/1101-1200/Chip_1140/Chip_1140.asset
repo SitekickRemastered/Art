@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1140
   m_EditorClassIdentifier: 
   id: 1140
-  displayName: RockDo
-  description: Hold the line!
-  icon: {fileID: 21300000, guid: 3173811a8286af541aeb7f516099f829, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d5d326b2541bfdc44af35c31ab1ef75f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

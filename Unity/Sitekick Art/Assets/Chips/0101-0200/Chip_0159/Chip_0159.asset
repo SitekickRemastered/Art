@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0159
   m_EditorClassIdentifier: 
   id: 159
-  displayName: RazorBurn
-  description: Prehistoric Beard.
-  icon: {fileID: 21300000, guid: 32903ad939d0d874880582f5c4be193f, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 662367317b727d64abab7407bce079fa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

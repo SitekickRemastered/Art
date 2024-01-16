@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1172
   m_EditorClassIdentifier: 
   id: 1172
-  displayName: FreedomStrikeWings
-  description: Generation Unsubdued Nuclear Drive Assault Module
-  icon: {fileID: 21300000, guid: c17f8edefd26de047a1abb6106ca9b92, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: 7b214edf7619e6342a74160100726aa7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

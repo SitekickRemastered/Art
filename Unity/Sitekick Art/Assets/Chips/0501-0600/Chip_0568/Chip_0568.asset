@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0568
   m_EditorClassIdentifier: 
   id: 568
-  displayName: KingLid
-  description: Your first act as king is?
-  icon: {fileID: 21300000, guid: fc07935034e7ba54cb0a67732282eecc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 55ae0ccc812ac7143a9aaad6ae5ec8a5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

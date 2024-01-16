@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0217
   m_EditorClassIdentifier: 
   id: 217
-  displayName: BunnyNose
-  description: Great for sniffing out vegetable gardens
-  icon: {fileID: 21300000, guid: ee783fc815267fc43be3b9763ca65d3e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: a6f408ae257a18a428cd673967497acd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

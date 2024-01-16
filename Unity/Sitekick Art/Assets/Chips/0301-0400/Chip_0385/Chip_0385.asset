@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0385
   m_EditorClassIdentifier: 
   id: 385
-  displayName: CCStache
-  description: Coach Callous's dazzling mustache.
-  icon: {fileID: 21300000, guid: e0f55b0359e4a3f4e93953204237fb4d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 99f20bcf4fb8e0e4695048938e703760
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

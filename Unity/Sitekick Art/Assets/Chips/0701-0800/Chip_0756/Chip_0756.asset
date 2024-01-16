@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0756
   m_EditorClassIdentifier: 
   id: 756
-  displayName: DragonClaws
-  description: It will be all mine.
-  icon: {fileID: 21300000, guid: 058d40609390f1d4f9d793b7fd63417d, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 3993cb56a1f2ac645bad39f79057ef80
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

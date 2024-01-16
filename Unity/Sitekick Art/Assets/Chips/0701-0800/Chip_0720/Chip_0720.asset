@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0720
   m_EditorClassIdentifier: 
   id: 720
-  displayName: PaperLid
-  description: Extra! Extra! Paper hats can also be paper boats. Read all about it!
-  icon: {fileID: 21300000, guid: 290cb5f701f92454a9c8702daf13c641, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c6c6465b2679a6545a8eb6519c255ed5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0216
   m_EditorClassIdentifier: 
   id: 216
-  displayName: BunnyTeeth
-  description: A single exposed tooth--no carrots included
-  icon: {fileID: 21300000, guid: 72c607eb04a11e344a74c2978e0a27f4, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 1dff51ac38c339f41844d98855dad1d0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0138
   m_EditorClassIdentifier: 
   id: 138
-  displayName: HollowEyes
-  description: Jeepers Creepers . . .
-  icon: {fileID: 21300000, guid: 335d9c4b70f49d340b721a0e8f4b2dea, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 24008b60c15d7374e91ca0b45a56cdd5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

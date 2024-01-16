@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0064
   m_EditorClassIdentifier: 
   id: 64
-  displayName: Monkey
-  description: Oooh Oooh Oooh Ah Ah Ah.
-  icon: {fileID: 21300000, guid: c464e32e2feea1440971a9be291054fb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6bbe93557f1320141a8ccd9eaa414d2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

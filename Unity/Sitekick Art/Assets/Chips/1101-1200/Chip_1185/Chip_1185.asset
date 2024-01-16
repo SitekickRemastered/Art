@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1185
   m_EditorClassIdentifier: 
   id: 1185
-  displayName: BumpBox
-  description: Play some wholesome lullabies for the crib.
-  icon: {fileID: 21300000, guid: 2bd9cf26822bc7f44bf14d0dbe5b5a49, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cff3033410a01664f9cb04ae83ddfe98
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

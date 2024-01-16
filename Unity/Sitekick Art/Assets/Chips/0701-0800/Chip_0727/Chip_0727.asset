@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0727
   m_EditorClassIdentifier: 
   id: 727
-  displayName: SkiFiend
-  description: Be ready for those Hot Dog Aerials.
-  icon: {fileID: 21300000, guid: c414b6f8ccb2ef14a8ab91bf435bef6c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0004349aba3f5c54b910b1e3c5ec5617
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

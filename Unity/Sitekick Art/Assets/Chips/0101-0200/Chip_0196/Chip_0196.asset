@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0196
   m_EditorClassIdentifier: 
   id: 196
-  displayName: AniEffect
-  description: Hazukashi-sa.
-  icon: {fileID: 21300000, guid: 517a4e7b7d795a94e862ffc3bb03c43a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9e748d12f9733f9458ca3754eb0c727e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

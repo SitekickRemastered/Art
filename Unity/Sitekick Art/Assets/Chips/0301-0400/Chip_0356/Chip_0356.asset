@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0356
   m_EditorClassIdentifier: 
   id: 356
-  displayName: CamoLid2
-  description: Works best with DesertCamo facepaint.
-  icon: {fileID: 21300000, guid: ef59ff1207249be4688f36a055218148, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e4a91fc018ff6ea40b4e944ff4b807bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

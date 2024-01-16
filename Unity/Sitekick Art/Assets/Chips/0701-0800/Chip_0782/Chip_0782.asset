@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0782
   m_EditorClassIdentifier: 
   id: 782
-  displayName: ShavingCreamBeard
-  description: From one beard to the next.
-  icon: {fileID: 21300000, guid: 377de227982cda44aae6504fc2d557bb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0e8745cd7c57bd845801b9cb71f97867
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

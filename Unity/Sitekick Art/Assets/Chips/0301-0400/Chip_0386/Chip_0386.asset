@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0386
   m_EditorClassIdentifier: 
   id: 386
-  displayName: CCWhistle
-  description: Coach Callous's whistle.
-  icon: {fileID: 21300000, guid: 48293d88f04490d4aacfc69804288981, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: edb41b1bfda81b1459cb1128941607e8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

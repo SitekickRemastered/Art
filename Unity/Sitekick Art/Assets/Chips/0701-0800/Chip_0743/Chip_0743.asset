@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0743
   m_EditorClassIdentifier: 
   id: 743
-  displayName: BloomerLid
-  description: Not the bloomers you're thinking of.
-  icon: {fileID: 21300000, guid: 09db9e47b74335a41b321c2a72d08301, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 24bcce36daf47354d85115048691367c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

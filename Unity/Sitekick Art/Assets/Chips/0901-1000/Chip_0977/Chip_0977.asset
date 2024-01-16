@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0977
   m_EditorClassIdentifier: 
   id: 977
-  displayName: Docmask
-  description: Be Kind. Be Calm. Be Safe.
-  icon: {fileID: 21300000, guid: 0cb9cdcbffd1780418b56e89f15ef49b, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 7dddfa427bf71964a9e51fb01a6d716a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0375
   m_EditorClassIdentifier: 
   id: 375
-  displayName: FOREFiend
-  description: Mr. Putter's name is Charlene.
-  icon: {fileID: 21300000, guid: 49f348417cfce81409dda119d587a206, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ce114389cf0f06d4aa9a45a94b3ddaa3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

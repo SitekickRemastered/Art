@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0371
   m_EditorClassIdentifier: 
   id: 371
-  displayName: MechCannon
-  description: Charge your shots for more damage.
-  icon: {fileID: 21300000, guid: 12ee47b178985f04fa4376361d537abf, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 785bfa24e70cdfe409de6ee1ce976977
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0037
   m_EditorClassIdentifier: 
   id: 37
-  displayName: Specimen
-  description: It's no pickle jar, but it will preserve your Sitekick.
-  icon: {fileID: 21300000, guid: 78c7ce3ea1dfe7845939625d4f4709fd, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 6ff98d515c45bbc498b800cf945d0a72
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

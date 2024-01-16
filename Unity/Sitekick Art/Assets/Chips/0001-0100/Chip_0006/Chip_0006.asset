@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0006
   m_EditorClassIdentifier: 
   id: 6
-  displayName: Saturday
-  description: You'll need to use everything you've learned up to this point to save
-    Dr. Frantic and the future of Sitekick!
-  icon: {fileID: 21300000, guid: fa21308d3beef6c4fbfdb0833c97e443, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f356cae8e3a35d242b8ad74a8d49864e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

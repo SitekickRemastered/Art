@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0812
   m_EditorClassIdentifier: 
   id: 812
-  displayName: BubbleWand
-  description: Literally blow kisses with this wand.
-  icon: {fileID: 21300000, guid: 60fa67f8a79cf54498f04b0c8c7cb76e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fa80a262943ee8f45b84603c4ce2cb3c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

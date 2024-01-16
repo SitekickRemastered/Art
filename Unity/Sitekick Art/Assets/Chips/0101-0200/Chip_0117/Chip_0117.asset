@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0117
   m_EditorClassIdentifier: 
   id: 117
-  displayName: YellowEyes
-  description: You must be bright.
-  icon: {fileID: 21300000, guid: 35b3c30451adbc3448e41407dccc5231, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 60007eb5fde88d34c993a1b35636fa38
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

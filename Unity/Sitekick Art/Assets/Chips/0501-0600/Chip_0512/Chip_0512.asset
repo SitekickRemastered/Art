@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0512
   m_EditorClassIdentifier: 
   id: 512
-  displayName: MountieLid
-  description: The hat of ultimate authority for Canadian law.
-  icon: {fileID: 21300000, guid: 472d38ff3abdc0d49945f0252584dc47, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8e1b831ec8a25c9428fd9d3b219c7dc5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

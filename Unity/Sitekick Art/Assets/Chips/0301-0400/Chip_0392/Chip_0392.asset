@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0392
   m_EditorClassIdentifier: 
   id: 392
-  displayName: BluePugEars
-  description: Unique folded dog's ears.
-  icon: {fileID: 21300000, guid: c9983ed06e7dc2f448ba197d1a0c611d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f23299ab8526d0d42afacb0d6b5f53f8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

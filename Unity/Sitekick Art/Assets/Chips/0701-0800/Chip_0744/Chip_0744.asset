@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0744
   m_EditorClassIdentifier: 
   id: 744
-  displayName: HeartShades
-  description: Find true love with Heart-O-Vision.
-  icon: {fileID: 21300000, guid: d7920d464670edf4ea3715342ecdd178, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7cc2851f7cf36d84db1fa6025397cc29
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

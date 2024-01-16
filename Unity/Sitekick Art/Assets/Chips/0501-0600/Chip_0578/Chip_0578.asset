@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0578
   m_EditorClassIdentifier: 
   id: 578
-  displayName: ElvisDo
-  description: I did it MYYY WAY!
-  icon: {fileID: 21300000, guid: b7558893be5483a45898a6f52c871fb5, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: c162adfe076c7d54e83335d00bc0fd4f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0111
   m_EditorClassIdentifier: 
   id: 111
-  displayName: Richard
-  description: I do declare; I'm better than you.
-  icon: {fileID: 21300000, guid: 6db008d4a80474d42a9002307819c7a1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: d58fa3202e11c434e85a3ecd517efbb7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

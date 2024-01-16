@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0255
   m_EditorClassIdentifier: 
   id: 255
-  displayName: YetiDo
-  description: Surfin' Yeti.
-  icon: {fileID: 21300000, guid: d0b165c03bbf1ff40afbe2c070314ebd, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f0276fedf02de3d48906f822014bbf55
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0929
   m_EditorClassIdentifier: 
   id: 929
-  displayName: ExplorerLid
-  description: The perfect hat for outrunning a boulder.
-  icon: {fileID: 21300000, guid: a81cdf736d2ddca43a6a685926fae38a, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b25dc0a6b769a4a4d81669792c8b93de
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

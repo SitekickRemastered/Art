@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0406
   m_EditorClassIdentifier: 
   id: 406
-  displayName: HoneyArms
-  description: Don't these belong to a cereal mascot?
-  icon: {fileID: 21300000, guid: 35cc0074e9c9e84429777955c56f3a46, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cbbc624ce34c71f458acaec600db35c5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

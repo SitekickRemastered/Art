@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0214
   m_EditorClassIdentifier: 
   id: 214
-  displayName: Giraffe
-  description: Become a cute robot giraffe
-  icon: {fileID: 21300000, guid: 35cb9cf6923c8cb4796b19bf238afa59, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 1e36713911505f442958f9d638135ead
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

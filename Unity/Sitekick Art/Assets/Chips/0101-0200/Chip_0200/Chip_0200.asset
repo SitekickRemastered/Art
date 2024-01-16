@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0200
   m_EditorClassIdentifier: 
   id: 200
-  displayName: Poison
-  description: For dastardly little cheaters
-  icon: {fileID: 21300000, guid: 70979b88322c9ea4288aa043ebd21d2d, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 048bee44879c8d544b4c6765c0cdd2a8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

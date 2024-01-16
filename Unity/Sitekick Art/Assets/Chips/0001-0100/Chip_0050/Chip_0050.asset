@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0050
   m_EditorClassIdentifier: 
   id: 50
-  displayName: ScurvyHoop
-  description: Pirate Single Hoop Earring, Me Hearties!
-  icon: {fileID: 21300000, guid: 57440290a44027e48a41fd7e1084c770, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6633568234722484ab91e14d79dea1ba
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

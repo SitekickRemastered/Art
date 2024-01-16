@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0417
   m_EditorClassIdentifier: 
   id: 417
-  displayName: MooseMug
-  description: If the plural of goose is "Geese," then why can't many moose be "Meese?"
-  icon: {fileID: 21300000, guid: 5a4443b1f24e0604e8e22935bb4957be, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: fda9fd63515491e4fb56c199309ac081
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0461
   m_EditorClassIdentifier: 
   id: 461
-  displayName: Wizbrrrm
-  description: Did you know that Quidditch has actually become a real sport?
-  icon: {fileID: 21300000, guid: aa1e011dee5e26a46a8d7b9c97cb3c17, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d355761874a58ec49915e2a17b96ef9f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

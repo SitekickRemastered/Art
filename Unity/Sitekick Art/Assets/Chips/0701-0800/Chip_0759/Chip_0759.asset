@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0759
   m_EditorClassIdentifier: 
   id: 759
-  displayName: SkullTar
-  description: What?!
-  icon: {fileID: 21300000, guid: ed947f384eca1b3448dee967e9a4e210, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2b043672c3a67a747bc5c42930270460
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

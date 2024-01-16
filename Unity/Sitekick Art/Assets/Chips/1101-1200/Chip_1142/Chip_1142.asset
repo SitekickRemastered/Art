@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1142
   m_EditorClassIdentifier: 
   id: 1142
-  displayName: FuManStach
-  description: ChopSueyStach, but with added chin tendril.
-  icon: {fileID: 21300000, guid: 793c68e535edbb946a70d6c1a792e6c2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6ff5d0c2877f6e84397f7443e5df4145
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

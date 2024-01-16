@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0737
   m_EditorClassIdentifier: 
   id: 737
-  displayName: NinjaBand
-  description: Cosplay as a ninja or a sushi chef.
-  icon: {fileID: 21300000, guid: a5091caf3c988b749a56927792b93833, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: db2e2833b46de4642a6f1434c2d0cdfa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

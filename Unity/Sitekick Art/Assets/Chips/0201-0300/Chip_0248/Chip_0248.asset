@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0248
   m_EditorClassIdentifier: 
   id: 248
-  displayName: SpudKick
-  description: Grants the body of a potato. Keep away from birds.
-  icon: {fileID: 21300000, guid: 9dc3b007500000e41b2a83898ee47b6d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 83fe000fb823212498f2c460f726f057
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

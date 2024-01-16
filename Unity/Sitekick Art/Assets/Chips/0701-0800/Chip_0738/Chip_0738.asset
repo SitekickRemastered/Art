@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0738
   m_EditorClassIdentifier: 
   id: 738
-  displayName: AMFuel
-  description: I take my coffee metallic.
-  icon: {fileID: 21300000, guid: 4702f776c0576e24c82bb33f1c726c8e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7e4dce8de99cec6429ef80c636698d41
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

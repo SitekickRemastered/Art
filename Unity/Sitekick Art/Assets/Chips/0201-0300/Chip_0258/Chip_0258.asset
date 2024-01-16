@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0258
   m_EditorClassIdentifier: 
   id: 258
-  displayName: YetiLegs
-  description: Leap! I leap.
-  icon: {fileID: 21300000, guid: da8d6dadebdd71c45bf2f3b028772f23, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9d22ae24fd798dd42a193537676557e3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

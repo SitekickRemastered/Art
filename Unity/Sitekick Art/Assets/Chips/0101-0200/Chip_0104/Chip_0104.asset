@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0104
   m_EditorClassIdentifier: 
   id: 104
-  displayName: Flies
-  description: Something stinks!
-  icon: {fileID: 21300000, guid: 059f8c7178936cc44b60077974e4c60f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 193b9ff6b10252840830c4ee2f491642
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0769
   m_EditorClassIdentifier: 
   id: 769
-  displayName: RapidRug
-  description: You waited 1001 nights for this?
-  icon: {fileID: 21300000, guid: 9dcca80fa1d3d3a4596fd67c195d4501, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8d6dba83d0720904b9593ff7f421e502
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

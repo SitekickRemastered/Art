@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0838
   m_EditorClassIdentifier: 
   id: 838
-  displayName: DoupodBlaster
-  description: '"I have schemes within schemes."'
-  icon: {fileID: 21300000, guid: 92bcd7e95e01e42419f499ac0f0c001a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 928bacdeae388184fb097c920f7fc8bb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

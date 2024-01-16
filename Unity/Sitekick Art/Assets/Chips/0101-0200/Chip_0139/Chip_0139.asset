@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0139
   m_EditorClassIdentifier: 
   id: 139
-  displayName: NoEyes
-  description: It's so dark in here.
-  icon: {fileID: 21300000, guid: f78040b0e6557284f97f751030ac0e34, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e55900a62431191468983da599c8a645
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

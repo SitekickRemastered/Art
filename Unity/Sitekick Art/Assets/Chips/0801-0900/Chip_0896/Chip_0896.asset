@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0896
   m_EditorClassIdentifier: 
   id: 896
-  displayName: PianoGrid
-  description: Classic Cartoon Contusion
-  icon: {fileID: 21300000, guid: 3c51985a7e4e6ff43a72cf493ea9e133, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fccd34f21ac08704db735236bd185cab
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

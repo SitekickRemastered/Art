@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0455
   m_EditorClassIdentifier: 
   id: 455
-  displayName: MechBAntennea
-  description: Your Crime Sensors are Tingling.
-  icon: {fileID: 21300000, guid: 238242658f738ba45a45d958fc6912e7, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 391b19a4fa38577428d88d5d99a55c2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

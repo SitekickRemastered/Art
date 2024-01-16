@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0948
   m_EditorClassIdentifier: 
   id: 948
-  displayName: TeamLid2
-  description: . . . Werbenjager . . .
-  icon: {fileID: 21300000, guid: 03ed08bd101600e44a7645d8c03082ce, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 48d0a70d770d9fa4598e2d388f868d42
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

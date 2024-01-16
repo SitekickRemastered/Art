@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1033
   m_EditorClassIdentifier: 
   id: 1033
-  displayName: RavenWings
-  description: Never would you need more feathers.
-  icon: {fileID: 21300000, guid: 2a12b50bbf4878a4ba433726048d216d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8e0f1c46dbb6a4e46a106cec1d74ac8e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

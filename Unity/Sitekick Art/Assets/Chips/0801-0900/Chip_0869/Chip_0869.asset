@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0869
   m_EditorClassIdentifier: 
   id: 869
-  displayName: WreathLid
-  description: Help! I'm being enveloped by Christmas cheer.
-  icon: {fileID: 21300000, guid: 10d4f2c225202824c873f2a3487fd897, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 0e49b88f68d26734f841239f373ffa7a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

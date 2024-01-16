@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0666
   m_EditorClassIdentifier: 
   id: 666
-  displayName: MuskateerLid
-  description: Legends say that behind this chip lies an unspeakable evil. Equip
-    with caution.
-  icon: {fileID: 21300000, guid: 94c1c93ecc144134d918c1e3ade9fb95, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f99b0ef2e62557f4b896e2199b09b15f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

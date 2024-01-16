@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0586
   m_EditorClassIdentifier: 
   id: 586
-  displayName: Unihorn
-  description: Does not emit lasers.
-  icon: {fileID: 21300000, guid: 03e9c0ee6c1a1a14b94b88ff0b19a105, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f209c3c42dfd55c4f91b79dc049ea073
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

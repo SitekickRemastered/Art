@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0191
   m_EditorClassIdentifier: 
   id: 191
-  displayName: AniMouth5
-  description: "Kono yar\u014D."
-  icon: {fileID: 21300000, guid: 6d29dfc8284b4e14d9f28fc050f93739, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 4bc6130b90ab95a4092754f71066926a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

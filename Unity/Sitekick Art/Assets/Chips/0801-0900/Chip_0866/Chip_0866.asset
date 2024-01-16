@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0866
   m_EditorClassIdentifier: 
   id: 866
-  displayName: PumpkinFace
-  description: This pumpkin is either symbiotic or parasitic to the Sitekick.
-  icon: {fileID: 21300000, guid: ece2afe34a06fb64496840c757c24568, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 924407a9f3a73174e8f5d4840a5b1e99
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

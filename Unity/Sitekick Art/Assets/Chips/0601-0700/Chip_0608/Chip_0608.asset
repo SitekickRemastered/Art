@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0608
   m_EditorClassIdentifier: 
   id: 608
-  displayName: TheBovineBeret
-  description: Udderly Ridiculous Headgear
-  icon: {fileID: 21300000, guid: a12e4c6ca3d226b4a98fc63825bbf55c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 13afee75b10c8be4eb654458a5b01baf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

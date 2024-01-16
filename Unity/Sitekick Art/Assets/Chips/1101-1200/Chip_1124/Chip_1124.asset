@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1124
   m_EditorClassIdentifier: 
   id: 1124
-  displayName: VeggieArmo
-  description: Protect this Salad.
-  icon: {fileID: 21300000, guid: 689447ad1913c0843a57092193d15e49, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7c3d2f4865f6d5f4ea07991edaf7c7cf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

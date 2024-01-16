@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0151
   m_EditorClassIdentifier: 
   id: 151
-  displayName: Snow
-  description: Fun to play in, but a pain in all other regards.
-  icon: {fileID: 21300000, guid: 5f722452277f16844a58255e779a1695, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 18565b8dfc58d93429f659b545600b9d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 3
   effectLayer: 3
   effectFlags: 0

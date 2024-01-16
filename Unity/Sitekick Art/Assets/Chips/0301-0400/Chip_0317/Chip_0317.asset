@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0317
   m_EditorClassIdentifier: 
   id: 317
-  displayName: JetWings
-  description: A pair of wings for increased aerial stability
-  icon: {fileID: 21300000, guid: b25d80a737e47d04696e6ba63b2d29f9, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 04446ef5fbe628c41ad1a7c49daa864c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

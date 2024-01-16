@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0422
   m_EditorClassIdentifier: 
   id: 422
-  displayName: GatorTrap
-  description: An alligator mouth for your Sitekick!  Scary!
-  icon: {fileID: 21300000, guid: 0cd8190f92f2b6545bd78ffb4f87fc90, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a9d1582fd39e2784f8e21f221e372f75
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

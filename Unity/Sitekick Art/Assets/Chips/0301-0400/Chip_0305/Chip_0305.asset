@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0305
   m_EditorClassIdentifier: 
   id: 305
-  displayName: OctoArm3
-  description: Easter Island Head.
-  icon: {fileID: 21300000, guid: d5e1b63d41176ef4d8fa42af278f5df9, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 440d88ff1caf0fb4383cd33f62b1f30c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0781
   m_EditorClassIdentifier: 
   id: 781
-  displayName: BronzeHelm
-  description: All flash and no fury!
-  icon: {fileID: 21300000, guid: ca6ea2a2cc863ca4fb6bd40fc0cbe9cb, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 561b6dbf5d23dd847a5f82a9dfbbec85
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

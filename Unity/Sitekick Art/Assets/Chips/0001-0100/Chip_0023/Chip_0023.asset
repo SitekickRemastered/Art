@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0023
   m_EditorClassIdentifier: 
   id: 23
-  displayName: BozoMop
-  description: OMG I'm clown head.
-  icon: {fileID: 21300000, guid: 7873cdb4611a73744bcffac48a97e238, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 21dccedf748aa2c42832f6d23e97761c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

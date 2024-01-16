@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0149
   m_EditorClassIdentifier: 
   id: 149
-  displayName: Werewolf
-  description: Ah-Woooo!
-  icon: {fileID: 21300000, guid: 43ce4a9b504898646a6c95f873c75a9e, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e7b8ccc27bacc8a44809282cb1a748fb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

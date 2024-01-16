@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0273
   m_EditorClassIdentifier: 
   id: 273
-  displayName: OuchieEye
-  description: Sitekick abuse will not be tolerated.
-  icon: {fileID: 21300000, guid: 553b4b2b1d389cf4e9c534780f96d3ae, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bdf8a7e817e178f48a1c9f3295b2c920
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0378
   m_EditorClassIdentifier: 
   id: 378
-  displayName: DunkFiend
-  description: Nothin' but net!
-  icon: {fileID: 21300000, guid: 740bbf930d37d5540802d0c32a121dfc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8f04fda185ac89546a0b9d69139d8fdf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

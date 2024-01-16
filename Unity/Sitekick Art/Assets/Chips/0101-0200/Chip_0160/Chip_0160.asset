@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0160
   m_EditorClassIdentifier: 
   id: 160
-  displayName: MetalHead
-  description: Good old Bulkhead.
-  icon: {fileID: 21300000, guid: ff50edee792dc734b9686a6fa73132b5, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: aea678e4c0ef43c4d87bb23b839e402d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

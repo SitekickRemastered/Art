@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0854
   m_EditorClassIdentifier: 
   id: 854
-  displayName: ChefApron
-  description: Splatter Protection.
-  icon: {fileID: 21300000, guid: 57eaab787cafd3d498701951f3633428, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 16f59303d454ea74eb7cd363e6a6ede1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

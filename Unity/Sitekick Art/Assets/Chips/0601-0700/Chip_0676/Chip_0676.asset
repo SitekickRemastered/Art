@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0676
   m_EditorClassIdentifier: 
   id: 676
-  displayName: Satellid
-  description: You can pick up intergalactic signals with this.
-  icon: {fileID: 21300000, guid: 2caacfd20429d044dadbb583caf4da31, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 7449792b85d9bab4fb6e1e9a6c35a804
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0833
   m_EditorClassIdentifier: 
   id: 833
-  displayName: BlasterArm
-  description: Destiny.
-  icon: {fileID: 21300000, guid: 163a160491a30874d80ef009c6575399, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f56edfc5a6d0a394f9104271c4449958
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

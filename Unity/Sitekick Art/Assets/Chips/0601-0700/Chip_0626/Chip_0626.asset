@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0626
   m_EditorClassIdentifier: 
   id: 626
-  displayName: DinoTail
-  description: A tail with offensive capabilities.
-  icon: {fileID: 21300000, guid: 836f1611d1dbcbc45a22fc348657294b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 41fa7ce8a8c25424f9788b84a9c6333f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0136
   m_EditorClassIdentifier: 
   id: 136
-  displayName: LizardEyes
-  description: '*Assorted Reptilian Hissing*'
-  icon: {fileID: 21300000, guid: db56dc639133fcc459671fb21d911335, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 6a782807f180f714392b811c89f6b6b8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

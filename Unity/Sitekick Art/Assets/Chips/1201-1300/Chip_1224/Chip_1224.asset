@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1224
   m_EditorClassIdentifier: 
   id: 1224
-  displayName: WhisperingEye
-  description: See beyond sight.
-  icon: {fileID: 21300000, guid: f63bc62ed96d88144af4c744e0a2deb4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 67be6d8a6506ac445b2af03f2e999625
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

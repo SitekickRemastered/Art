@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0069
   m_EditorClassIdentifier: 
   id: 69
-  displayName: Jess
-  description: Look at all the highlighting I've done. I'm such a good studier.
-  icon: {fileID: 21300000, guid: 3662a63ec4e762d49b40f91b3f038957, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 4f42d2aa637a3cf46ad8b9736f545525
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

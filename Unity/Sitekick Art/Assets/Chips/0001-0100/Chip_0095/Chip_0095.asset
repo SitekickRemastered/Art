@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0095
   m_EditorClassIdentifier: 
   id: 95
-  displayName: Jann
-  description: We live in a society.
-  icon: {fileID: 21300000, guid: c4910997b5ca7e54a89c2102312de0e9, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ce01c4f535ca6a0479c078a3f71c591b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

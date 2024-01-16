@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0584
   m_EditorClassIdentifier: 
   id: 584
-  displayName: HeartTopper
-  description: A Decorative Throbbing Heart.
-  icon: {fileID: 21300000, guid: 0300e357715722444afbb02fd157a30d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: dea7af1bbbaa8ad449c64f210a227b27
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1194
   m_EditorClassIdentifier: 
   id: 1194
-  displayName: SsssK
-  description: Add a "Ssss" sound to every other word, so people know you're a snake.
-  icon: {fileID: 21300000, guid: 2b8c40e6d0cf4c04a913782169f7255e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 61eb430f5fe6e414c96f5df5b92831d8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

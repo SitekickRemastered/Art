@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0465
   m_EditorClassIdentifier: 
   id: 465
-  displayName: Keytar
-  description: A Piano combined with a Guitar? Wowee! Moonlight Sonata is gonna sound
-    so wicked on this!
-  icon: {fileID: 21300000, guid: 892c8914be35b944da9d4a07a583b7b2, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 02f5edc5c1704d8499ec678633dd83ce
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

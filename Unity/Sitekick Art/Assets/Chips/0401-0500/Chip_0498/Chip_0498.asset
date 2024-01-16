@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0498
   m_EditorClassIdentifier: 
   id: 498
-  displayName: X4Mouth
-  description: Tuesday X's mouth.
-  icon: {fileID: 21300000, guid: cb5e77b7aec59f7489d0ff2bbc4269dc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3afefe1e9162fbf4d86d1650a7aef24f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

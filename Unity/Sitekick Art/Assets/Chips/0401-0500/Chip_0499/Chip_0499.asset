@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0499
   m_EditorClassIdentifier: 
   id: 499
-  displayName: X4Hair
-  description: Tuesday X's hairstyle.
-  icon: {fileID: 21300000, guid: 64494d0a91139054eaabf0776526d2a3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b89e1d0e5831e944aa5771700245d77e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0445
   m_EditorClassIdentifier: 
   id: 445
-  displayName: EdWood
-  description: A director's chair named after a famous filmmaker.
-  icon: {fileID: 21300000, guid: 1433284d5fc252443b3e846d88d39435, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e60f61c000f16154884e2bdcbae24245
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

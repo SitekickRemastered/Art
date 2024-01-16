@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0264
   m_EditorClassIdentifier: 
   id: 264
-  displayName: Snorkel
-  description: Do Sitekicks need to breathe? Either way this is a simple underwater
-    breathing apparatus.
-  icon: {fileID: 21300000, guid: a1cebbf1bd76a7847a055177b5605624, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: af1f292f81c67e4478a686dda91c277f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

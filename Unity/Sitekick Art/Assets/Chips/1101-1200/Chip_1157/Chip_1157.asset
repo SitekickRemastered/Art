@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1157
   m_EditorClassIdentifier: 
   id: 1157
-  displayName: DiverLid
-  description: Wait for me beyond the sea.
-  icon: {fileID: 21300000, guid: d828aaf308e9bc74f9fa395a99904f08, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 72a31820b93b5b1459029879fa2cc85c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

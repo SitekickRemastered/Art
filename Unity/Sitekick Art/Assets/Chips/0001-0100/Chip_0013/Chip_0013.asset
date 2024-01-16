@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0013
   m_EditorClassIdentifier: 
   id: 13
-  displayName: Badfish
-  description: ZAP! Your reward for a good Friday Night.
-  icon: {fileID: 21300000, guid: 5af4e4edda7af924b8736dc34f23ade5, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 92182f1953578914280afbc15af25658
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1195
   m_EditorClassIdentifier: 
   id: 1195
-  displayName: MedusaDo
-  description: Ever had hair that slithers? Should be a good scalp massage.
-  icon: {fileID: 21300000, guid: 183865e798a3ea24388d03f672d13ad3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e1350fb0a6672794393f56359b591ecd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

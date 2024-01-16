@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1037
   m_EditorClassIdentifier: 
   id: 1037
-  displayName: BrainLid
-  description: 'Not just an idea: The Big Brain Moment.'
-  icon: {fileID: 21300000, guid: 34fd6e371cdafa549ba937c54b8a005b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 135bb263eee61b648b006f87337371aa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

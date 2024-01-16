@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0569
   m_EditorClassIdentifier: 
   id: 569
-  displayName: WalrusTooth
-  description: A pair of Walrus tusks, not human tibia bones.
-  icon: {fileID: 21300000, guid: a0023b42dc825c849a95f4a393955c2d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 711e35c5035d8434fb5568d2c3970234
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

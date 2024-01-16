@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0324
   m_EditorClassIdentifier: 
   id: 324
-  displayName: Twiddle
-  description: This is a twiddle, similar to a plumbus, but not nearly as functional.
-  icon: {fileID: 21300000, guid: 1d28424a9e3771647a68114c9ff2d246, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c92add28d61a2b2498e1d3fcee2c7718
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

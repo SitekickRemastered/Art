@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0755
   m_EditorClassIdentifier: 
   id: 755
-  displayName: DragonTail
-  description: Not the Tale, but rather the Appendage.
-  icon: {fileID: 21300000, guid: b4b93982d6623d448b0fdf18ace713e7, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 799a51ab5f8b61b4cb23b1612237c43b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

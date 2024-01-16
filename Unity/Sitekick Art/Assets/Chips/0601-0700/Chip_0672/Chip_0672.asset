@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0672
   m_EditorClassIdentifier: 
   id: 672
-  displayName: RainFro
-  description: Carnival Circus Afro Zone.
-  icon: {fileID: 21300000, guid: 2293b00cd8383af418ebe1580ae18c80, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: aeb2cd3706ad66c4487697300d8b2961
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

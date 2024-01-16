@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0491
   m_EditorClassIdentifier: 
   id: 491
-  displayName: GoudaArms
-  description: Lovecraftian Cheese Terror in hat-form.
-  icon: {fileID: 21300000, guid: 669c145e74523664997d6ee03b6ddb0a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: fe4ac3125d0ddfe4880e29cc3742b40e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

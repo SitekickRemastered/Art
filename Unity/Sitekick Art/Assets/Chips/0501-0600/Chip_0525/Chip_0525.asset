@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0525
   m_EditorClassIdentifier: 
   id: 525
-  displayName: ScarPaint
-  description: I HAVE NO GREETING.
-  icon: {fileID: 21300000, guid: f4bbb4f1b3bd66942b2184509d79c743, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1c9b6937b6879124eafb484517f4dec1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

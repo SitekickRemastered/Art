@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0195
   m_EditorClassIdentifier: 
   id: 195
-  displayName: AniMouth9
-  description: Zip it! *wirrr!* Mmm Mmm Mmmph!
-  icon: {fileID: 21300000, guid: 5f982823f679f4f4fa92a7e3fb5adf04, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 8f7896d6b1a316a488f4e522bc3f91ac
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

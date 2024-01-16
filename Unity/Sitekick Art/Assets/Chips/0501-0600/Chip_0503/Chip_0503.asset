@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0503
   m_EditorClassIdentifier: 
   id: 503
-  displayName: Earthy
-  description: A certain red echidna would call this home.
-  icon: {fileID: 21300000, guid: 06cc601390457e741acbd1cd6569b13a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c0f83c7a342b7814cac953aef53f4077
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

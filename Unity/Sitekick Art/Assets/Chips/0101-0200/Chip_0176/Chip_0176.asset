@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0176
   m_EditorClassIdentifier: 
   id: 176
-  displayName: Superkick
-  description: A red superhero cape--Up up and away!
-  icon: {fileID: 21300000, guid: 5e2bec7a6752b714da251546d512a1e3, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: a3eb970ebf079e7459b2bf2d227f0403
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

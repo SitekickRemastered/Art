@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0665
   m_EditorClassIdentifier: 
   id: 665
-  displayName: PilotMask
-  description: '"Can you fly, Bobby?"'
-  icon: {fileID: 21300000, guid: b23e37b497d9b124b96d4aaaeedd6d0e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4146bdcdeefacee469e908eb9090249c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

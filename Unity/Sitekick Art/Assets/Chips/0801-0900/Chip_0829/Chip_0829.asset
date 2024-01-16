@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0829
   m_EditorClassIdentifier: 
   id: 829
-  displayName: TurtleLid
-  description: It's a Hard Shell War.
-  icon: {fileID: 21300000, guid: 6da0a32d8b959384b9ab99f591b9081f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4941609bb834c8a47a84801dafa99766
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

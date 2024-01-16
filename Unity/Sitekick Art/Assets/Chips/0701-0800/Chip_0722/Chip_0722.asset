@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0722
   m_EditorClassIdentifier: 
   id: 722
-  displayName: PawPaws
-  description: A pair of floating mitten paws.
-  icon: {fileID: 21300000, guid: ef25a4d7cc3463243b6331b2a22d57af, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cdb5facd42f8234408a524288e5b420b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

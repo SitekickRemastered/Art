@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0984
   m_EditorClassIdentifier: 
   id: 984
-  displayName: TreeTop
-  description: A hairstyle that really branches you out.
-  icon: {fileID: 21300000, guid: 04ac6d5c4347d2d4d9b70f4a08018316, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b6234291a5a25ec4282176f7b3a0d575
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

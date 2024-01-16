@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1212
   m_EditorClassIdentifier: 
   id: 1212
-  displayName: PeliBeak
-  description: What small fish fear.
-  icon: {fileID: 21300000, guid: ba32db25349d57a4fb50ae414992050f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c77c2ecaf8234dc4dbce975191feffa9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

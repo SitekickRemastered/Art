@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0638
   m_EditorClassIdentifier: 
   id: 638
-  displayName: SteinDo
-  description: Genius-level hairstyle. 100+ INT required to equip.
-  icon: {fileID: 21300000, guid: 67fb18598975f164c968416842fa3e76, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c649cef696e061c41a232f33dd91391d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

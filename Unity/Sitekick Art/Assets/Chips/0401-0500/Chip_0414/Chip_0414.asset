@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0414
   m_EditorClassIdentifier: 
   id: 414
-  displayName: GorillaBrow
-  description: Your ancient instincts are starting to awaken.
-  icon: {fileID: 21300000, guid: 64db1d40a588e2249b29d01f9810b5bc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6b343aef2e7a7c3419036f78513c31f7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

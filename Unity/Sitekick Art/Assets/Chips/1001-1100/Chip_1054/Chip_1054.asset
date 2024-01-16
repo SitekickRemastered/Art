@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1054
   m_EditorClassIdentifier: 
   id: 1054
-  displayName: FoxyMug
-  description: That's one fantastic face, mister.
-  icon: {fileID: 21300000, guid: d490ebbe99635284bbe236eefbafe50b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ccc0f76df2059cf45b5429dca06c92d4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

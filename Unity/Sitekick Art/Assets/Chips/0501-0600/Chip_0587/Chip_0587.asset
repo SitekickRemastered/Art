@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0587
   m_EditorClassIdentifier: 
   id: 587
-  displayName: SlugBod
-  description: Even slower than MechSnail
-  icon: {fileID: 21300000, guid: 72002f691768bcc4b8b4ba937ce9350f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2d05e8a7e6bd68c45b9abdf1685a7d04
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

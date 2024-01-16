@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0251
   m_EditorClassIdentifier: 
   id: 251
-  displayName: YetiBeard
-  description: He just wanted to live alone in peace.
-  icon: {fileID: 21300000, guid: 9a7c6847930ccd2499f85679c497f150, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 0b047eabd7660fc479ccc50709381a91
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

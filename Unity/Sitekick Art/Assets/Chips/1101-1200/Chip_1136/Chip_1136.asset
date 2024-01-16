@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1136
   m_EditorClassIdentifier: 
   id: 1136
-  displayName: FrankLid
-  description: No footlongs.
-  icon: {fileID: 21300000, guid: 4799595d42ab58a48a944957218c85b7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 057f348f79e1dee428b21bb04f7126ad
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

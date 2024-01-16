@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1025
   m_EditorClassIdentifier: 
   id: 1025
-  displayName: TrackJacket
-  description: We got a runner!
-  icon: {fileID: 21300000, guid: d62baca620591b342bf5477ea900020f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7673c953cac3f304fade88e8d673d73b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

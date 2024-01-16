@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0399
   m_EditorClassIdentifier: 
   id: 399
-  displayName: PoodleFace
-  description: Fancy Doggie.
-  icon: {fileID: 21300000, guid: 43a49bda70c5b8044a181773e1a4762c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 7885fa8812dcfce4f98d4365d23a28f7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

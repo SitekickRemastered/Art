@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0864
   m_EditorClassIdentifier: 
   id: 864
-  displayName: InspectorLid
-  description: Two baseball hats make a Sherlock cap.
-  icon: {fileID: 21300000, guid: 724f548cdd15fe148a3c2f3b05c699af, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: c48f2969a39ea3d4c9a97dd552ca2ed8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0822
   m_EditorClassIdentifier: 
   id: 822
-  displayName: AlienLid
-  description: Alien Beauty or Japanese Horror.
-  icon: {fileID: 21300000, guid: 4e5a252a9459b9a4790429d24420032c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 25e58d14c2ce55c438ce7e98f9663a07
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

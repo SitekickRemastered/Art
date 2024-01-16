@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1091
   m_EditorClassIdentifier: 
   id: 1091
-  displayName: BoltLid
-  description: Joined to another object by an inclined plane, wrapped helically around
-    an axis.
-  icon: {fileID: 21300000, guid: aef5027d511df7643913e4edc17a29df, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 0d8795df3b317b649bf9a5e488f923b6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

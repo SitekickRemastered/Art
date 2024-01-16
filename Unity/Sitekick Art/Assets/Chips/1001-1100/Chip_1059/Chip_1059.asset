@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1059
   m_EditorClassIdentifier: 
   id: 1059
-  displayName: ToastForBrains
-  description: Your way of thinking is cooked, toasted even.
-  icon: {fileID: 21300000, guid: a42d049f675be3f4c9b10d59063f3428, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2147226476756b449b6006e6fc9fc9f6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

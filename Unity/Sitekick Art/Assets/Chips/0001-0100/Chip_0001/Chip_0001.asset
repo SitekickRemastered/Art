@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0001
   m_EditorClassIdentifier: 
   id: 1
-  displayName: Monday
-  description: Yap Labs . . . Where it all began.
-  icon: {fileID: 21300000, guid: 4fb33ba2503612f41929b1d542a56643, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2080095795f8e584dba8f0e576971756
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

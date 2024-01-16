@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0043
   m_EditorClassIdentifier: 
   id: 43
-  displayName: FruitLid
-  description: Galoopo Fruithag has got all the right moves!
-  icon: {fileID: 21300000, guid: 7ac4d28132179ba4eaa6b9beaab7362b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7279205a495d12545ad486744478488e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

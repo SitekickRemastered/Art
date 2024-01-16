@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0061
   m_EditorClassIdentifier: 
   id: 61
-  displayName: Mohawk
-  description: The classic punk hairstyle
-  icon: {fileID: 21300000, guid: 1691e64c001cd57449ffa724603826e7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 98d036334e65c3e41bf21dfae77f4e65
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0025
   m_EditorClassIdentifier: 
   id: 25
-  displayName: BozoTopper
-  description: Flower for your Sitekick's antenna
-  icon: {fileID: 21300000, guid: 17573215ec1b58e43b442f25dce49273, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4b76b2a604cbf7d47b3d78cabd831b87
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

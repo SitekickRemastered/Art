@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1218
   m_EditorClassIdentifier: 
   id: 1218
-  displayName: ClydeLid
-  description: His legacy lives on in various merchandise.
-  icon: {fileID: 21300000, guid: 4f45ae2b3962ea1429ac4c6b5340e68e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4992afd6b962f5e40befa545e38fac6a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

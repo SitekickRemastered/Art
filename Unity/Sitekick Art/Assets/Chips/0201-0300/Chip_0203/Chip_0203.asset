@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0203
   m_EditorClassIdentifier: 
   id: 203
-  displayName: LepreLegs
-  description: Lucky legs
-  icon: {fileID: 21300000, guid: 8c435b1a68a00394991991184d449aae, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 58a26bf66ce999e45af9411f9d4848d3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

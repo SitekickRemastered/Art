@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0424
   m_EditorClassIdentifier: 
   id: 424
-  displayName: ButtKick2
-  description: A left hook to help you with all the buttkicking you're going to be
-    doing.
-  icon: {fileID: 21300000, guid: 757807b813679f94a8d45658b0d0f18a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f02b1524b7a73ab4ab3fc9f33b1c5bd9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

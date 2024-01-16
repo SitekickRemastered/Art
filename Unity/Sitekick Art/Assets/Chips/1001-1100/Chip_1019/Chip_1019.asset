@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1019
   m_EditorClassIdentifier: 
   id: 1019
-  displayName: TigerArm2
-  description: That's Stanley.
-  icon: {fileID: 21300000, guid: 0cc35f83d7c08f84da8c9eb3cb058d14, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 62cfca4d742cbda4692d79a60a3d069d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

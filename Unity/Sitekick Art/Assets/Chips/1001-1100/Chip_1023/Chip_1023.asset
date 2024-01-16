@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1023
   m_EditorClassIdentifier: 
   id: 1023
-  displayName: BigEyes
-  description: 'AniEyes2: Western Edition.'
-  icon: {fileID: 21300000, guid: 7e45e7dbbc8b3234b94ef36fa8108aee, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e506ef81671212e4391ee235e0afd985
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

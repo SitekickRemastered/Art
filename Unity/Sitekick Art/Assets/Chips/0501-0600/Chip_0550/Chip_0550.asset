@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0550
   m_EditorClassIdentifier: 
   id: 550
-  displayName: BadEyes
-  description: Who needs a monocle?
-  icon: {fileID: 21300000, guid: beea31154ea139641b51419efd28be5e, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: ce71813decc208e4d8b6a50a2dc19684
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

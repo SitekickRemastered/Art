@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0653
   m_EditorClassIdentifier: 
   id: 653
-  displayName: BlingLock
-  description: A wise, old Spirit of Bling resides in this necklace.
-  icon: {fileID: 21300000, guid: 183ecfa6d35456d438dcfebc385d3b5e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: fd690e88a880d864ab5ea8b3fdea6890
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

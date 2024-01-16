@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0035
   m_EditorClassIdentifier: 
   id: 35
-  displayName: BigShades
-  description: A pair of oversized sunglasses made for the beach
-  icon: {fileID: 21300000, guid: 626088288e6a59d40bd3fd0a9af9fa91, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a13027fb85f885846923234e8ae08c6e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

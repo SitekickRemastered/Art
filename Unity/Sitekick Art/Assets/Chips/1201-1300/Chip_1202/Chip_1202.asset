@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1202
   m_EditorClassIdentifier: 
   id: 1202
-  displayName: ChalkHelm
-  description: A helmet of many flavours.
-  icon: {fileID: 21300000, guid: 20fd6ed8d4c9f39468b3f1b221540a88, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6c9540a4dfa4e654596b48a57274ef9f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

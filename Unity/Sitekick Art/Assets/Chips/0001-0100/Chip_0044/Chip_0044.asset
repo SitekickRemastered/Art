@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0044
   m_EditorClassIdentifier: 
   id: 44
-  displayName: Beanie
-  description: A hat with a propeller. Fly away.
-  icon: {fileID: 21300000, guid: 4159e6529b9447044ac207e76a221f4b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 53af177d55bd20c43b2a3d707f85019c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

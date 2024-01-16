@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0615
   m_EditorClassIdentifier: 
   id: 615
-  displayName: HeroMask4
-  description: The most impulsive of the squad wears this.
-  icon: {fileID: 21300000, guid: 0ac307655107adb4a970f2b8f6f22fc5, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4bd807882d1e97f4f80ace3329da1622
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0678
   m_EditorClassIdentifier: 
   id: 678
-  displayName: LuchaMask2
-  description: Be the bane of your opponent's existence.
-  icon: {fileID: 21300000, guid: 6f7952c596b985d4b86a0168b4efb69b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: af4063f2d1835c84eb2caff88880418a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

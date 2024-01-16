@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0004
   m_EditorClassIdentifier: 
   id: 4
-  displayName: Thursday
-  description: The Sitekick learns how to speak, and what does he do? Order enough
-    pizzas to bankrupt the Lab!
-  icon: {fileID: 21300000, guid: 2417908d548dfd0468f5478b62ca29d4, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 840d238645e4ab442837037f97ffef98
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

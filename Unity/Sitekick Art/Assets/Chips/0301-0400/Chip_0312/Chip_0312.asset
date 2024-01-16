@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0312
   m_EditorClassIdentifier: 
   id: 312
-  displayName: Branchers
-  description: Macabre or Festive.
-  icon: {fileID: 21300000, guid: 21a8c8ac2abdc7e45a0e6fb5aaac07d5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4aa19affbd1712241bca6da50b36f10d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

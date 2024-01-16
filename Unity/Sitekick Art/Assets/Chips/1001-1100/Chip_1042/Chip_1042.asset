@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1042
   m_EditorClassIdentifier: 
   id: 1042
-  displayName: PaperBagLid
-  description: Don't look at me! I'm hideous!
-  icon: {fileID: 21300000, guid: 991d5c4684c3e0447b74f53a956c2b57, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 860ba165a1bfd45438654a6e9c49351d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

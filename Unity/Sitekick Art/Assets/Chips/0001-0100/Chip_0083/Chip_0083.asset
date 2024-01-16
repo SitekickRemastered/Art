@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0083
   m_EditorClassIdentifier: 
   id: 83
-  displayName: 25CentBling
-  description: Represent a quarter dollar.
-  icon: {fileID: 21300000, guid: 00dfe21ca295eb944894e911b93fef65, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: bb095591b87ca864c9f927118ccc0899
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

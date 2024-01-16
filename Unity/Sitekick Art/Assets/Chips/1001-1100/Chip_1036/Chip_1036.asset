@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1036
   m_EditorClassIdentifier: 
   id: 1036
-  displayName: BlackAngelWings
-  description: For the tainted soul that needs a lift.
-  icon: {fileID: 21300000, guid: ea7de46eb4bf2874995504ac38f0cef6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6e952e56e082c3e4d8f9de25bbbc9a9e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

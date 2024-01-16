@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0524
   m_EditorClassIdentifier: 
   id: 524
-  displayName: DigiPaint
-  description: Can you see the code coming to life?
-  icon: {fileID: 21300000, guid: ec9063057372feb4d84fea0654fb8645, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e1455e59c9612bb4aab1491f527b5f30
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

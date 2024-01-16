@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0669
   m_EditorClassIdentifier: 
   id: 669
-  displayName: ScorpionTail
-  description: Here I am!
-  icon: {fileID: 21300000, guid: 35798b7f8cc92ea4db6045245f0defa4, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 0605690129e23de4097e08b21831a0cc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

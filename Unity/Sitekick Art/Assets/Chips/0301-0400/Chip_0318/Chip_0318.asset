@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0318
   m_EditorClassIdentifier: 
   id: 318
-  displayName: RoboStride
-  description: Tank Jr.'s in the house.
-  icon: {fileID: 21300000, guid: 3402a78deec9bf746931af40375cab8f, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 225fa2629dd4e8d489a8033c3fba6c01
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0078
   m_EditorClassIdentifier: 
   id: 78
-  displayName: ImpHorns
-  description: '"I got me some can-day!"'
-  icon: {fileID: 21300000, guid: 94ef8d5394686a9469f5a4f895f76a4f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 16798729da69641459cf23ad1d57f612
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

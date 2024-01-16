@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0169
   m_EditorClassIdentifier: 
   id: 169
-  displayName: Earrings
-  description: '"Hey girls. Wanna trade?"'
-  icon: {fileID: 21300000, guid: be5a784d57e024849bc8c45b054370ce, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a9b2197782407fa4c9c0e14a03bb980a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

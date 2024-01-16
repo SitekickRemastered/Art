@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1026
   m_EditorClassIdentifier: 
   id: 1026
-  displayName: DiscoTopper
-  description: You're a Psychedelic Boogie Child, an out of sight funky little thing.
-  icon: {fileID: 21300000, guid: d6ec99c285fa9644aa13dc4f3e99061f, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e450ea593debca74f9360da44f53267c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

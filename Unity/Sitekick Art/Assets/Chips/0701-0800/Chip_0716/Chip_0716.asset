@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0716
   m_EditorClassIdentifier: 
   id: 716
-  displayName: Umbrella
-  description: Only you can prevent rainy parades.
-  icon: {fileID: 21300000, guid: bb48ad073067c2d4f9afd35265c10351, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 75c0515d4e14b574190c3efda9b32aac
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

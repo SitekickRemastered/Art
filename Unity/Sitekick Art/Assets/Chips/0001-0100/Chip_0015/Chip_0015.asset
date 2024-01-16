@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0015
   m_EditorClassIdentifier: 
   id: 15
-  displayName: Soundwave
-  description: Dr. Frantic's headphones
-  icon: {fileID: 21300000, guid: 7506bea0c300a4d49926f1b115762d70, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: a1d2b572d5c6e1042a0e61b9e37d3965
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

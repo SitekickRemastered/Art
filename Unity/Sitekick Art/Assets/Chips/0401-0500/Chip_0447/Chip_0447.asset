@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0447
   m_EditorClassIdentifier: 
   id: 447
-  displayName: PoppyTopper
-  description: Wear this every late-October to early-November.
-  icon: {fileID: 21300000, guid: d6860c4678f30a64292b26c3aca3afd7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 32f7b2de42600e74d805191f9b6f2e2e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

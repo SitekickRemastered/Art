@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0611
   m_EditorClassIdentifier: 
   id: 611
-  displayName: DragonWings4
-  description: For all the Frost Dragons out there.
-  icon: {fileID: 21300000, guid: 39576a39888d3674982d9ed4f4a61ab5, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: a94c7729b68e432489a85bba5e060ef4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

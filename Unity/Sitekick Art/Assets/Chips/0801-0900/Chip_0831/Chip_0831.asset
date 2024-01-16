@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0831
   m_EditorClassIdentifier: 
   id: 831
-  displayName: CrosshairArm
-  description: Unity.
-  icon: {fileID: 21300000, guid: ceef3bdefebd8f34d84cad6ba86a279e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d4f33b9da263d1545be47708dd06d8a1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

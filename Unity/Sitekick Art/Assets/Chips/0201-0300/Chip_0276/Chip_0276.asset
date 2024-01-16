@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0276
   m_EditorClassIdentifier: 
   id: 276
-  displayName: CluckLegs
-  description: A pair of chicken legs (uncooked)
-  icon: {fileID: 21300000, guid: 336dcff4251ed4442a4d7f7aeca1899c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1e33c4d3d40ac2a44884d05aca61d13f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

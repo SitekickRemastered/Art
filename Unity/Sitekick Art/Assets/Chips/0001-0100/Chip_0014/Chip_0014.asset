@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0014
   m_EditorClassIdentifier: 
   id: 14
-  displayName: Spider
-  description: Transform into a creepy crawly
-  icon: {fileID: 21300000, guid: 8aaffa3a2b305d14c91c071cdedf4f4d, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: de0515ec0fe16e44e9834cb64b7cac63
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 1
   effectLayer: 0
   effectFlags: 0

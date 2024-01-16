@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0915
   m_EditorClassIdentifier: 
   id: 915
-  displayName: SquareEyes
-  description: Just a Boring Square.
-  icon: {fileID: 21300000, guid: ba504a325b154284a823eb0ffbb30dfa, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 42dbde11942961240a5be48cfbf11521
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

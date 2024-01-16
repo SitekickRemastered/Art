@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0707
   m_EditorClassIdentifier: 
   id: 707
-  displayName: DarkAngelWings
-  description: DACE - Super_samurai
-  icon: {fileID: 21300000, guid: d9cb356c0de28e342853db8586b9a2af, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: c1e5dba50556c314f9d2791c7e798223
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

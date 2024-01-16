@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0362
   m_EditorClassIdentifier: 
   id: 362
-  displayName: AniDo3
-  description: Styled after a popular female anime mechanic.
-  icon: {fileID: 21300000, guid: 1e5fae3f620ecdd4892c50d110177485, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 37f558af20883f04593227a25891f71d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

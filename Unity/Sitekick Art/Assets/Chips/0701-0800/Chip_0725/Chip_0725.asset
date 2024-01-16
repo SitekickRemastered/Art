@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0725
   m_EditorClassIdentifier: 
   id: 725
-  displayName: LaurelLove
-  description: A festive wreath necklace.
-  icon: {fileID: 21300000, guid: 91e5cacfec7c7b04da9720eff4e6a214, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 194349d8247205d4ab92a44106b84bbd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

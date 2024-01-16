@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0119
   m_EditorClassIdentifier: 
   id: 119
-  displayName: BlueEyes
-  description: There's good in you yet.
-  icon: {fileID: 21300000, guid: 148680269a5a06741b707f256dbcf86f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9a5b73afb43a34540bed60d01ef60aec
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

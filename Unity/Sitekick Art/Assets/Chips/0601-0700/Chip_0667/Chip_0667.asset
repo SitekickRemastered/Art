@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0667
   m_EditorClassIdentifier: 
   id: 667
-  displayName: ToucanBeak
-  description: Follow your nose!
-  icon: {fileID: 21300000, guid: 170a77ff8069c9946a6e6ec7cb07579c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9d590a0a90971dd4483c4645ab9fe288
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

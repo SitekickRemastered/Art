@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0096
   m_EditorClassIdentifier: 
   id: 96
-  displayName: Christina
-  description: Easy breezy.
-  icon: {fileID: 21300000, guid: 76cd3077e85268d4aaeb4b51d0f1e328, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ad303a1a34b1ae4408ba16b8662312ec
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

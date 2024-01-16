@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1122
   m_EditorClassIdentifier: 
   id: 1122
-  displayName: GlobeTopper
-  description: On top of the world!
-  icon: {fileID: 21300000, guid: 2ac3a5b18915cd446b095b53c2ddc256, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cb49b74084003194283648ed1b051cf8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

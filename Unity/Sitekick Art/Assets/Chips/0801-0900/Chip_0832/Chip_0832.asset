@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0832
   m_EditorClassIdentifier: 
   id: 832
-  displayName: ProlliperArm
-  description: Duty.
-  icon: {fileID: 21300000, guid: d97888974a685d14ba257bf45288222d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 092b724df4223a44aadbf6b24aa2804e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

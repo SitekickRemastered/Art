@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0053
   m_EditorClassIdentifier: 
   id: 53
-  displayName: TheZoneEye
-  description: Used by Phil, Pat, Sugar, Carlos, etc
-  icon: {fileID: 21300000, guid: 670b122dc79a1364591ccda278609717, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 7d37e0129c26a5d468dd67a05813c6ae
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

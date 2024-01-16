@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0460
   m_EditorClassIdentifier: 
   id: 460
-  displayName: Blizzlid
-  description: "Fremd und geheimnisvoll. T\xFCrme aus rotem Gold. Kalt wie das Eis.
-    Moskau!"
-  icon: {fileID: 21300000, guid: 25c5e1ffaf5cb8d41a90e3cba8d15013, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 62842e55b9323f843920ffc35f61cba8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

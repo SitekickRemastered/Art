@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0319
   m_EditorClassIdentifier: 
   id: 319
-  displayName: TheMask
-  description: An ancient wooden mask.  I wonder what it does...
-  icon: {fileID: 21300000, guid: b9f1e7e46e5c3374da593f7d5c34a6a6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8f84c00304a78ba4bbbc9cdc62f117bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

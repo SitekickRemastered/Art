@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0645
   m_EditorClassIdentifier: 
   id: 645
-  displayName: JudgeDo
-  description: Order in the Court!
-  icon: {fileID: 21300000, guid: cde7d51558c49404cb46ed98595b9218, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 0e4a2c59850136b4db6ab0b70dd354b7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

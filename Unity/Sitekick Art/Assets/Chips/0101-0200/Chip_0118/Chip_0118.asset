@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0118
   m_EditorClassIdentifier: 
   id: 118
-  displayName: VioletEyes
-  description: Deception!
-  icon: {fileID: 21300000, guid: d70ca9a5557b7524caea62d095d28f06, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d1409fdd27b7fe64f89e58655b70d655
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

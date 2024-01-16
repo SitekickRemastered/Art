@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0307
   m_EditorClassIdentifier: 
   id: 307
-  displayName: OctoArm5
-  description: Bad Clarinet Player.
-  icon: {fileID: 21300000, guid: 543ae9c528210294b8b0f1cfe57db7fc, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: d110af171fd472b4f992b5fb13587f9f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

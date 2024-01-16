@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0094
   m_EditorClassIdentifier: 
   id: 94
-  displayName: Dot
-  description: Thanks! You're so sweet.
-  icon: {fileID: 21300000, guid: c9ec428401ed5a8408f16366f10bc0b2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 229e54aab956257418d4c4e5fcfc278e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

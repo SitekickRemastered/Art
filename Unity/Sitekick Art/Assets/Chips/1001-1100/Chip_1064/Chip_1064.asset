@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1064
   m_EditorClassIdentifier: 
   id: 1064
-  displayName: GiftTopper
-  description: A conveniently placed surprise.
-  icon: {fileID: 21300000, guid: 9b2f58182bd3fed48b07942a79f9eb97, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: da4461fcacf1d054dba5594b9c6493a6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

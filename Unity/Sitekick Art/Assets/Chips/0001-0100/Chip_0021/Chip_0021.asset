@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0021
   m_EditorClassIdentifier: 
   id: 21
-  displayName: BozoNose
-  description: HONK HONK
-  icon: {fileID: 21300000, guid: 8cb138d5efa2ac24f8f4f55324ad2148, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ae82a90467f60004f834ab913bcd9d71
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

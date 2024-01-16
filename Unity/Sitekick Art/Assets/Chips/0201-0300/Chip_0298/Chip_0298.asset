@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0298
   m_EditorClassIdentifier: 
   id: 298
-  displayName: MechCommand
-  description: Microphone attachment. Looks best with MechLid.
-  icon: {fileID: 21300000, guid: 88d00913487f58a4abe057da68387728, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 07af678e7116e714badf7280f2242fa4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

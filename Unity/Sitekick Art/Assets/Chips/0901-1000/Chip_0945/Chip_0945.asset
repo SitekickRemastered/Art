@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0945
   m_EditorClassIdentifier: 
   id: 945
-  displayName: MetalLegs
-  description: The elusive viral Sitekiciophage!
-  icon: {fileID: 21300000, guid: 31d2a6613f259b7438e94fd6bf3004c6, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: b92d0dc669189a940b8994419b7db345
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

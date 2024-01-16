@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0288
   m_EditorClassIdentifier: 
   id: 288
-  displayName: CyClaws
-  description: Give 'em the clamps!
-  icon: {fileID: 21300000, guid: 3aa28d8828158b841ad940eecb7f70e7, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 1605594dfd890ac41aa10621b139b79a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

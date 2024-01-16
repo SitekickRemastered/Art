@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0156
   m_EditorClassIdentifier: 
   id: 156
-  displayName: LizLid
-  description: Hidden in plane site/plain sight.
-  icon: {fileID: 21300000, guid: 5dee8a28735105841aff6d046435841a, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 3cd40b639ace4fb4191eb858ea69b918
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

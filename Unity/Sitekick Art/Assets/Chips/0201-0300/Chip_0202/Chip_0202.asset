@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0202
   m_EditorClassIdentifier: 
   id: 202
-  displayName: LepreLid
-  description: A lucky hat
-  icon: {fileID: 21300000, guid: 5472834062499c34a88940a24ac48877, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: bf22255adf803844bb529b4cd247343e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

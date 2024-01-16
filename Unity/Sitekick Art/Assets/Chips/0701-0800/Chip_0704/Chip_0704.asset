@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0704
   m_EditorClassIdentifier: 
   id: 704
-  displayName: BikerKick
-  description: DACE - _gumper_
-  icon: {fileID: 21300000, guid: 7483d3d48fef6cc4184e15070027078d, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: ca3e8fe3ce5967641af87da48e858bcb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

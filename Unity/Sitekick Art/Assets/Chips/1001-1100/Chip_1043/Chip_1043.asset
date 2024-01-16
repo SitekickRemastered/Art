@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1043
   m_EditorClassIdentifier: 
   id: 1043
-  displayName: ScareDo
-  description: Do the Halloween Krump.
-  icon: {fileID: 21300000, guid: 87628574e732d3940b923e9978bfcd53, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 00380eeabfcc39349b3c3a1aebbdef2d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

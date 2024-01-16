@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0400
   m_EditorClassIdentifier: 
   id: 400
-  displayName: HorseyMane
-  description: Horse topper or werewolf in mid-transformation? In concept it's endless.
-  icon: {fileID: 21300000, guid: 3e0b5ffb3f7744b41aaff980ee6ac2d6, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 35356481bdb7c5240b3d8d4e2c736537
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

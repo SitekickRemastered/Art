@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1017
   m_EditorClassIdentifier: 
   id: 1017
-  displayName: TigerNose
-  description: Smells like Bengal.
-  icon: {fileID: 21300000, guid: be5ed50723450684291bf4762d67b962, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6e7a02c09761694428f2a471495c27b6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

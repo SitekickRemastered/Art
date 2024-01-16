@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0030
   m_EditorClassIdentifier: 
   id: 30
-  displayName: HeroCowl
-  description: For the hero that Yap Labs deserves
-  icon: {fileID: 21300000, guid: b7da5f1da5222e84aa1f6d83db488e8d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 546e0858ced85a246b9859ee1f2090ac
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

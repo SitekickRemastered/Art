@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0724
   m_EditorClassIdentifier: 
   id: 724
-  displayName: HoHoHoldOn
-  description: Gifts delivered to good SKs.
-  icon: {fileID: 21300000, guid: dcb9b4fbeae0ace48995819b978578ca, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: ab8fb5beb17c3874f8383785430b96f5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

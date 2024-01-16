@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0605
   m_EditorClassIdentifier: 
   id: 605
-  displayName: TheSaturdayNight
-  description: Party at my place. Party hats mandatory.
-  icon: {fileID: 21300000, guid: 812b1a019fb7d994c8c8ba6005e97e2c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 39daaf790c4a5aa4fbae3830293750a3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0089
   m_EditorClassIdentifier: 
   id: 89
-  displayName: Shauna
-  description: 7 days?
-  icon: {fileID: 21300000, guid: 4af37c37d02dae140b7e454c4430b254, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6b3280dbfbe7eba468a444c586c5d9f9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

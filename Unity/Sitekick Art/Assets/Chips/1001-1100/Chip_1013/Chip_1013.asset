@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1013
   m_EditorClassIdentifier: 
   id: 1013
-  displayName: TigerStripes
-  description: They are good.
-  icon: {fileID: 21300000, guid: 54ba28c1be2107f4f8f9455bbe1d341d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 8c4cd2a895155784e86b63cd6b167d98
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 1

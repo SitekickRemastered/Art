@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0311
   m_EditorClassIdentifier: 
   id: 311
-  displayName: TopHat
-  description: Happy Birthday!
-  icon: {fileID: 21300000, guid: 0f3317e6637691343a5ee0c96b0e34ec, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b7db408bfeedf2245b48189bb8e319cf
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0155
   m_EditorClassIdentifier: 
   id: 155
-  displayName: FishLid
-  description: Out of water, but plenty of Sitekick.
-  icon: {fileID: 21300000, guid: 19a1c19f10777de498e9643010cb788f, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 72ad5ff07934bac42be59e8c1a9172bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

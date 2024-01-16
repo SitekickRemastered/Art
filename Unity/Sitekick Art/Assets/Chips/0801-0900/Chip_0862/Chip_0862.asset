@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0862
   m_EditorClassIdentifier: 
   id: 862
-  displayName: PrincessLid
-  description: The Royal Dunce Hat.
-  icon: {fileID: 21300000, guid: d1326eeb8fcf96648858f0cd4946d0be, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 3ea4d39da77059c48852e81d29d09646
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

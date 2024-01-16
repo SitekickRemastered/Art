@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0215
   m_EditorClassIdentifier: 
   id: 215
-  displayName: BunnyEars
-  description: Get excellent hearing with this pair of long ears
-  icon: {fileID: 21300000, guid: 5726305c9356e9e478d80cf531a12261, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b6fde0fb624c67a4a9ebfdee171234c0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

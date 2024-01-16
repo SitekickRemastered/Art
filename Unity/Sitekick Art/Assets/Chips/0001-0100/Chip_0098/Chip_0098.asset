@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0098
   m_EditorClassIdentifier: 
   id: 98
-  displayName: Pylon
-  description: Fashionably Safe.
-  icon: {fileID: 21300000, guid: 547265c89d0823943b6d15c9aa996b73, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 1fda1cdd42be2b54e94bd78a412f1915
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

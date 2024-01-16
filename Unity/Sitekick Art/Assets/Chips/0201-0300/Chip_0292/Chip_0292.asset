@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0292
   m_EditorClassIdentifier: 
   id: 292
-  displayName: RoboCrawl
-  description: Follow the Sentry Bot.
-  icon: {fileID: 21300000, guid: 700abfc53f91deb4587de29f01278917, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 9963ececf72598d47904e968470ea827
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

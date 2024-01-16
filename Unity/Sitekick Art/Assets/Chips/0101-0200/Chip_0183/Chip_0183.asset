@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0183
   m_EditorClassIdentifier: 
   id: 183
-  displayName: AniEyes6
-  description: Dizzy anime eyes
-  icon: {fileID: 21300000, guid: 80b8ccf4e62e6f844a413811f2191283, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: b10b501498afeb44ab3b7fbbedb1c776
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

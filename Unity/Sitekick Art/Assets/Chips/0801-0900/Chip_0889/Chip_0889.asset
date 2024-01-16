@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0889
   m_EditorClassIdentifier: 
   id: 889
-  displayName: SKSDJuL2009
-  description: TwihornLid
-  icon: {fileID: 21300000, guid: 71a7e2c2b3320e94bbbfa36d1d3b9389, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c39838dfc1a91f244ae2f608602f2370
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

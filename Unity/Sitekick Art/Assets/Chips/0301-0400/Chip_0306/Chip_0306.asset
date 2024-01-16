@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0306
   m_EditorClassIdentifier: 
   id: 306
-  displayName: OctoArm4
-  description: Struggling Artist.
-  icon: {fileID: 21300000, guid: 018ccef6ded175b4e957582ad21f9c7a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 61ce1639ee25f4f47ba4d054374fa8d6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

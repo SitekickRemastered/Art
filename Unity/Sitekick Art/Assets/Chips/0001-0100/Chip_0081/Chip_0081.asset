@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0081
   m_EditorClassIdentifier: 
   id: 81
-  displayName: 25CentBrow
-  description: Rapper eyebrows
-  icon: {fileID: 21300000, guid: a4ec36d1f94e0f848a5a0d4525c47c1e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: bba7505cc0f34bb48a24e8f326bd1f99
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0206
   m_EditorClassIdentifier: 
   id: 206
-  displayName: LepreEars
-  description: Lucky ears
-  icon: {fileID: 21300000, guid: 30385c504bb72e049bd1d95d59965711, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 9ba8ce2b5f9461448a3e034e9286df9a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

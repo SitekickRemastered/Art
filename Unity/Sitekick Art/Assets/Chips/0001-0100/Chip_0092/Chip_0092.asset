@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0092
   m_EditorClassIdentifier: 
   id: 92
-  displayName: Dana
-  description: Oh I wish upon a fish.
-  icon: {fileID: 21300000, guid: f3b357f1ee1ba5a46a66cfdece592ef5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7ceb85f18a4a3df4b988b31eb024c2d4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

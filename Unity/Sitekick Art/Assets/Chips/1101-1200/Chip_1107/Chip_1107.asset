@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1107
   m_EditorClassIdentifier: 
   id: 1107
-  displayName: AniDo9
-  description: The hair of an antagonist to the Gummy Bottle Brigade.
-  icon: {fileID: 21300000, guid: 937ebb82b902fe540b1fdd7d587d62b3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9e8f91001f726e84d84163db06a6b877
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0374
   m_EditorClassIdentifier: 
   id: 374
-  displayName: SpinFiend
-  description: Become a Lacrosse player.
-  icon: {fileID: 21300000, guid: c0bffd31aceac80439f05c11930c9215, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cca8780ef31cd0f46bb4098a15476a81
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

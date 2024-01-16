@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0685
   m_EditorClassIdentifier: 
   id: 685
-  displayName: ChippyMouth
-  description: Ahh-ahahahah!
-  icon: {fileID: 21300000, guid: bee08a3402cb0674ba3e525a3d4a5cc1, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 529ed70e09d52274393658a883abba34
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

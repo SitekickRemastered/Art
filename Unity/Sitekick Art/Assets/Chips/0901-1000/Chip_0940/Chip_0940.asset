@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0940
   m_EditorClassIdentifier: 
   id: 940
-  displayName: AstroLid
-  description: Wait! Please don't leave. Take me with you!
-  icon: {fileID: 21300000, guid: b12beaba04a9f93439e6db6f472b4153, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: cb55a6045f35e0a46b0ed55da1e44476
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

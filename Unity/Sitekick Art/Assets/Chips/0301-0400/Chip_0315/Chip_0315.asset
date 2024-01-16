@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0315
   m_EditorClassIdentifier: 
   id: 315
-  displayName: JetPack
-  description: Imagine your Sitekick taking to the skies with this flight gear.
-  icon: {fileID: 21300000, guid: bf9e570c1a9ae4342bdd9290fbb0837c, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 70601d5885d52af45a78ead57eaa3576
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

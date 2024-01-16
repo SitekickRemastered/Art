@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0162
   m_EditorClassIdentifier: 
   id: 162
-  displayName: LongHair
-  description: Long black hair!
-  icon: {fileID: 21300000, guid: 60bfcb8fed1d2e847813cc00870f8293, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 740c2054828195e41ace2370e6a7729b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

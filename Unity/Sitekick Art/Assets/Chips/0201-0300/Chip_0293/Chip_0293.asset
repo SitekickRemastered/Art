@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0293
   m_EditorClassIdentifier: 
   id: 293
-  displayName: ShockHelm
-  description: A helmet befitting of any galactic bounty hunter
-  icon: {fileID: 21300000, guid: fdc7f1ddde83183429f03e4a98f52d8b, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 7573fdaed80c18043b8b5d0482233b21
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

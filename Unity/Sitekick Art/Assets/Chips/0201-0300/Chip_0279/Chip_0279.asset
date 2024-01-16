@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0279
   m_EditorClassIdentifier: 
   id: 279
-  displayName: CarnoCoiff
-  description: Some predatory dreadlocks
-  icon: {fileID: 21300000, guid: 075726b2decff02408a2b22dd595cffe, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 1910aaeccceedcb4998006fd9b4f6877
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

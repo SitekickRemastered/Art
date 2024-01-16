@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0093
   m_EditorClassIdentifier: 
   id: 93
-  displayName: Aimie
-  description: I want to speak with your manager.
-  icon: {fileID: 21300000, guid: 18a999d7cc6fdc44a83a2e8bc3468814, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 126e11b6ae5c28e4f82a81402571ad3c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

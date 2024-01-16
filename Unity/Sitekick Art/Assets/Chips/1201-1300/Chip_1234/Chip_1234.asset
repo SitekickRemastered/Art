@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1234
   m_EditorClassIdentifier: 
   id: 1234
-  displayName: RidingHood
-  description: Does not repel wolves.
-  icon: {fileID: 21300000, guid: 81468812eda17f345b24f0157144b515, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fe27a34b41b033b4e9f98bf946a4844f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

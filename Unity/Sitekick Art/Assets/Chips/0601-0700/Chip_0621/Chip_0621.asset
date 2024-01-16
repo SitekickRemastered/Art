@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0621
   m_EditorClassIdentifier: 
   id: 621
-  displayName: RoyalRobe
-  description: All Sitekicks deserve the royal treatment.
-  icon: {fileID: 21300000, guid: 545f5b92930e52c48b501815aae4abc3, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: cd0d9246fa36028478a6ead965f67af3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

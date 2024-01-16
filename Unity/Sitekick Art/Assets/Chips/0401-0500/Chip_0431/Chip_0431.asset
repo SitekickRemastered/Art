@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0431
   m_EditorClassIdentifier: 
   id: 431
-  displayName: MechHover
-  description: Alien hovercraft from another dimension
-  icon: {fileID: 21300000, guid: 49559cded8c837b4986db2a0f3f843f9, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 556c936a4cc4ff048a9657fe30bcaf5a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

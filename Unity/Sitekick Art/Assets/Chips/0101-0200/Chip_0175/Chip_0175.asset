@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0175
   m_EditorClassIdentifier: 
   id: 175
-  displayName: Bangs3
-  description: The final entry in the Bangs collection. Do you dare equip them all?
-  icon: {fileID: 21300000, guid: c2fa5fad6408c0f419993d315703b751, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 019ea830721bbf24fbb1bab76cc50405
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1088
   m_EditorClassIdentifier: 
   id: 1088
-  displayName: SweetWings
-  description: Ascend into All Sorts of trouble.
-  icon: {fileID: 21300000, guid: b506e89f18cd89d49928c3311a51d6e2, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1d6f2d8b9168bb145aaf3ab6aa63d121
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1159
   m_EditorClassIdentifier: 
   id: 1159
-  displayName: MechTreads
-  description: Wham-Pow! I'll make that hot rod ever hotter--Wahahahahaha!
-  icon: {fileID: 21300000, guid: a349530152a9cb0458122b1aa7b43136, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: fa6bfba82492f3141bee6f53ac5ae495
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0137
   m_EditorClassIdentifier: 
   id: 137
-  displayName: Eyeclops
-  description: No. This isn't the Optic Blast.
-  icon: {fileID: 21300000, guid: 198d3da69d53feb4080ab9c63eaa3ebf, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: fa7f226157c92194a961f43debd30198
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

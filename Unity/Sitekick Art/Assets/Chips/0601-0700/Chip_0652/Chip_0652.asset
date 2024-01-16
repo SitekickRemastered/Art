@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0652
   m_EditorClassIdentifier: 
   id: 652
-  displayName: Wooly
-  description: Not a Bully.
-  icon: {fileID: 21300000, guid: c53023adda9d42546a20062e377e3afb, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: e7ecd83afcbf35f45b06709d2dedf527
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

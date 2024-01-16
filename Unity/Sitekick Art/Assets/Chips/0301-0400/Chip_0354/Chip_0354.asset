@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0354
   m_EditorClassIdentifier: 
   id: 354
-  displayName: DesertCamo
-  description: This basically makes you invisible in the desert.. or on the beach.
-  icon: {fileID: 21300000, guid: d21f72a219315354e8c6b3c605b8b208, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: dcdc41c36fd1d1140ab5ca5e4033e101
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 3

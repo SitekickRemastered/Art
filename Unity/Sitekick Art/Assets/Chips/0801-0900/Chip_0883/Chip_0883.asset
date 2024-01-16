@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0883
   m_EditorClassIdentifier: 
   id: 883
-  displayName: SkSDJan2009
-  description: JustOneScoop
-  icon: {fileID: 21300000, guid: ccc5374078b123b4eb4254eaa1170be1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6a6c538191edbbf40b50726622e031f3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

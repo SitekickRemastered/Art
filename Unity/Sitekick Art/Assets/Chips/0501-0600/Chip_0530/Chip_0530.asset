@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0530
   m_EditorClassIdentifier: 
   id: 530
-  displayName: CyVisorBlue
-  description: If only real augmented reality glasses looked this cool.
-  icon: {fileID: 21300000, guid: d246c4bb8851bb644931c2b013fb6439, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 885daaa3af23f224088bd94ff82ebf9f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

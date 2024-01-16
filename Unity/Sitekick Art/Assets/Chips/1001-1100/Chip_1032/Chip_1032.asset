@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1032
   m_EditorClassIdentifier: 
   id: 1032
-  displayName: RavenTail
-  description: Don't get these ruffled now.
-  icon: {fileID: 21300000, guid: 761b7b4cc693add4bbb7bdf5c191f2b9, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 913aef4c4ecc1db49a79474671f589d8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

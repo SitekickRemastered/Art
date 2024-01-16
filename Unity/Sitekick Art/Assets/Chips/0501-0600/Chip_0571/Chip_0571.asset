@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0571
   m_EditorClassIdentifier: 
   id: 571
-  displayName: HolidaySock
-  description: Have your Sitekick become a stocking stuffer.
-  icon: {fileID: 21300000, guid: fefab1db03f89864e9c600152255630d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e4d8f5797de6d1647aeb97cf0d35a8cb
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

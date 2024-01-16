@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0677
   m_EditorClassIdentifier: 
   id: 677
-  displayName: LuchaMask
-  description: You have my permission to wear this.
-  icon: {fileID: 21300000, guid: a379adb52dc09194d981e4639a21e2e9, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e576f9e1e1ef50b4eb205fc318df3cfa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

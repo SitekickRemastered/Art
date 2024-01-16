@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0070
   m_EditorClassIdentifier: 
   id: 70
-  displayName: Frankie
-  description: Frankenstein's Monster cosplay
-  icon: {fileID: 21300000, guid: 808c7cd5c7718e748914de2b275d40f1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 10efc2128a7d4944ea88d9c38c33475e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0364
   m_EditorClassIdentifier: 
   id: 364
-  displayName: AniDo5
-  description: We genuinely don't know what this is.
-  icon: {fileID: 21300000, guid: 06291e5d27d45454bb6767f0f3f8403d, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 59a10655546fcfc469ca68815e48bb14
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

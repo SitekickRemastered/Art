@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1129
   m_EditorClassIdentifier: 
   id: 1129
-  displayName: AmberEyes
-  description: You're not stopping. Admit it.
-  icon: {fileID: 21300000, guid: d4f816518bd3d794dab7f68826682ba5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6dc876d599ee6ad4f99ed0a5b1e2045e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

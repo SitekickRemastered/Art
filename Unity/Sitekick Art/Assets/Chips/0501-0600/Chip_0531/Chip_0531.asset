@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0531
   m_EditorClassIdentifier: 
   id: 531
-  displayName: CyVisorGreen
-  description: This one is environmentally-friendly.
-  icon: {fileID: 21300000, guid: 066b4571ab3eda0408cd23d77e535d8a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fe17665f944f1b14f966699ce4ff04aa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

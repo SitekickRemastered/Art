@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0456
   m_EditorClassIdentifier: 
   id: 456
-  displayName: MechBJets
-  description: Like the Aile Striker Pack before it, this will provide the Sitekick
-    with increased aerial agility.
-  icon: {fileID: 21300000, guid: 4c2cee73d2f53cd4e98043cbe0a74b18, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 4a8dcc3a84ead2c4fa303417181036f8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

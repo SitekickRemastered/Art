@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0209
   m_EditorClassIdentifier: 
   id: 209
-  displayName: LabMutant
-  description: Achieve the Alien-Cthulhu look
-  icon: {fileID: 21300000, guid: c97eb5f433e23f945ac19d5a7c852d5f, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 39e1ff76e1658864896c8b1366406c90
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0355
   m_EditorClassIdentifier: 
   id: 355
-  displayName: CamoLid
-  description: Works best with JungleCamo facepaint.
-  icon: {fileID: 21300000, guid: f9cc443900c25e24f9d3ff1f67347cda, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: bddba12d94be0c041aa98760e6104d9e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0996
   m_EditorClassIdentifier: 
   id: 996
-  displayName: AlleyShirt
-  description: Are you set to play? Better check your aim. Strike in every frame.
-    Watch that gutterball.
-  icon: {fileID: 21300000, guid: be10182cdfe694e4dbb6ea43d6a45b4d, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 92fad57f4cf2c4849a9fa247f620abc0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0684
   m_EditorClassIdentifier: 
   id: 684
-  displayName: DoggyFace
-  description: Bow Wow Wow.
-  icon: {fileID: 21300000, guid: 41908db6f71dd4a4bbefc17331201ed5, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fd9dc10df32a3d44d92c4a72496472e3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

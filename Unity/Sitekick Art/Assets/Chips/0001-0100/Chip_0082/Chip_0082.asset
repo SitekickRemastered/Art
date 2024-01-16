@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0082
   m_EditorClassIdentifier: 
   id: 82
-  displayName: 25CentLid
-  description: Yo! yo.
-  icon: {fileID: 21300000, guid: 17e0d6f46a000904bbca56d83a918f07, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: faf47d4ee1fad0b44af0a9a0ddfc755e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0389
   m_EditorClassIdentifier: 
   id: 389
-  displayName: Racer4
-  description: Race Off
-  icon: {fileID: 21300000, guid: 3d3f92efa243010458bda35234a9025b, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 0d9de9c916d4aa54fa47016314b2ae9d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1005
   m_EditorClassIdentifier: 
   id: 1005
-  displayName: CactusLid
-  description: Bring the desert with you.
-  icon: {fileID: 21300000, guid: 323ed3e9d8a07d4448d544341acd08b6, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 29eeafa7c077e9045a396be6285de4b8
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1046
   m_EditorClassIdentifier: 
   id: 1046
-  displayName: SkullTopper
-  description: Dia de los Muertos
-  icon: {fileID: 21300000, guid: d4d5a72c6fb45d649a977dc4c4ca3418, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e1a26720ac19016499e6c1a82c63d36f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

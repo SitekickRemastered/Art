@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0394
   m_EditorClassIdentifier: 
   id: 394
-  displayName: BluePugSnout
-  description: Not just the nose but the mouth too!
-  icon: {fileID: 21300000, guid: 17092bb7319130342a2f88a3b14cb83c, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 3708c81b041d9404fa9657403036e8a3
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

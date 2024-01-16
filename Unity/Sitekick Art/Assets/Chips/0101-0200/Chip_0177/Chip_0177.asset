@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0177
   m_EditorClassIdentifier: 
   id: 177
-  displayName: Prairies
-  description: Saskatchewan!
-  icon: {fileID: 21300000, guid: df79cb6beb3d6c34f9f6d63c68a49d94, type: 3}
-  rarity: 4
-  effectPrefabRef:
-    m_AssetGUID: b75de867db4b00d4ca681e7f5b0fd47b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

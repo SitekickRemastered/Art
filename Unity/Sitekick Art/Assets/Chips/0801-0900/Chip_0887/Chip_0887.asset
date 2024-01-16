@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0887
   m_EditorClassIdentifier: 
   id: 887
-  displayName: SKSDMay2009
-  description: ShoeHome
-  icon: {fileID: 21300000, guid: 55c709aa489e86c4c94263c68bc3f985, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 2a8525244fc4b114cb1d63c0721d3072
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

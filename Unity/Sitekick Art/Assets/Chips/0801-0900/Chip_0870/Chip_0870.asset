@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0870
   m_EditorClassIdentifier: 
   id: 870
-  displayName: Gifty
-  description: It's the thought that counts.
-  icon: {fileID: 21300000, guid: 918c7dc733421134fa2971828773f265, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 55ac3ca0bfe872f43b048b5cbde1c289
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0746
   m_EditorClassIdentifier: 
   id: 746
-  displayName: PoetLid
-  description: Dip that quill, and write something profound.
-  icon: {fileID: 21300000, guid: f19252952aefad048b65d094970af094, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 982d8e8c63218fa469c4fef3e6570c6f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

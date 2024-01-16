@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0085
   m_EditorClassIdentifier: 
   id: 85
-  displayName: Penny
-  description: '"I will never be a memory."'
-  icon: {fileID: 21300000, guid: dbfec56f3f4b1bf43a9303d79a9c0cf1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 9c86e706745014d4abc2678790f3ee1e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

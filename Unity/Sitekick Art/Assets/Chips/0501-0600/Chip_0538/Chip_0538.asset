@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0538
   m_EditorClassIdentifier: 
   id: 538
-  displayName: HagGams
-  description: Fly, my Pretties! FLY!!!!
-  icon: {fileID: 21300000, guid: df2b3551aa66fe24986a0c9b51c3929a, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 2874fe51fd37bb34bb8d7529869a5296
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

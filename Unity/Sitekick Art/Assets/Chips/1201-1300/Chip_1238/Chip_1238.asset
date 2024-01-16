@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1238
   m_EditorClassIdentifier: 
   id: 1238
-  displayName: RitualMask
-  description: Oh, sweet Sitekick. Welcome Moon and Star.
-  icon: {fileID: 21300000, guid: 38866e9a6804c47499bc4b0c0b353ef7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4dd305d6914b6ba46a00d144e3a8679b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

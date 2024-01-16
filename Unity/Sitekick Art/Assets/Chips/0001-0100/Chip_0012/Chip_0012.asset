@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0012
   m_EditorClassIdentifier: 
   id: 12
-  displayName: Cyranose
-  description: Ballistic Nose. BANG!
-  icon: {fileID: 21300000, guid: 409e69667a9729044b50283d192f5cd3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 61a8903ee5d6ae84d97765be67e29ce5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

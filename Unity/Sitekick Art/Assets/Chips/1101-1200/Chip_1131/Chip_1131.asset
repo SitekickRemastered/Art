@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1131
   m_EditorClassIdentifier: 
   id: 1131
-  displayName: PoisonKnot
-  description: For poisonous business practices.
-  icon: {fileID: 21300000, guid: 81b5d48c556ce1344903cec4c3dae9e1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cd9c646f6b4cad14dbd5faf12b40b5de
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0105
   m_EditorClassIdentifier: 
   id: 105
-  displayName: Ballcap
-  description: Take me out to the ball.
-  icon: {fileID: 21300000, guid: d203a1dd9cbca9c4488ee3f59c20ef81, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 58bbeb101ba6f7c46acc08580dc9eb48
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0622
   m_EditorClassIdentifier: 
   id: 622
-  displayName: LampShadeLid
-  description: Whoever ends up with this was the life of the party.
-  icon: {fileID: 21300000, guid: 8b306b1fa01e64c4fb86eaeb1c509809, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cf9e7f71696a9d34c814648964c6705a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

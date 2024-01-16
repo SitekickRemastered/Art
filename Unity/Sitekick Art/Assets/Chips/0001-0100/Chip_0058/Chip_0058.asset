@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0058
   m_EditorClassIdentifier: 
   id: 58
-  displayName: Kitty
-  description: Me-Wow!
-  icon: {fileID: 21300000, guid: 09137ae984886b346a01857356b72202, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 0c87258eaf251734c96c99c8e5e68eef
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

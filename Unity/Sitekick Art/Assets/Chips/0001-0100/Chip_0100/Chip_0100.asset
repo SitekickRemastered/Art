@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0100
   m_EditorClassIdentifier: 
   id: 100
-  displayName: Pharaoh
-  description: Walk like a--
-  icon: {fileID: 21300000, guid: d4298b49605b3ec48ac1450c81d7b668, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: bded5d5fecc2e9d4380d804bc5464941
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

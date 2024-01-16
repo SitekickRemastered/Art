@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0558
   m_EditorClassIdentifier: 
   id: 558
-  displayName: BuzzHead
-  description: Big Buzzard Bump.
-  icon: {fileID: 21300000, guid: 74d14a30254d2ca48b477804077a928c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f1fd28fd2a79d2a498f7bf7d43a8d19a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

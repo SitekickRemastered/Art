@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0249
   m_EditorClassIdentifier: 
   id: 249
-  displayName: YuDo
-  description: Believe in the heart of cardboard.
-  icon: {fileID: 21300000, guid: 4fa01d5cf4a326d478c27a420a91e7cc, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 814f58e46822122449616a36c1fb200f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

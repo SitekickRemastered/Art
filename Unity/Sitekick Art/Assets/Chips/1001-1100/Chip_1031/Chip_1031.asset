@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1031
   m_EditorClassIdentifier: 
   id: 1031
-  displayName: RavenLid
-  description: Your hat keeps quothing me. I'm telling!
-  icon: {fileID: 21300000, guid: 3cb852d3d0b01574aad5b355cd284a16, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 7ab169629223f8740b40cf320f53c759
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 4

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0280
   m_EditorClassIdentifier: 
   id: 280
-  displayName: BroomHelm
-  description: This . . . Is . . . Sitekick!
-  icon: {fileID: 21300000, guid: cbec4d234e48a964897e2af0fa302659, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6c6cf7a38b897d94c9376a5f021fdce7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

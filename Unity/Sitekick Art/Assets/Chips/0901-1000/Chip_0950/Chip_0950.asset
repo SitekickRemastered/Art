@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0950
   m_EditorClassIdentifier: 
   id: 950
-  displayName: Sitewich
-  description: A balanced lunch with a helping of metal.
-  icon: {fileID: 21300000, guid: bd04347dd55927c4b829fcc3fc50332a, type: 3}
-  rarity: 3
-  effectPrefabRef:
-    m_AssetGUID: 950876373a25fe14b83e8f6df18a80c5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

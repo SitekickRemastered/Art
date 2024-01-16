@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1123
   m_EditorClassIdentifier: 
   id: 1123
-  displayName: VNHat
-  description: Helps with pain relief.
-  icon: {fileID: 21300000, guid: f2b0b9b3339fada48bb902334294a2e4, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: f79f2de9364e667408260e5cf707c6cc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

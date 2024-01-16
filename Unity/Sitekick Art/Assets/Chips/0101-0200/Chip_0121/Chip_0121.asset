@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0121
   m_EditorClassIdentifier: 
   id: 121
-  displayName: BlackEyes
-  description: A pair of black eyes--not from an injury
-  icon: {fileID: 21300000, guid: 8131369895ad8ab478b52b0a2508d7ff, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: db2e0d8a79b53814792441177d312b36
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

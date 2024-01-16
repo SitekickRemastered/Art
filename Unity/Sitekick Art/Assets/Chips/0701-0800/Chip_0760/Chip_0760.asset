@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0760
   m_EditorClassIdentifier: 
   id: 760
-  displayName: SteamboatSKee
-  description: It's all about that Whistlin' Sway.
-  icon: {fileID: 21300000, guid: 27c04a24f62f7fa45badbcbad50265f7, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4e22412dfca7f924cb8cd84e1f6f8c13
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

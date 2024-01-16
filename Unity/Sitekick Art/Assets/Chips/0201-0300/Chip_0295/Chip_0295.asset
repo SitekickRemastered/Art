@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0295
   m_EditorClassIdentifier: 
   id: 295
-  displayName: Handlebar
-  description: If only you had a motorcycle to go with this 'stache.
-  icon: {fileID: 21300000, guid: 5d744ff6261866b47abb559b57b2c09a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bfa566e5642a1654b87f4906a4c0270e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

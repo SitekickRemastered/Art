@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0594
   m_EditorClassIdentifier: 
   id: 594
-  displayName: Burnify
-  description: DACE - KangarooKangaroo
-  icon: {fileID: 21300000, guid: eee53cba8c2c189458a4412f4d72dc86, type: 3}
-  rarity: 5
-  effectPrefabRef:
-    m_AssetGUID: cf594a82684b7f548a6499ab048571af
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

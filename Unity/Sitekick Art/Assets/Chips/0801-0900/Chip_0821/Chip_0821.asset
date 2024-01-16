@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0821
   m_EditorClassIdentifier: 
   id: 821
-  displayName: YellowPonyTail
-  description: Yellow Swirl.
-  icon: {fileID: 21300000, guid: 5d1c52015f15d41458dc71558ab1de6e, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 51108d4e1212dd0409ad6f0d3707b2d0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

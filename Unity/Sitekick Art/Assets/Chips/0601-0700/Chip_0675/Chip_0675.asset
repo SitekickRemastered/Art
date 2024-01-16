@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0675
   m_EditorClassIdentifier: 
   id: 675
-  displayName: Fnarp
-  description: Bimmy Quasar Alien Prodigy in . . .
-  icon: {fileID: 21300000, guid: 07d28e6d8ee16fb4b894291cc9a0fac3, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 660c9aa98e141724aa34346c4a36576c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

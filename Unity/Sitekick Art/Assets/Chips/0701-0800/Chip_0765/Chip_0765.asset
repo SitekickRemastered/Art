@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0765
   m_EditorClassIdentifier: 
   id: 765
-  displayName: BuckTeeth2
-  description: Should have got the braces . . .
-  icon: {fileID: 21300000, guid: be2d2f3b3bb3cab41a876379ce146f58, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: bfa540f209a1ce74aae80723b96bdede
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

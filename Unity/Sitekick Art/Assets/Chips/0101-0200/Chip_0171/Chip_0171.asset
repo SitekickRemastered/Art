@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0171
   m_EditorClassIdentifier: 
   id: 171
-  displayName: CarrotNose
-  description: Just like a snowman
-  icon: {fileID: 21300000, guid: 0b869b6b8f4c20d4084c9d7096c6acbc, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 6d4b60e5b9a2a974aafd0c6b07b217ac
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

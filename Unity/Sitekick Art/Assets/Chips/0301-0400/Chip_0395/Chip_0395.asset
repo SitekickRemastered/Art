@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0395
   m_EditorClassIdentifier: 
   id: 395
-  displayName: SheperdCollar
-  description: For one tough dog . . . Frisket?
-  icon: {fileID: 21300000, guid: c55c49a9faf8ed74399d6a5f2c1d5b3c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 008f247068a48cb4f89622102ecc9294
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

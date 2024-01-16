@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0409
   m_EditorClassIdentifier: 
   id: 409
-  displayName: Handy
-  description: A medal awarded for . . . something awesome.
-  icon: {fileID: 21300000, guid: 67c1f0097ca795a4595b53083517506d, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: e6b909435d9849a4088af4d46556167b
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

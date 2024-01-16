@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1130
   m_EditorClassIdentifier: 
   id: 1130
-  displayName: SpringKick
-  description: Celebrate Daylight Savings with style.
-  icon: {fileID: 21300000, guid: 0e9ce828a0a0c27438823569ee3a1a61, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 4275fcc5b5af07e4eb7fb6ba1615fc29
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

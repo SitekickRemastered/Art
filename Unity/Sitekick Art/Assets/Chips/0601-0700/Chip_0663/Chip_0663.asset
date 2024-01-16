@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0663
   m_EditorClassIdentifier: 
   id: 663
-  displayName: JellyLid
-  description: Ah. Jellyfish Fields . . .
-  icon: {fileID: 21300000, guid: cf6dd7615cfb03f43827b228f9aa151b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 04b12d6b3daf3dd44aa6d78bfdc7094c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

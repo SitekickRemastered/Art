@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0218
   m_EditorClassIdentifier: 
   id: 218
-  displayName: BunnyFeet
-  description: These feet were made for hopping
-  icon: {fileID: 21300000, guid: 2f4b4ede61569a747bb853dd6e25dc7e, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: f146c4114469759429b9b3f71babc315
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

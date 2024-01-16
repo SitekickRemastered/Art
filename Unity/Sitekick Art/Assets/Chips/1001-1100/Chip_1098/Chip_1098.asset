@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1098
   m_EditorClassIdentifier: 
   id: 1098
-  displayName: FrostTopper
-  description: A little snowman antenna buddy.
-  icon: {fileID: 21300000, guid: 02c61771f4d23264cb3ff1732bab555a, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 1e6418d04e2439c4d8d241bb92064436
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

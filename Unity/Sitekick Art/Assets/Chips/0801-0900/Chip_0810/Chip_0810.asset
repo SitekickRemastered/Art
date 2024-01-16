@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0810
   m_EditorClassIdentifier: 
   id: 810
-  displayName: DerbySkirt
-  description: Look cute but deadly on the rink.
-  icon: {fileID: 21300000, guid: 63083f4ac46f8c546a3877a2fff28244, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 08b18424954add04485b86337490a7aa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

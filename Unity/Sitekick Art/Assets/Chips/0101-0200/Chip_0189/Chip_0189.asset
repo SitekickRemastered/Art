@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0189
   m_EditorClassIdentifier: 
   id: 189
-  displayName: AniMouth3
-  description: Jissai no tokoro.
-  icon: {fileID: 21300000, guid: 89306542a9c5ab341a9d45783cd025c1, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 1bfd940d04f0d2c4e8d447012d5e8cf2
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

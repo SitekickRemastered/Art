@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0075
   m_EditorClassIdentifier: 
   id: 75
-  displayName: Blondie
-  description: Elegant.
-  icon: {fileID: 21300000, guid: 66c079ec0e9b1c3469fb040d50d73a89, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: e99c49aa97d28da4299108febaf8252d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

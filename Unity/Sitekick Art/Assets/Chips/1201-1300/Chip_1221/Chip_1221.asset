@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1221
   m_EditorClassIdentifier: 
   id: 1221
-  displayName: DrillMonkey
-  description: The face of timing rather than power.
-  icon: {fileID: 21300000, guid: a8adbdfce7cacde489af99f305b70952, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b227bebb9a47c724281537bd9b2188c5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

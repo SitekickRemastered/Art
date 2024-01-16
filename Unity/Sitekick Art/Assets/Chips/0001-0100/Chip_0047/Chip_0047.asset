@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0047
   m_EditorClassIdentifier: 
   id: 47
-  displayName: Hayseed
-  description: Stay relaxed on the farm with a Wheat Break.
-  icon: {fileID: 21300000, guid: b975d3c8268bd2c4cbfd7d7c1a8f7bd9, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 32cb38e1aebe06c45b17fd08a209dc5f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

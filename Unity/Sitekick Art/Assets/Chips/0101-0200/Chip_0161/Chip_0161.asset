@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0161
   m_EditorClassIdentifier: 
   id: 161
-  displayName: Tower
-  description: A Night in Terror Tower.
-  icon: {fileID: 21300000, guid: f96782ef417846f4ba29b840e69165b2, type: 3}
-  rarity: 4
-  effectPrefabRef:
-    m_AssetGUID: 0003aa2c1f43faa43b0e4993b7498b09
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 2
   effectLayer: 2
   effectFlags: 0

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0891
   m_EditorClassIdentifier: 
   id: 891
-  displayName: SKSDSpt2009
-  description: SwordWings
-  icon: {fileID: 21300000, guid: c69b32fb219957e4189c766c58f2322c, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: b42fd8c84d7e4764e8e0869bb8511957
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

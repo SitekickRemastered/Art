@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0907
   m_EditorClassIdentifier: 
   id: 907
-  displayName: Katsaucer
-  description: Kat was a space alien this whole time!?
-  icon: {fileID: 21300000, guid: 843422822fa3e534287b2d41181dfd23, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 96faeb200478d4d49b4b971082e9a439
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

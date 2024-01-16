@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0027
   m_EditorClassIdentifier: 
   id: 27
-  displayName: Specs
-  description: Oculus Reparo.
-  icon: {fileID: 21300000, guid: bff1bcaefff3d424c838883c75fba119, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: 322a223842927c846927084cb4f07a32
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

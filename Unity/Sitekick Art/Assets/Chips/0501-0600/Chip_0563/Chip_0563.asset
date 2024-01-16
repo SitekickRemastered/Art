@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0563
   m_EditorClassIdentifier: 
   id: 563
-  displayName: PinataEars
-  description: Someone's got a birthday, I wonder who?
-  icon: {fileID: 21300000, guid: ea40a7bedcbae6045811aef3889bc987, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: ee1460fee9ae36d418240df1f00d4e8c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

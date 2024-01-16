@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0403
   m_EditorClassIdentifier: 
   id: 403
-  displayName: HoneyStinger
-  description: 'A weapon of last resort . . . '
-  icon: {fileID: 21300000, guid: 4147bee12e377274281a91d103545ff3, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 16fe847e4e492554ea32630249556cc7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 1
   effectFlags: 0

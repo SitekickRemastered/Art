@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0826
   m_EditorClassIdentifier: 
   id: 826
-  displayName: DrillerArm2
-  description: Row Row Fight Da Powah!
-  icon: {fileID: 21300000, guid: f08ad8ea4a9fba2468525d77dacec911, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: a42e92592dcf6a446a2301d8a1731829
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

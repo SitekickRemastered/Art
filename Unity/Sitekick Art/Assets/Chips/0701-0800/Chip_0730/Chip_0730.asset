@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0730
   m_EditorClassIdentifier: 
   id: 730
-  displayName: BoardFiend
-  description: Shred the slopes with this knarley board.
-  icon: {fileID: 21300000, guid: c50fc47025720074d8dcf8ab2c2b562b, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: cdb1804545f793c4586e3300e6dab98c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

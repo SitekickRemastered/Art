@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_1190
   m_EditorClassIdentifier: 
   id: 1190
-  displayName: TheMole
-  description: That SK is a spy!
-  icon: {fileID: 21300000, guid: 408f3234834bf554d8c087ff6c3c1dee, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: fecd435637b01e142b6878971e361af4
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

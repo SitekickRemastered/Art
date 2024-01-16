@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0758
   m_EditorClassIdentifier: 
   id: 758
-  displayName: SiteSteed
-  description: Sitekick's very own high horse.
-  icon: {fileID: 21300000, guid: 2b45c3f286a774844b7cda7e9f19e3e1, type: 3}
-  rarity: 0
-  effectPrefabRef:
-    m_AssetGUID: c7f89ea28de148c438a5de1938f9e6cd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

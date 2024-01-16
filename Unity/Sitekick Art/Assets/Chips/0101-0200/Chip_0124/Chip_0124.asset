@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0124
   m_EditorClassIdentifier: 
   id: 124
-  displayName: AquaEyes
-  description: Oceanic Sight.
-  icon: {fileID: 21300000, guid: adf41152c7d441d40b97b91f7084957c, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: a4f846c2d23bf8f41954883afdec7ed0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 2

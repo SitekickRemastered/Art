@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0352
   m_EditorClassIdentifier: 
   id: 352
-  displayName: Mecharm3
-  description: Peace over your head
-  icon: {fileID: 21300000, guid: 12314a87392ffe14da2c1da4babd8f77, type: 3}
-  rarity: 2
-  effectPrefabRef:
-    m_AssetGUID: 9eeb6b7fa7b3cb14184f472e12dacf4e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0

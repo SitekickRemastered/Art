@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Chip_0253
   m_EditorClassIdentifier: 
   id: 253
-  displayName: YetiEars
-  description: Able to filter out the roars of the winter storm.
-  icon: {fileID: 21300000, guid: d8ac3b6a3adf854429408a7f0c741013, type: 3}
-  rarity: 1
-  effectPrefabRef:
-    m_AssetGUID: 144859cc3b2d4d14a861167690a5fdf5
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   effectType: 0
   effectLayer: 0
   effectFlags: 0
