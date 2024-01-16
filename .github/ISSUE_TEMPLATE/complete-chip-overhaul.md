@@ -1,7 +1,7 @@
 ---
 name: Complete Chip Overhaul
 about: Some chips should be redone..
-title: ''
+title: 'Chip #### Overhaul'
 labels: overhaul
 assignees: ''
 
