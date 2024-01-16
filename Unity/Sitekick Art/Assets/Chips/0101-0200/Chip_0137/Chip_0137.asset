@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0137
+  m_EditorClassIdentifier: 
+  id: 137
+  displayName: Eyeclops
+  description: No. This isn't the Optic Blast.
+  icon: {fileID: 21300000, guid: 198d3da69d53feb4080ab9c63eaa3ebf, type: 3}
+  rarity: 2
+  effectPrefabRef:
+    m_AssetGUID: fa7f226157c92194a961f43debd30198
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 2

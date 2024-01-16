@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0594
+  m_EditorClassIdentifier: 
+  id: 594
+  displayName: Burnify
+  description: DACE - KangarooKangaroo
+  icon: {fileID: 21300000, guid: eee53cba8c2c189458a4412f4d72dc86, type: 3}
+  rarity: 5
+  effectPrefabRef:
+    m_AssetGUID: cf594a82684b7f548a6499ab048571af
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

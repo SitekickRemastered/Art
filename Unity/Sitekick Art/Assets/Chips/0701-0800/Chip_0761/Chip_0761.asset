@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0761
+  m_EditorClassIdentifier: 
+  id: 761
+  displayName: Sphynxinator
+  description: This ancient structure holds many secrets. You're looking at one now.
+  icon: {fileID: 21300000, guid: 91c49df7e23fd554095e09ba037d73d0, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: 9c618a3ff2bac8f42bb726a656b35904
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

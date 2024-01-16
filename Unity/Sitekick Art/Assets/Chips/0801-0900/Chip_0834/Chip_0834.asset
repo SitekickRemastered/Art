@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0834
+  m_EditorClassIdentifier: 
+  id: 834
+  displayName: ClawWing1
+  description: '"There are a thousand ways I could destroy you right now. And 941
+    of them hurt."'
+  icon: {fileID: 21300000, guid: 1491ed2fda1248f4ba415b1cef59b710, type: 3}
+  rarity: 1
+  effectPrefabRef:
+    m_AssetGUID: e8aacc34b1a6d4540ab4f13f1b5b4587
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0303
+  m_EditorClassIdentifier: 
+  id: 303
+  displayName: OctoArm1
+  description: Tennis Balls.
+  icon: {fileID: 21300000, guid: c4a1b23eed03abf4c9f4934c073ac10f, type: 3}
+  rarity: 1
+  effectPrefabRef:
+    m_AssetGUID: cc60819208e63c14b9bfbb6cadceee7e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

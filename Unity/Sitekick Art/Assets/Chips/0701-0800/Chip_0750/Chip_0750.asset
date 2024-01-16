@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0750
+  m_EditorClassIdentifier: 
+  id: 750
+  displayName: SKReporter
+  description: Not just anyone gets to wear this hat. Will you accept the responsibility
+    it brings?
+  icon: {fileID: 21300000, guid: 9f8f10bf683d71248b6a1d19ca4f13b4, type: 3}
+  rarity: 5
+  effectPrefabRef:
+    m_AssetGUID: 5938c4a0c4c3ccf419f8126c1e9ef4d0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

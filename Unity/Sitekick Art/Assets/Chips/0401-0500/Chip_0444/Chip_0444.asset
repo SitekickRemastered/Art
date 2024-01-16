@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0444
+  m_EditorClassIdentifier: 
+  id: 444
+  displayName: SantaLid
+  description: A festive hat guaranteed to instill holiday cheer
+  icon: {fileID: 21300000, guid: bc5122a3efb76414d8ef9256ba2110ef, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: a0ea6e6b7b92b3b4797f3806faca5e03
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

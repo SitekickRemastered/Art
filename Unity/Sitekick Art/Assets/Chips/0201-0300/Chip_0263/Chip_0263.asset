@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0263
+  m_EditorClassIdentifier: 
+  id: 263
+  displayName: ChopSueyStach
+  description: The 'stach made popular by Fu Manchu, Wreck-Gar, etc.
+  icon: {fileID: 21300000, guid: b41cb45ca30bb2b439bb373474d4d238, type: 3}
+  rarity: 1
+  effectPrefabRef:
+    m_AssetGUID: 4548a54632f6dac409625efe57f859f6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

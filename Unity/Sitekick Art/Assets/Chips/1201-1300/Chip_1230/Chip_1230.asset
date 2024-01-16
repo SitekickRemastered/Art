@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_1230
+  m_EditorClassIdentifier: 
+  id: 1230
+  displayName: StechHelm
+  description: Orbital Jousting at its finest.
+  icon: {fileID: 21300000, guid: 1d1683227021fe54a87de4173d3349d2, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: 1e5f7a9d7188f1e438f35e3b6d7f2346
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 2

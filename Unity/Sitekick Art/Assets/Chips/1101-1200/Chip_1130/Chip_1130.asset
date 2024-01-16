@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_1130
+  m_EditorClassIdentifier: 
+  id: 1130
+  displayName: SpringKick
+  description: Celebrate Daylight Savings with style.
+  icon: {fileID: 21300000, guid: 0e9ce828a0a0c27438823569ee3a1a61, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: 4275fcc5b5af07e4eb7fb6ba1615fc29
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

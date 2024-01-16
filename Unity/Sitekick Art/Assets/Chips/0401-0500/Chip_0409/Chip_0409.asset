@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0409
+  m_EditorClassIdentifier: 
+  id: 409
+  displayName: Handy
+  description: A medal awarded for . . . something awesome.
+  icon: {fileID: 21300000, guid: 67c1f0097ca795a4595b53083517506d, type: 3}
+  rarity: 1
+  effectPrefabRef:
+    m_AssetGUID: e6b909435d9849a4088af4d46556167b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0555
+  m_EditorClassIdentifier: 
+  id: 555
+  displayName: BleakCollar
+  description: You can't tame the sorrow.
+  icon: {fileID: 21300000, guid: ad5b20aa80c40ad469e7b989d6838e55, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: a3058e90e78c069408f1d1141c5e3436
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

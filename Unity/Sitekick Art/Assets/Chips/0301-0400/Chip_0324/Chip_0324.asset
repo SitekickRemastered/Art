@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0324
+  m_EditorClassIdentifier: 
+  id: 324
+  displayName: Twiddle
+  description: This is a twiddle, similar to a plumbus, but not nearly as functional.
+  icon: {fileID: 21300000, guid: 1d28424a9e3771647a68114c9ff2d246, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: c92add28d61a2b2498e1d3fcee2c7718
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

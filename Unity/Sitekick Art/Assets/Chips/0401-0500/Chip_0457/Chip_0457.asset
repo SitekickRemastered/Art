@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0457
+  m_EditorClassIdentifier: 
+  id: 457
+  displayName: MechBStinger
+  description: This Vacuum Cleaner Attachment will allow the Sitekick to suck up
+    crime.
+  icon: {fileID: 21300000, guid: 9dd7d0418a74bcb4da95118e465dd9b8, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: 03640c00178935c49998a13573616a4e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

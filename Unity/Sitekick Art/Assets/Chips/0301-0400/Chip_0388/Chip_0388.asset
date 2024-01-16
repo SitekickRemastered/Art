@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0388
+  m_EditorClassIdentifier: 
+  id: 388
+  displayName: Racer3
+  description: Flying Colors
+  icon: {fileID: 21300000, guid: 5a6da785a69e4a34f8c96877a8fb38e7, type: 3}
+  rarity: 2
+  effectPrefabRef:
+    m_AssetGUID: 2a5d0e114f2ed8a4d830364755e541c5
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

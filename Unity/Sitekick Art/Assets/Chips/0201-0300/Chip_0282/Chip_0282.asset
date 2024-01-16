@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0282
+  m_EditorClassIdentifier: 
+  id: 282
+  displayName: SpikerOrange
+  description: The safest mohawk around.
+  icon: {fileID: 21300000, guid: 3b5ac94a54d57954db33429f2f921743, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: a6dcbd0e1663dab4ea2e41174191b433
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0

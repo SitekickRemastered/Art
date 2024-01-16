@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0755
+  m_EditorClassIdentifier: 
+  id: 755
+  displayName: DragonTail
+  description: Not the Tale, but rather the Appendage.
+  icon: {fileID: 21300000, guid: b4b93982d6623d448b0fdf18ace713e7, type: 3}
+  rarity: 2
+  effectPrefabRef:
+    m_AssetGUID: 799a51ab5f8b61b4cb23b1612237c43b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 1
+  effectFlags: 0

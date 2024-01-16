@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0880
+  m_EditorClassIdentifier: 
+  id: 880
+  displayName: HareTrick
+  description: So that's how it's done.
+  icon: {fileID: 21300000, guid: 24ece448c4fd1004cb8cc56f5e9ded46, type: 3}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: fd749a0cbdf202542a0b06ec16f1e9ed
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0
