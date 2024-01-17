@@ -560,6 +560,8 @@ MonoBehaviour:
   bodyObj: {fileID: 8461717153198668992}
   eyesObj: {fileID: 2671807497023302208}
   antennaObj: {fileID: 5525645097623822317}
+  coloredRenderers:
+  - {fileID: 7740891694683815978}
 --- !u!210 &4602383721831197911
 SortingGroup:
   m_ObjectHideFlags: 0

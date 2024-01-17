@@ -15,17 +15,30 @@ public static class ChipPrefabStage
 
 	static ChipPrefabStage()
 	{
+		AssemblyReloadEvents.beforeAssemblyReload += AssemblyReloadEvents_beforeAssemblyReload;
+
 		PrefabStage.prefabStageOpened += PrefabStage_prefabStageOpened;
 		PrefabStage.prefabStageClosing += PrefabStage_prefabStageClosing;
+
+		var currentPrefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+		if ( currentPrefabStage != null )
+			PrefabStage_prefabStageOpened( currentPrefabStage );
+	}
+
+	private static void AssemblyReloadEvents_beforeAssemblyReload()
+	{
+		var stages = editorStages.Keys.ToArray();
+		foreach ( var stage in stages )
+			PrefabStage_prefabStageClosing( stage );
 	}
 
 	private static void PrefabStage_prefabStageOpened( PrefabStage stage )
 	{
-		if ( editorStages.ContainsKey( stage ) )
-			return;
+		if ( editorStages.TryGetValue( stage, out var currentStage ) && currentStage != null )
+			currentStage.Destroy();
 
 		var editorStage = new EditorStage( stage );
-		editorStages.Add( stage, editorStage );
+		editorStages[stage] = editorStage;
 	}
 
 	private static void PrefabStage_prefabStageClosing( PrefabStage stage )
@@ -55,6 +68,7 @@ public static class ChipPrefabStage
 
 		protected PrefabStage currentStage = null;
 		protected ChipData currentChip = null;
+		protected ChipEffect currentEffect = null;
 
 		protected bool showSitekick
 		{
@@ -66,6 +80,39 @@ public static class ChipPrefabStage
 		{
 			get => EditorPrefs.GetFloat( nameof( sitekickAlpha ), 1f );
 			set => EditorPrefs.SetFloat( nameof( sitekickAlpha ), value );
+		}
+
+		private Color? _sitekickColor = null;
+		protected Color sitekickColor
+		{
+			get
+			{
+				if ( !_sitekickColor.HasValue )
+				{
+					var colorStr = "#FFCC00";
+
+					if ( EditorPrefs.HasKey( nameof( sitekickColor ) ) )
+					{
+						colorStr = EditorPrefs.GetString( nameof( sitekickColor ), colorStr );
+						if ( !colorStr.StartsWith( '#' ) )
+							colorStr = $"#{colorStr}";
+					}
+
+					if ( ColorUtility.TryParseHtmlString( colorStr, out var col ) )
+						_sitekickColor = col;
+				}
+
+				return _sitekickColor.HasValue ? _sitekickColor.Value : Color.white;
+			}
+
+			set
+			{
+				if ( !_sitekickColor.HasValue || _sitekickColor.Value != value )
+				{
+					_sitekickColor = value;
+					EditorPrefs.SetString( nameof( sitekickColor ), ColorUtility.ToHtmlStringRGB( value ) );
+				}
+			}
 		}
 
 		public EditorStage( PrefabStage prefabStage )
@@ -83,6 +130,8 @@ public static class ChipPrefabStage
 						.Select( x => AssetDatabase.LoadAssetAtPath<ChipData>( AssetDatabase.GUIDToAssetPath( x ) ) )
 						.FirstOrDefault( x => x.id == chipID );
 				}
+
+				currentEffect = prefabStage.prefabContentsRoot.GetComponent<ChipEffect>();
 
 				if ( SitekickPrefab != null )
 				{
@@ -117,6 +166,11 @@ public static class ChipPrefabStage
 
 				Destroy();
 			}
+		}
+
+		~EditorStage()
+		{
+			Destroy();
 		}
 
 		public void Destroy()
@@ -159,6 +213,15 @@ public static class ChipPrefabStage
 
 					GUILayout.Space( 5f );
 				}
+
+				using ( new GUILayout.HorizontalScope() )
+				{
+					GUILayout.Label( "Color", GUILayout.Width( 40f ) );
+
+					sitekickColor = EditorGUILayout.ColorField( sitekickColor );
+
+					GUILayout.Space( 5f );
+				}
 			}
 
 			UpdateSitekick();
@@ -172,6 +235,11 @@ public static class ChipPrefabStage
 			sitekickInstance.gameObject.SetActive( showSitekick );
 
 			sitekickInstance.SetAlpha( sitekickAlpha );
+
+			sitekickInstance.SetColor( sitekickColor );
+
+			if ( currentEffect != null )
+				currentEffect.ApplyColor( sitekickColor );
 
 			if ( currentChip != null )
 			{

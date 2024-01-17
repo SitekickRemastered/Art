@@ -9,6 +9,9 @@ public class EditorSitekick : MonoBehaviour
 	[SerializeField]
 	protected GameObject bodyObj, eyesObj, antennaObj;
 
+	[SerializeField]
+	protected List<Renderer> coloredRenderers = new List<Renderer>();
+
 	protected List<SpriteRenderer> sprites = null;
 
 	protected ChipData.EffectFlags currentEffectFlags;
@@ -28,6 +31,21 @@ public class EditorSitekick : MonoBehaviour
 
 		if ( antennaObj != null )
 			antennaObj.SetActive( ( effectFlags & ChipData.EffectFlags.HideAntenna ) != ChipData.EffectFlags.HideAntenna );
+	}
+
+	public void SetColor( Color color )
+	{
+		foreach ( var renderer in coloredRenderers )
+		{
+			if ( renderer is SpriteRenderer sr )
+			{
+				var mpb = new MaterialPropertyBlock();
+				sr.GetPropertyBlock( mpb );
+
+				mpb.SetColor( "_Color", color );
+				sr.SetPropertyBlock( mpb );
+			}
+		}
 	}
 
 	public void SetAlpha( float alpha )
