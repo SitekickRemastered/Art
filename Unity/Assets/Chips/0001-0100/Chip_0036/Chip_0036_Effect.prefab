@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e058694190c354a4ab26742ffed98388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coloredRenderers:
-  - {fileID: 0}
+  coloredRenderers: []
 --- !u!210 &2190595375098915662
 SortingGroup:
   m_ObjectHideFlags: 0
