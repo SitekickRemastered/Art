@@ -16,6 +16,8 @@ If you found a broken chip, please check [our project board](https://github.com/
 If you are capable and comfortable working in Flash Professional, please review [our project board](https://github.com/orgs/SitekickRemastered/projects/3/views/1) to see which chips need to be repaired / recreated.
 
 # Required Software
+- Unity 2022.3.16f1
+
 - [JPEXS Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)
 
 - Adobe Animate or Flash Professional
