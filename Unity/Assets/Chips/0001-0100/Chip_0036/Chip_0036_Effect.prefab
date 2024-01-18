@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3016879646846076910}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -268.298}
 --- !u!212 &4753541265482045043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3016879646846076910}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 187.59799}
 --- !u!212 &2677433013303833058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3016879646846076910}
   - component: {fileID: -2469612048519467426}
   - component: {fileID: 2190595375098915662}
+  - component: {fileID: 7703030956803984741}
   m_Layer: 0
   m_Name: Chip_0036_Effect
   m_TagString: Untagged
@@ -231,6 +232,27 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!95 &7703030956803984741
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357260631343377420}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c971a3e95bb1d54b8fcfe3e230baa6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8886875971185000856
 GameObject:
   m_ObjectHideFlags: 0
