@@ -1,6 +1,9 @@
 # Art
 This repository stores archives of original Sitekick .swf files, as well as decompiled / repaired .fla files.
 
+# Tracking Spreadsheet
+Anyone can view the art spreadsheet on [Onedrive](https://1drv.ms/x/s!AqDfnlkdiGWwpV_gBEGeuU-uP5Ro?e=Ib5Jwk) but only contributors can edit. Ping Crow on Discord for edit permissions.
+
 # Source directory
 Contains all archives of chip libraries, game files, etc. that have been scraped from [archive.org](https://archive.org/) or simlar.
 
