@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.9, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6610719873266953704
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7026541392558315172}
   - component: {fileID: -4753145477464757899}
+  - component: {fileID: -675580154342471679}
   m_Layer: 0
   m_Name: Chip_0047_Effect
   m_TagString: Untagged
@@ -130,3 +131,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coloredRenderers: []
+--- !u!210 &-675580154342471679
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6610719873266953704}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

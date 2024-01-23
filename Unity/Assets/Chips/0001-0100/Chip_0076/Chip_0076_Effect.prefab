@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1400699749357597143}
   - component: {fileID: -8283550659879517399}
   - component: {fileID: 740906464197677173}
+  - component: {fileID: 5344403653022521480}
   m_Layer: 0
   m_Name: Chip_0076_Effect
   m_TagString: Untagged
@@ -152,3 +153,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &5344403653022521480
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501441585919716940}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

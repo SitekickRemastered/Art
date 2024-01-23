@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3608523886614193225}
   - component: {fileID: 6147171994317532790}
+  - component: {fileID: -4100777765800086196}
   m_Layer: 0
   m_Name: Chip_1041_Effect
   m_TagString: Untagged
@@ -45,3 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coloredRenderers: []
+--- !u!210 &-4100777765800086196
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705625899944264329}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
