@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1828964535035272087}
   - component: {fileID: -8948093638425778376}
   - component: {fileID: 653789312487663027}
+  - component: {fileID: 784298958155727406}
   m_Layer: 0
   m_Name: Chip_0202_Effect
   m_TagString: Untagged
@@ -59,6 +60,27 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!95 &784298958155727406
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2984549225103280338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd7176128b97a6941b8a6595f225acca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3198395089186545699
 GameObject:
   m_ObjectHideFlags: 0
