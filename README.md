@@ -26,3 +26,8 @@ If you are capable and comfortable working in Flash Professional, please review 
 - Adobe Animate or Flash Professional
 
 - Photoshop (for resizing only)
+
+# Exports
+All Chip effects are exported at 500 dpi, and excess transparency is trimmed before importing to the game.
+
+All Chip icons are exported at 500dpi or higher, resized and trimmed in Photoship to 128x128.
