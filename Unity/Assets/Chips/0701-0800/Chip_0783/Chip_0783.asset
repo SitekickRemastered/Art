@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aab5fa3ce84a64a88001011186524e, type: 3}
+  m_Name: Chip_0783
+  m_EditorClassIdentifier: 
+  id: 783
+  displayName: FlameStaff
+  description: 
+  icon: {fileID: 0}
+  rarity: 0
+  effectPrefabRef:
+    m_AssetGUID: 9ab8da1fe266ac043a4a35ff46c14da6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  effectType: 0
+  effectLayer: 0
+  effectFlags: 0
