@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6996980006193116256}
   - component: {fileID: 7044421528957115116}
-  - component: {fileID: 707573840656923041}
+  - component: {fileID: 5319787738819571833}
   m_Layer: 0
   m_Name: chip_0510_left
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &707573840656923041
+--- !u!95 &5319787738819571833
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 1081708118234713652}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 36a15e26943c95e4e839ae44a92905c9, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41090027770063568}
   - component: {fileID: 9072112031959654847}
-  - component: {fileID: 2798584310144882327}
+  - component: {fileID: 1108556662579671534}
   m_Layer: 0
   m_Name: chip_0510_right
   m_TagString: Untagged
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2798584310144882327
+--- !u!95 &1108556662579671534
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 7746597677356467019}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35e457bc9f814d946b332b1389898eb4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 78af132a9c0b18b4683c9bf0f36cb358, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -270,7 +270,7 @@ Animator:
   m_GameObject: {fileID: 8025535171153521019}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12f59409984ed164b8ef7cf707779f99, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0592dc7fee130f54db1b259b8caddf7f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
