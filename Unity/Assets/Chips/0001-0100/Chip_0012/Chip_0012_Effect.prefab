@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 1610885493087142143}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48de6489a63810140b08d5288ad19b28, type: 2}
+  m_Controller: {fileID: 9100000, guid: 610d60b053f5a5441b476199d5ae5328, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -328,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8669500617557499142}
   - component: {fileID: 2917444966517854794}
+  - component: {fileID: 7428430211202481090}
   m_Layer: 0
   m_Name: chip_0012_nose
   m_TagString: Untagged
@@ -402,6 +403,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7428430211202481090
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171203020445177566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9f03954e64d1fc4e81b14e02a498a03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5994617890241761030
 GameObject:
   m_ObjectHideFlags: 0
