@@ -1,0 +1,1 @@
+﻿package com.digitalcrafts.media{	public class MediaEvent{				public static const MEDIA_COMPLETE:String = "media_complete";				public function MediaEvent(){		}	}}

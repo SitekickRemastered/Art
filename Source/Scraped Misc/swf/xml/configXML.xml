@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game_config>
+	<settings>
+		<swf_path>swf2/FranticBall.swf</swf_path>
+		<game_highscore_id>468</game_highscore_id>
+		<game_highscore_path>../scores/getGameHighScores.asp</game_highscore_path>
+		<game_highscore_enabled>true</game_highscore_enabled>
+		<tracking_enabled>true</tracking_enabled>
+		<submit_path>../scores/writeGameHighScore.asp</submit_path>
+	</settings>	
+</game_config>

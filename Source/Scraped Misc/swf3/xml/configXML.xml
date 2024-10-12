@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game_config>
+	<preload_items>
+		<!--<swf id="gameplay" url="gameplay.swf"/>
+		<swf id="drill" url="drill.swf"/>-->
+		<!--<swf id="intro_anim" url="../anim/opp_intro_anim.swf"/>
+		<swf id="midgame_anim" url="../anim/opp_midgame_anim.swf"/>
+		<swf id="endgame_anim" url="../anim/opp_endgame_anim.swf"/>
+		<swf id="gameover_anim" url="../anim/opp_gameover_anim.swf"/>-->
+		<swf id="intro_anim" url="anim/opp_intro_anim.swf"/>
+		<swf id="midgame_anim" url="anim/opp_midgame_anim.swf"/>
+		<swf id="endgame_anim" url="anim/opp_endgame_anim.swf"/>
+		<swf id="gameover_anim" url="anim/opp_gameover_anim.swf"/>
+	</preload_items>
+	<settings>
+		<swf_path></swf_path>
+		<game_highscore_id>496</game_highscore_id>
+		<game_highscore_path>../scores/getGameHighScores.asp</game_highscore_path>
+		<game_highscore_enabled>true</game_highscore_enabled>
+		<tracking_enabled>true</tracking_enabled>
+		<submit_path>../scores/writeGameHighScore.asp</submit_path>
+	</settings>
+	<game_vars>
+		<hit_points>500</hit_points><!--The number of hits Kerblooey can take from a MEME before a life is lost-->
+		<lives>3</lives><!--Number of lives before game over-->
+		<max_levels>5</max_levels><!--Number of levels before the game is over-->
+		<start_level>1</start_level><!--Starting level (for testing)-->
+		<max_speed>3.5</max_speed>
+		<wrench_hp>10</wrench_hp><!--The number of hit points recovered when a wrench is picked up-->
+		<turbo_mult>1.5</turbo_mult><!--The speed multiplier when a turbo is picked up-->
+		<gum_mult>0.5</gum_mult><!--The speed multiplier when a gum is picked up-->
+		<speed_decay>1</speed_decay><!--Optional decay rate for friction. 1 means no decay. Try 0.98 for some decay.-->
+		<powerup_duration>4</powerup_duration><!--The number of seconds a turbo or gum powerup affects the player-->
+		<enemy_speed>4</enemy_speed><!--How fast the enemy moves-->
+		<chase_distance>200</chase_distance><!--the distance in pixels at which a meme will begin to chase kerblooey-->
+		<stop_distance>50</stop_distance><!--the distance in pixels at which a meme will stop chasing and stand still-->
+		<convert_distance>32</convert_distance><!--the distance in pixels between the meme and the magnet that registers a conversion-->
+		<meme_damage>2</meme_damage><!--the number of hitpoints of damage a meme can do per frame-->
+		<meme_points>100</meme_points><!--the number of points earned when you convert a meme-->
+		<piece_scale>0.5</piece_scale><!--the scale of the kerblooey and meme clips-->
+	</game_vars>
+	<drill_questions>
+		<q safe="no" text="Gurlee22 wants to post her family’s vacation pictures, so she can share them with her online friends."/>
+		<q safe="yes" text= "MagicGuy has found a website that makes him feel weird. He runs to get his dad for help."/>
+		<q safe="yes" text= "Pink_is_happy blocked a new online friend when she asked personal stuff about her."/>
+		<q safe="no" text="Singin'_Star online friend thinks she sounds really pretty and wants her to see a pic of her."/>
+		<q safe="no" text= "RainBow32 has an online friend who said ‘talking dirty’ is fun if you keep it a secret."/>
+		<q safe="no" text="goopieEWW loves telling his mom all the funny jokes his friend Robotix99 tells him."/>
+					
+		<q safe="yes" text="Fun_4_Ever got into a fight with her best friend and chatted to Art_Xpert about it."/>
+		<q safe="no" text="Pawsta3 wants to surprise her friends and post pics of them from yesterday’s party. She thinks everyone would love to see them!"/>
+		<q safe="no" text= "SuperTeddy’s online friend wants to give him the latest video game. To get it SuperTeddy has to tell him where he lives."/>
+		<q safe="no" text="500Winks wants to add her pic to her online profile. She asks her dad to help her pick a good one."/>
+		<q safe="yes" text= "Luv2Shop has a new online friend that sends her A LOT of weird messages that make her feel icky. To get him to stop she tells him to ‘shut up’."/>
+		<q safe="no" text= "SpaceDude was chatting with someone new who sent him pics of naked people wrestling. It made him feel weird so he blocked her."/>
+		
+		<q safe="yes" text= "DizzyPopper was asked to send a ‘dirty pic’ to an online friend he’s had forever."/>
+		<q safe="no" text="Ride_the_Rail’s online friend said he’d get a ‘beat down’ if he didn’t keep their chat a secret."/>
+		<q safe="no" text="PuppyLove thinks her online friend is starting to sound like an adult, even though he says he’s 12. She blocks him and tells her mom."/>
+		<q safe="yes" text= "RayRayis13 started an online diary. She thinks this is a good place to keep all her thoughts."/>
+		<q safe="no" text="BadDuck’s long time friend asked for his cell number. BadDuck didn’t give it to him because his parents don’t know his online friend."/>
+		<q safe="yes" text= "Moto_Madness’ best friend sent an email about his really funny but really bad day. Moto_Madness wanted to forward it to make others laugh but decided not to share."/>
+		
+		<q safe="yes" text="BigSmile created a secret album where she and her friends can post their funny pics. It’s just for friends so she didn’t tell her parents about it."/>
+		
+		
+	</drill_questions>
+</game_config>

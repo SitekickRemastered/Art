@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<audio_data>
+	<!-- <folder_prefix>../audio/</folder_prefix>-->
+	<folder_prefix>audio/</folder_prefix>
+		<!-- MUSIC -->
+	<sound name="menu_music" file="game_music.mp3"/>
+	<sound name="game_music" file="game_music.mp3"/>
+	<!-- SOUND EFFECTS -->
+	<sound name="click" file="button_click.mp3"/>
+	<sound name="swoosh" file="swoosh.mp3"/>
+	<sound name="rattle" file="rattle.mp3"/>
+	<sound name="right_answer" file="right_answer.mp3"/>
+	<sound name="wrong_answer" file="wrong_answer.mp3"/>
+	<sound name="pickup" file="pickup.mp3"/>
+	<sound name="falling" file="falling.mp3"/>
+	<sound name="respawn" file="respawn.mp3"/>
+	<sound name="exit" file="exit.mp3"/>
+	<sound name="fix" file="fix.mp3"/>
+	<sound name="gum" file="gum.mp3"/>
+	<sound name="turbo" file="turbo.mp3"/>
+	<sound name="convert" file="convert.mp3"/>
+	<sound name="exploding" file="exploding.mp3"/>
+	<sound name="damage" file="damage.mp3"/>
+</audio_data>
