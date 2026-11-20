@@ -1,0 +1,24 @@
+{
+  "chip": 1161,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "back": {
+      "art": "chip_1161_back.svg",
+      "frames": 1,
+      "symbol": 863,
+      "size_px": [
+        2946.38,
+        2344.68
+      ],
+      "origin_px": [
+        57.6,
+        51.7
+      ]
+    }
+  }
+}

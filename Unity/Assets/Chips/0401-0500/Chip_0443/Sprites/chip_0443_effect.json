@@ -1,0 +1,47 @@
+{
+  "chip": 443,
+  "source": "effectlibrary251_500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "static",
+  "art": "chip_0443_effect.svg",
+  "art_size_px": [
+    3388.26,
+    2283.69
+  ],
+  "origin_px": [
+    -1260.15,
+    -987.36
+  ],
+  "effectType": 0,
+  "effectLayer": 0,
+  "clips": {
+    "back": {
+      "art": "chip_0443_back.svg",
+      "frames": 1,
+      "symbol": 372,
+      "size_px": [
+        3797.92,
+        3630.31
+      ],
+      "origin_px": [
+        453.88,
+        812.33
+      ]
+    },
+    "front": {
+      "art": "chip_0443_front.svg",
+      "frames": 1,
+      "symbol": 515,
+      "size_px": [
+        3695.2,
+        3768.42
+      ],
+      "origin_px": [
+        396.97,
+        907.75
+      ]
+    }
+  }
+}

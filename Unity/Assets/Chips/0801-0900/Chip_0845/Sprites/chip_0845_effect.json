@@ -1,0 +1,514 @@
+{
+  "chip": 845,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 11,
+  "mode": "animated",
+  "canvas_size_px": [
+    959.11,
+    1220.47
+  ],
+  "canvas_origin_px": [
+    505.93,
+    755.14
+  ],
+  "base": "chip_0845_base.svg",
+  "parts": [
+    {
+      "character_id": 2655,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        1634.37,
+        1634.37
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": "chip_0845_part_2655.svg"
+    },
+    {
+      "character_id": 2680,
+      "kind": "sprite",
+      "subframes": 11,
+      "size_px": [
+        546.18,
+        1028.51
+      ],
+      "origin_px": [
+        7.63,
+        -2.78
+      ],
+      "art": [
+        "chip_0845_part_2680_f001.svg",
+        "chip_0845_part_2680_f002.svg",
+        "chip_0845_part_2680_f003.svg",
+        "chip_0845_part_2680_f004.svg",
+        "chip_0845_part_2680_f005.svg",
+        "chip_0845_part_2680_f006.svg",
+        "chip_0845_part_2680_f007.svg",
+        "chip_0845_part_2680_f008.svg",
+        "chip_0845_part_2680_f009.svg",
+        "chip_0845_part_2680_f010.svg",
+        "chip_0845_part_2680_f011.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.65642,
+            -71.9,
+            -88.55
+          ],
+          "color": {
+            "alphaMultTerm": "82",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -38.0,
+            -109.0
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.69066,
+            -71.9,
+            -96.6
+          ],
+          "color": {
+            "alphaMultTerm": "88",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -38.0,
+            -109.0
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.72488,
+            -71.9,
+            -104.65
+          ],
+          "color": {
+            "alphaMultTerm": "94",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -38.0,
+            -109.0
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.75912,
+            -71.9,
+            -112.7
+          ],
+          "color": {
+            "alphaMultTerm": "99",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -38.0,
+            -109.0
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.79335,
+            -71.9,
+            -120.8
+          ],
+          "color": {
+            "alphaMultTerm": "105",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -38.0,
+            -109.0
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.77054,
+            -71.9,
+            -115.45
+          ],
+          "color": {
+            "alphaMultTerm": "101",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.9,
+            -108.6
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.74771,
+            -71.9,
+            -110.05
+          ],
+          "color": {
+            "alphaMultTerm": "97",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.85,
+            -108.15
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.72488,
+            -71.9,
+            -104.65
+          ],
+          "color": {
+            "alphaMultTerm": "94",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.75,
+            -107.75
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.70206,
+            -71.9,
+            -99.3
+          ],
+          "color": {
+            "alphaMultTerm": "90",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.65,
+            -107.35
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.67924,
+            -71.9,
+            -93.95
+          ],
+          "color": {
+            "alphaMultTerm": "86",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.6,
+            -106.9
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2655,
+          "matrix": [
+            0.57855,
+            0.0,
+            0.0,
+            0.65642,
+            -71.9,
+            -88.55
+          ],
+          "color": {
+            "alphaMultTerm": "82",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2680,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -37.5,
+            -106.5
+          ],
+          "color": {
+            "alphaMultTerm": "151",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: bc2d15da8fb077a8c43bfc2ec23d3e6e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12408, guid: 0000000000000000e000000000000000, type: 0}
+  svgType: 0
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 120.5896
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  tessellationMode: 1
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 0
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 1323
+  textureWidth: 1323
+  textureHeight: 1323
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 0
+    SpriteName: chip_1112_part_1233_f070Sprite
+    SpritePivot: {x: 0.5, y: 0.5}
+    SpriteAlignment: 0
+    SpriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    SpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 129.63194
+      height: 189.5081
+    SpriteID: 40fab4d4caf70a7978dc5a5885dde360
+    PhysicsOutlines: []

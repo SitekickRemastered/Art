@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 7546d4a7923259353a489592a22140db
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12408, guid: 0000000000000000e000000000000000, type: 0}
+  svgType: 0
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 57.2379
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  tessellationMode: 1
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 0
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 391
+  textureWidth: 391
+  textureHeight: 391
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 0
+    SpriteName: chip_0386_part_603Sprite
+    SpritePivot: {x: 0.5, y: 0.5}
+    SpriteAlignment: 0
+    SpriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    SpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 52.142586
+      height: 55.93
+    SpriteID: 47fd1676268d3283683f0c5592242c6e
+    PhysicsOutlines: []

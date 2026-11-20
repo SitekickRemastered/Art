@@ -1,0 +1,99 @@
+{
+  "chip": 1282,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1635.48,
+    1046.7
+  ],
+  "canvas_origin_px": [
+    1026.81,
+    1006.92
+  ],
+  "base": "chip_1282_base.svg",
+  "parts": [
+    {
+      "character_id": 1291,
+      "kind": "sprite",
+      "subframes": 11,
+      "size_px": [
+        1683.3,
+        1591.0
+      ],
+      "origin_px": [
+        173.85,
+        239.78
+      ],
+      "art": [
+        "chip_1282_part_1291_f001.svg",
+        "chip_1282_part_1291_f002.svg",
+        "chip_1282_part_1291_f003.svg",
+        "chip_1282_part_1291_f004.svg",
+        "chip_1282_part_1291_f005.svg",
+        "chip_1282_part_1291_f006.svg",
+        "chip_1282_part_1291_f007.svg",
+        "chip_1282_part_1291_f008.svg",
+        "chip_1282_part_1291_f009.svg",
+        "chip_1282_part_1291_f010.svg",
+        "chip_1282_part_1291_f011.svg"
+      ]
+    },
+    {
+      "character_id": 1299,
+      "kind": "sprite",
+      "subframes": 6,
+      "size_px": [
+        525.01,
+        470.88
+      ],
+      "origin_px": [
+        27.76,
+        14.92
+      ],
+      "art": [
+        "chip_1282_part_1299_f001.svg",
+        "chip_1282_part_1299_f002.svg",
+        "chip_1282_part_1299_f003.svg",
+        "chip_1282_part_1299_f004.svg",
+        "chip_1282_part_1299_f005.svg",
+        "chip_1282_part_1299_f006.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 1291,
+          "matrix": [
+            0.8869,
+            -0.19545,
+            0.19545,
+            0.8869,
+            -155.95,
+            -145.85
+          ]
+        },
+        {
+          "depth": 16,
+          "character_id": 1299,
+          "matrix": [
+            0.8869,
+            -0.19545,
+            0.19545,
+            0.8869,
+            13.35,
+            -76.85
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

@@ -1,0 +1,46 @@
+{
+  "chip": 873,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "back": {
+      "art": "chip_0873_back.svg",
+      "frames": 1,
+      "symbol": 2442,
+      "size_px": [
+        3038.68,
+        2254.81
+      ],
+      "origin_px": [
+        13.53,
+        0.0
+      ]
+    },
+    "front": {
+      "art": [
+        "chip_0873_front_f001.svg",
+        "chip_0873_front_f002.svg",
+        "chip_0873_front_f003.svg",
+        "chip_0873_front_f004.svg",
+        "chip_0873_front_f005.svg",
+        "chip_0873_front_f006.svg",
+        "chip_0873_front_f007.svg",
+        "chip_0873_front_f008.svg"
+      ],
+      "frames": 8,
+      "symbol": 2409,
+      "size_px": [
+        3066.09,
+        2728.81
+      ],
+      "origin_px": [
+        151.29,
+        102.37
+      ]
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "chip": 1277,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1755.47,
+    956.19
+  ],
+  "canvas_origin_px": [
+    637.44,
+    48.58
+  ],
+  "base": "chip_1277_base.svg",
+  "parts": [
+    {
+      "character_id": 1654,
+      "kind": "sprite",
+      "subframes": 85,
+      "size_px": [
+        1672.89,
+        654.44
+      ],
+      "origin_px": [
+        0.0,
+        -71.48
+      ],
+      "art": [
+        "chip_1277_part_1654_f001.svg",
+        "chip_1277_part_1654_f002.svg",
+        "chip_1277_part_1654_f003.svg",
+        "chip_1277_part_1654_f004.svg",
+        "chip_1277_part_1654_f005.svg",
+        "chip_1277_part_1654_f006.svg",
+        "chip_1277_part_1654_f007.svg",
+        "chip_1277_part_1654_f008.svg",
+        "chip_1277_part_1654_f009.svg",
+        "chip_1277_part_1654_f010.svg",
+        "chip_1277_part_1654_f011.svg",
+        "chip_1277_part_1654_f012.svg",
+        "chip_1277_part_1654_f013.svg",
+        "chip_1277_part_1654_f014.svg",
+        "chip_1277_part_1654_f015.svg",
+        "chip_1277_part_1654_f016.svg",
+        "chip_1277_part_1654_f017.svg",
+        "chip_1277_part_1654_f018.svg",
+        "chip_1277_part_1654_f019.svg",
+        "chip_1277_part_1654_f020.svg",
+        "chip_1277_part_1654_f021.svg",
+        "chip_1277_part_1654_f022.svg",
+        "chip_1277_part_1654_f023.svg",
+        "chip_1277_part_1654_f024.svg",
+        "chip_1277_part_1654_f025.svg",
+        "chip_1277_part_1654_f026.svg",
+        "chip_1277_part_1654_f027.svg",
+        "chip_1277_part_1654_f028.svg",
+        "chip_1277_part_1654_f029.svg",
+        "chip_1277_part_1654_f030.svg",
+        "chip_1277_part_1654_f031.svg",
+        "chip_1277_part_1654_f032.svg",
+        "chip_1277_part_1654_f033.svg",
+        "chip_1277_part_1654_f034.svg",
+        "chip_1277_part_1654_f035.svg",
+        "chip_1277_part_1654_f036.svg",
+        "chip_1277_part_1654_f037.svg",
+        "chip_1277_part_1654_f038.svg",
+        "chip_1277_part_1654_f039.svg",
+        "chip_1277_part_1654_f040.svg",
+        "chip_1277_part_1654_f041.svg",
+        "chip_1277_part_1654_f042.svg",
+        "chip_1277_part_1654_f043.svg",
+        "chip_1277_part_1654_f044.svg",
+        "chip_1277_part_1654_f045.svg",
+        "chip_1277_part_1654_f046.svg",
+        "chip_1277_part_1654_f047.svg",
+        "chip_1277_part_1654_f048.svg",
+        "chip_1277_part_1654_f049.svg",
+        "chip_1277_part_1654_f050.svg",
+        "chip_1277_part_1654_f051.svg",
+        "chip_1277_part_1654_f052.svg",
+        "chip_1277_part_1654_f053.svg",
+        "chip_1277_part_1654_f054.svg",
+        "chip_1277_part_1654_f055.svg",
+        "chip_1277_part_1654_f056.svg",
+        "chip_1277_part_1654_f057.svg",
+        "chip_1277_part_1654_f058.svg",
+        "chip_1277_part_1654_f059.svg",
+        "chip_1277_part_1654_f060.svg",
+        "chip_1277_part_1654_f061.svg",
+        "chip_1277_part_1654_f062.svg",
+        "chip_1277_part_1654_f063.svg",
+        "chip_1277_part_1654_f064.svg",
+        "chip_1277_part_1654_f065.svg",
+        "chip_1277_part_1654_f066.svg",
+        "chip_1277_part_1654_f067.svg",
+        "chip_1277_part_1654_f068.svg",
+        "chip_1277_part_1654_f069.svg",
+        "chip_1277_part_1654_f070.svg",
+        "chip_1277_part_1654_f071.svg",
+        "chip_1277_part_1654_f072.svg",
+        "chip_1277_part_1654_f073.svg",
+        "chip_1277_part_1654_f074.svg",
+        "chip_1277_part_1654_f075.svg",
+        "chip_1277_part_1654_f076.svg",
+        "chip_1277_part_1654_f077.svg",
+        "chip_1277_part_1654_f078.svg",
+        "chip_1277_part_1654_f079.svg",
+        "chip_1277_part_1654_f080.svg",
+        "chip_1277_part_1654_f081.svg",
+        "chip_1277_part_1654_f082.svg",
+        "chip_1277_part_1654_f083.svg",
+        "chip_1277_part_1654_f084.svg",
+        "chip_1277_part_1654_f085.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 3,
+          "character_id": 1654,
+          "matrix": [
+            0.84966,
+            0.0,
+            0.0,
+            0.84966,
+            -44.7,
+            58.9
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

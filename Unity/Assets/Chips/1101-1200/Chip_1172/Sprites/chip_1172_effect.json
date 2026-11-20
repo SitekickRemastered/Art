@@ -1,0 +1,514 @@
+{
+  "chip": 1172,
+  "source": "effectlibrary1001_1250.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    2568.02,
+    1757.3
+  ],
+  "canvas_origin_px": [
+    1289.4,
+    924.33
+  ],
+  "base": "chip_1172_base.svg",
+  "parts": [
+    {
+      "character_id": 590,
+      "kind": "sprite",
+      "subframes": 74,
+      "size_px": [
+        1130.18,
+        575.33
+      ],
+      "origin_px": [
+        517.03,
+        -72.18
+      ],
+      "art": [
+        "chip_1172_part_590_f001.svg",
+        "chip_1172_part_590_f002.svg",
+        "chip_1172_part_590_f003.svg",
+        "chip_1172_part_590_f004.svg",
+        "chip_1172_part_590_f005.svg",
+        "chip_1172_part_590_f006.svg",
+        "chip_1172_part_590_f007.svg",
+        "chip_1172_part_590_f008.svg",
+        "chip_1172_part_590_f009.svg",
+        "chip_1172_part_590_f010.svg",
+        "chip_1172_part_590_f011.svg",
+        "chip_1172_part_590_f012.svg",
+        "chip_1172_part_590_f013.svg",
+        "chip_1172_part_590_f014.svg",
+        "chip_1172_part_590_f015.svg",
+        "chip_1172_part_590_f016.svg",
+        "chip_1172_part_590_f017.svg",
+        "chip_1172_part_590_f018.svg",
+        "chip_1172_part_590_f019.svg",
+        "chip_1172_part_590_f020.svg",
+        "chip_1172_part_590_f021.svg",
+        "chip_1172_part_590_f022.svg",
+        "chip_1172_part_590_f023.svg",
+        "chip_1172_part_590_f024.svg",
+        "chip_1172_part_590_f025.svg",
+        "chip_1172_part_590_f026.svg",
+        "chip_1172_part_590_f027.svg",
+        "chip_1172_part_590_f028.svg",
+        "chip_1172_part_590_f029.svg",
+        "chip_1172_part_590_f030.svg",
+        "chip_1172_part_590_f031.svg",
+        "chip_1172_part_590_f032.svg",
+        "chip_1172_part_590_f033.svg",
+        "chip_1172_part_590_f034.svg",
+        "chip_1172_part_590_f035.svg",
+        "chip_1172_part_590_f036.svg",
+        "chip_1172_part_590_f037.svg",
+        "chip_1172_part_590_f038.svg",
+        "chip_1172_part_590_f039.svg",
+        "chip_1172_part_590_f040.svg",
+        "chip_1172_part_590_f041.svg",
+        "chip_1172_part_590_f042.svg",
+        "chip_1172_part_590_f043.svg",
+        "chip_1172_part_590_f044.svg",
+        "chip_1172_part_590_f045.svg",
+        "chip_1172_part_590_f046.svg",
+        "chip_1172_part_590_f047.svg",
+        "chip_1172_part_590_f048.svg",
+        "chip_1172_part_590_f049.svg",
+        "chip_1172_part_590_f050.svg",
+        "chip_1172_part_590_f051.svg",
+        "chip_1172_part_590_f052.svg",
+        "chip_1172_part_590_f053.svg",
+        "chip_1172_part_590_f054.svg",
+        "chip_1172_part_590_f055.svg",
+        "chip_1172_part_590_f056.svg",
+        "chip_1172_part_590_f057.svg",
+        "chip_1172_part_590_f058.svg",
+        "chip_1172_part_590_f059.svg",
+        "chip_1172_part_590_f060.svg",
+        "chip_1172_part_590_f061.svg",
+        "chip_1172_part_590_f062.svg",
+        "chip_1172_part_590_f063.svg",
+        "chip_1172_part_590_f064.svg",
+        "chip_1172_part_590_f065.svg",
+        "chip_1172_part_590_f066.svg",
+        "chip_1172_part_590_f067.svg",
+        "chip_1172_part_590_f068.svg",
+        "chip_1172_part_590_f069.svg",
+        "chip_1172_part_590_f070.svg",
+        "chip_1172_part_590_f071.svg",
+        "chip_1172_part_590_f072.svg",
+        "chip_1172_part_590_f073.svg",
+        "chip_1172_part_590_f074.svg"
+      ]
+    },
+    {
+      "character_id": 591,
+      "kind": "sprite",
+      "subframes": 59,
+      "size_px": [
+        1130.18,
+        575.33
+      ],
+      "origin_px": [
+        517.03,
+        -72.18
+      ],
+      "art": [
+        "chip_1172_part_591_f001.svg",
+        "chip_1172_part_591_f002.svg",
+        "chip_1172_part_591_f003.svg",
+        "chip_1172_part_591_f004.svg",
+        "chip_1172_part_591_f005.svg",
+        "chip_1172_part_591_f006.svg",
+        "chip_1172_part_591_f007.svg",
+        "chip_1172_part_591_f008.svg",
+        "chip_1172_part_591_f009.svg",
+        "chip_1172_part_591_f010.svg",
+        "chip_1172_part_591_f011.svg",
+        "chip_1172_part_591_f012.svg",
+        "chip_1172_part_591_f013.svg",
+        "chip_1172_part_591_f014.svg",
+        "chip_1172_part_591_f015.svg",
+        "chip_1172_part_591_f016.svg",
+        "chip_1172_part_591_f017.svg",
+        "chip_1172_part_591_f018.svg",
+        "chip_1172_part_591_f019.svg",
+        "chip_1172_part_591_f020.svg",
+        "chip_1172_part_591_f021.svg",
+        "chip_1172_part_591_f022.svg",
+        "chip_1172_part_591_f023.svg",
+        "chip_1172_part_591_f024.svg",
+        "chip_1172_part_591_f025.svg",
+        "chip_1172_part_591_f026.svg",
+        "chip_1172_part_591_f027.svg",
+        "chip_1172_part_591_f028.svg",
+        "chip_1172_part_591_f029.svg",
+        "chip_1172_part_591_f030.svg",
+        "chip_1172_part_591_f031.svg",
+        "chip_1172_part_591_f032.svg",
+        "chip_1172_part_591_f033.svg",
+        "chip_1172_part_591_f034.svg",
+        "chip_1172_part_591_f035.svg",
+        "chip_1172_part_591_f036.svg",
+        "chip_1172_part_591_f037.svg",
+        "chip_1172_part_591_f038.svg",
+        "chip_1172_part_591_f039.svg",
+        "chip_1172_part_591_f040.svg",
+        "chip_1172_part_591_f041.svg",
+        "chip_1172_part_591_f042.svg",
+        "chip_1172_part_591_f043.svg",
+        "chip_1172_part_591_f044.svg",
+        "chip_1172_part_591_f045.svg",
+        "chip_1172_part_591_f046.svg",
+        "chip_1172_part_591_f047.svg",
+        "chip_1172_part_591_f048.svg",
+        "chip_1172_part_591_f049.svg",
+        "chip_1172_part_591_f050.svg",
+        "chip_1172_part_591_f051.svg",
+        "chip_1172_part_591_f052.svg",
+        "chip_1172_part_591_f053.svg",
+        "chip_1172_part_591_f054.svg",
+        "chip_1172_part_591_f055.svg",
+        "chip_1172_part_591_f056.svg",
+        "chip_1172_part_591_f057.svg",
+        "chip_1172_part_591_f058.svg",
+        "chip_1172_part_591_f059.svg"
+      ]
+    },
+    {
+      "character_id": 592,
+      "kind": "sprite",
+      "subframes": 44,
+      "size_px": [
+        1130.18,
+        575.33
+      ],
+      "origin_px": [
+        517.03,
+        -72.18
+      ],
+      "art": [
+        "chip_1172_part_592_f001.svg",
+        "chip_1172_part_592_f002.svg",
+        "chip_1172_part_592_f003.svg",
+        "chip_1172_part_592_f004.svg",
+        "chip_1172_part_592_f005.svg",
+        "chip_1172_part_592_f006.svg",
+        "chip_1172_part_592_f007.svg",
+        "chip_1172_part_592_f008.svg",
+        "chip_1172_part_592_f009.svg",
+        "chip_1172_part_592_f010.svg",
+        "chip_1172_part_592_f011.svg",
+        "chip_1172_part_592_f012.svg",
+        "chip_1172_part_592_f013.svg",
+        "chip_1172_part_592_f014.svg",
+        "chip_1172_part_592_f015.svg",
+        "chip_1172_part_592_f016.svg",
+        "chip_1172_part_592_f017.svg",
+        "chip_1172_part_592_f018.svg",
+        "chip_1172_part_592_f019.svg",
+        "chip_1172_part_592_f020.svg",
+        "chip_1172_part_592_f021.svg",
+        "chip_1172_part_592_f022.svg",
+        "chip_1172_part_592_f023.svg",
+        "chip_1172_part_592_f024.svg",
+        "chip_1172_part_592_f025.svg",
+        "chip_1172_part_592_f026.svg",
+        "chip_1172_part_592_f027.svg",
+        "chip_1172_part_592_f028.svg",
+        "chip_1172_part_592_f029.svg",
+        "chip_1172_part_592_f030.svg",
+        "chip_1172_part_592_f031.svg",
+        "chip_1172_part_592_f032.svg",
+        "chip_1172_part_592_f033.svg",
+        "chip_1172_part_592_f034.svg",
+        "chip_1172_part_592_f035.svg",
+        "chip_1172_part_592_f036.svg",
+        "chip_1172_part_592_f037.svg",
+        "chip_1172_part_592_f038.svg",
+        "chip_1172_part_592_f039.svg",
+        "chip_1172_part_592_f040.svg",
+        "chip_1172_part_592_f041.svg",
+        "chip_1172_part_592_f042.svg",
+        "chip_1172_part_592_f043.svg",
+        "chip_1172_part_592_f044.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 590,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 590,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 591,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 7,
+          "character_id": 592,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 591,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 11,
+          "character_id": 590,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 13,
+          "character_id": 590,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 591,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 17,
+          "character_id": 592,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 591,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 21,
+          "character_id": 592,
+          "matrix": [
+            0.89049,
+            -0.45421,
+            0.45422,
+            0.89049,
+            43.45,
+            47.8
+          ]
+        },
+        {
+          "depth": 23,
+          "character_id": 590,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 25,
+          "character_id": 590,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 27,
+          "character_id": 591,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 29,
+          "character_id": 592,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 31,
+          "character_id": 591,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 33,
+          "character_id": 590,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 35,
+          "character_id": 590,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 37,
+          "character_id": 591,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 39,
+          "character_id": 592,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 41,
+          "character_id": 591,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        },
+        {
+          "depth": 43,
+          "character_id": 592,
+          "matrix": [
+            -0.89049,
+            -0.45421,
+            -0.45422,
+            0.89049,
+            -46.6,
+            45.8
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 1
+}

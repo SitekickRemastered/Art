@@ -1,0 +1,102 @@
+{
+  "chip": 891,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    2837.43,
+    1132.52
+  ],
+  "canvas_origin_px": [
+    1424.09,
+    514.82
+  ],
+  "base": "chip_0891_base.svg",
+  "parts": [
+    {
+      "character_id": 1929,
+      "kind": "sprite",
+      "subframes": 35,
+      "size_px": [
+        1856.45,
+        2383.2
+      ],
+      "origin_px": [
+        163.78,
+        655.48
+      ],
+      "art": [
+        "chip_0891_part_1929_f001.svg",
+        "chip_0891_part_1929_f002.svg",
+        "chip_0891_part_1929_f003.svg",
+        "chip_0891_part_1929_f004.svg",
+        "chip_0891_part_1929_f005.svg",
+        "chip_0891_part_1929_f006.svg",
+        "chip_0891_part_1929_f007.svg",
+        "chip_0891_part_1929_f008.svg",
+        "chip_0891_part_1929_f009.svg",
+        "chip_0891_part_1929_f010.svg",
+        "chip_0891_part_1929_f011.svg",
+        "chip_0891_part_1929_f012.svg",
+        "chip_0891_part_1929_f013.svg",
+        "chip_0891_part_1929_f014.svg",
+        "chip_0891_part_1929_f015.svg",
+        "chip_0891_part_1929_f016.svg",
+        "chip_0891_part_1929_f017.svg",
+        "chip_0891_part_1929_f018.svg",
+        "chip_0891_part_1929_f019.svg",
+        "chip_0891_part_1929_f020.svg",
+        "chip_0891_part_1929_f021.svg",
+        "chip_0891_part_1929_f022.svg",
+        "chip_0891_part_1929_f023.svg",
+        "chip_0891_part_1929_f024.svg",
+        "chip_0891_part_1929_f025.svg",
+        "chip_0891_part_1929_f026.svg",
+        "chip_0891_part_1929_f027.svg",
+        "chip_0891_part_1929_f028.svg",
+        "chip_0891_part_1929_f029.svg",
+        "chip_0891_part_1929_f030.svg",
+        "chip_0891_part_1929_f031.svg",
+        "chip_0891_part_1929_f032.svg",
+        "chip_0891_part_1929_f033.svg",
+        "chip_0891_part_1929_f034.svg",
+        "chip_0891_part_1929_f035.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1929,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -182.6,
+            -122.9
+          ]
+        },
+        {
+          "depth": 27,
+          "character_id": 1929,
+          "matrix": [
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            181.05,
+            -123.9
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 1
+}

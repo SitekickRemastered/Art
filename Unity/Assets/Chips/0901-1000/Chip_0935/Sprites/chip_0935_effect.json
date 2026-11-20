@@ -1,0 +1,82 @@
+{
+  "chip": 935,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "back": {
+      "art": "chip_0935_back.svg",
+      "frames": 1,
+      "symbol": 1487,
+      "size_px": [
+        4933.3,
+        2686.82
+      ],
+      "origin_px": [
+        960.5,
+        287.32
+      ]
+    },
+    "front": {
+      "art": [
+        "chip_0935_front_f001.svg",
+        "chip_0935_front_f002.svg",
+        "chip_0935_front_f003.svg",
+        "chip_0935_front_f004.svg",
+        "chip_0935_front_f005.svg",
+        "chip_0935_front_f006.svg",
+        "chip_0935_front_f007.svg",
+        "chip_0935_front_f008.svg",
+        "chip_0935_front_f009.svg",
+        "chip_0935_front_f010.svg",
+        "chip_0935_front_f011.svg",
+        "chip_0935_front_f012.svg",
+        "chip_0935_front_f013.svg",
+        "chip_0935_front_f014.svg",
+        "chip_0935_front_f015.svg",
+        "chip_0935_front_f016.svg",
+        "chip_0935_front_f017.svg",
+        "chip_0935_front_f018.svg",
+        "chip_0935_front_f019.svg",
+        "chip_0935_front_f020.svg",
+        "chip_0935_front_f021.svg",
+        "chip_0935_front_f022.svg",
+        "chip_0935_front_f023.svg",
+        "chip_0935_front_f024.svg",
+        "chip_0935_front_f025.svg",
+        "chip_0935_front_f026.svg",
+        "chip_0935_front_f027.svg",
+        "chip_0935_front_f028.svg",
+        "chip_0935_front_f029.svg",
+        "chip_0935_front_f030.svg",
+        "chip_0935_front_f031.svg",
+        "chip_0935_front_f032.svg",
+        "chip_0935_front_f033.svg",
+        "chip_0935_front_f034.svg",
+        "chip_0935_front_f035.svg",
+        "chip_0935_front_f036.svg",
+        "chip_0935_front_f037.svg",
+        "chip_0935_front_f038.svg",
+        "chip_0935_front_f039.svg",
+        "chip_0935_front_f040.svg",
+        "chip_0935_front_f041.svg",
+        "chip_0935_front_f042.svg",
+        "chip_0935_front_f043.svg",
+        "chip_0935_front_f044.svg"
+      ],
+      "frames": 44,
+      "symbol": 1464,
+      "size_px": [
+        3080.67,
+        2896.76
+      ],
+      "origin_px": [
+        514.25,
+        523.62
+      ]
+    }
+  }
+}

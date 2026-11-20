@@ -1,0 +1,135 @@
+{
+  "chip": 775,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    414.67,
+    513.34
+  ],
+  "canvas_origin_px": [
+    -159.27,
+    220.89
+  ],
+  "base": "chip_0775_base.svg",
+  "parts": [
+    {
+      "character_id": 3421,
+      "kind": "sprite",
+      "subframes": 80,
+      "size_px": [
+        187.38,
+        4016.53
+      ],
+      "origin_px": [
+        43.72,
+        1181.54
+      ],
+      "art": [
+        "chip_0775_part_3421_f001.svg",
+        "chip_0775_part_3421_f002.svg",
+        "chip_0775_part_3421_f003.svg",
+        "chip_0775_part_3421_f004.svg",
+        "chip_0775_part_3421_f005.svg",
+        "chip_0775_part_3421_f006.svg",
+        "chip_0775_part_3421_f007.svg",
+        "chip_0775_part_3421_f008.svg",
+        "chip_0775_part_3421_f009.svg",
+        "chip_0775_part_3421_f010.svg",
+        "chip_0775_part_3421_f011.svg",
+        "chip_0775_part_3421_f012.svg",
+        "chip_0775_part_3421_f013.svg",
+        "chip_0775_part_3421_f014.svg",
+        "chip_0775_part_3421_f015.svg",
+        "chip_0775_part_3421_f016.svg",
+        "chip_0775_part_3421_f017.svg",
+        "chip_0775_part_3421_f018.svg",
+        "chip_0775_part_3421_f019.svg",
+        "chip_0775_part_3421_f020.svg",
+        "chip_0775_part_3421_f021.svg",
+        "chip_0775_part_3421_f022.svg",
+        "chip_0775_part_3421_f023.svg",
+        "chip_0775_part_3421_f024.svg",
+        "chip_0775_part_3421_f025.svg",
+        "chip_0775_part_3421_f026.svg",
+        "chip_0775_part_3421_f027.svg",
+        "chip_0775_part_3421_f028.svg",
+        "chip_0775_part_3421_f029.svg",
+        "chip_0775_part_3421_f030.svg",
+        "chip_0775_part_3421_f031.svg",
+        "chip_0775_part_3421_f032.svg",
+        "chip_0775_part_3421_f033.svg",
+        "chip_0775_part_3421_f034.svg",
+        "chip_0775_part_3421_f035.svg",
+        "chip_0775_part_3421_f036.svg",
+        "chip_0775_part_3421_f037.svg",
+        "chip_0775_part_3421_f038.svg",
+        "chip_0775_part_3421_f039.svg",
+        "chip_0775_part_3421_f040.svg",
+        "chip_0775_part_3421_f041.svg",
+        "chip_0775_part_3421_f042.svg",
+        "chip_0775_part_3421_f043.svg",
+        "chip_0775_part_3421_f044.svg",
+        "chip_0775_part_3421_f045.svg",
+        "chip_0775_part_3421_f046.svg",
+        "chip_0775_part_3421_f047.svg",
+        "chip_0775_part_3421_f048.svg",
+        "chip_0775_part_3421_f049.svg",
+        "chip_0775_part_3421_f050.svg",
+        "chip_0775_part_3421_f051.svg",
+        "chip_0775_part_3421_f052.svg",
+        "chip_0775_part_3421_f053.svg",
+        "chip_0775_part_3421_f054.svg",
+        "chip_0775_part_3421_f055.svg",
+        "chip_0775_part_3421_f056.svg",
+        "chip_0775_part_3421_f057.svg",
+        "chip_0775_part_3421_f058.svg",
+        "chip_0775_part_3421_f059.svg",
+        "chip_0775_part_3421_f060.svg",
+        "chip_0775_part_3421_f061.svg",
+        "chip_0775_part_3421_f062.svg",
+        "chip_0775_part_3421_f063.svg",
+        "chip_0775_part_3421_f064.svg",
+        "chip_0775_part_3421_f065.svg",
+        "chip_0775_part_3421_f066.svg",
+        "chip_0775_part_3421_f067.svg",
+        "chip_0775_part_3421_f068.svg",
+        "chip_0775_part_3421_f069.svg",
+        "chip_0775_part_3421_f070.svg",
+        "chip_0775_part_3421_f071.svg",
+        "chip_0775_part_3421_f072.svg",
+        "chip_0775_part_3421_f073.svg",
+        "chip_0775_part_3421_f074.svg",
+        "chip_0775_part_3421_f075.svg",
+        "chip_0775_part_3421_f076.svg",
+        "chip_0775_part_3421_f077.svg",
+        "chip_0775_part_3421_f078.svg",
+        "chip_0775_part_3421_f079.svg",
+        "chip_0775_part_3421_f080.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 5,
+          "character_id": 3421,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            58.2,
+            -42.5
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

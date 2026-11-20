@@ -1,0 +1,34 @@
+{
+  "chip": 728,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "static",
+  "art": "chip_0728_effect.svg",
+  "art_size_px": [
+    1639.58,
+    1067.37
+  ],
+  "origin_px": [
+    1068.07,
+    -90.57
+  ],
+  "effectType": 0,
+  "effectLayer": 0,
+  "clips": {
+    "back": {
+      "art": "chip_0728_back.svg",
+      "frames": 1,
+      "symbol": 305,
+      "size_px": [
+        2685.78,
+        2172.91
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

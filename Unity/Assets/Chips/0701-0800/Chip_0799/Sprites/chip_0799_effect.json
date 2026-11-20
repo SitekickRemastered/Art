@@ -1,0 +1,70 @@
+{
+  "chip": 799,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    463.27,
+    409.11
+  ],
+  "canvas_origin_px": [
+    608.66,
+    276.91
+  ],
+  "base": "chip_0799_base.svg",
+  "parts": [
+    {
+      "character_id": 3286,
+      "kind": "sprite",
+      "subframes": 8,
+      "size_px": [
+        338.67,
+        395.23
+      ],
+      "origin_px": [
+        -187.73,
+        -65.58
+      ],
+      "art": [
+        "chip_0799_part_3286_f001.svg",
+        "chip_0799_part_3286_f002.svg",
+        "chip_0799_part_3286_f003.svg",
+        "chip_0799_part_3286_f004.svg",
+        "chip_0799_part_3286_f005.svg",
+        "chip_0799_part_3286_f006.svg",
+        "chip_0799_part_3286_f007.svg",
+        "chip_0799_part_3286_f008.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 6,
+          "character_id": 3286,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -114.75,
+            -48.35
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "0",
+            "greenMultTerm": "0",
+            "blueMultTerm": "0"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

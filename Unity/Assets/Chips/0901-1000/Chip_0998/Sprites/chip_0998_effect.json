@@ -1,0 +1,35 @@
+{
+  "chip": 998,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "back": {
+      "art": [
+        "chip_0998_back_f001.svg",
+        "chip_0998_back_f002.svg",
+        "chip_0998_back_f003.svg",
+        "chip_0998_back_f004.svg",
+        "chip_0998_back_f005.svg",
+        "chip_0998_back_f006.svg",
+        "chip_0998_back_f007.svg",
+        "chip_0998_back_f008.svg",
+        "chip_0998_back_f009.svg",
+        "chip_0998_back_f010.svg"
+      ],
+      "frames": 10,
+      "symbol": 553,
+      "size_px": [
+        6120.73,
+        4201.48
+      ],
+      "origin_px": [
+        1212.42,
+        366.78
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "chip": 1224,
+  "source": "effectlibrary1001_1250.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    114.51,
+    158.93
+  ],
+  "canvas_origin_px": [
+    32.97,
+    198.14
+  ],
+  "base": "chip_1224_base.svg",
+  "parts": [
+    {
+      "character_id": 207,
+      "kind": "sprite",
+      "subframes": 54,
+      "size_px": [
+        84.67,
+        141.92
+      ],
+      "origin_px": [
+        6.94,
+        7.63
+      ],
+      "art": [
+        "chip_1224_part_207_f001.svg",
+        "chip_1224_part_207_f002.svg",
+        "chip_1224_part_207_f003.svg",
+        "chip_1224_part_207_f004.svg",
+        "chip_1224_part_207_f005.svg",
+        "chip_1224_part_207_f006.svg",
+        "chip_1224_part_207_f007.svg",
+        "chip_1224_part_207_f008.svg",
+        "chip_1224_part_207_f009.svg",
+        "chip_1224_part_207_f010.svg",
+        "chip_1224_part_207_f011.svg",
+        "chip_1224_part_207_f012.svg",
+        "chip_1224_part_207_f013.svg",
+        "chip_1224_part_207_f014.svg",
+        "chip_1224_part_207_f015.svg",
+        "chip_1224_part_207_f016.svg",
+        "chip_1224_part_207_f017.svg",
+        "chip_1224_part_207_f018.svg",
+        "chip_1224_part_207_f019.svg",
+        "chip_1224_part_207_f020.svg",
+        "chip_1224_part_207_f021.svg",
+        "chip_1224_part_207_f022.svg",
+        "chip_1224_part_207_f023.svg",
+        "chip_1224_part_207_f024.svg",
+        "chip_1224_part_207_f025.svg",
+        "chip_1224_part_207_f026.svg",
+        "chip_1224_part_207_f027.svg",
+        "chip_1224_part_207_f028.svg",
+        "chip_1224_part_207_f029.svg",
+        "chip_1224_part_207_f030.svg",
+        "chip_1224_part_207_f031.svg",
+        "chip_1224_part_207_f032.svg",
+        "chip_1224_part_207_f033.svg",
+        "chip_1224_part_207_f034.svg",
+        "chip_1224_part_207_f035.svg",
+        "chip_1224_part_207_f036.svg",
+        "chip_1224_part_207_f037.svg",
+        "chip_1224_part_207_f038.svg",
+        "chip_1224_part_207_f039.svg",
+        "chip_1224_part_207_f040.svg",
+        "chip_1224_part_207_f041.svg",
+        "chip_1224_part_207_f042.svg",
+        "chip_1224_part_207_f043.svg",
+        "chip_1224_part_207_f044.svg",
+        "chip_1224_part_207_f045.svg",
+        "chip_1224_part_207_f046.svg",
+        "chip_1224_part_207_f047.svg",
+        "chip_1224_part_207_f048.svg",
+        "chip_1224_part_207_f049.svg",
+        "chip_1224_part_207_f050.svg",
+        "chip_1224_part_207_f051.svg",
+        "chip_1224_part_207_f052.svg",
+        "chip_1224_part_207_f053.svg",
+        "chip_1224_part_207_f054.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 207,
+          "matrix": [
+            1.02313,
+            0.0,
+            0.10123,
+            1.02313,
+            -2.65,
+            -26.45
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

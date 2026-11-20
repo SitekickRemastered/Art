@@ -1,0 +1,361 @@
+{
+  "chip": 742,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 10,
+  "mode": "animated",
+  "canvas_size_px": [
+    131.86,
+    124.07
+  ],
+  "canvas_origin_px": [
+    -108.96,
+    20.63
+  ],
+  "base": "chip_0742_base.svg",
+  "parts": [
+    {
+      "character_id": 67,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0742_part_67.svg",
+      "size_px": [
+        114.86,
+        102.37
+      ],
+      "origin_px": [
+        -115.9,
+        12.15
+      ]
+    },
+    {
+      "character_id": 68,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0742_part_68.svg",
+      "size_px": [
+        69.75,
+        58.99
+      ],
+      "origin_px": [
+        -134.98,
+        -7.98
+      ]
+    },
+    {
+      "character_id": 70,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        244.29,
+        252.96
+      ],
+      "origin_px": [
+        6.94,
+        6.94
+      ],
+      "art": "chip_0742_part_70.svg"
+    },
+    {
+      "character_id": 72,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        77.03,
+        68.36
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": "chip_0742_part_72.svg"
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 67,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "absent": true
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 1,
+          "absent": true
+        },
+        {
+          "depth": 2,
+          "character_id": 68,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 3,
+          "absent": true
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 1,
+          "absent": true
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            0.28802,
+            0.0,
+            0.0,
+            0.28802,
+            23.5,
+            0.9
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 72,
+          "matrix": [
+            0.66617,
+            0.0,
+            0.01331,
+            1.14941,
+            25.5,
+            -0.1
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            0.91504,
+            0.0,
+            0.0,
+            0.91504,
+            32.2,
+            -8.7
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 72,
+          "matrix": [
+            1.79887,
+            0.0,
+            0.29109,
+            0.46005,
+            23.6,
+            3.25
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            1.29126,
+            0.0,
+            0.0,
+            1.29126,
+            37.4,
+            -14.45
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 72,
+          "matrix": [
+            2.17645,
+            0.0,
+            0.23386,
+            0.25198,
+            23.0,
+            4.3
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            1.41667,
+            0.0,
+            0.0,
+            1.41667,
+            39.25,
+            -16.45
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 72,
+          "matrix": [
+            1.79886,
+            0.0,
+            0.29106,
+            0.46007,
+            22.95,
+            3.25
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            1.29127,
+            0.0,
+            0.0,
+            1.29127,
+            37.55,
+            -14.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 72,
+          "matrix": [
+            0.66617,
+            0.0,
+            0.01331,
+            1.14941,
+            25.5,
+            -0.1
+          ]
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            0.91505,
+            0.0,
+            0.0,
+            0.91505,
+            32.3,
+            -8.75
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 1,
+          "absent": true
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "character_id": 70,
+          "matrix": [
+            0.28802,
+            0.0,
+            0.0,
+            0.28802,
+            23.5,
+            0.9
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 1,
+          "absent": true
+        },
+        {
+          "depth": 2,
+          "absent": true
+        },
+        {
+          "depth": 3,
+          "absent": true
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

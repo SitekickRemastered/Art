@@ -1,0 +1,95 @@
+{
+  "chip": 840,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1798.35,
+    1152.66
+  ],
+  "canvas_origin_px": [
+    1100.73,
+    1111.54
+  ],
+  "base": "chip_0840_base.svg",
+  "parts": [
+    {
+      "character_id": 2967,
+      "kind": "sprite",
+      "subframes": 40,
+      "size_px": [
+        2012.25,
+        2296.79
+      ],
+      "origin_px": [
+        165.52,
+        189.46
+      ],
+      "art": [
+        "chip_0840_part_2967_f001.svg",
+        "chip_0840_part_2967_f002.svg",
+        "chip_0840_part_2967_f003.svg",
+        "chip_0840_part_2967_f004.svg",
+        "chip_0840_part_2967_f005.svg",
+        "chip_0840_part_2967_f006.svg",
+        "chip_0840_part_2967_f007.svg",
+        "chip_0840_part_2967_f008.svg",
+        "chip_0840_part_2967_f009.svg",
+        "chip_0840_part_2967_f010.svg",
+        "chip_0840_part_2967_f011.svg",
+        "chip_0840_part_2967_f012.svg",
+        "chip_0840_part_2967_f013.svg",
+        "chip_0840_part_2967_f014.svg",
+        "chip_0840_part_2967_f015.svg",
+        "chip_0840_part_2967_f016.svg",
+        "chip_0840_part_2967_f017.svg",
+        "chip_0840_part_2967_f018.svg",
+        "chip_0840_part_2967_f019.svg",
+        "chip_0840_part_2967_f020.svg",
+        "chip_0840_part_2967_f021.svg",
+        "chip_0840_part_2967_f022.svg",
+        "chip_0840_part_2967_f023.svg",
+        "chip_0840_part_2967_f024.svg",
+        "chip_0840_part_2967_f025.svg",
+        "chip_0840_part_2967_f026.svg",
+        "chip_0840_part_2967_f027.svg",
+        "chip_0840_part_2967_f028.svg",
+        "chip_0840_part_2967_f029.svg",
+        "chip_0840_part_2967_f030.svg",
+        "chip_0840_part_2967_f031.svg",
+        "chip_0840_part_2967_f032.svg",
+        "chip_0840_part_2967_f033.svg",
+        "chip_0840_part_2967_f034.svg",
+        "chip_0840_part_2967_f035.svg",
+        "chip_0840_part_2967_f036.svg",
+        "chip_0840_part_2967_f037.svg",
+        "chip_0840_part_2967_f038.svg",
+        "chip_0840_part_2967_f039.svg",
+        "chip_0840_part_2967_f040.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2967,
+          "matrix": [
+            0.81387,
+            -0.58598,
+            0.49625,
+            0.86534,
+            -211.7,
+            -135.7
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

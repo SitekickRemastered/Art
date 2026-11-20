@@ -1,0 +1,115 @@
+{
+  "chip": 1302,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    538.32,
+    679.83
+  ],
+  "canvas_origin_px": [
+    271.74,
+    276.21
+  ],
+  "base": "chip_1302_base.svg",
+  "parts": [
+    {
+      "character_id": 724,
+      "kind": "sprite",
+      "subframes": 14,
+      "size_px": [
+        1026.77,
+        1514.65
+      ],
+      "origin_px": [
+        18.74,
+        1.39
+      ],
+      "art": [
+        "chip_1302_part_724_f001.svg",
+        "chip_1302_part_724_f002.svg",
+        "chip_1302_part_724_f003.svg",
+        "chip_1302_part_724_f004.svg",
+        "chip_1302_part_724_f005.svg",
+        "chip_1302_part_724_f006.svg",
+        "chip_1302_part_724_f007.svg",
+        "chip_1302_part_724_f008.svg",
+        "chip_1302_part_724_f009.svg",
+        "chip_1302_part_724_f010.svg",
+        "chip_1302_part_724_f011.svg",
+        "chip_1302_part_724_f012.svg",
+        "chip_1302_part_724_f013.svg",
+        "chip_1302_part_724_f014.svg"
+      ]
+    },
+    {
+      "character_id": 729,
+      "kind": "sprite",
+      "subframes": 7,
+      "size_px": [
+        775.55,
+        428.2
+      ],
+      "origin_px": [
+        24.29,
+        8.33
+      ],
+      "art": [
+        "chip_1302_part_729_f001.svg",
+        "chip_1302_part_729_f002.svg",
+        "chip_1302_part_729_f003.svg",
+        "chip_1302_part_729_f004.svg",
+        "chip_1302_part_729_f005.svg",
+        "chip_1302_part_729_f006.svg",
+        "chip_1302_part_729_f007.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 724,
+          "matrix": [
+            0.53145,
+            0.0,
+            0.0,
+            0.53145,
+            -37.75,
+            -38.7
+          ],
+          "color": {
+            "alphaMultTerm": "179",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 4,
+          "character_id": 729,
+          "matrix": [
+            0.44911,
+            -0.03926,
+            0.09064,
+            0.3755,
+            -22.3,
+            -18.0
+          ],
+          "color": {
+            "alphaMultTerm": "179",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

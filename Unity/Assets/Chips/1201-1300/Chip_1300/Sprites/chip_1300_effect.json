@@ -1,0 +1,132 @@
+{
+  "chip": 1300,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    646.46,
+    492.74
+  ],
+  "canvas_origin_px": [
+    -208.89,
+    166.91
+  ],
+  "base": "chip_1300_base.svg",
+  "parts": [
+    {
+      "character_id": 1153,
+      "kind": "sprite",
+      "subframes": 5,
+      "size_px": [
+        42.68,
+        72.87
+      ],
+      "origin_px": [
+        9.37,
+        6.94
+      ],
+      "art": [
+        "chip_1300_part_1153_f001.svg",
+        "chip_1300_part_1153_f002.svg",
+        "chip_1300_part_1153_f003.svg",
+        "chip_1300_part_1153_f004.svg",
+        "chip_1300_part_1153_f005.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 1153,
+          "matrix": [
+            0.38904,
+            0.0,
+            0.0,
+            0.38904,
+            103.4,
+            -22.55
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 1153,
+          "matrix": [
+            -0.52092,
+            0.0,
+            0.0,
+            0.38904,
+            100.1,
+            -22.6
+          ]
+        },
+        {
+          "depth": 12,
+          "character_id": 1153,
+          "matrix": [
+            0.38904,
+            0.0,
+            0.0,
+            0.38904,
+            92.5,
+            -22.5
+          ]
+        },
+        {
+          "depth": 14,
+          "character_id": 1153,
+          "matrix": [
+            -0.32019,
+            0.0,
+            0.0,
+            0.38904,
+            88.35,
+            -22.5
+          ]
+        },
+        {
+          "depth": 16,
+          "character_id": 1153,
+          "matrix": [
+            0.30869,
+            0.0,
+            0.0,
+            0.38904,
+            81.2,
+            -22.55
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 1153,
+          "matrix": [
+            0.44026,
+            0.0,
+            0.0,
+            0.38904,
+            75.5,
+            -22.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 1153,
+          "matrix": [
+            -0.49249,
+            0.0,
+            0.0,
+            0.38904,
+            71.65,
+            -22.45
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

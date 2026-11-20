@@ -1,0 +1,1577 @@
+{
+  "chip": 544,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 84,
+  "mode": "animated",
+  "canvas_size_px": [
+    521.42,
+    759.58
+  ],
+  "canvas_origin_px": [
+    440.96,
+    17.35
+  ],
+  "base": "chip_0544_base.svg",
+  "parts": [
+    {
+      "character_id": 1595,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        501.76,
+        745.7
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1595.svg"
+    },
+    {
+      "character_id": 1599,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        529.87,
+        701.29
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1599.svg"
+    },
+    {
+      "character_id": 1603,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        501.76,
+        745.7
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1603.svg"
+    },
+    {
+      "character_id": 1608,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        495.86,
+        706.84
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1608.svg"
+    },
+    {
+      "character_id": 1612,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        488.92,
+        674.92
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1612.svg"
+    },
+    {
+      "character_id": 1616,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        480.25,
+        655.48
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1616.svg"
+    },
+    {
+      "character_id": 1620,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        463.59,
+        637.09
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1620.svg"
+    },
+    {
+      "character_id": 1624,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        440.0,
+        646.81
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1624.svg"
+    },
+    {
+      "character_id": 1628,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        511.48,
+        734.95
+      ],
+      "origin_px": [
+        3.47,
+        3.47
+      ],
+      "art": "chip_0544_part_1628.svg"
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1599,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1599,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1599,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1620,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -68.05,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1620,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -68.05,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1620,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -68.05,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1624,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1616,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.9,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1612,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -65.2,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1608,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.3,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 72,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 74,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1603,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 75,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1628,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -59.5,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 76,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1628,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -59.5,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 77,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1628,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -59.5,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 78,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1628,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -59.5,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 79,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1628,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -59.5,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 81,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 82,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 84,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1595,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -61.25,
+            -1.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

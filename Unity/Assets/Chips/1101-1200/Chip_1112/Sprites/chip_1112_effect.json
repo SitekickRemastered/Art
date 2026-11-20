@@ -1,0 +1,142 @@
+{
+  "chip": 1112,
+  "source": "effectlibrary1001_1250.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1519.86,
+    1290.66
+  ],
+  "canvas_origin_px": [
+    763.75,
+    176.79
+  ],
+  "base": "chip_1112_base.svg",
+  "parts": [
+    {
+      "character_id": 1233,
+      "kind": "sprite",
+      "subframes": 75,
+      "size_px": [
+        1799.89,
+        2768.02
+      ],
+      "origin_px": [
+        795.32,
+        1509.8
+      ],
+      "art": [
+        "chip_1112_part_1233_f001.svg",
+        "chip_1112_part_1233_f002.svg",
+        "chip_1112_part_1233_f003.svg",
+        "chip_1112_part_1233_f004.svg",
+        "chip_1112_part_1233_f005.svg",
+        "chip_1112_part_1233_f006.svg",
+        "chip_1112_part_1233_f007.svg",
+        "chip_1112_part_1233_f008.svg",
+        "chip_1112_part_1233_f009.svg",
+        "chip_1112_part_1233_f010.svg",
+        "chip_1112_part_1233_f011.svg",
+        "chip_1112_part_1233_f012.svg",
+        "chip_1112_part_1233_f013.svg",
+        "chip_1112_part_1233_f014.svg",
+        "chip_1112_part_1233_f015.svg",
+        "chip_1112_part_1233_f016.svg",
+        "chip_1112_part_1233_f017.svg",
+        "chip_1112_part_1233_f018.svg",
+        "chip_1112_part_1233_f019.svg",
+        "chip_1112_part_1233_f020.svg",
+        "chip_1112_part_1233_f021.svg",
+        "chip_1112_part_1233_f022.svg",
+        "chip_1112_part_1233_f023.svg",
+        "chip_1112_part_1233_f024.svg",
+        "chip_1112_part_1233_f025.svg",
+        "chip_1112_part_1233_f026.svg",
+        "chip_1112_part_1233_f027.svg",
+        "chip_1112_part_1233_f028.svg",
+        "chip_1112_part_1233_f029.svg",
+        "chip_1112_part_1233_f030.svg",
+        "chip_1112_part_1233_f031.svg",
+        "chip_1112_part_1233_f032.svg",
+        "chip_1112_part_1233_f033.svg",
+        "chip_1112_part_1233_f034.svg",
+        "chip_1112_part_1233_f035.svg",
+        "chip_1112_part_1233_f036.svg",
+        "chip_1112_part_1233_f037.svg",
+        "chip_1112_part_1233_f038.svg",
+        "chip_1112_part_1233_f039.svg",
+        "chip_1112_part_1233_f040.svg",
+        "chip_1112_part_1233_f041.svg",
+        "chip_1112_part_1233_f042.svg",
+        "chip_1112_part_1233_f043.svg",
+        "chip_1112_part_1233_f044.svg",
+        "chip_1112_part_1233_f045.svg",
+        "chip_1112_part_1233_f046.svg",
+        "chip_1112_part_1233_f047.svg",
+        "chip_1112_part_1233_f048.svg",
+        "chip_1112_part_1233_f049.svg",
+        "chip_1112_part_1233_f050.svg",
+        "chip_1112_part_1233_f051.svg",
+        "chip_1112_part_1233_f052.svg",
+        "chip_1112_part_1233_f053.svg",
+        "chip_1112_part_1233_f054.svg",
+        "chip_1112_part_1233_f055.svg",
+        "chip_1112_part_1233_f056.svg",
+        "chip_1112_part_1233_f057.svg",
+        "chip_1112_part_1233_f058.svg",
+        "chip_1112_part_1233_f059.svg",
+        "chip_1112_part_1233_f060.svg",
+        "chip_1112_part_1233_f061.svg",
+        "chip_1112_part_1233_f062.svg",
+        "chip_1112_part_1233_f063.svg",
+        "chip_1112_part_1233_f064.svg",
+        "chip_1112_part_1233_f065.svg",
+        "chip_1112_part_1233_f066.svg",
+        "chip_1112_part_1233_f067.svg",
+        "chip_1112_part_1233_f068.svg",
+        "chip_1112_part_1233_f069.svg",
+        "chip_1112_part_1233_f070.svg",
+        "chip_1112_part_1233_f071.svg",
+        "chip_1112_part_1233_f072.svg",
+        "chip_1112_part_1233_f073.svg",
+        "chip_1112_part_1233_f074.svg",
+        "chip_1112_part_1233_f075.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1233,
+          "matrix": [
+            -0.92099,
+            0.0,
+            0.22238,
+            0.89008,
+            103.1,
+            0.15
+          ]
+        },
+        {
+          "depth": 69,
+          "character_id": 1233,
+          "matrix": [
+            0.92099,
+            0.0,
+            -0.22238,
+            0.89008,
+            -104.2,
+            0.15
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 1
+}

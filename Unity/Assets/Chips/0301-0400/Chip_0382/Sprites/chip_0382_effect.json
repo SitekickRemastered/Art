@@ -1,0 +1,93 @@
+{
+  "chip": 382,
+  "source": "effectlibrary251_500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    518.42,
+    486.49
+  ],
+  "canvas_origin_px": [
+    254.7,
+    237.35
+  ],
+  "base": "chip_0382_base.svg",
+  "parts": [
+    {
+      "character_id": 674,
+      "kind": "sprite",
+      "subframes": 32,
+      "size_px": [
+        267.54,
+        267.19
+      ],
+      "origin_px": [
+        127.0,
+        130.12
+      ],
+      "art": [
+        "chip_0382_part_674_f001.svg",
+        "chip_0382_part_674_f002.svg",
+        "chip_0382_part_674_f003.svg",
+        "chip_0382_part_674_f004.svg",
+        "chip_0382_part_674_f005.svg",
+        "chip_0382_part_674_f006.svg",
+        "chip_0382_part_674_f007.svg",
+        "chip_0382_part_674_f008.svg",
+        "chip_0382_part_674_f009.svg",
+        "chip_0382_part_674_f010.svg",
+        "chip_0382_part_674_f011.svg",
+        "chip_0382_part_674_f012.svg",
+        "chip_0382_part_674_f013.svg",
+        "chip_0382_part_674_f014.svg",
+        "chip_0382_part_674_f015.svg",
+        "chip_0382_part_674_f016.svg",
+        "chip_0382_part_674_f017.svg",
+        "chip_0382_part_674_f018.svg",
+        "chip_0382_part_674_f019.svg",
+        "chip_0382_part_674_f020.svg",
+        "chip_0382_part_674_f021.svg",
+        "chip_0382_part_674_f022.svg",
+        "chip_0382_part_674_f023.svg",
+        "chip_0382_part_674_f024.svg",
+        "chip_0382_part_674_f025.svg",
+        "chip_0382_part_674_f026.svg",
+        "chip_0382_part_674_f027.svg",
+        "chip_0382_part_674_f028.svg",
+        "chip_0382_part_674_f029.svg",
+        "chip_0382_part_674_f030.svg",
+        "chip_0382_part_674_f031.svg",
+        "chip_0382_part_674_f032.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 4,
+          "character_id": 674,
+          "matrix": [
+            1.61133,
+            0.0,
+            0.0,
+            1.49158,
+            -0.85,
+            0.75
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "0",
+            "greenMultTerm": "256",
+            "blueMultTerm": "0"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

@@ -1,0 +1,231 @@
+{
+  "chip": 207,
+  "source": "effectlibrary1_250.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1256.83,
+    1090.27
+  ],
+  "canvas_origin_px": [
+    638.48,
+    783.87
+  ],
+  "base": "chip_0207_base.svg",
+  "parts": [
+    {
+      "character_id": 307,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        676.3,
+        536.12
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": [
+        "chip_0207_part_307_f001.svg",
+        "chip_0207_part_307_f002.svg"
+      ]
+    },
+    {
+      "character_id": 310,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        764.79,
+        613.84
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": [
+        "chip_0207_part_310_f001.svg",
+        "chip_0207_part_310_f002.svg"
+      ]
+    },
+    {
+      "character_id": 313,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        876.52,
+        688.8
+      ],
+      "origin_px": [
+        -0.35,
+        0.0
+      ],
+      "art": [
+        "chip_0207_part_313_f001.svg",
+        "chip_0207_part_313_f002.svg"
+      ]
+    },
+    {
+      "character_id": 316,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        969.52,
+        754.38
+      ],
+      "origin_px": [
+        0.0,
+        -0.35
+      ],
+      "art": [
+        "chip_0207_part_316_f001.svg",
+        "chip_0207_part_316_f002.svg"
+      ]
+    },
+    {
+      "character_id": 319,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        1046.9,
+        812.33
+      ],
+      "origin_px": [
+        0.0,
+        -0.35
+      ],
+      "art": [
+        "chip_0207_part_319_f001.svg",
+        "chip_0207_part_319_f002.svg"
+      ]
+    },
+    {
+      "character_id": 322,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        1139.89,
+        878.6
+      ],
+      "origin_px": [
+        0.0,
+        -0.35
+      ],
+      "art": [
+        "chip_0207_part_322_f001.svg",
+        "chip_0207_part_322_f002.svg"
+      ]
+    },
+    {
+      "character_id": 325,
+      "kind": "sprite",
+      "subframes": 2,
+      "size_px": [
+        1242.95,
+        969.17
+      ],
+      "origin_px": [
+        0.0,
+        -0.35
+      ],
+      "art": [
+        "chip_0207_part_325_f001.svg",
+        "chip_0207_part_325_f002.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 307,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -44.1,
+            -64.05
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 310,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -50.55,
+            -73.25
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 313,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -58.85,
+            -81.7
+          ]
+        },
+        {
+          "depth": 7,
+          "character_id": 316,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -66.45,
+            -89.0
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 319,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -72.95,
+            -95.6
+          ]
+        },
+        {
+          "depth": 11,
+          "character_id": 322,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -80.85,
+            -102.8
+          ]
+        },
+        {
+          "depth": 13,
+          "character_id": 325,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -91.0,
+            -112.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 1
+}

@@ -1,0 +1,190 @@
+{
+  "chip": 584,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 9,
+  "mode": "animated",
+  "canvas_size_px": [
+    242.65,
+    217.35
+  ],
+  "canvas_origin_px": [
+    319.28,
+    642.96
+  ],
+  "base": "chip_0584_base.svg",
+  "parts": [
+    {
+      "character_id": 1140,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        824.47,
+        730.09
+      ],
+      "origin_px": [
+        20.82,
+        20.82
+      ],
+      "art": "chip_0584_part_1140.svg"
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.25934,
+            -0.0517,
+            0.0517,
+            0.25934,
+            -44.75,
+            -86.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.27475,
+            -0.05472,
+            0.05472,
+            0.27475,
+            -45.8,
+            -86.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.2903,
+            -0.0578,
+            0.0578,
+            0.2903,
+            -46.8,
+            -87.1
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.30585,
+            -0.0609,
+            0.0609,
+            0.30585,
+            -47.85,
+            -87.7
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.32159,
+            -0.06412,
+            0.06412,
+            0.32159,
+            -48.85,
+            -88.35
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.30585,
+            -0.0609,
+            0.0609,
+            0.30585,
+            -47.85,
+            -87.65
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.2903,
+            -0.05782,
+            0.05782,
+            0.2903,
+            -46.75,
+            -87.15
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.27475,
+            -0.05472,
+            0.05472,
+            0.27475,
+            -45.75,
+            -86.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 1140,
+          "matrix": [
+            0.25934,
+            -0.0517,
+            0.0517,
+            0.25934,
+            -44.75,
+            -86.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

@@ -1,0 +1,581 @@
+{
+  "chip": 762,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 12,
+  "mode": "animated",
+  "canvas_size_px": [
+    1532.15,
+    936.05
+  ],
+  "canvas_origin_px": [
+    807.37,
+    586.93
+  ],
+  "base": "chip_0762_base.svg",
+  "parts": [
+    {
+      "character_id": 3518,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3518.svg",
+      "size_px": [
+        1782.89,
+        1430.33
+      ],
+      "origin_px": [
+        950.78,
+        742.93
+      ]
+    },
+    {
+      "character_id": 3519,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3519.svg",
+      "size_px": [
+        140.53,
+        175.93
+      ],
+      "origin_px": [
+        79.81,
+        315.77
+      ]
+    },
+    {
+      "character_id": 3520,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3520.svg",
+      "size_px": [
+        1202.01,
+        1504.25
+      ],
+      "origin_px": [
+        573.59,
+        739.46
+      ]
+    },
+    {
+      "character_id": 3521,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3521.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3522,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3522.svg",
+      "size_px": [
+        1000.05,
+        1499.73
+      ],
+      "origin_px": [
+        580.53,
+        741.54
+      ]
+    },
+    {
+      "character_id": 3523,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3523.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3524,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3524.svg",
+      "size_px": [
+        1819.32,
+        1318.25
+      ],
+      "origin_px": [
+        957.03,
+        741.54
+      ]
+    },
+    {
+      "character_id": 3525,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3525.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3526,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3526.svg",
+      "size_px": [
+        1920.99,
+        1261.35
+      ],
+      "origin_px": [
+        1005.26,
+        746.4
+      ]
+    },
+    {
+      "character_id": 3527,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3527.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3528,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3528.svg",
+      "size_px": [
+        1982.76,
+        936.55
+      ],
+      "origin_px": [
+        1036.14,
+        670.75
+      ]
+    },
+    {
+      "character_id": 3529,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3529.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3530,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3530.svg",
+      "size_px": [
+        144.0,
+        179.4
+      ],
+      "origin_px": [
+        81.55,
+        317.5
+      ]
+    },
+    {
+      "character_id": 3531,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3531.svg",
+      "size_px": [
+        1003.52,
+        1504.59
+      ],
+      "origin_px": [
+        580.53,
+        739.46
+      ]
+    },
+    {
+      "character_id": 3532,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0762_part_3532.svg",
+      "size_px": [
+        1819.32,
+        1319.64
+      ],
+      "origin_px": [
+        957.03,
+        739.46
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3518,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.5
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3519,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3520,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3521,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3522,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3523,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3524,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3525,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3526,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3527,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3528,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3529,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3518,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3530,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3520,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3521,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3531,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3523,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3532,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3525,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3526,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3527,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 3528,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 3529,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

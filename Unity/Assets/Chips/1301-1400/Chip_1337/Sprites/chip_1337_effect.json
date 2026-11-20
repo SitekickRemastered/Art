@@ -1,0 +1,989 @@
+{
+  "chip": 1337,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 12,
+  "mode": "animated",
+  "canvas_size_px": [
+    888.79,
+    562.96
+  ],
+  "canvas_origin_px": [
+    574.5,
+    300.53
+  ],
+  "base": "chip_1337_base.svg",
+  "parts": [
+    {
+      "character_id": 364,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        188.77,
+        116.59
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": "chip_1337_part_364.svg"
+    },
+    {
+      "character_id": 368,
+      "kind": "sprite",
+      "subframes": 15,
+      "size_px": [
+        745.01,
+        720.37
+      ],
+      "origin_px": [
+        354.98,
+        267.19
+      ],
+      "art": [
+        "chip_1337_part_368_f001.svg",
+        "chip_1337_part_368_f002.svg",
+        "chip_1337_part_368_f003.svg",
+        "chip_1337_part_368_f004.svg",
+        "chip_1337_part_368_f005.svg",
+        "chip_1337_part_368_f006.svg",
+        "chip_1337_part_368_f007.svg",
+        "chip_1337_part_368_f008.svg",
+        "chip_1337_part_368_f009.svg",
+        "chip_1337_part_368_f010.svg",
+        "chip_1337_part_368_f011.svg",
+        "chip_1337_part_368_f012.svg",
+        "chip_1337_part_368_f013.svg",
+        "chip_1337_part_368_f014.svg",
+        "chip_1337_part_368_f015.svg"
+      ]
+    },
+    {
+      "character_id": 369,
+      "kind": "sprite",
+      "subframes": 15,
+      "size_px": [
+        430.97,
+        319.24
+      ],
+      "origin_px": [
+        226.94,
+        157.19
+      ],
+      "art": [
+        "chip_1337_part_369_f001.svg",
+        "chip_1337_part_369_f002.svg",
+        "chip_1337_part_369_f003.svg",
+        "chip_1337_part_369_f004.svg",
+        "chip_1337_part_369_f005.svg",
+        "chip_1337_part_369_f006.svg",
+        "chip_1337_part_369_f007.svg",
+        "chip_1337_part_369_f008.svg",
+        "chip_1337_part_369_f009.svg",
+        "chip_1337_part_369_f010.svg",
+        "chip_1337_part_369_f011.svg",
+        "chip_1337_part_369_f012.svg",
+        "chip_1337_part_369_f013.svg",
+        "chip_1337_part_369_f014.svg",
+        "chip_1337_part_369_f015.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 8,
+          "absent": true
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.42647,
+            0.0,
+            0.0,
+            0.42647,
+            -40.8,
+            -31.55
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "absent": true
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.42647,
+            0.0,
+            0.0,
+            0.42647,
+            -93.2,
+            -9.55
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 8,
+          "absent": true
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.46698,
+            0.0,
+            0.0,
+            0.46698,
+            -44.75,
+            -29.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "absent": true
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.46698,
+            0.0,
+            0.0,
+            0.46698,
+            -97.15,
+            -7.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 8,
+          "absent": true
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.50748,
+            0.0,
+            0.0,
+            0.50748,
+            -48.6,
+            -28.3
+          ]
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "absent": true
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.50748,
+            0.0,
+            0.0,
+            0.50748,
+            -101.0,
+            -6.3
+          ]
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.42647,
+            0.0,
+            0.0,
+            0.42647,
+            -40.8,
+            -31.55
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.52548,
+            0.0,
+            0.0,
+            0.52548,
+            -50.3,
+            -27.55
+          ]
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.42647,
+            0.0,
+            0.0,
+            0.42647,
+            -93.2,
+            -9.55
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.52548,
+            0.0,
+            0.0,
+            0.52548,
+            -102.75,
+            -5.55
+          ]
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.46698,
+            0.0,
+            0.0,
+            0.46698,
+            -44.75,
+            -29.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.54347,
+            0.0,
+            0.0,
+            0.54347,
+            -52.1,
+            -26.85
+          ]
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.46698,
+            0.0,
+            0.0,
+            0.46698,
+            -97.15,
+            -7.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.54347,
+            0.0,
+            0.0,
+            0.54347,
+            -104.5,
+            -4.9
+          ]
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.50748,
+            0.0,
+            0.0,
+            0.50748,
+            -48.6,
+            -28.3
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.56148,
+            0.0,
+            0.0,
+            0.56148,
+            -53.9,
+            -26.1
+          ]
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.50748,
+            0.0,
+            0.0,
+            0.50748,
+            -101.0,
+            -6.3
+          ]
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.56148,
+            0.0,
+            0.0,
+            0.56148,
+            -106.3,
+            -4.1
+          ]
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.52548,
+            0.0,
+            0.0,
+            0.52548,
+            -50.3,
+            -27.55
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.61549,
+            0.0,
+            0.0,
+            0.61549,
+            -59.1,
+            -23.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.52548,
+            0.0,
+            0.0,
+            0.52548,
+            -102.75,
+            -5.55
+          ]
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.61549,
+            0.0,
+            0.0,
+            0.61549,
+            -111.55,
+            -1.95
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.54347,
+            0.0,
+            0.0,
+            0.54347,
+            -52.1,
+            -26.85
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 364,
+          "matrix": [
+            0.66949,
+            0.0,
+            0.0,
+            0.66949,
+            -64.4,
+            -21.75
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.54347,
+            0.0,
+            0.0,
+            0.54347,
+            -104.5,
+            -4.9
+          ]
+        },
+        {
+          "depth": 21,
+          "character_id": 364,
+          "matrix": [
+            0.66949,
+            0.0,
+            0.0,
+            0.66949,
+            -116.8,
+            0.25
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.56148,
+            0.0,
+            0.0,
+            0.56148,
+            -53.9,
+            -26.1
+          ]
+        },
+        {
+          "depth": 10,
+          "absent": true
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.56148,
+            0.0,
+            0.0,
+            0.56148,
+            -106.3,
+            -4.1
+          ]
+        },
+        {
+          "depth": 21,
+          "absent": true
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.61549,
+            0.0,
+            0.0,
+            0.61549,
+            -59.1,
+            -23.9
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 10,
+          "absent": true
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.61549,
+            0.0,
+            0.0,
+            0.61549,
+            -111.55,
+            -1.95
+          ],
+          "color": {
+            "alphaMultTerm": "128",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 21,
+          "absent": true
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "moving": [
+        {
+          "depth": 8,
+          "character_id": 364,
+          "matrix": [
+            0.66949,
+            0.0,
+            0.0,
+            0.66949,
+            -64.4,
+            -21.75
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 10,
+          "absent": true
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 364,
+          "matrix": [
+            0.66949,
+            0.0,
+            0.0,
+            0.66949,
+            -116.8,
+            0.25
+          ],
+          "color": {
+            "alphaMultTerm": "0",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 21,
+          "absent": true
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "moving": [
+        {
+          "depth": 8,
+          "absent": true
+        },
+        {
+          "depth": 10,
+          "absent": true
+        },
+        {
+          "depth": 12,
+          "character_id": 368,
+          "matrix": [
+            0.94586,
+            0.32455,
+            -0.32455,
+            0.94586,
+            3.65,
+            -19.15
+          ]
+        },
+        {
+          "depth": 19,
+          "absent": true
+        },
+        {
+          "depth": 21,
+          "absent": true
+        },
+        {
+          "depth": 23,
+          "character_id": 369,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -48.25,
+            -5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

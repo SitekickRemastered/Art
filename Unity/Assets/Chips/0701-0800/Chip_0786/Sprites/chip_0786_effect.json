@@ -1,0 +1,117 @@
+{
+  "chip": 786,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "particles": [
+      {
+        "art": [
+          "chip_0786_particle_0_f001.svg",
+          "chip_0786_particle_0_f002.svg",
+          "chip_0786_particle_0_f003.svg",
+          "chip_0786_particle_0_f004.svg",
+          "chip_0786_particle_0_f005.svg",
+          "chip_0786_particle_0_f006.svg",
+          "chip_0786_particle_0_f007.svg",
+          "chip_0786_particle_0_f008.svg"
+        ],
+        "frames": 8,
+        "dir": "down",
+        "symbol": 3634,
+        "size_px": [
+          118.67,
+          117.98
+        ],
+        "origin_px": [
+          5.21,
+          5.21
+        ],
+        "name": "particle_0",
+        "seconds": 3.5,
+        "x_swf": -206.25
+      },
+      {
+        "art": [
+          "chip_0786_particle_0_f001.svg",
+          "chip_0786_particle_0_f002.svg",
+          "chip_0786_particle_0_f003.svg",
+          "chip_0786_particle_0_f004.svg",
+          "chip_0786_particle_0_f005.svg",
+          "chip_0786_particle_0_f006.svg",
+          "chip_0786_particle_0_f007.svg",
+          "chip_0786_particle_0_f008.svg"
+        ],
+        "frames": 8,
+        "dir": "down",
+        "symbol": 3634,
+        "size_px": [
+          118.67,
+          117.98
+        ],
+        "origin_px": [
+          5.21,
+          5.21
+        ],
+        "name": "particle_1",
+        "seconds": 4.5,
+        "x_swf": -68.75
+      },
+      {
+        "art": [
+          "chip_0786_particle_0_f001.svg",
+          "chip_0786_particle_0_f002.svg",
+          "chip_0786_particle_0_f003.svg",
+          "chip_0786_particle_0_f004.svg",
+          "chip_0786_particle_0_f005.svg",
+          "chip_0786_particle_0_f006.svg",
+          "chip_0786_particle_0_f007.svg",
+          "chip_0786_particle_0_f008.svg"
+        ],
+        "frames": 8,
+        "dir": "down",
+        "symbol": 3634,
+        "size_px": [
+          118.67,
+          117.98
+        ],
+        "origin_px": [
+          5.21,
+          5.21
+        ],
+        "name": "particle_2",
+        "seconds": 5.5,
+        "x_swf": 68.75
+      },
+      {
+        "art": [
+          "chip_0786_particle_0_f001.svg",
+          "chip_0786_particle_0_f002.svg",
+          "chip_0786_particle_0_f003.svg",
+          "chip_0786_particle_0_f004.svg",
+          "chip_0786_particle_0_f005.svg",
+          "chip_0786_particle_0_f006.svg",
+          "chip_0786_particle_0_f007.svg",
+          "chip_0786_particle_0_f008.svg"
+        ],
+        "frames": 8,
+        "dir": "down",
+        "symbol": 3634,
+        "size_px": [
+          118.67,
+          117.98
+        ],
+        "origin_px": [
+          5.21,
+          5.21
+        ],
+        "name": "particle_3",
+        "seconds": 6.5,
+        "x_swf": 206.25
+      }
+    ]
+  }
+}

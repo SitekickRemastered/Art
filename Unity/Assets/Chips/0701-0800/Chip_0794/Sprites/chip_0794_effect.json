@@ -1,0 +1,104 @@
+{
+  "chip": 794,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1326.32,
+    937.34
+  ],
+  "canvas_origin_px": [
+    683.97,
+    364.93
+  ],
+  "base": "chip_0794_base.svg",
+  "parts": [
+    {
+      "character_id": 3329,
+      "kind": "sprite",
+      "subframes": 37,
+      "size_px": [
+        1303.33,
+        1458.09
+      ],
+      "origin_px": [
+        1464.34,
+        146.78
+      ],
+      "art": [
+        "chip_0794_part_3329_f001.svg",
+        "chip_0794_part_3329_f002.svg",
+        "chip_0794_part_3329_f003.svg",
+        "chip_0794_part_3329_f004.svg",
+        "chip_0794_part_3329_f005.svg",
+        "chip_0794_part_3329_f006.svg",
+        "chip_0794_part_3329_f007.svg",
+        "chip_0794_part_3329_f008.svg",
+        "chip_0794_part_3329_f009.svg",
+        "chip_0794_part_3329_f010.svg",
+        "chip_0794_part_3329_f011.svg",
+        "chip_0794_part_3329_f012.svg",
+        "chip_0794_part_3329_f013.svg",
+        "chip_0794_part_3329_f014.svg",
+        "chip_0794_part_3329_f015.svg",
+        "chip_0794_part_3329_f016.svg",
+        "chip_0794_part_3329_f017.svg",
+        "chip_0794_part_3329_f018.svg",
+        "chip_0794_part_3329_f019.svg",
+        "chip_0794_part_3329_f020.svg",
+        "chip_0794_part_3329_f021.svg",
+        "chip_0794_part_3329_f022.svg",
+        "chip_0794_part_3329_f023.svg",
+        "chip_0794_part_3329_f024.svg",
+        "chip_0794_part_3329_f025.svg",
+        "chip_0794_part_3329_f026.svg",
+        "chip_0794_part_3329_f027.svg",
+        "chip_0794_part_3329_f028.svg",
+        "chip_0794_part_3329_f029.svg",
+        "chip_0794_part_3329_f030.svg",
+        "chip_0794_part_3329_f031.svg",
+        "chip_0794_part_3329_f032.svg",
+        "chip_0794_part_3329_f033.svg",
+        "chip_0794_part_3329_f034.svg",
+        "chip_0794_part_3329_f035.svg",
+        "chip_0794_part_3329_f036.svg",
+        "chip_0794_part_3329_f037.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 3329,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            37.4,
+            -66.45
+          ]
+        },
+        {
+          "depth": 24,
+          "character_id": 3329,
+          "matrix": [
+            -0.93999,
+            0.0,
+            0.0,
+            0.93999,
+            -35.7,
+            -64.55
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

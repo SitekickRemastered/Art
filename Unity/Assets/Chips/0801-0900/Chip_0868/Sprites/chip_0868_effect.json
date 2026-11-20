@@ -1,0 +1,8946 @@
+{
+  "chip": 868,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 42,
+  "mode": "animated",
+  "canvas_size_px": [
+    1888.65,
+    791.69
+  ],
+  "canvas_origin_px": [
+    478.8,
+    50.8
+  ],
+  "base": "chip_0868_base.svg",
+  "parts": [
+    {
+      "character_id": 2015,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2015.svg",
+      "size_px": [
+        118.67,
+        190.16
+      ],
+      "origin_px": [
+        3.47,
+        4.86
+      ]
+    },
+    {
+      "character_id": 2016,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2016.svg",
+      "size_px": [
+        256.78,
+        364.0
+      ],
+      "origin_px": [
+        5.21,
+        3.12
+      ]
+    },
+    {
+      "character_id": 2017,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2017.svg",
+      "size_px": [
+        588.51,
+        577.41
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "character_id": 2018,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2018.svg",
+      "size_px": [
+        437.91,
+        117.63
+      ],
+      "origin_px": [
+        -58.3,
+        6.59
+      ]
+    },
+    {
+      "character_id": 2021,
+      "kind": "sprite",
+      "subframes": 20,
+      "size_px": [
+        1232.89,
+        251.58
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": [
+        "chip_0868_part_2021_f001.svg",
+        "chip_0868_part_2021_f002.svg",
+        "chip_0868_part_2021_f003.svg",
+        "chip_0868_part_2021_f004.svg",
+        "chip_0868_part_2021_f005.svg",
+        "chip_0868_part_2021_f006.svg",
+        "chip_0868_part_2021_f007.svg",
+        "chip_0868_part_2021_f008.svg",
+        "chip_0868_part_2021_f009.svg",
+        "chip_0868_part_2021_f010.svg",
+        "chip_0868_part_2021_f011.svg",
+        "chip_0868_part_2021_f012.svg",
+        "chip_0868_part_2021_f013.svg",
+        "chip_0868_part_2021_f014.svg",
+        "chip_0868_part_2021_f015.svg",
+        "chip_0868_part_2021_f016.svg",
+        "chip_0868_part_2021_f017.svg",
+        "chip_0868_part_2021_f018.svg",
+        "chip_0868_part_2021_f019.svg",
+        "chip_0868_part_2021_f020.svg"
+      ]
+    },
+    {
+      "character_id": 2022,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2022.svg",
+      "size_px": [
+        1271.06,
+        289.75
+      ],
+      "origin_px": [
+        6.94,
+        -0.69
+      ]
+    },
+    {
+      "character_id": 2024,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        933.78,
+        115.2
+      ],
+      "origin_px": [
+        -96.81,
+        -28.8
+      ],
+      "art": "chip_0868_part_2024.svg"
+    },
+    {
+      "character_id": 2025,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2025.svg",
+      "size_px": [
+        545.48,
+        251.58
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "character_id": 2026,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2026.svg",
+      "size_px": [
+        499.68,
+        499.68
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "character_id": 2027,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2027.svg",
+      "size_px": [
+        845.29,
+        158.23
+      ],
+      "origin_px": [
+        0.0,
+        -0.35
+      ]
+    },
+    {
+      "character_id": 2028,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2028.svg",
+      "size_px": [
+        308.83,
+        254.35
+      ],
+      "origin_px": [
+        6.25,
+        3.47
+      ]
+    },
+    {
+      "character_id": 2029,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2029.svg",
+      "size_px": [
+        97.85,
+        28.8
+      ],
+      "origin_px": [
+        0.69,
+        0.69
+      ]
+    },
+    {
+      "character_id": 2030,
+      "kind": "shape",
+      "subframes": 1,
+      "art": "chip_0868_part_2030.svg",
+      "size_px": [
+        191.54,
+        148.52
+      ],
+      "origin_px": [
+        6.59,
+        3.47
+      ]
+    },
+    {
+      "character_id": 2031,
+      "kind": "sprite",
+      "subframes": 1,
+      "size_px": [
+        1306.46,
+        322.36
+      ],
+      "origin_px": [
+        6.94,
+        31.92
+      ],
+      "art": "chip_0868_part_2031.svg"
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13126,
+            -0.07419,
+            0.07045,
+            1.13274,
+            -46.35,
+            2.85
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.12964,
+            0.09962,
+            -0.09962,
+            1.12964,
+            -56.55,
+            10.95
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.04723,
+            0.5648,
+            -0.11176,
+            -0.00934,
+            -35.9,
+            11.3
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13394,
+            0.00569,
+            -0.00569,
+            1.13394,
+            -84.3,
+            61.65
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13277,
+            0.04547,
+            -0.04547,
+            1.13277,
+            -14.05,
+            57.4
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13277,
+            0.04547,
+            -0.04547,
+            1.13277,
+            -15.05,
+            53.25
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13277,
+            0.04547,
+            -0.04547,
+            1.13277,
+            -0.55,
+            66.4
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13277,
+            0.04547,
+            -0.04547,
+            1.13277,
+            98.15,
+            61.9
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07826,
+            0.1626,
+            -0.50497,
+            0.24298,
+            191.2,
+            56.3
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00122,
+            0.18021,
+            -1.12628,
+            -0.00784,
+            135.0,
+            86.5
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13277,
+            0.04547,
+            -0.04547,
+            1.13277,
+            -14.65,
+            72.55
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13394,
+            0.00569,
+            -0.00569,
+            1.13394,
+            -27.3,
+            51.95
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13394,
+            0.00569,
+            -0.00569,
+            1.13394,
+            -9.65,
+            63.5
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13394,
+            0.00569,
+            -0.00569,
+            1.13394,
+            -54.95,
+            53.45
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18811,
+            0.01292,
+            -0.00769,
+            -0.11179,
+            -37.3,
+            73.8
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.12311,
+            -0.14799,
+            0.1476,
+            1.12558,
+            -46.5,
+            3.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.11533,
+            0.20294,
+            -0.20294,
+            1.11533,
+            -55.5,
+            8.75
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.09889,
+            0.55788,
+            -0.11038,
+            -0.01956,
+            -35.0,
+            11.0
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13278,
+            0.01585,
+            -0.01585,
+            1.13278,
+            -92.1,
+            60.2
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13139,
+            0.05577,
+            -0.05577,
+            1.13139,
+            -21.6,
+            56.5
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13139,
+            0.05577,
+            -0.05577,
+            1.13139,
+            -22.55,
+            52.4
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13139,
+            0.05577,
+            -0.05577,
+            1.13139,
+            -8.15,
+            65.7
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13139,
+            0.05577,
+            -0.05577,
+            1.13139,
+            90.45,
+            62.05
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07672,
+            0.16316,
+            -0.50677,
+            0.23817,
+            183.5,
+            57.35
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00287,
+            0.18004,
+            -1.12524,
+            -0.01811,
+            127.1,
+            87.0
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13139,
+            0.05577,
+            -0.05577,
+            1.13139,
+            -22.35,
+            71.7
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13278,
+            0.01585,
+            -0.01585,
+            1.13278,
+            -34.95,
+            51.25
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13278,
+            0.01585,
+            -0.01585,
+            1.13278,
+            -17.45,
+            62.95
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13278,
+            0.01585,
+            -0.01585,
+            1.13278,
+            -60.45,
+            52.95
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18803,
+            0.01123,
+            -0.00668,
+            -0.11176,
+            -43.0,
+            73.4
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.03821,
+            -0.4472,
+            0.44478,
+            1.04494,
+            -46.45,
+            7.9
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.09808,
+            -0.27979,
+            0.27979,
+            1.09808,
+            -53.95,
+            17.35
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.14233,
+            0.54817,
+            -0.10847,
+            0.02817,
+            -34.35,
+            10.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.02103,
+            -0.48898,
+            0.48898,
+            1.02103,
+            -73.55,
+            71.6
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.03752,
+            -0.45277,
+            0.45277,
+            1.03752,
+            -11.4,
+            37.2
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.03752,
+            -0.45277,
+            0.45277,
+            1.03752,
+            -14.1,
+            33.9
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.03752,
+            -0.45277,
+            0.45277,
+            1.03752,
+            4.7,
+            39.4
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.03752,
+            -0.45277,
+            0.45277,
+            1.03752,
+            91.35,
+            -7.65
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.14117,
+            0.11197,
+            -0.34779,
+            0.43837,
+            172.55,
+            -53.2
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.07742,
+            0.16245,
+            -1.0153,
+            0.48375,
+            135.2,
+            -1.6
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.03752,
+            -0.45277,
+            0.45277,
+            1.03752,
+            -5.35,
+            51.1
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.02103,
+            -0.48898,
+            0.48898,
+            1.02103,
+            -26.05,
+            38.65
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.02103,
+            -0.48898,
+            0.48898,
+            1.02103,
+            -5.15,
+            41.3
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.02103,
+            -0.48898,
+            0.48898,
+            1.02103,
+            -43.6,
+            52.0
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.16331,
+            0.09358,
+            -0.05562,
+            -0.09706,
+            -18.85,
+            62.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.87584,
+            -0.71234,
+            0.70988,
+            0.88812,
+            -45.05,
+            12.0
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.87901,
+            -0.71423,
+            0.71423,
+            0.87901,
+            -48.5,
+            25.55
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.35896,
+            0.4377,
+            -0.08661,
+            0.07103,
+            -33.5,
+            11.45
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.69141,
+            -0.89679,
+            0.89679,
+            0.69141,
+            -41.0,
+            79.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.72533,
+            -0.86932,
+            0.86932,
+            0.72533,
+            -0.55,
+            21.15
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.72533,
+            -0.86932,
+            0.86932,
+            0.72533,
+            -4.45,
+            19.4
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.72533,
+            -0.86932,
+            0.86932,
+            0.72533,
+            14.8,
+            15.95
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.72533,
+            -0.86932,
+            0.86932,
+            0.72533,
+            71.25,
+            -65.0
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17638,
+            0.03696,
+            -0.11488,
+            0.54773,
+            123.5,
+            -142.1
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.14195,
+            0.11063,
+            -0.69159,
+            0.88707,
+            113.2,
+            -79.2
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.72533,
+            -0.86932,
+            0.86932,
+            0.72533,
+            11.1,
+            30.9
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.69141,
+            -0.89679,
+            0.89679,
+            0.69141,
+            -13.4,
+            28.8
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.69141,
+            -0.89679,
+            0.89679,
+            0.69141,
+            6.45,
+            21.8
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.69141,
+            -0.89679,
+            0.89679,
+            0.69141,
+            -23.4,
+            51.25
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.10368,
+            0.15717,
+            -0.0934,
+            -0.0616,
+            3.4,
+            49.55
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64752,
+            -0.9257,
+            0.92723,
+            0.66417,
+            -42.1,
+            15.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.50146,
+            -1.01801,
+            1.01801,
+            0.50146,
+            -40.0,
+            32.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.50993,
+            0.24831,
+            -0.04912,
+            0.10091,
+            -32.2,
+            12.85
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            2.45,
+            77.75
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            11.6,
+            7.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            7.35,
+            7.9
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            23.05,
+            -3.85
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            37.45,
+            -101.65
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17468,
+            -0.04587,
+            0.14235,
+            0.54248,
+            49.7,
+            -194.15
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17682,
+            0.0356,
+            -0.22264,
+            1.10503,
+            68.65,
+            -133.2
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            26.35,
+            11.25
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            3.95,
+            19.9
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            18.65,
+            4.8
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            -0.65,
+            48.85
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.02299,
+            0.18727,
+            -0.11128,
+            -0.01366,
+            22.65,
+            35.4
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64412,
+            -0.92491,
+            0.92534,
+            0.66222,
+            -41.85,
+            15.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.53262,
+            -0.99953,
+            0.99954,
+            0.53265,
+            -40.4,
+            31.75
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.50076,
+            0.26395,
+            -0.05222,
+            0.09909,
+            -32.05,
+            12.9
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.25533,
+            -1.10454,
+            1.10454,
+            0.25533,
+            0.4,
+            79.0
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.29436,
+            -1.09439,
+            1.09439,
+            0.29436,
+            11.65,
+            8.7
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.29436,
+            -1.09439,
+            1.09439,
+            0.29436,
+            7.4,
+            8.75
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.29436,
+            -1.09439,
+            1.09439,
+            0.29436,
+            23.45,
+            -2.5
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.29436,
+            -1.09439,
+            1.09439,
+            0.29436,
+            40.8,
+            -99.7
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.1758,
+            -0.04042,
+            0.12544,
+            0.54597,
+            55.9,
+            -191.65
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17543,
+            0.04097,
+            -0.25624,
+            1.09636,
+            72.95,
+            -130.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.29436,
+            -1.09439,
+            1.09439,
+            0.29436,
+            26.3,
+            12.65
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.25533,
+            -1.10454,
+            1.10454,
+            0.25533,
+            3.8,
+            20.85
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.25533,
+            -1.10454,
+            1.10454,
+            0.25533,
+            18.95,
+            6.2
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.25533,
+            -1.10454,
+            1.10454,
+            0.25533,
+            -2.1,
+            49.4
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.02882,
+            0.18628,
+            -0.1107,
+            -0.01712,
+            21.6,
+            36.65
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64484,
+            -0.92549,
+            0.92603,
+            0.66278,
+            -42.1,
+            15.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.56432,
+            -0.98299,
+            0.983,
+            0.56432,
+            -41.0,
+            31.05
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.49257,
+            0.27982,
+            -0.05536,
+            0.09747,
+            -32.05,
+            12.45
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.29021,
+            -1.09637,
+            1.09637,
+            0.29021,
+            -1.6,
+            79.7
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.33212,
+            -1.08409,
+            1.08409,
+            0.33212,
+            12.05,
+            10.3
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.33212,
+            -1.08409,
+            1.08409,
+            0.33212,
+            7.8,
+            10.2
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.33212,
+            -1.08409,
+            1.08409,
+            0.33212,
+            24.25,
+            -0.45
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.33212,
+            -1.08409,
+            1.08409,
+            0.33212,
+            44.95,
+            -97.05
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17717,
+            -0.03435,
+            0.10658,
+            0.55023,
+            63.2,
+            -188.55
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.174,
+            0.04703,
+            -0.2941,
+            1.08739,
+            78.1,
+            -126.5
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.33212,
+            -1.08409,
+            1.08409,
+            0.33212,
+            26.6,
+            14.75
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.29021,
+            -1.09637,
+            1.09637,
+            0.29021,
+            3.6,
+            22.0
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.29021,
+            -1.09637,
+            1.09637,
+            0.29021,
+            19.2,
+            7.85
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.29021,
+            -1.09637,
+            1.09637,
+            0.29021,
+            -2.85,
+            50.55
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.03471,
+            0.18535,
+            -0.11014,
+            -0.02061,
+            21.25,
+            38.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64331,
+            -0.92422,
+            0.92453,
+            0.66158,
+            -42.15,
+            15.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.56282,
+            -0.98181,
+            0.98183,
+            0.56282,
+            -41.0,
+            31.1
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.49199,
+            0.27907,
+            -0.05522,
+            0.09735,
+            -32.1,
+            12.55
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.28909,
+            -1.09563,
+            1.09563,
+            0.28909,
+            -1.5,
+            79.75
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.33163,
+            -1.0831,
+            1.0831,
+            0.33163,
+            11.9,
+            10.5
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.33163,
+            -1.0831,
+            1.0831,
+            0.33163,
+            7.65,
+            10.4
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.33163,
+            -1.0831,
+            1.0831,
+            0.33163,
+            24.05,
+            -0.25
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.33163,
+            -1.0831,
+            1.0831,
+            0.33163,
+            44.75,
+            -96.75
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17699,
+            -0.03435,
+            0.10657,
+            0.5497,
+            62.95,
+            -188.15
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17383,
+            0.04695,
+            -0.29364,
+            1.0864,
+            77.9,
+            -126.2
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.33163,
+            -1.0831,
+            1.0831,
+            0.33163,
+            26.4,
+            14.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.28909,
+            -1.09563,
+            1.09563,
+            0.28909,
+            3.65,
+            22.1
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.28909,
+            -1.09563,
+            1.09563,
+            0.28909,
+            19.2,
+            7.9
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.28909,
+            -1.09563,
+            1.09563,
+            0.28909,
+            -2.9,
+            50.55
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.03453,
+            0.18521,
+            -0.11008,
+            -0.02051,
+            21.15,
+            38.55
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64323,
+            -0.92412,
+            0.92441,
+            0.66147,
+            -42.2,
+            15.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.56277,
+            -0.98174,
+            0.98177,
+            0.56279,
+            -41.05,
+            31.1
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.49196,
+            0.27905,
+            -0.05521,
+            0.09735,
+            -32.15,
+            12.55
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.28906,
+            -1.09557,
+            1.09557,
+            0.28906,
+            -1.5,
+            79.7
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.33162,
+            -1.08299,
+            1.08299,
+            0.33162,
+            11.75,
+            10.65
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.33162,
+            -1.08299,
+            1.08299,
+            0.33162,
+            7.5,
+            10.55
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.33162,
+            -1.08299,
+            1.08299,
+            0.33162,
+            23.9,
+            -0.1
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.33162,
+            -1.08299,
+            1.08299,
+            0.33162,
+            44.6,
+            -96.6
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17697,
+            -0.03433,
+            0.10654,
+            0.54965,
+            62.8,
+            -188.0
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17381,
+            0.04695,
+            -0.29362,
+            1.08629,
+            77.75,
+            -126.05
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.33162,
+            -1.08299,
+            1.08299,
+            0.33162,
+            26.25,
+            15.1
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.28906,
+            -1.09557,
+            1.09557,
+            0.28906,
+            3.65,
+            22.15
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.28906,
+            -1.09557,
+            1.09557,
+            0.28906,
+            19.2,
+            7.95
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.28906,
+            -1.09557,
+            1.09557,
+            0.28906,
+            -2.9,
+            50.55
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.03452,
+            0.18521,
+            -0.11006,
+            -0.02051,
+            21.15,
+            38.55
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64311,
+            -0.924,
+            0.92427,
+            0.66138,
+            -42.3,
+            15.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.56267,
+            -0.98161,
+            0.98161,
+            0.5627,
+            -41.1,
+            31.15
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.49188,
+            0.27901,
+            -0.05521,
+            0.09734,
+            -32.2,
+            12.6
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.28902,
+            -1.09546,
+            1.09546,
+            0.28902,
+            -1.45,
+            79.7
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.33159,
+            -1.08293,
+            1.08293,
+            0.33159,
+            11.55,
+            10.9
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.33159,
+            -1.08293,
+            1.08293,
+            0.33159,
+            7.3,
+            10.8
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.33159,
+            -1.08293,
+            1.08293,
+            0.33159,
+            23.7,
+            0.15
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.33159,
+            -1.08293,
+            1.08293,
+            0.33159,
+            44.4,
+            -96.35
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17697,
+            -0.03433,
+            0.10654,
+            0.54961,
+            62.6,
+            -187.75
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.1738,
+            0.04695,
+            -0.29359,
+            1.08623,
+            77.55,
+            -125.75
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.33159,
+            -1.08293,
+            1.08293,
+            0.33159,
+            26.05,
+            15.35
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.28902,
+            -1.09546,
+            1.09546,
+            0.28902,
+            3.65,
+            22.15
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.28902,
+            -1.09546,
+            1.09546,
+            0.28902,
+            19.2,
+            7.95
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.28902,
+            -1.09546,
+            1.09546,
+            0.28902,
+            -2.95,
+            50.6
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.03452,
+            0.18518,
+            -0.11005,
+            -0.02049,
+            21.1,
+            38.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64433,
+            -0.92508,
+            0.92555,
+            0.66241,
+            -42.05,
+            15.6
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.56384,
+            -0.98264,
+            0.98265,
+            0.56384,
+            -41.0,
+            31.05
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.4924,
+            0.27957,
+            -0.05531,
+            0.09743,
+            -32.05,
+            12.45
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.28987,
+            -1.09613,
+            1.09613,
+            0.28987,
+            -1.5,
+            79.75
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.33197,
+            -1.08379,
+            1.08379,
+            0.33197,
+            12.15,
+            10.25
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.33197,
+            -1.08379,
+            1.08379,
+            0.33197,
+            7.9,
+            10.15
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.33197,
+            -1.08379,
+            1.08379,
+            0.33197,
+            24.35,
+            -0.5
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.33197,
+            -1.08379,
+            1.08379,
+            0.33197,
+            45.0,
+            -97.1
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17712,
+            -0.03435,
+            0.10657,
+            0.55008,
+            63.3,
+            -188.55
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17393,
+            0.047,
+            -0.29395,
+            1.08707,
+            78.2,
+            -126.55
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.33197,
+            -1.08379,
+            1.08379,
+            0.33197,
+            26.65,
+            14.7
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.28987,
+            -1.09613,
+            1.09613,
+            0.28987,
+            3.75,
+            22.1
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.28987,
+            -1.09613,
+            1.09613,
+            0.28987,
+            19.3,
+            7.95
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.28987,
+            -1.09613,
+            1.09613,
+            0.28987,
+            -2.9,
+            50.6
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.03465,
+            0.1853,
+            -0.11012,
+            -0.02058,
+            21.2,
+            38.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64392,
+            -0.92468,
+            0.92511,
+            0.66206,
+            -42.05,
+            15.55
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.53249,
+            -0.9993,
+            0.9993,
+            0.53249,
+            -40.35,
+            31.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.50064,
+            0.26385,
+            -0.0522,
+            0.09906,
+            -32.0,
+            12.45
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.25525,
+            -1.10437,
+            1.10437,
+            0.25525,
+            0.5,
+            78.6
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.29428,
+            -1.09424,
+            1.09424,
+            0.29428,
+            12.4,
+            8.95
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.29428,
+            -1.09424,
+            1.09424,
+            0.29428,
+            8.15,
+            9.0
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.29428,
+            -1.09424,
+            1.09424,
+            0.29428,
+            24.2,
+            -2.25
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.29428,
+            -1.09424,
+            1.09424,
+            0.29428,
+            41.55,
+            -99.45
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17577,
+            -0.04044,
+            0.12544,
+            0.5459,
+            56.65,
+            -191.4
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.1754,
+            0.04095,
+            -0.25618,
+            1.09621,
+            73.65,
+            -130.0
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.29428,
+            -1.09424,
+            1.09424,
+            0.29428,
+            27.05,
+            12.9
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.25525,
+            -1.10437,
+            1.10437,
+            0.25525,
+            4.0,
+            21.1
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.25525,
+            -1.10437,
+            1.10437,
+            0.25525,
+            19.15,
+            6.45
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.25525,
+            -1.10437,
+            1.10437,
+            0.25525,
+            -1.4,
+            50.05
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.02881,
+            0.18625,
+            -0.11069,
+            -0.01711,
+            22.3,
+            37.3
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            0.64752,
+            -0.9257,
+            0.92723,
+            0.66417,
+            -42.1,
+            15.65
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            0.50146,
+            -1.01801,
+            1.01801,
+            0.50146,
+            -40.0,
+            32.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.50993,
+            0.24831,
+            -0.04912,
+            0.10091,
+            -32.2,
+            12.85
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            2.45,
+            77.75
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            11.6,
+            7.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            7.35,
+            7.9
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            23.05,
+            -3.85
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            37.45,
+            -101.65
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.17468,
+            -0.04587,
+            0.14235,
+            0.54248,
+            49.7,
+            -194.15
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            0.17682,
+            0.0356,
+            -0.22264,
+            1.10503,
+            68.65,
+            -133.2
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            0.26085,
+            -1.10422,
+            1.10422,
+            0.26085,
+            26.35,
+            11.25
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            3.95,
+            19.9
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            18.65,
+            4.8
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.22089,
+            -1.1131,
+            1.1131,
+            0.22089,
+            -0.65,
+            48.85
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.02299,
+            0.18727,
+            -0.11128,
+            -0.01366,
+            22.65,
+            35.4
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.01987,
+            -0.48856,
+            0.4861,
+            1.02702,
+            -46.2,
+            8.8
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.03867,
+            -0.45337,
+            0.45338,
+            1.03867,
+            -52.95,
+            20.6
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.22896,
+            0.51807,
+            -0.10251,
+            0.0453,
+            -34.7,
+            11.0
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            0.98763,
+            -0.55513,
+            0.55513,
+            0.98763,
+            -64.15,
+            70.65
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2031,
+          "matrix": [
+            1.00647,
+            -0.51988,
+            0.51988,
+            1.00647,
+            -7.95,
+            29.05
+          ]
+        },
+        {
+          "depth": 9,
+          "absent": true
+        },
+        {
+          "depth": 10,
+          "absent": true
+        },
+        {
+          "depth": 12,
+          "absent": true
+        },
+        {
+          "depth": 13,
+          "absent": true
+        },
+        {
+          "depth": 14,
+          "absent": true
+        },
+        {
+          "depth": 15,
+          "absent": true
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            0.98763,
+            -0.55513,
+            0.55513,
+            0.98763,
+            -19.2,
+            34.3
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            0.98763,
+            -0.55513,
+            0.55513,
+            0.98763,
+            1.8,
+            35.65
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            0.98763,
+            -0.55513,
+            0.55513,
+            0.98763,
+            -35.7,
+            49.1
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.15698,
+            0.10414,
+            -0.06189,
+            -0.09328,
+            -10.35,
+            58.05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13268,
+            0.06999,
+            -0.06999,
+            1.13268,
+            -45.9,
+            0.6
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.10698,
+            0.24724,
+            -0.24724,
+            1.10698,
+            -57.05,
+            8.35
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.12105,
+            0.55382,
+            -0.10957,
+            -0.02394,
+            -36.65,
+            11.4
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.08934,
+            0.31508,
+            -0.31508,
+            1.08934,
+            -88.15,
+            47.35
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.07709,
+            0.35408,
+            -0.35408,
+            1.07709,
+            -19.1,
+            62.5
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.07709,
+            0.35408,
+            -0.35408,
+            1.07709,
+            -18.95,
+            58.25
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.07709,
+            0.35408,
+            -0.35408,
+            1.07709,
+            -8.65,
+            74.9
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.07709,
+            0.35408,
+            -0.35408,
+            1.07709,
+            87.55,
+            97.6
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.03075,
+            0.17783,
+            -0.55228,
+            0.09537,
+            178.6,
+            117.7
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.05055,
+            0.173,
+            -1.08115,
+            -0.31612,
+            116.3,
+            131.35
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.07709,
+            0.35408,
+            -0.35408,
+            1.07709,
+            -23.85,
+            76.9
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.08934,
+            0.31508,
+            -0.31508,
+            1.08934,
+            -30.6,
+            53.85
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.08934,
+            0.31508,
+            -0.31508,
+            1.08934,
+            -16.8,
+            69.75
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.08934,
+            0.31508,
+            -0.31508,
+            1.08934,
+            -59.2,
+            46.65
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18449,
+            -0.03891,
+            0.02312,
+            -0.10963,
+            -47.75,
+            71.05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13362,
+            0.05029,
+            -0.05029,
+            1.13362,
+            -45.95,
+            0.9
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.11896,
+            0.18329,
+            -0.18329,
+            1.11896,
+            -57.25,
+            9.65
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.08905,
+            0.55965,
+            -0.11073,
+            -0.01761,
+            -36.7,
+            11.55
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.10858,
+            0.23631,
+            -0.23631,
+            1.10858,
+            -85.6,
+            50.95
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.09927,
+            0.27515,
+            -0.27515,
+            1.09927,
+            -15.9,
+            61.15
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.09927,
+            0.27515,
+            -0.27515,
+            1.09927,
+            -16.0,
+            56.9
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.09927,
+            0.27515,
+            -0.27515,
+            1.09927,
+            -4.5,
+            72.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.09927,
+            0.27515,
+            -0.27515,
+            1.09927,
+            93.0,
+            88.4
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.04349,
+            0.17505,
+            -0.54366,
+            0.13496,
+            185.2,
+            101.9
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.0379,
+            0.1761,
+            -1.10059,
+            -0.23701,
+            124.1,
+            120.0
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.09927,
+            0.27515,
+            -0.27515,
+            1.09927,
+            -19.6,
+            75.9
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.10858,
+            0.23631,
+            -0.23631,
+            1.10858,
+            -27.9,
+            53.45
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.10858,
+            0.23631,
+            -0.23631,
+            1.10858,
+            -13.0,
+            68.35
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.10858,
+            0.23631,
+            -0.23631,
+            1.10858,
+            -56.7,
+            48.5
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18672,
+            -0.02562,
+            0.01521,
+            -0.11096,
+            -43.55,
+            72.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13431,
+            0.03476,
+            -0.03476,
+            1.13431,
+            -45.9,
+            1.15
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.12747,
+            0.12373,
+            -0.12373,
+            1.12747,
+            -57.4,
+            10.8
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.05928,
+            0.56377,
+            -0.11156,
+            -0.01172,
+            -36.8,
+            11.6
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.12294,
+            0.15823,
+            -0.15823,
+            1.12294,
+            -82.75,
+            54.65
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.11633,
+            0.19762,
+            -0.19762,
+            1.11633,
+            -12.65,
+            59.95
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.11633,
+            0.19762,
+            -0.19762,
+            1.11633,
+            -13.05,
+            55.75
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.11633,
+            0.19762,
+            -0.19762,
+            1.11633,
+            -0.45,
+            70.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.11633,
+            0.19762,
+            -0.19762,
+            1.11633,
+            97.95,
+            79.5
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.05566,
+            0.17165,
+            -0.53311,
+            0.17276,
+            190.9,
+            86.55
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.0255,
+            0.17841,
+            -1.11496,
+            -0.15947,
+            131.15,
+            108.9
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.11633,
+            0.19762,
+            -0.19762,
+            1.11633,
+            -15.3,
+            74.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.12294,
+            0.15823,
+            -0.15823,
+            1.12294,
+            -25.15,
+            53.1
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.12294,
+            0.15823,
+            -0.15823,
+            1.12294,
+            -9.25,
+            66.9
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.12294,
+            0.15823,
+            -0.15823,
+            1.12294,
+            -54.15,
+            50.35
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18814,
+            -0.0125,
+            0.00742,
+            -0.1118,
+            -39.4,
+            72.9
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13484,
+            0.01552,
+            -0.01552,
+            1.13484,
+            -45.85,
+            1.45
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13304,
+            0.06012,
+            -0.06012,
+            1.13304,
+            -57.5,
+            12.05
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            -0.02747,
+            0.56642,
+            -0.11208,
+            -0.00543,
+            -36.85,
+            11.7
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13174,
+            0.07933,
+            -0.07933,
+            1.13174,
+            -79.65,
+            58.25
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.12793,
+            0.11908,
+            -0.11908,
+            1.12793,
+            -9.5,
+            58.7
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.12793,
+            0.11908,
+            -0.11908,
+            1.12793,
+            -10.2,
+            54.55
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.12793,
+            0.11908,
+            -0.11908,
+            1.12793,
+            3.45,
+            68.65
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.12793,
+            0.11908,
+            -0.11908,
+            1.12793,
+            102.2,
+            70.5
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.06757,
+            0.1674,
+            -0.51994,
+            0.20973,
+            195.5,
+            71.0
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.01295,
+            0.17982,
+            -1.1239,
+            -0.0811,
+            137.45,
+            97.5
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.12793,
+            0.11908,
+            -0.11908,
+            1.12793,
+            -11.05,
+            73.8
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13174,
+            0.07933,
+            -0.07933,
+            1.13174,
+            -22.35,
+            52.8
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13174,
+            0.07933,
+            -0.07933,
+            1.13174,
+            -5.5,
+            65.5
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13174,
+            0.07933,
+            -0.07933,
+            1.13174,
+            -51.65,
+            52.15
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18864,
+            0.0007,
+            -0.00043,
+            -0.11211,
+            -35.35,
+            73.6
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 2015,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -46.1,
+            1.7
+          ]
+        },
+        {
+          "depth": 3,
+          "character_id": 2016,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -57.5,
+            13.3
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 2017,
+          "matrix": [
+            0.00258,
+            0.56729,
+            -0.11224,
+            0.00052,
+            -36.9,
+            11.8
+          ]
+        },
+        {
+          "depth": 5,
+          "character_id": 2018,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -76.55,
+            62.3
+          ]
+        },
+        {
+          "depth": 6,
+          "character_id": 2021,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.0,
+            57.75
+          ]
+        },
+        {
+          "depth": 9,
+          "character_id": 2022,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -7.0,
+            53.6
+          ]
+        },
+        {
+          "depth": 10,
+          "character_id": 2024,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            7.6,
+            66.75
+          ],
+          "color": {
+            "alphaMultTerm": "131",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 12,
+          "character_id": 2025,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            106.3,
+            61.8
+          ],
+          "color": {
+            "alphaMultTerm": "77",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 13,
+          "character_id": 2026,
+          "matrix": [
+            0.07901,
+            0.16243,
+            -0.50452,
+            0.2453,
+            199.5,
+            55.85
+          ],
+          "color": {
+            "alphaMultTerm": "251",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 14,
+          "character_id": 2026,
+          "matrix": [
+            -0.00049,
+            0.1804,
+            -1.12747,
+            -0.00328,
+            143.35,
+            86.25
+          ]
+        },
+        {
+          "depth": 15,
+          "character_id": 2027,
+          "matrix": [
+            1.13412,
+            0.04091,
+            -0.04091,
+            1.13412,
+            -6.55,
+            72.95
+          ],
+          "color": {
+            "alphaMultTerm": "164",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 2028,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -19.5,
+            52.6
+          ]
+        },
+        {
+          "depth": 18,
+          "character_id": 2029,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -1.8,
+            64.05
+          ]
+        },
+        {
+          "depth": 19,
+          "character_id": 2030,
+          "matrix": [
+            1.13507,
+            0.0,
+            0.0,
+            1.13507,
+            -48.8,
+            53.7
+          ]
+        },
+        {
+          "depth": 20,
+          "character_id": 2017,
+          "matrix": [
+            -0.18822,
+            0.01389,
+            -0.00826,
+            -0.11185,
+            -31.05,
+            73.95
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

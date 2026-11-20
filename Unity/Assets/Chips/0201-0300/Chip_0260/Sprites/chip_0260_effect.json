@@ -1,0 +1,65 @@
+{
+  "chip": 260,
+  "source": "effectlibrary251_500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1139.87,
+    894.23
+  ],
+  "canvas_origin_px": [
+    502.37,
+    334.6
+  ],
+  "base": "chip_0260_base.svg",
+  "parts": [
+    {
+      "character_id": 1698,
+      "kind": "sprite",
+      "subframes": 10,
+      "size_px": [
+        1202.01,
+        630.85
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": [
+        "chip_0260_part_1698_f001.svg",
+        "chip_0260_part_1698_f002.svg",
+        "chip_0260_part_1698_f003.svg",
+        "chip_0260_part_1698_f004.svg",
+        "chip_0260_part_1698_f005.svg",
+        "chip_0260_part_1698_f006.svg",
+        "chip_0260_part_1698_f007.svg",
+        "chip_0260_part_1698_f008.svg",
+        "chip_0260_part_1698_f009.svg",
+        "chip_0260_part_1698_f010.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 24,
+          "character_id": 1698,
+          "matrix": [
+            1.00436,
+            0.0,
+            0.0,
+            1.05835,
+            -56.05,
+            -8.65
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

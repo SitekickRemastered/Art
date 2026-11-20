@@ -1,0 +1,146 @@
+{
+  "chip": 646,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    395.03,
+    390.6
+  ],
+  "canvas_origin_px": [
+    242.97,
+    401.05
+  ],
+  "base": "chip_0646_base.svg",
+  "parts": [
+    {
+      "character_id": 695,
+      "kind": "sprite",
+      "subframes": 8,
+      "size_px": [
+        357.41,
+        144.0
+      ],
+      "origin_px": [
+        -2.43,
+        22.55
+      ],
+      "art": [
+        "chip_0646_part_695_f001.svg",
+        "chip_0646_part_695_f002.svg",
+        "chip_0646_part_695_f003.svg",
+        "chip_0646_part_695_f004.svg",
+        "chip_0646_part_695_f005.svg",
+        "chip_0646_part_695_f006.svg",
+        "chip_0646_part_695_f007.svg",
+        "chip_0646_part_695_f008.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 695,
+          "matrix": [
+            0.22913,
+            -1.38568,
+            0.80029,
+            0.0293,
+            2.05,
+            -9.05
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "215",
+            "greenMultTerm": "215",
+            "blueMultTerm": "215"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 695,
+          "matrix": [
+            0.13876,
+            -1.31517,
+            -0.87579,
+            -0.55598,
+            4.6,
+            -10.05
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "205",
+            "greenMultTerm": "205",
+            "blueMultTerm": "205"
+          }
+        },
+        {
+          "depth": 5,
+          "character_id": 695,
+          "matrix": [
+            -0.25342,
+            -0.61162,
+            -0.39806,
+            0.38304,
+            -20.9,
+            -8.0
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "215",
+            "greenMultTerm": "215",
+            "blueMultTerm": "215"
+          }
+        },
+        {
+          "depth": 7,
+          "character_id": 695,
+          "matrix": [
+            -0.29825,
+            -1.0094,
+            0.65675,
+            -0.46762,
+            -21.35,
+            -7.35
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "236",
+            "greenMultTerm": "236",
+            "blueMultTerm": "236"
+          }
+        },
+        {
+          "depth": 9,
+          "character_id": 695,
+          "matrix": [
+            -0.19489,
+            -1.23367,
+            0.6844,
+            -0.08926,
+            -14.4,
+            -15.0
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "205",
+            "greenMultTerm": "205",
+            "blueMultTerm": "205"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

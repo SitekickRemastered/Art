@@ -1,0 +1,40 @@
+{
+  "chip": 349,
+  "source": null,
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 0,
+  "mode": "blank",
+  "art": null,
+  "clips": {
+    "back": {
+      "art": [
+        "chip_0349_back_f001.svg",
+        "chip_0349_back_f002.svg"
+      ],
+      "frames": 2,
+      "symbol": 1278,
+      "size_px": [
+        8236.74,
+        9693.1
+      ],
+      "origin_px": [
+        2741.65,
+        1850.9
+      ]
+    },
+    "front": {
+      "art": "chip_0349_front.svg",
+      "frames": 1,
+      "symbol": 1231,
+      "size_px": [
+        2542.82,
+        1835.98
+      ],
+      "origin_px": [
+        -928.57,
+        -438.96
+      ]
+    }
+  }
+}

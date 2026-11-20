@@ -1,0 +1,110 @@
+{
+  "chip": 862,
+  "source": "effectlibrary751_1000.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    1578.5,
+    946.56
+  ],
+  "canvas_origin_px": [
+    1412.29,
+    1021.51
+  ],
+  "base": "chip_0862_base.svg",
+  "parts": [
+    {
+      "character_id": 2085,
+      "kind": "sprite",
+      "subframes": 13,
+      "size_px": [
+        1052.1,
+        764.44
+      ],
+      "origin_px": [
+        69.75,
+        140.53
+      ],
+      "art": [
+        "chip_0862_part_2085_f001.svg",
+        "chip_0862_part_2085_f002.svg",
+        "chip_0862_part_2085_f003.svg",
+        "chip_0862_part_2085_f004.svg",
+        "chip_0862_part_2085_f005.svg",
+        "chip_0862_part_2085_f006.svg",
+        "chip_0862_part_2085_f007.svg",
+        "chip_0862_part_2085_f008.svg",
+        "chip_0862_part_2085_f009.svg",
+        "chip_0862_part_2085_f010.svg",
+        "chip_0862_part_2085_f011.svg",
+        "chip_0862_part_2085_f012.svg",
+        "chip_0862_part_2085_f013.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 2085,
+          "matrix": [
+            0.96025,
+            -0.36201,
+            -0.1066,
+            0.60327,
+            -171.95,
+            -75.3
+          ],
+          "color": {
+            "alphaMultTerm": "159",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 3,
+          "character_id": 2085,
+          "matrix": [
+            0.8483,
+            -0.11736,
+            -0.06755,
+            0.38234,
+            -154.15,
+            -110.15
+          ],
+          "color": {
+            "alphaMultTerm": "159",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        },
+        {
+          "depth": 5,
+          "character_id": 2085,
+          "matrix": [
+            1.09496,
+            -0.34691,
+            0.10794,
+            0.3407,
+            -189.35,
+            -79.2
+          ],
+          "color": {
+            "alphaMultTerm": "159",
+            "redMultTerm": "256",
+            "greenMultTerm": "256",
+            "blueMultTerm": "256"
+          }
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

@@ -1,0 +1,88 @@
+{
+  "chip": 568,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    362.54,
+    291.67
+  ],
+  "canvas_origin_px": [
+    295.92,
+    376.04
+  ],
+  "base": "chip_0568_base.svg",
+  "parts": [
+    {
+      "character_id": 1191,
+      "kind": "sprite",
+      "subframes": 21,
+      "size_px": [
+        328.61,
+        326.53
+      ],
+      "origin_px": [
+        157.19,
+        161.01
+      ],
+      "art": [
+        "chip_0568_part_1191_f001.svg",
+        "chip_0568_part_1191_f002.svg",
+        "chip_0568_part_1191_f003.svg",
+        "chip_0568_part_1191_f004.svg",
+        "chip_0568_part_1191_f005.svg",
+        "chip_0568_part_1191_f006.svg",
+        "chip_0568_part_1191_f007.svg",
+        "chip_0568_part_1191_f008.svg",
+        "chip_0568_part_1191_f009.svg",
+        "chip_0568_part_1191_f010.svg",
+        "chip_0568_part_1191_f011.svg",
+        "chip_0568_part_1191_f012.svg",
+        "chip_0568_part_1191_f013.svg",
+        "chip_0568_part_1191_f014.svg",
+        "chip_0568_part_1191_f015.svg",
+        "chip_0568_part_1191_f016.svg",
+        "chip_0568_part_1191_f017.svg",
+        "chip_0568_part_1191_f018.svg",
+        "chip_0568_part_1191_f019.svg",
+        "chip_0568_part_1191_f020.svg",
+        "chip_0568_part_1191_f021.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 2,
+          "character_id": 1191,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -21.0,
+            -26.0
+          ]
+        },
+        {
+          "depth": 4,
+          "character_id": 1191,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0,
+            -54.0
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

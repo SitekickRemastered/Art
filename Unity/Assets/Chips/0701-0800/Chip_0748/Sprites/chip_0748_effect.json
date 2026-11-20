@@ -1,0 +1,423 @@
+{
+  "chip": 748,
+  "source": "effectlibrary501_750.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 9,
+  "mode": "animated",
+  "canvas_size_px": [
+    718.76,
+    570.24
+  ],
+  "canvas_origin_px": [
+    562.29,
+    649.14
+  ],
+  "base": "chip_0748_base.svg",
+  "parts": [
+    {
+      "character_id": 41,
+      "kind": "sprite",
+      "subframes": 9,
+      "size_px": [
+        773.12,
+        241.17
+      ],
+      "origin_px": [
+        62.46,
+        102.37
+      ],
+      "art": [
+        "chip_0748_part_41_f001.svg",
+        "chip_0748_part_41_f002.svg",
+        "chip_0748_part_41_f003.svg",
+        "chip_0748_part_41_f004.svg",
+        "chip_0748_part_41_f005.svg",
+        "chip_0748_part_41_f006.svg",
+        "chip_0748_part_41_f007.svg",
+        "chip_0748_part_41_f008.svg",
+        "chip_0748_part_41_f009.svg"
+      ]
+    },
+    {
+      "character_id": 51,
+      "kind": "sprite",
+      "subframes": 9,
+      "size_px": [
+        773.12,
+        242.21
+      ],
+      "origin_px": [
+        62.46,
+        103.41
+      ],
+      "art": [
+        "chip_0748_part_51_f001.svg",
+        "chip_0748_part_51_f002.svg",
+        "chip_0748_part_51_f003.svg",
+        "chip_0748_part_51_f004.svg",
+        "chip_0748_part_51_f005.svg",
+        "chip_0748_part_51_f006.svg",
+        "chip_0748_part_51_f007.svg",
+        "chip_0748_part_51_f008.svg",
+        "chip_0748_part_51_f009.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84364,
+            0.5369,
+            0.5369,
+            0.84364,
+            13.1,
+            -77.25
+          ]
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84364,
+            -0.5369,
+            0.5369,
+            0.84364,
+            -66.25,
+            -26.75
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84344,
+            0.53444,
+            0.53444,
+            0.84344,
+            11.55,
+            -79.75
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "245",
+            "greenMultTerm": "245",
+            "blueMultTerm": "245"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84344,
+            -0.53444,
+            0.53444,
+            0.84344,
+            -67.75,
+            -29.15
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "236",
+            "greenMultTerm": "236",
+            "blueMultTerm": "236"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84364,
+            0.5369,
+            0.5369,
+            0.84364,
+            9.9,
+            -82.3
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "233",
+            "greenMultTerm": "233",
+            "blueMultTerm": "233"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84364,
+            -0.5369,
+            0.5369,
+            0.84364,
+            -69.45,
+            -31.8
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "215",
+            "greenMultTerm": "215",
+            "blueMultTerm": "215"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84344,
+            0.53444,
+            0.53444,
+            0.84344,
+            12.1,
+            -78.95
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "222",
+            "greenMultTerm": "222",
+            "blueMultTerm": "222"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84344,
+            -0.53444,
+            0.53444,
+            0.84344,
+            -67.4,
+            -28.35
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "195",
+            "greenMultTerm": "195",
+            "blueMultTerm": "195"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84364,
+            0.5369,
+            0.5369,
+            0.84364,
+            14.2,
+            -75.6
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "210",
+            "greenMultTerm": "210",
+            "blueMultTerm": "210"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84364,
+            -0.5369,
+            0.5369,
+            0.84364,
+            -65.15,
+            -25.1
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "174",
+            "greenMultTerm": "174",
+            "blueMultTerm": "174"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84344,
+            0.53444,
+            0.53444,
+            0.84344,
+            12.1,
+            -78.9
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "222",
+            "greenMultTerm": "222",
+            "blueMultTerm": "222"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84344,
+            -0.53444,
+            0.53444,
+            0.84344,
+            -67.15,
+            -28.5
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "195",
+            "greenMultTerm": "195",
+            "blueMultTerm": "195"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84364,
+            0.5369,
+            0.5369,
+            0.84364,
+            9.9,
+            -82.3
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "233",
+            "greenMultTerm": "233",
+            "blueMultTerm": "233"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84364,
+            -0.5369,
+            0.5369,
+            0.84364,
+            -69.45,
+            -31.8
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "215",
+            "greenMultTerm": "215",
+            "blueMultTerm": "215"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84344,
+            0.53444,
+            0.53444,
+            0.84344,
+            11.55,
+            -79.75
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "redMultTerm": "245",
+            "greenMultTerm": "245",
+            "blueMultTerm": "245"
+          }
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84344,
+            -0.53444,
+            0.53444,
+            0.84344,
+            -67.85,
+            -29.4
+          ],
+          "color": {
+            "alphaMultTerm": "256",
+            "alphaAddTerm": "0",
+            "redMultTerm": "236",
+            "greenMultTerm": "236",
+            "blueMultTerm": "236"
+          }
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "moving": [
+        {
+          "depth": 1,
+          "character_id": 41,
+          "matrix": [
+            -0.84364,
+            0.5369,
+            0.5369,
+            0.84364,
+            13.1,
+            -77.25
+          ]
+        },
+        {
+          "depth": 17,
+          "character_id": 51,
+          "matrix": [
+            0.84364,
+            -0.5369,
+            0.5369,
+            0.84364,
+            -66.25,
+            -26.75
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}

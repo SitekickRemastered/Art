@@ -1,0 +1,347 @@
+{
+  "chip": 1347,
+  "source": "effectlibrary1251_1500.swf",
+  "scale": 6.94,
+  "fps": 31,
+  "frames": 1,
+  "mode": "animated",
+  "canvas_size_px": [
+    444.51,
+    1003.52
+  ],
+  "canvas_origin_px": [
+    209.24,
+    90.22
+  ],
+  "base": "chip_1347_base.svg",
+  "parts": [
+    {
+      "character_id": 226,
+      "kind": "sprite",
+      "subframes": 40,
+      "size_px": [
+        10.41,
+        10.41
+      ],
+      "origin_px": [
+        0.0,
+        0.0
+      ],
+      "art": [
+        "chip_1347_part_226_f001.svg",
+        "chip_1347_part_226_f002.svg",
+        "chip_1347_part_226_f003.svg",
+        "chip_1347_part_226_f004.svg",
+        "chip_1347_part_226_f005.svg",
+        "chip_1347_part_226_f006.svg",
+        "chip_1347_part_226_f007.svg",
+        "chip_1347_part_226_f008.svg",
+        "chip_1347_part_226_f009.svg",
+        "chip_1347_part_226_f010.svg",
+        "chip_1347_part_226_f011.svg",
+        "chip_1347_part_226_f012.svg",
+        "chip_1347_part_226_f013.svg",
+        "chip_1347_part_226_f014.svg",
+        "chip_1347_part_226_f015.svg",
+        "chip_1347_part_226_f016.svg",
+        "chip_1347_part_226_f017.svg",
+        "chip_1347_part_226_f018.svg",
+        "chip_1347_part_226_f019.svg",
+        "chip_1347_part_226_f020.svg",
+        "chip_1347_part_226_f021.svg",
+        "chip_1347_part_226_f022.svg",
+        "chip_1347_part_226_f023.svg",
+        "chip_1347_part_226_f024.svg",
+        "chip_1347_part_226_f025.svg",
+        "chip_1347_part_226_f026.svg",
+        "chip_1347_part_226_f027.svg",
+        "chip_1347_part_226_f028.svg",
+        "chip_1347_part_226_f029.svg",
+        "chip_1347_part_226_f030.svg",
+        "chip_1347_part_226_f031.svg",
+        "chip_1347_part_226_f032.svg",
+        "chip_1347_part_226_f033.svg",
+        "chip_1347_part_226_f034.svg",
+        "chip_1347_part_226_f035.svg",
+        "chip_1347_part_226_f036.svg",
+        "chip_1347_part_226_f037.svg",
+        "chip_1347_part_226_f038.svg",
+        "chip_1347_part_226_f039.svg",
+        "chip_1347_part_226_f040.svg"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "frame": 1,
+      "moving": [
+        {
+          "depth": 76,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            14.0,
+            23.55
+          ]
+        },
+        {
+          "depth": 78,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            12.25,
+            27.3
+          ]
+        },
+        {
+          "depth": 80,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -16.15,
+            16.55
+          ]
+        },
+        {
+          "depth": 82,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -14.15,
+            19.05
+          ]
+        },
+        {
+          "depth": 84,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -16.65,
+            21.8
+          ]
+        },
+        {
+          "depth": 86,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -13.4,
+            29.55
+          ]
+        },
+        {
+          "depth": 88,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.6,
+            30.55
+          ]
+        },
+        {
+          "depth": 90,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            5.1,
+            35.55
+          ]
+        },
+        {
+          "depth": 92,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            12.1,
+            40.3
+          ]
+        },
+        {
+          "depth": 94,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -5.4,
+            45.3
+          ]
+        },
+        {
+          "depth": 96,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -5.9,
+            41.3
+          ]
+        },
+        {
+          "depth": 98,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -7.15,
+            38.05
+          ]
+        },
+        {
+          "depth": 100,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -9.9,
+            35.3
+          ]
+        },
+        {
+          "depth": 102,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -11.15,
+            40.55
+          ]
+        },
+        {
+          "depth": 104,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -11.4,
+            47.05
+          ]
+        },
+        {
+          "depth": 106,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            13.35,
+            15.05
+          ]
+        },
+        {
+          "depth": 108,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            28.1,
+            13.05
+          ]
+        },
+        {
+          "depth": 110,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            21.35,
+            15.55
+          ]
+        },
+        {
+          "depth": 112,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -12.15,
+            12.55
+          ]
+        },
+        {
+          "depth": 114,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -22.65,
+            19.3
+          ]
+        },
+        {
+          "depth": 116,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            9.85,
+            19.55
+          ]
+        },
+        {
+          "depth": 118,
+          "character_id": 226,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            4.85,
+            20.3
+          ]
+        }
+      ]
+    }
+  ],
+  "effectType": 0,
+  "effectLayer": 0
+}
