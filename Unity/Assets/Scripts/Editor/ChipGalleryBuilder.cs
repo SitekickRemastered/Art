@@ -70,6 +70,7 @@ namespace Sitekick
 			serialized.FindProperty( "content" ).objectReferenceValue = content;
 			serialized.FindProperty( "sitekick" ).objectReferenceValue = sitekick.transform;
 			serialized.FindProperty( "effectScale" ).floatValue = EffectScale;
+			serialized.FindProperty( "iconMaterial" ).objectReferenceValue = IconMaterial();
 
 			var entries = CollectEntries();
 			var list = serialized.FindProperty( "entries" );
@@ -218,10 +219,13 @@ namespace Sitekick
 				var folder = Path.GetDirectoryName( path ).Replace( '\\', '/' );
 				var name = "chip_" + data.id.ToString( "0000" );
 
+				// the grid draws the chip's own vector sprite, at whatever the cell asks
+				var icon = AssetDatabase.LoadAssetAtPath<Sprite>( folder + "/Sprites/" + name + ".svg" );
+
 				var entry = new ChipGallery.Entry
 				{
 					id = data.id,
-					icon = AssetDatabase.LoadAssetAtPath<Sprite>( folder + "/Sprites/" + name + ".svg" ),
+					icon = icon,
 					effect = AssetDatabase.LoadAssetAtPath<GameObject>( folder + "/Chip_" + data.id.ToString( "0000" ) + "_Effect.prefab" ),
 					layer = data.effectLayer
 				};
@@ -231,6 +235,32 @@ namespace Sitekick
 
 			entries.Sort( ( a, b ) => a.id.CompareTo( b.id ) );
 			return entries;
+		}
+
+		/// <summary>
+		/// Shared material for the grid's vector icons: paints the colours baked into
+		/// each cell's mesh and still honours the scroll view's clipping, which is what
+		/// a baked PNG used to work around.
+		/// </summary>
+		public const string IconMaterialPath = "Assets/Materials/ChipIcon.mat";
+
+		public static Material IconMaterial()
+		{
+			var existing = AssetDatabase.LoadAssetAtPath<Material>( IconMaterialPath );
+			if ( existing != null )
+				return existing;
+
+			var shader = Shader.Find( "Sitekick/ChipIcon" );
+			if ( shader == null )
+			{
+				Debug.LogError( "Sitekick/ChipIcon is missing" );
+				return null;
+			}
+
+			Directory.CreateDirectory( Path.GetDirectoryName( IconMaterialPath ) );
+			var material = new Material( shader ) { name = "ChipIcon" };
+			AssetDatabase.CreateAsset( material, IconMaterialPath );
+			return AssetDatabase.LoadAssetAtPath<Material>( IconMaterialPath );
 		}
 
 		static Transform FindDeep( Transform parent, string name )

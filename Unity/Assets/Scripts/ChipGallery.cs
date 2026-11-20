@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,12 +29,16 @@ namespace Sitekick
 		[SerializeField]
 		protected float effectScale = 0.2f;
 
+		/// <summary>Vector shader that reads a chip sprite's gradient index from uv1.</summary>
+		[SerializeField]
+		protected Material iconMaterial;
+
 		[SerializeField]
 		protected List<Entry> entries = new List<Entry>();
 
 		protected sealed class Item
 		{
-			public SVGImage icon;
+			public Graphic icon;
 		}
 
 		protected readonly Dictionary<int, Item> items = new Dictionary<int, Item>();
@@ -75,12 +78,14 @@ namespace Sitekick
 				var rect = go.AddComponent<RectTransform>();
 				rect.SetParent( content, false );
 
-				// the chips are vector sprites (SVG tessellated at import), so the
-				// grid draws them with an SVGImage instead of a textured Image
-				var image = go.AddComponent<SVGImage>();
+				// the cell's mesh comes from the vector sprite itself, so the icon stays
+				// sharp at any size and costs a few kilobytes, not a baked texture
+				var image = go.AddComponent<ChipIconGraphic>();
 				image.sprite = entry.icon;
 				image.preserveAspect = true;
 				image.raycastTarget = true;
+				if ( iconMaterial != null )
+					image.material = iconMaterial;
 				if ( entry.icon == null )
 					image.color = new Color( 1f, 1f, 1f, 0.15f );
 
