@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ruffle frame grid</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #101010; }
+  #grid { display: grid; grid-template-columns: repeat(var(--cols, 4), 375px); }
+  #grid > div { width: 375px; height: 300px; overflow: hidden; }
+  #grid ruffle-player { width: 375px; height: 300px; display: block; }
+</style>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0/ruffle.js"></script>
+</head>
+<body>
+<script>
+// ?base=/.tmp-frames/f&from=1&count=24&cols=4&pad=3
+// Each cell loads <base><padded frame>.swf.  Every frozen SWF stops on its own
+// frame (see ruffle_frames.py), so the page is stable once the slowest has
+// played, and the cell order matches the screenshot tile order.
+//
+// A minimised window gets no animation frames, so `raf=timer` drives Ruffle
+// from timers instead, and `renderer=canvas&post=NAME` draws into readable
+// canvases and POSTs the whole grid to shot_server.py -- the same route
+// static_review.html uses, so a grid can be captured unattended.
+//
+//   ...&renderer=canvas&raf=timer&post=c0008
+const q = new URLSearchParams(location.search);
+const base = q.get('base') || '/.tmp-frames/f';
+const from = parseInt(q.get('from') || '1', 10);
+const count = parseInt(q.get('count') || '24', 10);
+const pad = parseInt(q.get('pad') || '3', 10);
+const cols = parseInt(q.get('cols') || '4', 10);
+const renderer = q.get('renderer') || 'webgl';
+const post = q.get('post');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+if (q.get('raf') === 'timer') {
+  const timers = new Map();
+  let seq = 1;
+  window.requestAnimationFrame = (cb) => {
+    const id = seq++;
+    timers.set(id, setTimeout(() => { timers.delete(id); cb(performance.now()); }, 16));
+    return id;
+  };
+  window.cancelAnimationFrame = (id) => {
+    clearTimeout(timers.get(id));
+    timers.delete(id);
+  };
+}
+
+const grid = document.createElement('div');
+grid.id = 'grid';
+grid.style.setProperty('--cols', cols);
+// Ruffle skips rendering a player that is outside the viewport, so a grid
+// taller than the window leaves its lower rows blank.  `scale` shrinks the
+// whole grid to fit; the canvases stay 375x300 and are grabbed at that size.
+const gridScale = parseFloat(q.get('scale') || '0');
+if (gridScale > 0) {
+  grid.style.transformOrigin = '0 0';
+  grid.style.transform = `scale(${gridScale})`;
+}
+document.body.appendChild(grid);
+
+window.players = [];
+
+function canvases(root, out) {
+  for (const el of root.querySelectorAll('*')) {
+    if (el.tagName === 'CANVAS') out.push(el);
+    if (el.shadowRoot) canvases(el.shadowRoot, out);
+  }
+  return out;
+}
+
+(async () => {
+  while (!window.RufflePlayer) {
+    await sleep(50);
+  }
+  window.RufflePlayer.config = Object.assign({}, window.RufflePlayer.config, {
+    preferredRenderer: renderer === 'canvas' ? 'canvas' : 'webgl',
+  });
+  const ruffle = window.RufflePlayer.newest();
+  for (let i = 0; i < count; i++) {
+    const n = String(from + i).padStart(pad, '0');
+    const cell = document.createElement('div');
+    const player = ruffle.createPlayer();
+    cell.appendChild(player);
+    grid.appendChild(cell);
+    player.load(base + n + '.swf', {
+      autoplay: 'on',
+      unmuteOverlay: 'hidden',
+      letterbox: 'off',
+      scale: 'noScale',
+      quality: 'best',
+      warnOnUnsupportedContent: false,
+      logLevel: 'error',
+      preferredRenderer: renderer === 'canvas' ? 'canvas' : 'webgl',
+    });
+    window.players.push(player);
+  }
+  window.gridReady = true;
+  if (!post) return;
+  // 71 players loading at once need longer than a single player; a snapshot
+  // taken too early draws blank canvases, which compares as a clean frame.
+  const probe = document.createElement('canvas');
+  probe.width = 4;
+  probe.height = 4;
+  const pctx = probe.getContext('2d');
+  const painted = (player) => {
+    const cs = canvases(player.shadowRoot || player, []);
+    if (!cs.length || !cs[0].width) return false;
+    pctx.clearRect(0, 0, 4, 4);
+    pctx.drawImage(cs[0], 0, 0, 4, 4);
+    const d = pctx.getImageData(0, 0, 4, 4).data;
+    for (let k = 3; k < d.length; k += 4) if (d[k] > 0) return true;
+    return false;
+  };
+  const deadline = Date.now() + 45000;
+  while (Date.now() < deadline && !window.players.every(painted)) await sleep(250);
+  await sleep(700);
+  const sw = 375, sh = 300;
+  const rows = Math.ceil(count / cols);
+  const out = document.createElement('canvas');
+  out.width = sw * cols;
+  out.height = sh * rows;
+  const ctx = out.getContext('2d');
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, out.width, out.height);
+  // Ruffle clears and redraws its canvas every tick, so a grab can land on a
+  // cleared buffer and composite as a blank tile: retry each one until the
+  // corner actually has pixels.
+  const stage = document.createElement('canvas');
+  stage.width = sw;
+  stage.height = sh;
+  const sctx = stage.getContext('2d');
+  const filled = (c) => {
+    sctx.clearRect(0, 0, sw, sh);
+    sctx.drawImage(c, 0, 0, sw, sh);
+    const d = sctx.getImageData(0, 0, 8, 8).data;
+    for (let k = 3; k < d.length; k += 4) if (d[k] > 0) return true;
+    return false;
+  };
+  let drawn = 0;
+  for (let i = 0; i < window.players.length; i++) {
+    const found = canvases(window.players[i].shadowRoot || window.players[i], []);
+    const c = found[0];
+    if (!c || !c.width) continue;
+    let ok = false;
+    for (let k = 0; k < 40 && !ok; k++) {
+      ok = filled(c);
+      if (!ok) await sleep(40);
+    }
+    if (!ok) continue;
+    ctx.drawImage(stage, (i % cols) * sw, Math.floor(i / cols) * sh);
+    drawn++;
+  }
+  ctx.getImageData(0, 0, 1, 1);
+  const blob = await new Promise((r) => out.toBlob(r, 'image/png'));
+  const res = await fetch(`/shot?name=${post}`, { method: 'POST', body: blob });
+  window.posted = { name: post, tiles: drawn, of: count, ok: res.ok };
+})();
+</script>
+</body>
+</html>

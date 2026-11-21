@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Static chip page</title>
+<style>html,body{margin:0;padding:0;background:#fff} #stage{margin:0}</style>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0/ruffle.js"></script>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+// Plays one generated page SWF: a one-frame stage holding a batch of static
+// chip sprites at known cell positions.
+//
+//   static_review.html?base=/.tmp-static&page=p0001
+//
+// Ruffle's default WebGL renderer keeps its pixels in the GPU, so a page had to
+// be captured as a screenshot.  With renderer=canvas it draws into a 2D canvas
+// instead, whose pixels can be read back and POSTed to shot_server.py.  That
+// works even when the browser window is minimised, which a screenshot cannot.
+//
+//   ...&renderer=canvas&post=p0001   POSTs the drawn page to /shot?name=p0001
+const q = new URLSearchParams(location.search);
+// A minimised or covered window gets no animation frames, so Ruffle never
+// presents anything and both the screenshot and the canvas stay blank.  Drive
+// frame callbacks from a timer instead when asked to render unattended.
+if (q.get('raf') === 'timer') {
+  const timers = new Map();
+  let seq = 1;
+  window.requestAnimationFrame = (cb) => {
+    const id = seq++;
+    timers.set(id, setTimeout(() => { timers.delete(id); cb(performance.now()); }, 16));
+    return id;
+  };
+  window.cancelAnimationFrame = (id) => {
+    clearTimeout(timers.get(id));
+    timers.delete(id);
+  };
+}
+const base = q.get('base');
+const page = q.get('page');
+const renderer = q.get('renderer') || 'webgl';
+const post = q.get('post');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function canvases(root, out) {
+  for (const el of root.querySelectorAll('*')) {
+    if (el.tagName === 'CANVAS') out.push(el);
+    if (el.shadowRoot) canvases(el.shadowRoot, out);
+  }
+  return out;
+}
+
+(async () => {
+  while (!window.RufflePlayer) await sleep(50);
+  const meta = await (await fetch(`${base}/${page}.json`)).json();
+  window.RufflePlayer.config = Object.assign({}, window.RufflePlayer.config, {
+    preferredRenderer: renderer === 'canvas' ? 'canvas' : 'webgl',
+  });
+  const ruffle = window.RufflePlayer.newest();
+  const p = ruffle.createPlayer();
+  p.style.width = meta.stage[0] + 'px';
+  p.style.height = meta.stage[1] + 'px';
+  document.getElementById('stage').appendChild(p);
+  p.load(`${base}/${page}.swf`, {
+    autoplay: 'on', unmuteOverlay: 'hidden', letterbox: 'off',
+    scale: 'noScale', quality: 'best', warnOnUnsupportedContent: false,
+    logLevel: 'error', backgroundColor: '#ffffff',
+    preferredRenderer: renderer === 'canvas' ? 'canvas' : 'webgl',
+  });
+  await sleep(2500);
+  window.readyPage = page;
+  if (post) {
+    const w = meta.stage[0], h = meta.stage[1];
+    const out = document.createElement('canvas');
+    out.width = w;
+    out.height = h;
+    const ctx = out.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+    let drawn = 0;
+    for (const c of canvases(document, [])) {
+      if (!c.width || !c.height) continue;
+      try { ctx.drawImage(c, 0, 0, w, h); drawn++; } catch (e) {}
+    }
+    ctx.getImageData(0, 0, 1, 1);   // force the composite out of the GPU
+    const blob = await new Promise((r) => out.toBlob(r, 'image/png'));
+    const res = await fetch(`/shot?name=${post}`, { method: 'POST', body: blob });
+    window.posted = { name: post, canvases: drawn, ok: res.ok };
+  }
+})();
+</script>
+</body>
+</html>

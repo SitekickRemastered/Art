@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ruffle review</title>
+<style>
+  html, body { margin: 0; background: #101010; }
+  #grid { display: grid; grid-template-columns: repeat(var(--cols, 8), 375px); }
+  #grid > div { width: 375px; height: 300px; overflow: hidden; }
+</style>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0/ruffle.js"></script>
+</head>
+<body>
+<script>
+// Frame-exact Ruffle review, computed in the page.
+//
+//   ruffle_review.html?base=/.tmp-review/c0007/f&from=1&count=53&cols=8
+//                       &movie=/Unity/Assets/Chips/.../Chip_0007/Movie
+//
+// Each cell plays one frozen SWF (see ruffle_frames.py: root trimmed to that
+// frame plus a stop, every child clip frozen), so the cell is stable once it
+// has played.  The player canvas is a 2D canvas in an open shadow root, so the
+// pixels can be read straight out and compared with the exported frame SVG,
+// drawn at one SVG unit per SWF pixel and pasted at its own viewBox origin.
+// Nothing is screenshotted: window.reviewMetrics() returns the numbers.
+const q = new URLSearchParams(location.search);
+const base = q.get('base');
+const movie = q.get('movie') || '';
+const from = parseInt(q.get('from') || '1', 10);
+const count = parseInt(q.get('count') || '1', 10);
+const cols = parseInt(q.get('cols') || '8', 10);
+const pad = parseInt(q.get('pad') || '3', 10);
+const W = 375, H = 300;
+
+const grid = document.createElement('div');
+grid.id = 'grid';
+grid.style.setProperty('--cols', cols);
+document.body.appendChild(grid);
+window.players = [];
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+(async () => {
+  while (!window.RufflePlayer) await sleep(50);
+  const ruffle = window.RufflePlayer.newest();
+  for (let i = 0; i < count; i++) {
+    const n = String(from + i).padStart(pad, '0');
+    const cell = document.createElement('div');
+    const player = ruffle.createPlayer();
+    cell.appendChild(player);
+    grid.appendChild(cell);
+    player.load(base + n + '.swf', {
+      autoplay: 'on', unmuteOverlay: 'hidden', letterbox: 'off',
+      scale: 'noScale', quality: 'best',
+      warnOnUnsupportedContent: false, logLevel: 'error',
+    });
+    window.players.push(player);
+  }
+  // every frozen SWF stops on its own frame; the longest needs count/12 s
+  await sleep(Math.min(30000, Math.round(count / 12 * 1000) + 2500));
+  // freeze them: measuring 53 canvases while 53 players keep ticking starves
+  // the main thread and the measurement never finishes
+  for (const p of window.players) {
+    try { p.pause(); } catch (e) {}
+  }
+  window.reviewDone = new Array(count).fill(false);
+  window.reviewReady = true;
+})();
+
+function pixels(player) {
+  const canv = player.shadowRoot && player.shadowRoot.querySelector('canvas');
+  if (!canv || !canv.width) return null;
+  // the canvas is as big as the player element, not necessarily the stage, so
+  // rescale it to stage pixels before comparing
+  const off = document.createElement('canvas');
+  off.width = W; off.height = H;
+  const c = off.getContext('2d');
+  c.fillStyle = '#fff';
+  c.fillRect(0, 0, W, H);
+  c.drawImage(canv, 0, 0, W, H);
+  return c.getImageData(0, 0, W, H).data;
+}
+
+async function exportPixels(frame) {
+  const url = movie + '/frame_' + String(frame).padStart(3, '0') + '.svg';
+  const text = await (await fetch(url)).text();
+  const doc = new DOMParser().parseFromString(text, 'image/svg+xml');
+  const svg = doc.documentElement;
+  const vb = (svg.getAttribute('viewBox') || '0 0 375 300').split(/\s+/).map(Number);
+  const [vx, vy, vw, vh] = vb;
+  const blob = new Blob([text], { type: 'image/svg+xml' });
+  const img = new Image();
+  img.src = URL.createObjectURL(blob);
+  await img.decode();
+  const off = document.createElement('canvas');
+  off.width = W; off.height = H;
+  const c = off.getContext('2d');
+  c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
+  c.drawImage(img, Math.round(-vx), Math.round(-vy), Math.round(vw), Math.round(vh));
+  URL.revokeObjectURL(img.src);
+  return { data: c.getImageData(0, 0, W, H).data, vb: vb };
+}
+
+// the stage colour Ruffle paints behind the art
+function isPaper(r, g, b, bg) {
+  return Math.abs(r - bg[0]) < 8 && Math.abs(g - bg[1]) < 8 && Math.abs(b - bg[2]) < 8;
+}
+
+window.reviewMetrics = async function (start = 0, end = window.players.length) {
+  while (!window.reviewReady) await sleep(200);
+  const out = [];
+  for (let i = start; i < Math.min(end, window.players.length); i++) {
+    const frame = from + i;
+    if (window.reviewDone[i]) continue;
+    const ruf = pixels(window.players[i]);
+    const exp = await exportPixels(frame);
+    if (!ruf || !exp.data) { out.push({ frame, error: 'no pixels' }); continue; }
+    const bg = [ruf[0], ruf[1], ruf[2]];
+    let sum = 0, n = 0, inter = 0, uni = 0, inkR = 0, inkE = 0;
+    for (let p = 0; p < W * H; p++) {
+      const o = p * 4;
+      const paper = isPaper(ruf[o], ruf[o + 1], ruf[o + 2], bg);
+      const greyR = paper ? 255 : (0.299 * ruf[o] + 0.587 * ruf[o + 1] + 0.114 * ruf[o + 2]);
+      const alphaE = exp.data[o + 3];
+      const greyE = alphaE < 8 ? 255 : (0.299 * exp.data[o] + 0.587 * exp.data[o + 1] + 0.114 * exp.data[o + 2]);
+      const a = !paper, b = alphaE >= 8;
+      if (a) inkR++;
+      if (b) inkE++;
+      if (a || b) { sum += Math.abs(greyR - greyE); n++; }
+      if (a && b) inter++;
+      if (a || b) uni++;
+    }
+    window.reviewDone[i] = true;
+    out.push({
+      frame,
+      grey: n ? +(sum / n).toFixed(2) : 0,
+      iou: uni ? +(inter / uni).toFixed(4) : 1,
+      inkR, inkE,
+    });
+  }
+  return out;
+};
+</script>
+</body>
+</html>

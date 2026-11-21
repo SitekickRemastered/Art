@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ruffle preview</title>
+<style>
+  html, body { margin: 0; background: #101010; }
+  /* the SWF's own size: an unstretched stage makes a screenshot directly
+     comparable with an exported frame */
+  #stage { width: 375px; height: 300px; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script>
+// Play a SWF with Ruffle, the reference renderer for these chips.
+//
+//   /Unity/Tools/SwfToSvg/ruffle_preview.html?swf=../../../SWF/chip_0008.swf
+//
+// The decompiler's frame export is only SVG geometry; whether an animation
+// actually looks like the SWF is decided here.  window.player is exposed so the
+// page can be driven from a browser console (player.pause(), player.play()).
+const swf = new URLSearchParams(location.search).get("swf") || "../../../SWF/chip_0008.swf";
+const ruffle = window.RufflePlayer.newest();
+const player = ruffle.createPlayer();
+player.id = "ruffle";
+document.getElementById("stage").appendChild(player);
+window.player = player;
+player.load(swf, {
+  autoplay: "on",
+  unmuteOverlay: "hidden",
+  letterbox: "off",
+  scale: "noScale",
+  quality: "high",
+  warnOnUnsupportedContent: false,
+  logLevel: "warn",
+});
+</script>
+</body>
+</html>

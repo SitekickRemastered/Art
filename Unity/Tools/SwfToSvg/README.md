@@ -50,6 +50,81 @@ Output per chip: `Assets/Chips/<range>/Chip_XXXX/`
 - `Chip_XXXX_Effect.prefab` — SortingGroup + ChipEffect root, one SpriteRenderer per
   animated part; blank effects get an empty prefab, static effects one renderer
 
+## Frame-exact Ruffle check
+
+The movies are judged in Ruffle, not in the decompiler's frames (see `AGENTS.md`).
+`ruffle_frames.py` freezes the patched movie one frame at a time, plays the copies in
+`ruffle_frames.html` and diffs every tile against `Movie/frame_NNN.svg` in stage
+pixels.  `--capture` runs the whole thing headlessly and prints one line per frame:
+
+```bash
+python3 Tools/SwfToSvg/ruffle_frames.py ~/sitekick-movies/0008/chip_0008_tools.xml \
+    --out ../.tmp-review/c0008 --frames 45-61 --capture --cols 5
+```
+
+`--out` gets `fNNN.swf` per frame plus `shots/frames-NNN-NNN.png` per page
+(`--shot-dir` moves those).  The browser is Brave (flatpak) when it is installed,
+else the first Chromium on `PATH`; `--browser '<command>'` overrides the choice.
+
+Three flags in that launch are not optional:
+
+- `--autoplay-policy=no-user-gesture-required` — a headless Chromium blocks
+  playback that would produce audio, and every chip movie carries sound cues.  With
+  the policy in force Ruffle never leaves its click-to-play overlay, so the capture
+  is a grid of play buttons (or a blank page) and diffs as a clean frame.
+- `--mute-audio` — the same cues, at full volume.
+- `--force-device-scale-factor=1` — a HiDPI scale turns a tile into 470x375 instead
+  of 375x300 and the diff then compares the wrong pixels.
+
+The window is sized to the grid because Ruffle does not render a player outside the
+viewport, so a page taller than the window leaves blank tiles; `--rows` (default 3)
+sets how many 300 px rows fit and longer ranges are captured one page at a time.
+
+The page's own `&post=NAME` composite still exists for driving the grid by hand in
+the Freebuff browser, but it grabs whatever each player happened to have painted:
+when the window is not being drawn it returns duplicate tiles, which read as an
+agreeing frame.  Use `--capture` whenever the result matters.
+
+### What a pixel diff can and cannot decide
+
+`--playhead SPRITE=LABEL@FRAME` (repeatable) freezes a clip where the root script
+jumps it; a `!` after the target makes it a `gotoAndStop` (`83=2!@40`), and a bare
+number is a frame for clips the script jumps by number.  `--region X,Y,W,H`
+restricts the diff to one rectangle, and `--cross A B` compares two captures
+instead of a capture against the export.
+
+A clip the script jumps is frozen by merging its frames up to the playhead into
+one, so a playhead may name a pose past the root frame (chip 9's arm is on 53
+while the root is on 33).  A clip no script jumps is cut to the frames it has
+played since it was placed and stopped there, because the placement offset is
+part of the state: chip 7's butterfly clip (104), placed on root 13, is 18
+frames old on root 30 and shows its 18th frame, not its 30th.  Re-measured after
+this, chip 7's reference is pixel-identical to the earlier run (mean 1.06 over
+all 53 frames) and chip 8's lockstep capture reads 5.69 whole-frame against
+5.70 before.
+
+The frozen build has to decide where each clip's playhead is, and the plain build
+uses FFDec's lockstep advance — the export's own assumption.  A pristine SWF
+therefore reads at the floor against an export made that way, which is agreement
+by construction, not evidence.  Chip 8, frames 45-61, over the arms region (26.8%
+of the stage: the pixels where the arm clips draw):
+
+| comparison | arms region (mean /255) |
+| --- | --- |
+| current export vs Ruffle of the shipped SWF | 5.48 |
+| HEAD export vs the lockstep build | 5.04 |
+| repeat capture of the same page twice | 0.00 |
+| the same export vs its Ruffle, arms parked (57-61) | 1.2-2.4 |
+| the same export vs its Ruffle, arms moving (45-56) | 6.8-9.9 |
+
+Two different arm states differ by ~13/255 in that region while rendering the same
+state two ways costs up to ~10, and the whole-frame means that used to be quoted
+(~2.2) are a mixture of quiet background and busy arm pixels.  So this harness can
+show an export is faithful to the SWF it was made from; it cannot show *when* a
+clip moves.  Timing comes from the SWF: `verify_arm_timing.py` reads the root's
+frame actions, resolves the labels they name, and checks tag-for-tag that the arm
+sprites the export draws carry exactly that source clip frame on every root frame.
+
 ## Prefab placement
 
 `build_prefabs.py` places each piece using the SWF matrix of the fullest animation

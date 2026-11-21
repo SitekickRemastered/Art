@@ -42,12 +42,24 @@ FFDEC = ["flatpak", "run", "--command=ffdec.sh", "com.jpexs.decompiler.flash"]
 sys.path.insert(0, HERE)
 import flatten_svg as flatten
 import normalize as N
+import patch_chip7 as patch7
+import patch_chip8_tools as patch8
+import patch_chip9 as patch9
+import patch_chip10 as patch10
+import patch_stopped_clips as patch_stop
 
 TEMPLATE_SVG_META = os.path.join(
     ROOT, "Assets/Chips/0101-0200/Chip_0177/Sprites/chip_0177_back.svg.meta")
 
 # The stage is the Sitekick's face: 1.100 prefab units across 375 stage px.
 STAGE_UNITS_PER_PX = 0.0029333
+
+# Root frames the movie never shows.  Chip 8's root timeline runs ten frames
+# past the end of the effect: the script on 61 calls `sk.gotoAndPlay("fromEffect")`
+# and `skMain.effectHolder.removeMovieClip()`, so 62-71 are a collapsed dot the
+# player removes before it can draw.  Only the timeline play (which no script
+# stops) keeps them, so the export ends where the effect does.
+LAST_VISIBLE_FRAME = {8: 61}
 
 SOUND_META = """fileFormatVersion: 2
 guid: {guid}
@@ -245,25 +257,70 @@ def main():
         for sub in ("svg", "png", "snd", "scr", "xml"):
             os.makedirs(os.path.join(work, sub), exist_ok=True)
 
+        # sound cues are read from the movie as it ships on the site: the patch
+        # passes prune characters nothing reaches, and the walk that turns a
+        # sound's placement chain into a root frame needs the original graph
+        source_xml = os.path.join(work, "xml", "source.xml")
+        if not os.path.exists(source_xml):
+            run(*FFDEC, "-swf2xml", swf, source_xml)
+
+        if chip == 8:
+            # chip 8's hands take one tool each from the server record, which
+            # only the ActionScript ever applies; the timeline has all six on
+            # the clip's first frame, so the assignment is authored in first
+            swf = patch8.patched(swf, work)
+        elif chip == 7:
+            # chip 7's rings, score wings and antenna are placed by frame
+            # scripts too; that pass also runs the stopped-clip freeze
+            swf = patch7.patched(swf, work)
+        elif chip == 9:
+            # chip 9's arm, hole side, right side, trim and hole are all parked
+            # or jumped by frame scripts; that pass runs the freeze as well
+            swf = patch9.patched(swf, work)
+        elif chip == 10:
+            # chip 10's bubble is parked on the effect's first frame and squints
+            # at root 9; that pass runs the freeze as well
+            swf = patch10.patched(swf, work)
+        else:
+            # clips that stop themselves and no script restarts are frozen at
+            # their parked frame instead of playing out and looping
+            swf = patch_stop.patched(swf, work)
+
         run(*FFDEC, "-format", "frame:svg", "-export", "frame", os.path.join(work, "svg"), swf)
         run(*FFDEC, "-format", "frame:png", "-export", "frame", os.path.join(work, "png"), swf)
         run(*FFDEC, "-export", "sound", os.path.join(work, "snd"), swf)
         run(*FFDEC, "-export", "script", os.path.join(work, "scr"), swf)
         run(*FFDEC, "-swf2xml", swf, os.path.join(work, "xml", "lib.xml"))
 
-        sounds, _, frames = timeline(os.path.join(work, "xml", "lib.xml"))
+        sounds, _, frames = timeline(source_xml)
         pauses = pause_frames(os.path.join(work, "scr", "scripts"))
 
         chip_dir = glob.glob(os.path.join(ROOT, "Assets/Chips", "*", "Chip_%04d" % chip))
         if not chip_dir:
             print(chip, "no chip folder"); continue
         out = os.path.join(chip_dir[0], "Movie")
+        # every frame keeps its guid across a re-export: the chip prefabs point
+        # at them, so read the old metas before the folder is cleared
+        old_guids = {}
+        for path in glob.glob(os.path.join(out, "frame_*.svg.meta")):
+            found = re.search(r"^guid: (.*)$", open(path, encoding="utf-8").read(), re.M)
+            if found:
+                old_guids[os.path.basename(path)] = found.group(1)
+        # the manifest's importer settings are Unity's, not ours: the folder is
+        # cleared for the re-export, so carry them across like the frame guids
+        manifest_meta = None
+        manifest_meta_path = os.path.join(out, "movie.json.meta")
+        if os.path.exists(manifest_meta_path):
+            manifest_meta = open(manifest_meta_path, encoding="utf-8").read()
         shutil.rmtree(out, ignore_errors=True)
         os.makedirs(out, exist_ok=True)
 
         # frames: normalise each stage render, keep the canvas numbers
         frame_files = sorted(glob.glob(os.path.join(work, "svg", "*.svg")),
                              key=lambda p: int(re.search(r"(\d+)\.svg$", p).group(1)))
+        keep = LAST_VISIBLE_FRAME.get(chip)
+        if keep:
+            frame_files = frame_files[:keep]
         names = []
         stage = None
         for n, src in enumerate(frame_files, 1):
@@ -274,7 +331,15 @@ def main():
             # Unity's import tessellates a curve to a chord every ~60 px at the
             # size these play, so the curves are cut to sub-pixel segments here
             flatten.flatten_file(dst)
-            open(dst + ".meta", "w", encoding="utf-8").write(svg_meta(name + "Sprite", meta_path=dst + ".meta"))
+            # read the old guid before opening the meta for writing: opening it
+            # truncates the file, and svg_meta would then hand back a new guid,
+            # which orphans every prefab that points at this frame
+            meta_text = svg_meta(name + "Sprite", meta_path=dst + ".meta")
+            keep = old_guids.get(name + ".svg.meta")
+            if keep:
+                meta_text = re.sub(r"^guid: .*$", "guid: " + keep, meta_text,
+                                   count=1, flags=re.M)
+            open(dst + ".meta", "w", encoding="utf-8").write(meta_text)
             names.append(name + ".svg")
             if stage is None:
                 stage = [meta["w_swf"], meta["h_swf"]]
@@ -283,6 +348,15 @@ def main():
         # knows them only by number, so the file name says which chip it belongs
         # to and the frame it fires on, which is how it is found in the timeline.
         sfx = os.path.join(chip_dir[0], "SFX")
+        # keyed by sound id, not file name: the name carries the frame the clip
+        # fires on, which a re-export can shift
+        sfx_guids = {}
+        for path in glob.glob(os.path.join(sfx, "*.meta")):
+            found = re.search(r"^guid: (.*)$", open(path, encoding="utf-8").read(), re.M)
+            sid = re.search(r"_sfx_(-?\d+)_", os.path.basename(path))
+            key = sid.group(1) if sid else os.path.basename(path)[:-5]
+            if found:
+                sfx_guids[key] = found.group(1)
         shutil.rmtree(sfx, ignore_errors=True)
         os.makedirs(sfx, exist_ok=True)
 
@@ -304,7 +378,7 @@ def main():
                 chip, sid.group(1), ("frame_%03d" % when[0]) if when else "unused", ext)
             shutil.copyfile(path, os.path.join(sfx, name))
             open(os.path.join(sfx, name + ".meta"), "w", encoding="utf-8").write(
-                SOUND_META.format(guid=uuid.uuid4().hex))
+                SOUND_META.format(guid=sfx_guids.get(sid.group(1), uuid.uuid4().hex)))
             clips[sound_id] = "SFX/" + name
 
         # Several sprites can start a clip on the same frame: they are the movie's
@@ -343,6 +417,9 @@ def main():
         with open(os.path.join(out, "movie.json"), "w", encoding="utf-8") as f:
             json.dump(manifest, f, indent=1)
             f.write("\n")
+        if manifest_meta:
+            with open(manifest_meta_path, "w", encoding="utf-8") as f:
+                f.write(manifest_meta)
 
         print("%d: %d frames  %d sounds (%d cues)  pauses %s"
               % (chip, len(names), len(clips), len(cues), pauses))

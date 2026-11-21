@@ -74,10 +74,37 @@ namespace Sitekick
 			Run();
 		}
 
+		/// <summary>
+		/// Batch entry point: rebuilds every chip, or only the ones named by
+		/// `--chip 8` / `--chip 8,9` after -executeMethod.
+		/// </summary>
+		public static void RunFromCommandLine()
+		{
+			var wanted = new List<int>();
+			var args = Environment.GetCommandLineArgs();
+			for ( var i = 0; i < args.Length - 1; i++ )
+			{
+				if ( args[ i ] != "--chip" )
+					continue;
+				foreach ( var part in args[ i + 1 ].Split( ',' ) )
+				{
+					int chip;
+					if ( int.TryParse( part.Trim(), out chip ) )
+						wanted.Add( chip );
+				}
+			}
+			Run( wanted.Count > 0 ? ( IEnumerable<int> )wanted : Chips );
+		}
+
 		public static void Run()
 		{
+			Run( Chips );
+		}
+
+		static void Run( IEnumerable<int> chips )
+		{
 			var report = new StringBuilder();
-			foreach ( var chip in Chips )
+			foreach ( var chip in chips )
 			{
 				var dir = ChipDir( chip );
 				if ( dir == null )
