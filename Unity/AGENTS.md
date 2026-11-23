@@ -544,6 +544,189 @@
   holder's (-0.4, +10.8).  Chips 7-16 were measured against standalone Ruffle
   renders, which do not include the holder, so their placement on the Sitekick
   is off by that much and has not been re-checked.
+- Chip 18 is static too: `effect_000018` -> symbol 1321, one frame, one
+  placement (shape 1320), empty class.  Its art interior matches the Ruffle
+  render at 0.77/255, and the art sits (-16.5, -34) px from the symbol origin
+  -- already encoded in the prefab's sprite offset, so only the `STAGE_OFFSET`
+  shift was needed (`Chip_0018_Effect.prefab` base renderer now
+  (-0.28888, 0.38560)).  When building these references, composite the SVG over
+  the Sitekick render with its alpha: a crop of the Ruffle frame is opaque and
+  hides the Sitekick wherever the art has transparent gaps.  Evidence in
+  `Logs/chip_0018_play/` (`reference.png`, `compare.png`, `report.txt`).
+- Chip 19 is static as well: `effect_000019` -> symbol 1319, one frame, one
+  placement (shape 1318), empty class.  Its art box is 578x705 at 6.94 px per
+  SWF px (83.3 x 101.6) against Ruffle's 84x102, and the art sits (-7.0, -2.5) px
+  from the symbol origin (the prefab had (-6.3, -2.35)), so only the
+  `STAGE_OFFSET` shift was needed -- base renderer now (-0.11581, -0.14661).
+  At 1:1 this art is mostly 1-2 px strokes, so the pixel diff is dominated by
+  rasterisation: capture it through `ruffle_preview.html` in a headless browser
+  with `--force-device-scale-factor=3` (the stage then renders about 4x) and
+  compare content-box crops.  That reads shape IoU 0.930, interior colour
+  2.59/255 and size ratio 1.0026, with the difference map
+  (`Logs/chip_0019_play/art-diff.png`) showing only stroke edges -- no missing
+  piece.  Gallery check: `bounds (3.53, 4.31, 0.50) @ (4.91, -0.37)`, sprite
+  drawn, RESULT OK (`Logs/chip_0019_play/report.txt`, `reference.png`,
+  `compare.png`).  Remember Unity deletes `Temp/` on launch, so re-extract the
+  standalone SWF after a play check before capturing a reference.
+- Chip 20 is static as well: `effect_000020` -> symbol 1317, one frame, one
+  placement (shape 1316), empty class -- a dark red kabuto with a gold crest,
+  drawn with a transparent well the Sitekick's face shows through.  Art box
+  785x902 at 6.94 px per SWF px (113.1 x 130.0) against Ruffle's 114x130, art
+  centre (1.0, -22.5) px from the symbol origin (prefab had (1.55, -22.18)), so
+  only the `STAGE_OFFSET` shift was needed: base renderer now
+  (0.01995, 0.19736).  The 4x Ruffle comparison reads shape IoU 0.989 and
+  interior colour 1.81/255 over 101k px (`Logs/chip_0020_play/art-diff.png` is
+  edges only).  Gallery check: `bounds (4.82, 5.54, 0.50) @ (5.25, 0.49)`,
+  sprite drawn, RESULT OK (`report.txt`, `reference.png`, `compare.png`).
+- Chip 21 is static too: `effect_000021` -> symbol 1315, one frame, one
+  placement (shape 1314), empty class -- a small badge (22x17 SWF px), much
+  smaller than the 17-20 art.  Art centre (11.0, -5.0) px from the symbol
+  origin (prefab had (11.5, -4.3)), so only the `STAGE_OFFSET` shift was
+  needed: base renderer now (0.19259, -0.11278).  4x Ruffle comparison:
+  IoU 0.979, interior colour 1.46/255 (`Logs/chip_0021_play/`).  Gallery check:
+  `bounds (0.82, 0.64, 0.50) @ (5.68, -0.28)`, sprite drawn, RESULT OK.
+- Chip 22 is static too: `effect_000022` -> symbol 1313, one frame, one
+  placement (shape 1312), empty class -- a wide red swoosh with pale bands in
+  thin curved strokes (65.5 x 23.4 SWF px).  Art centre (-1.0, -0.5) px from the
+  symbol origin (prefab had (0.1, -0.3)), so only the `STAGE_OFFSET` shift:
+  base renderer now (-0.00521, -0.18218).  4x Ruffle comparison: IoU 0.976 and
+  colour 8.23/255, which is crop alignment, not art: the difference map is
+  dotted along every stroke, and searching a +/-10 px window on the 254x86
+  upscaled crops takes the diff from 9.14 down to **1.36** at (+6, +9) px
+  (about 1.5 x 2.3 px at 1:1) -- the two bounding boxes clip the thin strokes
+  differently, and at the matched offset the art agrees.  Placement measured
+  against the Sitekick's shell, not the eyes (the iris mask is 8 px tall at 1:1
+  and its black pupil cuts the purple short): the band's top sits at 0.862 of the
+  shell height on the site and 0.858 in the gallery capture, its left edge at
+  -0.026 and -0.012 shell widths -- within half a pixel on both axes.  Gallery
+  check:
+  `bounds (2.68, 0.90, 0.50) @ (5.19, -0.46)`,
+  sprite drawn, RESULT OK (`Logs/chip_0022_play/`).
+- Chip 23 is static too: `effect_000023` -> symbol 1311, one frame, one
+  placement (shape 1310), empty class -- two orange flame shapes that flank the
+  Sitekick at its sides (art 121x44 at 1:1, 123.5 x 46.4 SWF px).  Art centre
+  (0.5, -0.5) px from the symbol origin (prefab had (1.23, +0.05)), so only the
+  `STAGE_OFFSET` shift: base renderer now (0.01431, -0.18825).  The 4x Ruffle
+  comparison needs no alignment search here -- IoU 0.985 and colour 2.34/255 at
+  zero shift.  Placement against the shell: the orange bbox spans x -0.56..1.68
+  and y -0.27..1.15 plate widths/heights on the site, -0.57..1.56 and
+  -0.30..1.22 in the gallery capture, i.e. the same flanking position within the
+  mask's ~2% noise (`Logs/chip_0023_play/compare.png`).  Gallery check:
+  `bounds (5.20, 1.90, 0.50) @ (5.24, -0.47)`, sprite drawn, RESULT OK.
+- Chip 24 is static too: `effect_000024` -> symbol 1309, one frame, one
+  placement (shape 1308), empty class -- a green pith helmet with a yellow band,
+  tilted onto the upper-left of the head so the brim lies over the left eye (art
+  49x34 at 1:1, 50.5 x 34.9 SWF px).  Art centre (-12.5, -28.5) px from the symbol
+  origin (prefab had (-11.83, -27.6)), so only the `STAGE_OFFSET` shift: base
+  renderer now (-0.21210, 0.29148).  4x Ruffle comparison: IoU 0.983, colour
+  3.42/255 at zero shift, 3.43 at the best shift found (+0, +1) px -- already
+  aligned.  Gallery check: `bounds (2.06, 1.40, 0.50) @ (4.67, 0.73)`, sprite
+  drawn, RESULT OK; `Logs/chip_0024_play/compare.png` shows the brim over the
+  left eye in both.
+- Chip 25 is static too: `effect_000025` -> symbol 1307, one frame, one
+  placement (shape 1306), empty class -- a yellow four-petal fan with orange
+  shading, floating at the antenna tip above the head (art 33x34 at 1:1,
+  33.9 x 35.6 SWF px).  Art centre (-24.5, -72.5) px from the symbol origin
+  (prefab had (-23.97, -71.8)), so only the `STAGE_OFFSET` shift: base renderer
+  now (-0.42291, 1.05835).  4x Ruffle comparison: IoU 0.970, colour 6.49/255 at
+  zero shift and 3.25 at the best offset (+3, +10) px -- again the two bounding
+  boxes clip this small art differently rather than a difference in the art.  The
+  fan's middle is a transparent hole (alpha 0 over a 13x13 px box at native size),
+  so it shows the stage blue in the site reference and the dark capture
+  background in Unity -- not a white disc that went dark.  Gallery check:
+  `bounds (1.37, 1.44, 0.50) @ (4.14, 2.65)` (well above the head, as drawn),
+  sprite drawn, RESULT OK (`Logs/chip_0025_play/`).
+- Chip 26 is static too: `effect_000026` -> symbol 1305, one frame, one
+  placement (shape 1304), empty class -- a red and yellow striped scarf round the
+  neck with the tail hanging below the body and one end flicking up to the right
+  (art 65x94 at 1:1, 66.7 x 95.4 SWF px).  Art centre (2.5, +54.5) px below the
+  symbol origin (prefab had (3.30, +54.8)), so only the `STAGE_OFFSET` shift:
+  base renderer now (0.05031, -1.13773).  4x Ruffle comparison: IoU 0.990,
+  colour 1.81/255 at zero shift (the search's best, 1.79, sits at the edge of the
+  window, so it is already aligned).  Gallery check: `bounds (2.75, 3.96, 0.50)
+  @ (5.33, -2.84)` -- hanging under the body, as drawn -- sprite drawn, RESULT
+  OK (`Logs/chip_0026_play/compare.png` shows collar and flick in both).
+- Chip 27 is static too: `effect_000027` -> symbol 1303, one frame, one
+  placement (shape 1302), empty class -- black round eyeglasses over the eyes,
+  the left lens on the left eye and the right lens low on the cheek (art 46x23 at
+  1:1, 48.3 x 23.9 SWF px).  Art centre (10.0, -11.0) px from the symbol origin
+  (prefab had (10.5, -10.55)), so only the `STAGE_OFFSET` shift: base renderer
+  now (0.17524, -0.00434).  4x Ruffle comparison: colour 0.00/255 -- every shared
+  pixel identical -- with IoU 0.910, which is thin black frames at 1:1 against
+  the same frames 4x wide in the capture (best offset 0.24 at (+6, +8) px).
+  Gallery check: `bounds (1.94, 0.92, 0.50) @ (5.64, -0.01)`, sprite drawn,
+  RESULT OK (`Logs/chip_0027_play/compare.png` matches lens for lens).
+- Chip 28 is static too: `effect_000028` -> symbol 1301, one frame, one
+  placement (shape 1300), empty class -- a brown spiky mop of hair over the top of
+  the head with a jagged fringe down the left cheek and the eyes peeking through
+  (art 70x68 at 1:1, 71.4 x 68.7 SWF px).  Art centre (-5.0, -8.5) px from the
+  symbol origin (prefab had (-4.72, -7.97)), so only the `STAGE_OFFSET` shift:
+  base renderer now (-0.08892, -0.04901).  4x Ruffle comparison: IoU 0.985,
+  colour 1.24/255 at zero shift (best 1.19 at the edge of the search window) --
+  aligned.  Gallery check: `bounds (2.92, 2.81, 0.50) @ (4.98, -0.12)`, sprite
+  drawn, RESULT OK (`Logs/chip_0028_play/compare.png` matches hairline, fringe and
+  the visible eye).
+- Chip 29 is static too, though its symbol is the first with two placements:
+  `effect_000029` -> symbol 1299, one frame, placing sprite 1297 (itself one frame
+  over shape 1296) and shape 1298.  Both children are single-frame, so nothing can
+  move and the class is empty.  The effect is a lower-lip and chin band across the
+  bottom of the face -- the mouth curve, the three cheek dots on the left and the
+  grey swirl on the right (art 87x54 at 1:1, 87.9 x 55.8 SWF px).  Art centre
+  (11.5, +17.5) px below-right of the symbol origin (prefab had (12.33, +19.3)), so
+  only the `STAGE_OFFSET` shift: base renderer now (0.20690, -0.52233).  4x Ruffle
+  comparison: IoU 0.990, colour 1.03/255 at zero shift and 0.24 at (-2, +10) px.
+  Gallery check: `bounds (3.77, 2.36, 0.50) @ (5.72, -1.31)`, sprite drawn, RESULT
+  OK (`Logs/chip_0029_play/compare.png` agrees on dots, swirl and chin line).
+- Chip 30 is static too: `effect_000030` -> symbol 1295, one frame, one
+  placement (shape 1294), empty class -- a black bat mask with violet-edged ears
+  rising above the head and eye holes showing the one eye (art 79x99 at 1:1,
+  80.4 x 101.1 SWF px).  Art centre (-8.5, -20.0) px from the symbol origin (prefab
+  had (-6.78, -19.82)), so only the `STAGE_OFFSET` shift: base renderer now
+  (-0.12449, 0.15658).  4x Ruffle comparison: IoU 0.972, colour 2.90/255 at zero
+  shift with the search flat (best 2.94 at the window edge) -- aligned.  Gallery
+  check: `bounds (3.33, 4.20, 0.50) @ (4.89, 0.39)`, sprite drawn, RESULT OK
+  (`Logs/chip_0030_play/compare.png` matches brow band, chin edge and ears).
+- Chip 31 is static too: `effect_000031` -> symbol 1293, one frame, one
+  placement (shape 1292), empty class.  It is the widest effect so far -- a gold
+  arrow with red fletching and a silver head passing through a purple sleeve, drawn
+  right across the body (art 203x94 at 1:1, 204.6 x 95.4 SWF px).  Art centre
+  (-13.5, -3.5) px from the symbol origin (prefab had (-12.98, -2.97)), so only the
+  `STAGE_OFFSET` shift: base renderer now (-0.23206, -0.13576).  4x Ruffle
+  comparison: IoU 0.982, colour 2.82/255 at zero shift (best 2.74 at the window
+  corner) -- aligned.  Gallery check: `bounds (8.70, 4.01, 0.50) @ (4.62, -0.34)`,
+  sprite drawn, RESULT OK (`Logs/chip_0031_play/compare.png` matches fletching,
+  shaft height and sleeve over the head).
+- Chip 32 is static too: `effect_000032` -> symbol 1291, one frame, one
+  placement (shape 1290), empty class -- spiky glasses, black frames with grey
+  shading and pale lavender lenses, and hair tufts over the brow (art 69x47 at
+  1:1, 70.1 x 48.4 SWF px).  Art centre (-0.5, -7.0) px from the symbol origin
+  (prefab had (0, -6.85)), so only the `STAGE_OFFSET` shift: base renderer now
+  (-0.00694, -0.06853).  This is the first chip whose art needed a fix, not just
+  the shift: it first read colour 12.61/255 with IoU 0.972, the hair shading
+  nearly black where Ruffle shows #4b4b4b.  No path order fixes it (all five
+  tried stay at 12.2-17.8): the cause is stroke width.  FFDec writes both of the
+  shape's outlines at `stroke-width="1.0"` although the SWF's lines are 10 and
+  20 twips, so the hair's 10-twip outline drew at double width and swallowed the
+  grey bands under it.  Set that path (the second-to-last, the one starting
+  `M15.55 -23.4`) to 0.5: colour 12.61 -> 6.30/255 (best 5.89 at (-8, +3) px) and
+  IoU 0.972 -> 0.980.  Worth checking on later chips: a shape whose outlines come
+  out at `stroke-width="1.0"` while its line styles differ in width is being
+  drawn too heavy.  Gallery check after the fix: `bounds (2.87, 1.95, 0.50) @
+  (5.18, -0.17)`, sprite drawn, RESULT OK (`Logs/chip_0032_play/compare.png`
+  matches lens over eye, temple arm and hair tufts).
+- Chip 33 is static too: `effect_000033` -> symbol 1289, one frame, one
+  placement (shape 1288), empty class -- a big orange troll nose with a black
+  moustache fringe under it, over the mouth (art 35x28 at 1:1, 36.8 x 29.2 SWF
+  px).  Art centre (6.5, -3.5) px from the symbol origin (prefab had (7.02,
+  -3.22)): base renderer now (0.11494, -0.13143).  It shows the same doubled
+  outline as chip 32 -- shape 1288's line styles are 20 and 10 twips and FFDec
+  writes both at `stroke-width="1.0"` -- and the narrow one hurts here too: its
+  path (the last, starting `M15.55 1.4`) at 0.5 takes the 4x comparison from
+  colour 5.20 to 4.66/255 against Ruffle's render, IoU 0.990 either way (the wide
+  outline at 0.5 is much worse, 14.81, so only the 10-twip one is halved).  No
+  shift helps (best 5.45 at the window edge).  Gallery check: `bounds (1.42, 1.11,
+  0.50) @ (5.49, -0.33)`, sprite drawn, RESULT OK (`Logs/chip_0033_play/compare.png`
+  matches nose over the eyes' midline and moustache under it).
 - Movie frames are sprite-swap animations: `Tools/SwfToSvg/export_chip_movies.py`
   writes `Movie/frame_NNN.svg` plus `movie.json`; `Sitekick.ChipMovieBuilder.Run`
   builds the effect prefabs from them.
@@ -566,22 +749,22 @@ checked against a Ruffle reference, then the movie played in the gallery
 Ruffle and the animation plays correctly in Unity.
 
 - [x] 17
-- [ ] 18
-- [ ] 19
-- [ ] 20
-- [ ] 21
-- [ ] 22
-- [ ] 23
-- [ ] 24
-- [ ] 25
-- [ ] 26
-- [ ] 27
-- [ ] 28
-- [ ] 29
-- [ ] 30
-- [ ] 31
-- [ ] 32
-- [ ] 33
+- [x] 18
+- [x] 19
+- [x] 20
+- [x] 21
+- [x] 22
+- [x] 23
+- [x] 24
+- [x] 25
+- [x] 26
+- [x] 27
+- [x] 28
+- [x] 29
+- [x] 30
+- [x] 31
+- [x] 32
+- [x] 33
 - [ ] 34
 - [ ] 35
 - [ ] 36
