@@ -27,9 +27,10 @@ public static class ChipAnimValidate
 
 		int withAnimator = 0, missingController = 0, badState = 0, noCurves = 0;
 		int animatedRoots = 0, movedRoots = 0, staticRoots = 0;
-		int badBindings = 0, badDuration = 0, notLooping = 0;
+		int badBindings = 0, badDuration = 0, notLooping = 0, spriteSwaps = 0;
 		var problems = new List<string>();
 		var unmoved = new List<string>();
+		var swapped = new List<string>();
 
 		foreach ( var path in prefabs )
 		{
@@ -52,7 +53,9 @@ public static class ChipAnimValidate
 				continue;
 			}
 
-			var bindings = AnimationUtility.GetCurveBindings( clip );
+			// a sprite swap is an object-reference curve: it is not in GetCurveBindings
+			var bindings = AnimationUtility.GetCurveBindings( clip )
+				.Concat( AnimationUtility.GetObjectReferenceCurveBindings( clip ) ).ToArray();
 			curveCount = bindings.Length;
 			if ( curveCount == 0 ) { noCurves++; problems.Add( path + ": clip has no curves" ); continue; }
 
@@ -74,6 +77,19 @@ public static class ChipAnimValidate
 
 			// motion check: sample the clip at two times
 			var go = (GameObject) PrefabUtility.InstantiatePrefab( root );
+			var renderers = go.GetComponentsInChildren<SpriteRenderer>( true ).OrderBy( r => r.name ).ToArray();
+			clip.SampleAnimation( go, 0f );
+			var startSprites = renderers.Select( r => r.sprite ).ToArray();
+			bool spriteSwap = false;
+			float spriteDuration = Mathf.Max( clip.length, 0.001f );
+			for ( int s = 1; s <= 4; s++ )
+			{
+				clip.SampleAnimation( go, spriteDuration * ( s / 5f ) );
+				for ( int r = 0; r < renderers.Length; r++ )
+					if ( renderers[r].sprite != startSprites[r] ) spriteSwap = true;
+			}
+			if ( spriteSwap ) { spriteSwaps++; swapped.Add( Path.GetFileNameWithoutExtension( path ) ); }
+
 			var parts = go.GetComponentsInChildren<Transform>( true )
 				.Where( t => t != go.transform && t.name.StartsWith( "chip_" ) && t.name.Contains( "_part_" ) )
 				.ToArray();
@@ -81,6 +97,7 @@ public static class ChipAnimValidate
 			if ( parts.Length == 0 )
 			{
 				Object.DestroyImmediate( go );
+				if ( spriteSwap ) movedRoots++;
 				continue;
 			}
 
@@ -103,7 +120,7 @@ public static class ChipAnimValidate
 			}
 			Object.DestroyImmediate( go );
 
-			if ( best > MOTION_EPS ) movedRoots++;
+			if ( best > MOTION_EPS || spriteSwap ) movedRoots++;
 			else { staticRoots++; unmoved.Add( path ); }
 
 			var expected = clip.length;
@@ -114,7 +131,9 @@ public static class ChipAnimValidate
 		report.AppendLine( $"prefabs: {prefabs.Length}  with Animator: {withAnimator}" );
 		report.AppendLine( $"  missing controller: {missingController}  default state without clip: {badState}" );
 		report.AppendLine( $"  clips without curves: {noCurves}  unresolved binding paths: {badBindings}  not looping: {notLooping}" );
-		report.AppendLine( $"  animatable roots: {animatedRoots}  parts move: {movedRoots}  static pose only: {staticRoots}" );
+					report.AppendLine( $"  animatable roots: {animatedRoots}  parts move: {movedRoots}  static pose only: {staticRoots}" );
+			report.AppendLine( $"  sprite-swapping chips: {spriteSwaps}" +
+				( swapped.Count > 0 ? " (" + string.Join( ", ", swapped ) + ")" : "" ) );
 		report.AppendLine( $"problems: {problems.Count}" );
 		foreach ( var p in problems.Take( 30 ) ) report.AppendLine( "  " + p );
 		if ( unmoved.Count > 0 )

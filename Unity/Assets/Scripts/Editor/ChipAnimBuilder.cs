@@ -27,6 +27,9 @@ public static class ChipAnimBuilder
 	{
 		public string path;
 		public readonly List<Key> keys = new List<Key>();
+		// a multi-frame part symbol swaps its sprite instead of moving
+		public readonly List<string> swapPaths = new List<string>();
+		public readonly List<string[]> swapAssets = new List<string[]>();
 	}
 
 	class Aux
@@ -64,8 +67,16 @@ public static class ChipAnimBuilder
 					part = null;
 					break;
 				case "SWAP":
-					aux.swapPaths.Add( f[1] );
-					aux.swapAssets.Add( f.Skip( 2 ).ToArray() );
+					if ( aux != null )
+					{
+						aux.swapPaths.Add( f[1] );
+						aux.swapAssets.Add( f.Skip( 2 ).ToArray() );
+					}
+					else if ( part != null )
+					{
+						part.swapPaths.Add( f[1] );
+						part.swapAssets.Add( f.Skip( 2 ).ToArray() );
+					}
 					break;
 				case "M":
 					aux.moves.Add( new Vector3( F( f[1] ), F( f[2] ), F( f[3] ) ) );
@@ -129,14 +140,26 @@ public static class ChipAnimBuilder
 		AssetDatabase.CreateFolder( parent, name );
 	}
 
+	/// <summary>-chipIds 99,100 limits the run to those chips (no argument = all).</summary>
+	static int[] OnlyIds()
+	{
+		var args = System.Environment.GetCommandLineArgs();
+		for ( int i = 0; i < args.Length - 1; i++ )
+			if ( args[i] == "-chipIds" )
+				return args[i + 1].Split( ',' ).Select( s => int.Parse( s.Trim() ) ).ToArray();
+		return null;
+	}
+
 	public static void Run()
 	{
 		var chips = ParsePlan( PLAN );
+		var only = OnlyIds();
 		int clips = 0, controllers = 0, skipped = 0, auxClips = 0, auxControllers = 0;
 		var problems = new List<string>();
 
 		foreach ( var chip in chips )
 		{
+			if ( only != null && !only.Contains( chip.id ) ) continue;
 			string folder = ChipDir( chip.id );
 			string clipPath = $"{folder}/Chip_{chip.id:0000}.anim";
 			string ctrlPath = $"{folder}/chip_{chip.id:0000}.controller";
@@ -150,6 +173,12 @@ public static class ChipAnimBuilder
 
 			var clip = new AnimationClip { name = $"Chip_{chip.id:0000}" };
 			int curves = 0;
+			// a sprite swap needs at least one frame per subframe, even when the
+			// root track is a single frame (chip 99's wing flicker is exactly that)
+			int frames = chip.frames;
+			foreach ( var p in chip.parts )
+				foreach ( var assets in p.swapAssets )
+					frames = Mathf.Max( frames, assets.Length );
 
 			foreach ( var part in chip.parts )
 			{
@@ -180,6 +209,28 @@ public static class ChipAnimBuilder
 						Curve( part.keys.Select( k => new KeyValuePair<float, float>( k.t, k.a ) ) ) );
 					curves++;
 				}
+
+				for ( int i = 0; i < part.swapPaths.Count; i++ )
+				{
+					var sprites = part.swapAssets[i]
+						.Select( p => AssetDatabase.LoadAllAssetsAtPath( p ).OfType<Sprite>().FirstOrDefault() )
+						.Where( s => s != null ).ToArray();
+					if ( sprites.Length < 2 ) continue;
+					// a nested sprite loops its own timeline, so a short sub-animation
+					// repeats inside a longer chip clip (chip 57: 55 frames in 87)
+					var keys = new List<ObjectReferenceKeyframe>();
+					for ( int f = 0; f < frames; f++ )
+						keys.Add( new ObjectReferenceKeyframe
+						{
+							time = f / (float) chip.fps,
+							value = sprites[f % sprites.Length]
+						} );
+					if ( keys.Count < 2 ) continue;
+					AnimationUtility.SetObjectReferenceCurve( clip,
+						EditorCurveBinding.PPtrCurve( part.swapPaths[i], typeof( SpriteRenderer ), "m_Sprite" ),
+						keys.ToArray() );
+					curves++;
+				}
 			}
 
 			if ( curves == 0 && chip.aux.Count == 0 )
@@ -196,7 +247,7 @@ public static class ChipAnimBuilder
 			clip.wrapMode = WrapMode.Loop;
 			var settings = AnimationUtility.GetAnimationClipSettings( clip );
 			settings.loopTime = true;
-			settings.stopTime = chip.frames / (float) chip.fps;
+			settings.stopTime = frames / (float) chip.fps;
 			AnimationUtility.SetAnimationClipSettings( clip, settings );
 
 			AssetDatabase.CreateAsset( clip, clipPath );
@@ -286,6 +337,7 @@ public static class ChipAnimBuilder
 		int badBind = 0;
 		foreach ( var chip in chips )
 		{
+			if ( only != null && !only.Contains( chip.id ) ) continue;
 			string folder = ChipDir( chip.id );
 			if ( chip.parts.Count == 0 )
 			{

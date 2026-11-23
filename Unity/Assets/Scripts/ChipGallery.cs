@@ -33,6 +33,13 @@ namespace Sitekick
 		[SerializeField]
 		protected Material iconMaterial;
 
+		/// <summary>
+		/// The Sitekick colour every chip effect is painted with, as set by the
+		/// colour field.  White is the default and changes nothing.
+		/// </summary>
+		[SerializeField]
+		protected Color effectColor = Color.white;
+
 		[SerializeField]
 		protected List<Entry> entries = new List<Entry>();
 
@@ -55,6 +62,24 @@ namespace Sitekick
 		public IEnumerable<GameObject> ActiveEffects { get { return spawned.Values; } }
 
 		public int ActiveCount { get { return spawned.Count; } }
+
+		public Color EffectColor
+		{
+			get { return effectColor; }
+			set { effectColor = value; }
+		}
+
+		/// <summary>
+		/// Paints the Sitekick and every effect on show, and remembers the colour so
+		/// effects switched on later get it too.  One publish is all it takes: the
+		/// body and every flagged object follow <see cref="SitekickColor"/>, and a
+		/// chip spawned afterwards reads the colour as it switches on.
+		/// </summary>
+		public void ApplyColor( Color color )
+		{
+			effectColor = color;
+			SitekickColor.Set( color );
+		}
 
 		void Start()
 		{

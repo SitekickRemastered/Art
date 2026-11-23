@@ -62,7 +62,7 @@ namespace Sitekick
 			cameraGo.AddComponent<AudioListener>();
 
 			var sitekick = PlaceSitekick();
-			var content = BuildInterface();
+			var content = BuildInterface( out var colorRow, out var picker );
 
 			var galleryGo = new GameObject( "ChipGallery" );
 			var gallery = galleryGo.AddComponent<ChipGallery>();
@@ -86,6 +86,16 @@ namespace Sitekick
 
 			serialized.ApplyModifiedPropertiesWithoutUndo();
 
+			var panel = colorRow.GetComponent<ChipColorPanel>();
+			var panelSerialized = new SerializedObject( panel );
+			panelSerialized.FindProperty( "gallery" ).objectReferenceValue = gallery;
+			panelSerialized.ApplyModifiedPropertiesWithoutUndo();
+
+			var pickerSerialized = new SerializedObject( picker );
+			pickerSerialized.FindProperty( "gallery" ).objectReferenceValue = gallery;
+			pickerSerialized.FindProperty( "panel" ).objectReferenceValue = panel;
+			pickerSerialized.ApplyModifiedPropertiesWithoutUndo();
+
 			Debug.Log( "chip gallery: " + entries.Count + " chips -> " + ScenePath );
 
 			if ( save )
@@ -108,7 +118,7 @@ namespace Sitekick
 			return instance;
 		}
 
-		static RectTransform BuildInterface()
+		static RectTransform BuildInterface( out GameObject colorRow, out ColorPicker picker )
 		{
 			var eventSystemGo = new GameObject( "EventSystem" );
 			eventSystemGo.AddComponent<EventSystem>();
@@ -202,7 +212,264 @@ namespace Sitekick
 			scrollRect.verticalScrollbar = bar;
 			scrollRect.verticalScrollbarVisibility = ScrollRect.ScrollbarVisibility.Permanent;
 
+			var colorPanel = BuildColorRow( canvasGo.transform );
+			colorRow = colorPanel.gameObject;
+			picker = BuildColorPicker( canvasGo.transform, colorPanel );
 			return content;
+		}
+
+		/// <summary>
+		/// The colour field under the grid and the Apply button to its right: a hex
+		/// value without the #, which <see cref="ChipColorPanel"/> reads when pressed.
+		/// </summary>
+		static ChipColorPanel BuildColorRow( Transform canvas )
+		{
+			var rowGo = new GameObject( "Color Row", typeof( RectTransform ) );
+			var row = rowGo.GetComponent<RectTransform>();
+			row.SetParent( canvas, false );
+			row.anchorMin = new Vector2( 0f, 0.5f );
+			row.anchorMax = new Vector2( 0f, 0.5f );
+			row.pivot = new Vector2( 0f, 1f );
+			row.anchoredPosition = new Vector2( 24f, -ViewportHeight * 0.5f - 12f );
+			row.sizeDelta = new Vector2( ViewportWidth + 18f, 46f );
+
+			var font = Resources.GetBuiltinResource<Font>( "LegacyRuntime.ttf" );
+
+			var fieldGo = new GameObject( "Hex", typeof( RectTransform ), typeof( Image ), typeof( InputField ) );
+			var fieldRect = fieldGo.GetComponent<RectTransform>();
+			fieldRect.SetParent( row, false );
+			fieldRect.anchorMin = new Vector2( 0f, 0f );
+			fieldRect.anchorMax = new Vector2( 0f, 0f );
+			fieldRect.pivot = new Vector2( 0f, 0f );
+			fieldRect.anchoredPosition = Vector2.zero;
+			fieldRect.sizeDelta = new Vector2( 300f, 46f );
+
+			var fieldImage = fieldGo.GetComponent<Image>();
+			fieldImage.color = new Color( 0.16f, 0.18f, 0.23f, 1f );
+
+			var placeholder = MakeLabel( fieldRect, "Placeholder", "FFFFFF", font, new Color( 1f, 1f, 1f, 0.35f ) );
+			var text = MakeLabel( fieldRect, "Text", "", font, Color.white );
+
+			var field = fieldGo.GetComponent<InputField>();
+			field.targetGraphic = fieldImage;
+			field.textComponent = text;
+			field.placeholder = placeholder;
+			field.contentType = InputField.ContentType.Standard;
+			field.lineType = InputField.LineType.SingleLine;
+			field.characterLimit = 6;
+
+			var buttonGo = new GameObject( "Apply", typeof( RectTransform ), typeof( Image ), typeof( Button ) );
+			var buttonRect = buttonGo.GetComponent<RectTransform>();
+			buttonRect.SetParent( row, false );
+			buttonRect.anchorMin = new Vector2( 0f, 0f );
+			buttonRect.anchorMax = new Vector2( 0f, 0f );
+			buttonRect.pivot = new Vector2( 0f, 0f );
+			buttonRect.anchoredPosition = new Vector2( 308f, 0f );
+			buttonRect.sizeDelta = new Vector2( 96f, 46f );
+
+			var buttonImage = buttonGo.GetComponent<Image>();
+			buttonImage.color = new Color( 0.32f, 0.36f, 0.46f, 1f );
+
+			var button = buttonGo.GetComponent<Button>();
+			button.targetGraphic = buttonImage;
+
+			var label = MakeLabel( buttonRect, "Label", "Apply", font, Color.white );
+			label.alignment = TextAnchor.MiddleCenter;
+
+			var panel = rowGo.AddComponent<ChipColorPanel>();
+			var panelSerialized = new SerializedObject( panel );
+			panelSerialized.FindProperty( "field" ).objectReferenceValue = field;
+			panelSerialized.FindProperty( "apply" ).objectReferenceValue = button;
+			panelSerialized.ApplyModifiedPropertiesWithoutUndo();
+
+			return panel;
+		}
+
+		/// <summary>
+		/// The live picker beside the hex row: an HSV square, a hue strip and the
+		/// value it is publishing.  <see cref="ColorPicker"/> builds the gradient
+		/// textures itself, so the scene only carries the rects.
+		/// </summary>
+		static ColorPicker BuildColorPicker( Transform canvas, ChipColorPanel panel )
+		{
+			var font = Resources.GetBuiltinResource<Font>( "LegacyRuntime.ttf" );
+
+			var rootGo = new GameObject( "Color Picker", typeof( RectTransform ), typeof( Image ) );
+			var root = rootGo.GetComponent<RectTransform>();
+			root.SetParent( canvas, false );
+			root.anchorMin = new Vector2( 0f, 0.5f );
+			root.anchorMax = new Vector2( 0f, 0.5f );
+			root.pivot = new Vector2( 0f, 1f );
+			root.anchoredPosition = new Vector2( 24f + ViewportWidth + 18f + 16f, -ViewportHeight * 0.5f - 12f );
+			root.sizeDelta = new Vector2( 206f, 238f );
+			rootGo.GetComponent<Image>().color = new Color( 0.1f, 0.11f, 0.14f, 0.95f );
+
+			var areaGo = new GameObject( "Area", typeof( RectTransform ), typeof( Image ) );
+			var area = areaGo.GetComponent<RectTransform>();
+			area.SetParent( root, false );
+			area.anchorMin = new Vector2( 0f, 1f );
+			area.anchorMax = new Vector2( 0f, 1f );
+			area.pivot = new Vector2( 0f, 1f );
+			area.anchoredPosition = new Vector2( 8f, -8f );
+			area.sizeDelta = new Vector2( 190f, 160f );
+			areaGo.GetComponent<Image>().color = Color.white;
+
+			var hueGo = new GameObject( "Hue", typeof( RectTransform ), typeof( Image ) );
+			var hue = hueGo.GetComponent<RectTransform>();
+			hue.SetParent( root, false );
+			hue.anchorMin = new Vector2( 0f, 1f );
+			hue.anchorMax = new Vector2( 0f, 1f );
+			hue.pivot = new Vector2( 0f, 1f );
+			hue.anchoredPosition = new Vector2( 8f, -176f );
+			hue.sizeDelta = new Vector2( 190f, 18f );
+			hueGo.GetComponent<Image>().color = Color.white;
+
+			var swatchGo = new GameObject( "Swatch", typeof( RectTransform ), typeof( Image ) );
+			var swatch = swatchGo.GetComponent<RectTransform>();
+			swatch.SetParent( root, false );
+			swatch.anchorMin = new Vector2( 0f, 1f );
+			swatch.anchorMax = new Vector2( 0f, 1f );
+			swatch.pivot = new Vector2( 0f, 1f );
+			swatch.anchoredPosition = new Vector2( 8f, -200f );
+			swatch.sizeDelta = new Vector2( 30f, 30f );
+
+			var readoutGo = new GameObject( "Readout", typeof( RectTransform ), typeof( Text ) );
+			var readoutRect = readoutGo.GetComponent<RectTransform>();
+			readoutRect.SetParent( root, false );
+			readoutRect.anchorMin = new Vector2( 0f, 1f );
+			readoutRect.anchorMax = new Vector2( 0f, 1f );
+			readoutRect.pivot = new Vector2( 0f, 1f );
+			readoutRect.anchoredPosition = new Vector2( 46f, -200f );
+			readoutRect.sizeDelta = new Vector2( 152f, 30f );
+
+			var readout = readoutGo.GetComponent<Text>();
+			readout.font = font;
+			readout.fontSize = 20;
+			readout.text = "#FFFFFF";
+			readout.color = Color.white;
+			readout.alignment = TextAnchor.MiddleLeft;
+			readout.horizontalOverflow = HorizontalWrapMode.Overflow;
+			readout.supportRichText = false;
+
+			var picker = rootGo.AddComponent<ColorPicker>();
+			var serialized = new SerializedObject( picker );
+			serialized.FindProperty( "panel" ).objectReferenceValue = panel;
+			serialized.FindProperty( "area" ).objectReferenceValue = area;
+			serialized.FindProperty( "hueBar" ).objectReferenceValue = hue;
+			serialized.FindProperty( "swatch" ).objectReferenceValue = swatchGo.GetComponent<Image>();
+			serialized.FindProperty( "readout" ).objectReferenceValue = readout;
+			serialized.ApplyModifiedPropertiesWithoutUndo();
+
+			var areaCursor = MakeCursor( area, "Area Cursor", 22f );
+			var hueCursor = MakeCursor( hue, "Hue Cursor", 22f );
+
+			serialized.Update();
+			serialized.FindProperty( "areaCursor" ).objectReferenceValue = areaCursor;
+			serialized.FindProperty( "hueCursor" ).objectReferenceValue = hueCursor;
+			serialized.ApplyModifiedPropertiesWithoutUndo();
+
+			return picker;
+		}
+
+		/// <summary>The ring that marks the picked point; the sprite comes from the picker.</summary>
+		static RectTransform MakeCursor( RectTransform parent, string name, float size )
+		{
+			var go = new GameObject( name, typeof( RectTransform ), typeof( Image ) );
+			var rect = go.GetComponent<RectTransform>();
+			rect.SetParent( parent, false );
+			rect.anchorMin = Vector2.zero;
+			rect.anchorMax = Vector2.zero;
+			rect.pivot = new Vector2( 0.5f, 0.5f );
+			rect.anchoredPosition = Vector2.zero;
+			rect.sizeDelta = new Vector2( size, size );
+
+			var image = go.GetComponent<Image>();
+			image.color = Color.white;
+			image.raycastTarget = false;
+			return rect;
+		}
+
+		static Text MakeLabel( RectTransform parent, string name, string value, Font font, Color color )
+		{
+			var go = new GameObject( name, typeof( RectTransform ), typeof( Text ) );
+			var rect = go.GetComponent<RectTransform>();
+			rect.SetParent( parent, false );
+			rect.anchorMin = Vector2.zero;
+			rect.anchorMax = Vector2.one;
+			rect.offsetMin = new Vector2( 10f, 4f );
+			rect.offsetMax = new Vector2( -10f, -4f );
+
+			var label = go.GetComponent<Text>();
+			label.font = font;
+			label.fontSize = 22;
+			label.text = value;
+			label.color = color;
+			label.alignment = TextAnchor.MiddleLeft;
+			label.horizontalOverflow = HorizontalWrapMode.Overflow;
+			label.supportRichText = false;
+			return label;
+		}
+
+		/// <summary>
+		/// Batch entry point: <c>-executeMethod ChipGalleryBuilder.AddColorRow</c>.
+		/// Adds the colour row to the scene that is already on disk, without
+		/// rebuilding the grid, so an existing scene keeps its ids.
+		/// </summary>
+		public static void AddColorRow()
+		{
+			EditorSceneManager.OpenScene( ScenePath, OpenSceneMode.Single );
+
+			if ( Object.FindFirstObjectByType<ChipColorPanel>() != null )
+			{
+				Debug.Log( "chip gallery: colour row already present" );
+				return;
+			}
+
+			var canvas = Object.FindFirstObjectByType<Canvas>();
+			var gallery = Object.FindFirstObjectByType<ChipGallery>();
+			if ( canvas == null || gallery == null )
+				throw new System.Exception( "open " + ScenePath + " with a Canvas and a ChipGallery first" );
+
+			var panel = BuildColorRow( canvas.transform );
+			var serialized = new SerializedObject( panel );
+			serialized.FindProperty( "gallery" ).objectReferenceValue = gallery;
+			serialized.ApplyModifiedPropertiesWithoutUndo();
+
+			EditorSceneManager.MarkSceneDirty( canvas.gameObject.scene );
+			EditorSceneManager.SaveScene( canvas.gameObject.scene );
+			Debug.Log( "chip gallery: colour row added" );
+		}
+
+		/// <summary>
+		/// Batch entry point: <c>-executeMethod ChipGalleryBuilder.AddColorPicker</c>.
+		/// Adds the live picker beside the colour row of the scene on disk, without
+		/// rebuilding the grid.
+		/// </summary>
+		public static void AddColorPicker()
+		{
+			EditorSceneManager.OpenScene( ScenePath, OpenSceneMode.Single );
+
+			if ( Object.FindFirstObjectByType<ColorPicker>() != null )
+			{
+				Debug.Log( "chip gallery: colour picker already present" );
+				return;
+			}
+
+			var canvas = Object.FindFirstObjectByType<Canvas>();
+			var gallery = Object.FindFirstObjectByType<ChipGallery>();
+			var panel = Object.FindFirstObjectByType<ChipColorPanel>();
+			if ( canvas == null || gallery == null || panel == null )
+				throw new System.Exception( "open " + ScenePath + " with a Canvas, a ChipGallery and a colour row first" );
+
+			var picker = BuildColorPicker( canvas.transform, panel );
+			var serialized = new SerializedObject( picker );
+			serialized.FindProperty( "gallery" ).objectReferenceValue = gallery;
+			serialized.FindProperty( "panel" ).objectReferenceValue = panel;
+			serialized.ApplyModifiedPropertiesWithoutUndo();
+
+			EditorSceneManager.MarkSceneDirty( canvas.gameObject.scene );
+			EditorSceneManager.SaveScene( canvas.gameObject.scene );
+			Debug.Log( "chip gallery: colour picker added" );
 		}
 
 		public static List<ChipGallery.Entry> CollectEntries()
@@ -295,6 +562,25 @@ namespace Sitekick
 		/// Batch check: opens the scene, builds the grid, toggles a few chips and
 		/// writes what happened to Logs/chip-gallery-check.txt.
 		/// </summary>
+		/// <summary>The renderers of `root` whose `_Color` block is set, for reports.</summary>
+		static string Tints( Transform root )
+		{
+			if ( root == null )
+				return "MISSING";
+
+			var tints = new List<string>();
+			foreach ( var renderer in root.GetComponentsInChildren<SpriteRenderer>( true ) )
+			{
+				var block = new MaterialPropertyBlock();
+				renderer.GetPropertyBlock( block );
+				var tint = block.GetColor( "_Color" );
+				if ( tint.a > 0f && tint != Color.white )
+					tints.Add( renderer.name + "=" + ColorUtility.ToHtmlStringRGB( tint ) );
+			}
+
+			return tints.Count > 0 ? string.Join( " ", tints.ToArray() ) : "white";
+		}
+
 		public static void Check()
 		{
 			var lines = new List<string>();
@@ -423,6 +709,38 @@ namespace Sitekick
 			}
 			gallery.ClearAll();
 		}
+
+			// the colour row: field, Apply and the Sitekick's paint, in edit mode
+			var panel = Object.FindFirstObjectByType<ChipColorPanel>();
+			lines.Add( "colour row: " + ( panel != null ) );
+			if ( panel != null )
+			{
+				var panelData = new SerializedObject( panel );
+				var field = panelData.FindProperty( "field" ).objectReferenceValue as InputField;
+				var button = panelData.FindProperty( "apply" ).objectReferenceValue as Button;
+				var wired = panelData.FindProperty( "gallery" ).objectReferenceValue as ChipGallery;
+				failed |= field == null || button == null || wired == null;
+				lines.Add( "  field: " + ( field != null ? field.name + " chars " + field.characterLimit : "MISSING" ) +
+					", font " + ( field != null && field.textComponent != null && field.textComponent.font != null
+						? field.textComponent.font.name : "MISSING" ) +
+					", placeholder " + ( field != null && field.placeholder != null ? "yes" : "no" ) );
+				lines.Add( "  apply: " + ( button != null ? button.name + " listeners " +
+					button.onClick.GetPersistentEventCount() : "MISSING" ) );
+
+				// the button's handler, called directly: Awake has not run in edit mode,
+				// so onClick has no listener here (ChipPlayCheck covers the click)
+				field.text = "ff3322";
+				panel.ApplyField();
+				lines.Add( "  typed ff3322 -> " + ColorUtility.ToHtmlStringRGB( wired.EffectColor ) );
+				failed |= ColorUtility.ToHtmlStringRGB( wired.EffectColor ) != "FF3322";
+				lines.Add( "  sitekick: " + Tints( wired.Sitekick ) );
+
+				field.text = "";
+				panel.ApplyField();
+				lines.Add( "  cleared -> " + ColorUtility.ToHtmlStringRGB( wired.EffectColor ) );
+				failed |= ColorUtility.ToHtmlStringRGB( wired.EffectColor ) != "FFFFFF";
+				lines.Add( "  sitekick: " + Tints( wired.Sitekick ) );
+			}
 
 			lines.Add( failed ? "RESULT: FAIL" : "RESULT: OK" );
 			File.WriteAllLines( ReportPath, lines );

@@ -578,6 +578,20 @@
   interior colour 1.81/255 over 101k px (`Logs/chip_0020_play/art-diff.png` is
   edges only).  Gallery check: `bounds (4.82, 5.54, 0.50) @ (5.25, 0.49)`,
   sprite drawn, RESULT OK (`report.txt`, `reference.png`, `compare.png`).
+  **Correction, the art was right and Unity's material was wrong.**  The exported
+  SVG carries five gradients (`url(#gradient0..4)`; three linear, two radial), so
+  under the built-in sprite material the prefab drew the whole kabuto black --
+  90,444 near-black px of 1.56M in `Logs/chip_0020_play/resting.png`, i.e. the
+  same defect chip 42 hit.  Pointing the renderer at the shared
+  `Assets/Materials/ChipMovie-Vector.mat` (Unlit/VectorGradient, guid
+  31d1e238120410636b8eb04cc8ca4ff5, fileID 2100000) fixed it: the capture now
+  reads its dark red (128,0,0), gold horn/crest (224,128,0) and the white face
+  through the well, and the 4x Ruffle check is unchanged at zero shift (IoU 0.994,
+  colour 1.94/255, against 0.92/17.6 at +-1 px), so the export never needed
+  touching.  Gallery check re-run, still RESULT OK.  Rule for the rest of the run:
+  any effect SVG with `url(#gradient...)` fills gets the vector material in its
+  prefab -- the art check cannot catch this, since it compares the SVG against
+  Ruffle and both are correct.
 - Chip 21 is static too: `effect_000021` -> symbol 1315, one frame, one
   placement (shape 1314), empty class -- a small badge (22x17 SWF px), much
   smaller than the 17-20 art.  Art centre (11.0, -5.0) px from the symbol
@@ -937,8 +951,11 @@
   guid/PPU/textureSize/SpriteRect, i.e. no import-setting difference at all.
   Scope: every static effect prefab so far (chips 17-41) still uses the built-in
   material, and nothing was visibly wrong because only chip 20 among them
-  carries a gradient at all -- chip 20 has exactly one, so it is the one earlier
-  chip that may deserve a second look under Unlit/VectorGradient.
+  carries a gradient at all -- five of them.  Chip 20 was the earlier chip that
+  needed the second look, and it needed it badly: under the built-in material it
+  drew black (90,444 near-black px); it now uses this material too (see the chip
+  20 note above).  Check every new effect SVG for `url(#gradient...)` fills before
+  calling its prefab done.
 - Chip 43 is static: `effect_000043` -> symbol 1197, one frame, one
   placement (shape 1196) at depth 1 with no matrix, and although the library's
   class is AS3 there is nothing on the timeline for a script to drive -- it is a
@@ -2115,8 +2132,9 @@
   `f002.svg`, and a base `chip_0099_base.svg` that the exporter merged from 943
   and 949 **plus the four wing copies** -- drawing that behind the parts paints the
   42% wing fill twice (170,204,221 where Ruffle has 108,167,196), so the four wing
-  groups were stripped out of the base (32 paths -> 12).  The prefab had no base
-  renderer at all (four wings floating with no head); it now has one at sorting
+  groups were stripped out of the base (32 paths -> 12, then split again into
+  body and head below).  The prefab had no base renderer at all (four wings
+  floating with no head); it got one at sorting
   order **30**, above the parts, which is where 949 sits in the sprite, and that
   draw order is what the art check prefers: over the whole stage the f001 state
   reads **mean 5.01/255 on the art union, 0.34 whole-frame, p99 3** with the base
@@ -2135,11 +2153,58 @@
   back.  Gallery check: `renderers 5  sprites 5  bounds (5.85, 5.81, 0.50) @
   (5.03, 0.20)`, drawn `chip_0099_baseSprite` plus four
   `chip_0099_part_948_f001Sprite`, RESULT OK (bounds are sprite canvases, 139 px
-  base at 0.0416 units per px).  Known limit, not specific to this chip: the
-  Animator clip has one keyframe and no sprite-swap curve, so Unity holds f001 and
-  the two-frame flicker does not play -- `build_anim_plan.py` only emits `SWAP`
-  for backdrop/foreground clips, and 144 of the 254 animated effects carry
-  multi-subframe parts.  Design composite (`Logs/chip_0099_play/compare.png`,
+  base at 0.0416 units per px).  The flicker initially did *not* play -- the clip
+  had one keyframe and no sprite-swap curve, because `build_anim_plan.py` emitted
+  `SWAP` only for backdrop/foreground clips, and 144 of the 254 animated effects
+  carry multi-subframe parts -- and it is fixed in the toolchain, not per chip:
+  `build_anim_plan.py` now emits `SWAP <part>/sprite <f001> <f002> ...` after a
+  part's keys whenever its symbol has more than one usable frame (148 chips, 407
+  swap lines if the whole plan is regenerated), and `ChipAnimBuilder` writes those
+  as `m_Sprite` PPtr curves and lengthens the clip to the frame count (`stopTime`
+  = frames/fps), because a single-frame `CHIP` line would wrap at 1/31 s and never
+  reach f002.  Chip 99 was rebuilt alone (`-executeMethod ChipAnimBuilder.Run
+  -chipIds 99`; the new `-chipIds` filter stops a one-chip rebuild rewriting 250
+  other clips) and its position keys were re-shifted, since the plan carries raw
+  art coordinates:
+  `Chip_0099.anim` is 31 fps with `m_StopTime 0.06451613` and four `m_PPtrCurves`
+  on `chip_0099_part_4/10/16/22/sprite`, guid 68f6a927 (f001) at t=0 swapping to
+  eeaef86d (f002) at t=0.032258 -- the two scratch patterns alternate, twice per
+  loop.  Verified by sampling rather than by inspecting the YAML:
+  `ChipAnimValidate` now samples the clip too (it only checked transform motion
+  before) and reports `sprite-swapping chips: 1 (Chip_0099_Effect)`,
+  `problems: 0`, RESULT OK.  The gallery check is unchanged after the rebuild
+  (`renderers 5  sprites 5  bounds (5.85, 5.81, 0.50) @ (5.03, 0.20)`, RESULT OK),
+  since it captures the resting pose and that is f001.
+  **Correction: the prefab drew three wings, and the fourth was lost to a draw
+  order, not to a missing placement.**  The SWF puts the white dome (sprite 944
+  -> shape 943) at depth **1**, i.e. *behind* the four wings, and only the face
+  (949) at depth 30 in front of them.  The merged base drew dome and face
+  together at order 30, so the dome covered the parts: invisible on the three
+  wings that stick out past the head, fatal on the fourth -- part 16, the narrow
+  wing between the ears at (0.12492, 0.4884025), lies wholly inside the head
+  silhouette and disappeared.  Splitting the base along its own two groups is
+  the fix: `chip_0099_body.svg` (group `x1_sprite0`, sprite 944 -> shape 943) is
+  now a renderer at sorting order **1** and `chip_0099_head.svg` (`x11_shape5`,
+  shape 949) stays at **30**, so the wings sit between them exactly as in the
+  SWF.  Both keep the merged canvas, so the body's ink centre is inset from the
+  head's: body at (-0.0174, -0.6943) = head + (-0.052, +0.017) local, from 21 px
+  and 7 px of the 964 px canvas at 0.002479 local units per canvas px.  Two traps
+  recorded: (a) this prefab had been left with `m_LocalPosition: {x:
+  np.float64(0.03473193), ...}` -- a Python repr written into YAML by an earlier
+  hand edit, which is not a number Unity can read; it is plain floats again;
+  (b) the chip prefab is instanced under a parent scaled **2.5**, so a renderer's
+  world bounds move 2.5x its local position -- fitting the body by world bounds
+  first over-corrected by exactly that factor.  Verified in play mode:
+  `renderers 6  sprites 6`, orders 1/4/10/16/22/30, all four wings in the Ruffle
+  arrangement.  `ChipPlayCheck` grew the two things that made this findable: a
+  `resting-art.png` framed on the whole effect (the plain `resting.png` still
+  uses the game camera, which cropped a static chip at the screen edge) and a
+  per-renderer line in `report.txt` with sprite, order, centre and size.
+  Only the four `SWAP`
+  lines for chip 99 were added to the committed plan by hand (+4 lines, nothing
+  else touched): a full `build_anim_plan.py` run rewrites 5,954 unrelated lines of
+  chip timelines, so the plan is not regenerated wholesale while chips are being
+  fixed one at a time.  Design composite (`Logs/chip_0099_play/compare.png`,
   eye-anchored at 4.30x): wings read grey there instead of light blue because the
   gallery backdrop is dark rather than the stage blue -- the 42% white fill is the
   same.
@@ -2163,6 +2228,21 @@
   RESULT OK; 0.0416 units per SWF px.  Design composite vs capture
   (`Logs/chip_0100_play/compare.png`): white-face ratio 4.43, and at that scale the
   stripes, both hooks and the brow all sit where the capture has them.
+- Two whole-run audits from the chip 20 / chip 99 double report.  **Gradients:**
+  of the ticked chips 17-100, only chip 20's *effect* art carries gradient fills
+  (`url(#gradient)` in `<chip>_effect.svg`); the other gradient references live in
+  the combined `<chip>_XXXX.svg` source files, which no renderer uses.  Chips 42,
+  56, 59, 66 and now 20 use `ChipMovie-Vector.mat`; nothing else needs it before
+  chip 100 -- but check every new effect SVG for gradient fills, because a wrong
+  material renders black and the SVG-vs-Ruffle art check cannot see it.
+  **Multi-frame parts:** 148 chips in the plan have a part symbol with more than
+  one frame, so their sprite has to swap inside the clip.  Only chip 99 does
+  today; chip 57 is the one already ticked whose clip still holds a single pose
+  (`chip_0057_part_1065` has 55 frames in an 87-frame clip, `CHIP 57 31 87`).
+  Chip 57 was deliberately left alone here: rebuilding it from the plan replaces
+  far more than the pose offsets (the regenerated track differs from the reviewed
+  clip by thousands of keys) and nobody has compared that clip against Ruffle, so
+  it needs its own check, not a drive-by rebuild.
 - Movie frames are sprite-swap animations: `Tools/SwfToSvg/export_chip_movies.py`
   writes `Movie/frame_NNN.svg` plus `movie.json`; `Sitekick.ChipMovieBuilder.Run`
   builds the effect prefabs from them.
@@ -2176,6 +2256,221 @@
   their guids survive.  Restore them after a re-export
   (`git checkout -- Assets/Chips/<range>/Chip_XXXX/Movie/*.svg.meta`) until the
   template and the shipped metas agree.
+
+### Colour
+
+- **What a chip colours is in the ActionScript, not the art.**
+  `corus.effects.base.BaseEffect extends BasePaint`, and `BasePaint.checkKids`
+  (and its `Event.ADDED` handler) paints every descendant clip whose instance
+  name matches `/fill/i` with `new ColorTransform(0,0,0,1,r,g,b,0)`: the clip
+  becomes a flat silhouette in the Sitekick's colour and keeps only its alpha.
+  No effect class in 1-100 overrides `setColors`/`paint`, so that one rule is
+  the whole story -- a chip with no `fill` clip is a chip that does not colour.
+- `Tools/SwfToSvg/color_targets.py` walks the library XML once (8 s; one
+  `extract_effect.py` per chip would be about a minute each) and prints the
+  `fill` placements per chip, with the FFDec group (`spriteK`/`shapeK`) each one
+  lands in.  Chips 1-100 with fills: 11, 12, 14, 16, 29, 36, 38, 42, 44, 45, 54,
+  57, 58, 64, 72, 73, 74, 99.  Chips 3-6 are not in `effectlibrary1_250.swf`
+  and have no class there.
+- `split_fill_layers.py` cuts one exported SVG into **runs**: every maximal
+  stretch of the drawing that is all-fill or all-not-fill becomes one layer,
+  in the original draw order (chip 45's fills sit between other pieces, so a
+  fixed three-layer cut covers parts of it wrongly).  FFDec writes the drawing
+  as nested `<g id="xN_spriteK">` groups in draw order, so the fills are
+  elements of that tree: each layer is a prune that keeps its pieces and the
+  ancestors (and transforms) around them, plus its own copy of the `<defs>` /
+  `<clipPath>` definitions, and `Logs/color-layers/<name>.layers.json` records
+  the runs, which are fills and which are tinted.
+- **A layer needs an anchor, or it lands in the wrong place.**  Unity's SVG
+  importer measures a sprite from its own geometry bbox, not its viewBox (see
+  `svg_bbox.py`), so a layer holding one small piece imported to a *smaller*
+  rect, got centred on its own ink and drifted away from the rest of the chip;
+  chips 72-74 were visibly out of register for that reason.  Every layer now
+  carries an invisible `<rect>` over the *source* drawing's geometry bbox
+  (`fill-opacity 0.001`), so all layers import to the same rect and pivot and
+  share the original renderer's transform.  Verified by comparing each layer's
+  import box with the source bbox (`svg_bbox.bbox` plus that rect) and by the
+  play check, which now reports the same centre *and* size for every layer.
+- **What the colour reaches is the fill plus its shading, not the whole
+  drawing.**  Inside a fill clip everything is tinted (Flash paints it flat).
+  Outside one, only a *translucent* piece is tinted: a 50 %-alpha grey is a
+  shade drawn over the fill, so tinting it turns it into a darker shade of the
+  colour.  Opaque art outside a fill clip is not painted by the effect at all
+  and keeps its own greys -- chip 74's boots and hip screws, chip 73's shoulder
+  knob, chip 44/72's spare pieces.  Chip 74 is the check: the shins follow the
+  colour and the boots stay grey, which is the "ankle to knee" the colour is
+  meant to cover.
+- **The arms need a hand cut.**  Chips 72 and 73 put the *whole* arm -- hand
+  included -- in the one `fill` clip, so Flash would colour the fist too, and
+  there is no separate hand piece in the art to leave alone.  Both take
+  `--hand` (`apply_color_layers.HANDS`: `72: "x>87"`, `73: "slope -0.409,32.4"`): every
+  tinted piece is written twice, once clipped to the rest of the drawing
+  (tinted) and once clipped to the hand side (untinted, its own white/grey
+  art), and the copy is emitted *in place* rather than as a layer at the end,
+  or its white fill lands on the black outlines.  Chip 74 needs no cut because
+  its boots really are opaque pieces outside the fill.  At the default white a
+  cut chip is unchanged to within the seam's antialiasing: 0.004 % of pixels
+  for 72, 0.009 % for 73.  The spec is either an axis-aligned side (`x>87`,
+  `y<40`, ...) or `slope m,b` for the line `y = m*x + b`, hand below it -- 73's
+  wrist runs diagonally and a horizontal cut there swallows half the forearm.
+  Unity honours both: the rect and polygon `clipPath`s were checked in play mode,
+  the fist staying white/grey while the forearm tints.
+- **The Sitekick body is a white/grey template tinted to Tuesday's palette.**
+  The reference is not `sitekick.swf`'s runtime paint but **Tuesday.swf's
+  sitekick, which is baked at its own colour**: at `#FFCC00` (100/80/0) its flat
+  colours are `#FFCC00` body, `#D59A00` and `#B27600` shades, `#FFEB99` gloss
+  and black lines.  `build_sitekick.py` rebuilds the head (sprite 29) as five
+  display-list layers that reproduce exactly those relationships off one
+  multiply:
+
+  | object | SWF | art | tint |
+  | --- | --- | --- | --- |
+  | `Body` | shape 23, the opaque path | white | `C` |
+  | `Body Gloss` | shape 23, its 60 %-white path | white, opaque | `Lift(C, 0.6)` |
+  | `Body Shadow2` | sprite 25 (`paint(this,"shadow2")`) | `#B29393` = (0.698, 0.578) | `C` |
+  | `Body Shadow` | sprite 27 (`paint(this,"shadow")`) | `#D5C1C1` = (0.835, 0.755) | `C` |
+  | `Body Lines` | shape 28 (black outlines) | black | none |
+
+  The shades are **baked ratios, not tone arithmetic**: Tuesday's deeper shade
+  is `0.698 x C` on red and `0.578 x C` on green, so the layer art carries those
+  greys and the runtime multiply does the rest.  At FFCC00 the body renders
+  `#FFCC00` / `#D59A00` / `#B27600` / `#FFEB99` with the reference's proportions
+  (shade2 15.4 % of the body's area against 16.1 %, shade 10.4 % against 13.4 %,
+  gloss 5.5 % against 5.3 %).  The blue channel takes the green ratio because
+  the baked reference is blue-less; at 3366FF the shades read `#2B4DC1` /
+  `#243B93` rather than turning black.
+  **The gloss cannot be a ratio, so it is a lift.**  It is the 60 %-white path
+  inside shape 23, i.e. white over the body colour, which composites to
+  `C + 0.6 (1 - C)` -- `#FFEB99` on `#FFCC00`, a pale blue on a blue Sitekick.
+  Written as an art ratio it is impossible: it would need 235/204 = 1.15 on
+  green and 153/0 on blue, and a multiplier above 1 is not a ratio.  So the
+  layer ships as **opaque white art tinted by `SitekickColor.Lift(C, 0.6)`**,
+  which is the same pixel the white alpha-0.6 overlay made (verified: the gloss
+  mask against Tuesday's render is IoU 0.995, unchanged by the switch) while
+  still following the picker like every other run instead of washing it white.
+  `EditorSitekick` therefore has two lists and no tone fields:
+  `coloredRenderers` = `Body`, `Body Shadow2`, `Body Shadow` (plain multiply)
+  and `shineRenderers` = `Body Gloss` (`Lift`), and `SetColor` is those two
+  multiplies plus the publish.  At white the gloss is white on white and so
+  invisible -- that is inherent to a highlight, not a missing layer: the
+  reference is paler than its body, and nothing can be paler than white.
+  The other pieces (antenna, knob, washer, eyes) are never painted, so they keep
+  their own colours.
+  `sitekick.swf`'s own tone path still has a Ruffle reference, and it is what
+  the movie chips will be wired against: `Tools/SwfToSvg/make_sitekick_probe.py
+  ffcc00` inlines the transform into the
+  48 painted clips' frame-1 scripts and writes `Temp/skpatch/sitekick_probe.swf`;
+  serve the project root and open
+  `Tools/SwfToSvg/sitekick_probe.html?swf=/Temp/skpatch/sitekick_probe.swf&w=1125&h=900`
+  (a headless Chromium screenshot is the reliable way to capture it), then diff its
+  histogram -- it reads `#FFCB00`, `#CB7900`, `#B26600`, i.e. the same values
+  within one 1/255 step.  `SitekickColorCheck` (batch) renders the Unity body at
+  FFCC00, white and 3366FF into `Logs/sitekick-colour-<hex>/art.png` and logs
+  the six most common colours, which is the other half of that diff.
+  Tinting is a multiply, so grey x colour is a darker
+  shade of the colour -- that is the site's own math for a shaded piece
+  (`paint(clip,"shadow")` is `rvalue - 20` on the multiplier) -- instead of an
+  untinted grey overlay washing the colour towards grey.  Chip 73 is the
+  example: its grey glove shadow is a 50 % overlay that used to read as a grey
+  wedge over the colour and now reads as darker blue.  At the default white the
+  multiply is the identity, and the check confirms it: the layered drawing with
+  no tint is **0 differing pixels** from the original on all eleven chips.
+  Checked with a tint by recolouring each tinted layer's white and grey fills
+  (white -> colour, grey -> colour x grey, `Logs/color-check/<chip>_colour.svg`).
+- `apply_color_layers.py` writes the layer sprites and their `.meta` (the
+  original's import settings, new guid) and rewrites the prefab: one renderer
+  per run at consecutive sorting orders, and the fill *and* shading runs in
+  `ChipEffect.coloredRenderers`.  Chips done this way: 29, 38, 42, 44, 45, 54,
+  58, 64, 72, 73, 74 (two runs each for 29/38/54/58/64, three for 42/44/72/73/74,
+  six for 45).  Chip 99 needed nothing: its `fill_1` was already its own
+  renderer (the white dome, order 1) after the four-wing split, so it is just
+  listed in `coloredRenderers`.
+- **Not coloured yet:** the movie chips 7, 8, 9, 10, 11, 12, 14, 16, 36, and
+  chip 57.  Those chips are not painted by `BasePaint` at all: their own clips
+  call the *site's* `paint(this,"shadow")` / `"shadow2"` / `"shadow3"` (or
+  plain `paint(this)`) on their first frame -- sitekick.swf has 48 of those, and
+  the chip SWFs use the same call -- so the colour reaches one *clip* at a time
+  and each clip carries a tone.  Wiring them means knowing which clip each
+  piece of each `Movie/frame_NNN.svg` came from, and `ChipMoviePlayer` swaps a
+  single sprite per frame, so a frame needs to be split into a tinted and an
+  untinted sprite (with the tint target swapped alongside).  The mapping is
+  available -- the frame SVGs keep the same draw-order group numbering
+  (`xN_spriteK`/`xN_shapeK`, nested) that `color_targets.py` uses, so the
+  display list of the frame gives character id -> group -- but the movie
+  prefabs, the player and the nine exports would all have to change together.
+  Until then those chips do not change colour, like any chip with no fill clip.
+  Chip 57's fills sit inside the part sprites and its animation is the
+  known-broken one.
+- **Unity side: one colour, one list per prefab.**  `SitekickColor`
+  (Assets/Scripts) holds `Current`, raises `Changed`, and owns the arithmetic
+  (`Tint(colour, tone, paintedParent)`: `C - tone/100` per channel, times `C`
+  again when the piece sits inside a painted clip -- the tone path the movie
+  chips need; the body and the static chips are a plain multiply).  A prefab
+  says *which* renderers are painted by listing them --
+  `ChipEffect.coloredRenderers` for a chip, `EditorSitekick.coloredRenderers`
+  for the body -- and
+  the scripts read the colour and follow it, so there is nothing per-renderer
+  to set up.  That is the whole authoring surface a human touches: select the
+  effect root, drag the tinted renderers into "Colored Renderers".
+  `ChipGallery.ApplyColor` is one `SitekickColor.Set`, and `effectColor` only
+  remembers the value across spawns, so an effect switched on later reads the
+  colour as it enables.  Tinting itself is a `_Color` property block multiply
+  (`Unlit/VectorGradient` multiplies both `_Color` and the renderer colour, and
+  an unset block reads back as (0,0,0,0), not white).
+  `ChipColorPanel` is the field under the grid: `RRGGBB` or `RGB`, with or
+  without a leading `#`; empty or unreadable means white, which is the default.
+  The scene comes from `ChipGalleryBuilder`; `Sitekick.ChipGalleryBuilder.AddColorRow`
+  adds the row to an existing scene without rebuilding the 1375-cell grid.
+  `ColorPicker` sits beside that row (`Sitekick.ChipGalleryBuilder.AddColorPicker`
+  adds it to the existing scene): an HSV square and a hue strip that publish on
+  every drag step, so the Sitekick and whatever effects are on show repaint
+  under the pointer.  It builds its own gradient and cursor-ring textures, keeps
+  its hue/value while dragging (a round trip through RGB would snap the hue at
+  the grey ends), follows `SitekickColor.Changed` otherwise, and writes the hex
+  field as it moves so the value can be copied.  `ColorPickerCheck` (batch,
+  `-executeMethod Sitekick.ColorPickerCheck.RunFromCommandLine`) drives the real
+  pointer handlers at screen points inside the two rects and reads back the
+  published colour, the body's `_Color` and the field text;
+  `Logs/color-picker/report.txt` reads `RESULT OK` with all three agreeing on
+  every drag.
+- `ChipColorCheck` (batch, `-executeMethod Sitekick.ChipColorCheck.RunFromCommandLine`,
+  optional `--chip`) is the end-to-end check for that list: it sets FFCC00
+  *before* spawning chip 45, so the effect has to come up in FFCC00 from its
+  `coloredRenderers` alone, then changes the colour to 3366FF and back to white.
+  `Logs/chip-colour/report.txt` reads `chip 45 colored renderers: 4`, the four
+  `chip_0045_effect_L0/L2/L4/L6` tints at `RGBA(1.0, 0.8, 0.0)`, `followed a
+  colour change: yes`, `reverted to white: yes`, `RESULT OK`.  `SitekickColorCheck`
+  renders the body at FFCC00/FFFFFF/3366FF; at FFCC00 the capture reads
+  `#FFCC00 108933`, `#B27600 16815`, `#D59A00 11341`, `#FFEB99 6086`,
+  `#000000 30185` -- Tuesday's palette exactly, which is the point of the
+  template (`Logs/sitekick-colour-ffcc00/`).
+- **The Sitekick body is the reference for the chip math.**  `sitekick.swf` root
+  frame 1 defines `_global.paint(clip, tone)` and 48 body clips call it on their
+  own first frame: plain `paint(this)` is the colour itself, `"shadow"`,
+  `"shadow2"` and `"shadow3"` are `rvalue/gvalue/bvalue` minus 20/30/40 on the
+  per-channel *multiplier*, so each shade is a darker version of the chosen
+  colour, never a grey.  The body art is a white and grey template under the
+  same `_Color` multiply -- white -> colour, a shade grey -> a darker shade of
+  the colour, black stays black -- so the Sitekick and the chips use one rule, a
+  multiply of the chosen colour.  The body's greys are Tuesday's baked ratios,
+  not `paint()`'s tones (see the template table above).  The washer, knob and
+  eyes are not in `coloredRenderers` because nothing paints them.
+- `ChipPlayCheck` takes `--color RRGGBB`: it types the value into the field,
+  presses Apply (`apply.onClick.Invoke()`, the same listener the button fires),
+  spawns the chip into that colour and writes the tint of every renderer to
+  `Logs/chip_NNNN_play_<hex>/report.txt`.  Chip 42 tints only
+  `chip_0042_effect_L1`; chip 99 only `chip_0099_body`; chip 45 only L0/L2/L4;
+  chip 20, which has no fill clip, reads `untouched`; every run also shows
+  `sitekick Body: <hex> (set)` and `RESULT: OK`.  `ChipGalleryBuilder.Check`
+  additionally reports the colour row: the field's character limit and font,
+  the Apply button, and the result of typing `ff3322` then an empty value (back
+  to `FFFFFF`).
+- **A tint is a multiply, Flash's paint is a replace.**  Every fill drawing is
+  `#ffffff` except one `#999999` path in chip 45 (`baseFill`, the shadow side of
+  its guitar), which therefore comes out 0.6x the chosen colour rather than
+  flat.  Nothing else in 1-100 is affected; fixing it means a shader that
+  replaces the colour instead of multiplying, not a change to the art (toning
+  that path to white would also change how chip 45 looks at the default white).
 
 ## Chip review queue
 

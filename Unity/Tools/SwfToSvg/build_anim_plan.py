@@ -156,6 +156,16 @@ def plan_for(cid, cdir):
     lines = ["CHIP %d %d %d" % (data["chip"], fps, len(tracks) or 1)]
     emitted = 0
     by_char = bp.art_by_char(sdir, data) if animatable else {}
+    # a part symbol with more than one frame animates by swapping its sprite,
+    # exactly like a backdrop clip does: emit the frame list for the clip builder
+    frames_by_char = {}
+    for p in (data.get("parts") or []):
+        names = p.get("art")
+        if not isinstance(names, list):
+            continue
+        usable = [n for n in names if bp.art_usable(os.path.join(sdir, n))]
+        if len(usable) > 1:
+            frames_by_char[p["character_id"]] = usable
     ref_index = best_frame_index(tracks) if animatable else 0
 
     for ref in (sorted(tracks[ref_index]["moving"], key=lambda e: e["depth"])
@@ -204,6 +214,10 @@ def plan_for(cid, cdir):
             lines.append("K %s %s %s %s %s %s %s" % (
                 bp.fnum(t), bp.fnum(px), bp.fnum(py), bp.fnum(rz),
                 bp.fnum(sx), bp.fnum(sy), bp.fnum(a)))
+        swap = frames_by_char.get(cid_part)
+        if swap:
+            lines.append("SWAP %s/sprite %s" % (
+                path, " ".join(asset_path(cdir, n) for n in swap)))
         emitted += 1
 
     aux = aux_lines(data, cdir, fps)

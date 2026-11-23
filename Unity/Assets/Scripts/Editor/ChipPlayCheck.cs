@@ -37,12 +37,22 @@ namespace Sitekick
 		static int samples;
 		static int last = -1;
 		static int wraps;
+		static string tintHex;
+		static GameObject spawned;
+
 		static float start;
 		static float window = Seconds;
 		static bool restarted;
 		static bool wasPaused;
 
-		static string OutDir { get { return "Logs/chip_" + Chip.ToString( "0000" ) + "_play"; } }
+		static string OutDir
+		{
+			get
+			{
+				return "Logs/chip_" + Chip.ToString( "0000" ) + "_play" +
+					( tintHex != null ? "_" + tintHex.ToLowerInvariant() : "" );
+			}
+		}
 
 		[InitializeOnLoadMethod]
 		static void Hook()
@@ -58,6 +68,12 @@ namespace Sitekick
 			var args = System.Environment.GetCommandLineArgs();
 			for ( var i = 0; i < args.Length - 1; i++ )
 			{
+				if ( args[ i ] == "--color" )
+				{
+					tintHex = args[ i + 1 ];
+					continue;
+				}
+
 				if ( args[ i ] != "--chip" )
 					continue;
 
@@ -119,8 +135,20 @@ namespace Sitekick
 				return;
 			}
 
+			// the colour goes on first so the chip is spawned into it, the way the
+			// real gallery paints whatever is already wearing the Sitekick colour
+			if ( tintHex != null )
+			{
+				var panel = Object.FindFirstObjectByType<ChipColorPanel>();
+				if ( panel != null )
+					panel.ApplyHex( tintHex );
+				else
+					gallery.ApplyColor( ChipColorPanel.Parse( tintHex ) );
+			}
+
 			button.onClick.Invoke();
 			var instance = GameObject.Find( "Chip_" + Chip.ToString( "0000" ) + "_Effect" );
+			spawned = instance;
 			player = instance != null ? instance.GetComponentInChildren<ChipMoviePlayer>( true ) : null;
 			isStatic = player == null;
 			if ( isStatic )
@@ -239,6 +267,17 @@ namespace Sitekick
 					+ "  sprites " + sprites.Count
 					+ "  bounds " + bounds.size.ToString( "0.00" ) + " @ " + bounds.center.ToString( "0.00" ) );
 				lines.Add( "drawn " + string.Join( ",", sprites.ToArray() ) );
+				// where each renderer actually sits, so a missing or covered piece of
+				// art is visible in the report instead of only in the capture
+				foreach ( var r in art )
+				{
+					if ( r == null ) continue;
+					var w = r.transform.TransformVector( r.sprite != null ? (Vector3) r.sprite.bounds.size : Vector3.zero );
+					lines.Add( $"  renderer {r.name}  sprite {( r.sprite != null ? r.sprite.name : "-" )}  order {r.sortingOrder}"
+						+ $"  z {r.transform.position.z:0.00}  centre {r.bounds.center.ToString( "0.000" )}"
+						+ $"  size {Mathf.Abs( w.x ):0.000}x{Mathf.Abs( w.y ):0.000}"
+						+ ( r.enabled ? "" : "  DISABLED" ) );
+				}
 			}
 
 			// 0,0 is not a loop: the movie plays once and rests on its last frame
@@ -298,6 +337,36 @@ namespace Sitekick
 			else if ( player.IsPaused )
 				{ lines.Add( "FAIL held at a stop() when the run ended" ); ok = false; }
 
+			if ( tintHex != null )
+			{
+				lines.Add( "colour: " + tintHex.ToUpperInvariant() );
+				foreach ( var renderer in spawned != null
+					? spawned.GetComponentsInChildren<SpriteRenderer>( true )
+					: new SpriteRenderer[ 0 ] )
+				{
+					var block = new MaterialPropertyBlock();
+					renderer.GetPropertyBlock( block );
+					var tint = block.GetColor( "_Color" );
+					// an unset block reads back as (0,0,0,0), not white
+					lines.Add( "  " + renderer.name + ": " + ( tint.a > 0f
+						? ColorUtility.ToHtmlStringRGB( tint ) + " (set)"
+						: "untouched" ) );
+				}
+
+				var gallery = Object.FindFirstObjectByType<ChipGallery>();
+				foreach ( var renderer in gallery != null && gallery.Sitekick != null
+					? gallery.Sitekick.GetComponentsInChildren<SpriteRenderer>( true )
+					: new SpriteRenderer[ 0 ] )
+				{
+					var block = new MaterialPropertyBlock();
+					renderer.GetPropertyBlock( block );
+					var tint = block.GetColor( "_Color" );
+					if ( tint.a > 0f && tint != Color.white )
+						lines.Add( "  sitekick " + renderer.name + ": " +
+							ColorUtility.ToHtmlStringRGB( tint ) + " (set)" );
+				}
+			}
+
 			lines.Add( "" );
 			lines.Add( ok ? "RESULT: OK" : "RESULT: FAIL" );
 
@@ -306,7 +375,15 @@ namespace Sitekick
 			if ( player != null && player.target != null )
 				Capture( "resting-close.png", player.target.bounds );
 			else if ( art != null && art.Length > 0 && art[ 0 ] != null )
+			{
 				Capture( "resting-close.png", art[ 0 ].bounds );
+				// a static chip can have several renderers (chip 99's four wings):
+				// frame the whole effect, or a piece at the edge is invisible in the check
+				var whole = art[ 0 ].bounds;
+				foreach ( var r in art )
+					if ( r != null ) whole.Encapsulate( r.bounds );
+				Capture( "resting-art.png", whole );
+			}
 			File.WriteAllText( OutDir + "/report.txt", string.Join( "\n", lines.ToArray() ) + "\n" );
 			Debug.Log( string.Join( "\n", lines.ToArray() ) );
 

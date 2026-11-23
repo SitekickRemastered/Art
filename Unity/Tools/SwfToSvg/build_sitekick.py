@@ -29,6 +29,7 @@ Usage:  python3 Tools/SwfToSvg/build_sitekick.py [--write]
 """
 
 import argparse
+import copy
 import hashlib
 import os
 import re
@@ -46,10 +47,67 @@ ART_DIR = os.path.join(ROOT, "Assets", "Sitekick", "Sprites")
 PREFAB = os.path.join(ROOT, "Assets", "Sitekick", "EditorSitekick.prefab")
 
 BODY_SPRITE = 214
+HEAD_CHAR = 29           # the body shell; its four runs carry the paint tones
 PPU = bp.PPU * 2          # rasterise at twice the chip resolution
 U = bp.U                  # Unity units per SWF pixel
 TWIP = 20.0               # twips per SWF pixel
 ZOOM = 2.0 * bp.SCALE     # rasterised pixels per SWF pixel
+
+W = "{http://www.w3.org/2000/svg}"
+FF = "{https://www.free-decompiler.com/flash}"
+XL = "{http://www.w3.org/1999/xlink}"
+
+# The body is a template: white and grey art that one colour multiplies, so a
+# user can repaint the whole Sitekick the way Tuesday.swf's sitekick already
+# looks at its own colour.
+#
+# Tuesday's sprite is that same drawing baked at #FFCC00, and its flat colours
+# are the reference this file reproduces -- measured off a render of the site:
+#
+#   body      #FFCC00       white art x C
+#   shade     #D59A00       art x C, art = (0.835, 0.755)
+#   shade2    #B27600       art x C, art = (0.698, 0.578)
+#   gloss     #FFEB99       white art x lift(C, 60 %) -- C + 0.6 (1 - C)
+#                           i.e. the colour pulled 60 % of the way to white
+#
+# The gloss cannot be a ratio of the colour the way the shades are:
+# #FFEB99 over #FFCC00 asks for 235/204 = 1.15 on green and 153/0 = infinite on
+# blue, and a multiplier above 1 is a lift, not a ratio.  Written as a white
+# overlay at 60 % it is exactly C + 0.6 (1 - C), so the layer ships as opaque
+# white art and SitekickColor.Lift(colour, 0.6) supplies that tint at runtime:
+# the same pixels as the overlay, but the gloss is a listed, tinted piece of the
+# template like every other run, and it follows the colour instead of sitting
+# on top of it as a white wash.
+#   lines     black art
+#
+# So the shading is *baked into the art* as those two grey ratios and every
+# piece is a plain multiply: no tone arithmetic is left at runtime, and the
+# prefab just lists what the colour reaches.  The blue channel takes the green
+# ratio, since the baked reference is fully blue-less and says nothing about it;
+# that keeps a blue Sitekick's shading blue instead of black.
+#
+# SitekickColor.Tint still knows Flash's tone arithmetic because the chip effects
+# and the movie clips need it, but this body no longer does.
+SHADE_LIGHT = "#d5c1c1"     # (0.835, 0.755) x 255 -- Tuesday's #D59A00 shade
+SHADE_DEEP = "#b29393"      # (0.698, 0.578) x 255 -- Tuesday's #B27600 shade
+
+HEAD_LAYERS = (
+    # art stem,      character, art colour,   object name,   paint
+    #
+    # paint: "tint" multiplies by the chosen colour, "shine" by that colour
+    # lifted 60 % toward white, "" not painted at all (the black outlines).
+    ("body", 23, "#ffffff", "Body", "tint"),
+    ("body_gloss", 23, "#ffffff", "Body Gloss", "shine"),
+    ("body_shadow2", 25, SHADE_DEEP, "Body Shadow2", "tint"),
+    ("body_shadow", 27, SHADE_LIGHT, "Body Shadow", "tint"),
+    ("body_lines", 28, None, "Body Lines", ""),
+)
+
+# character 23 draws the shell twice: an opaque base and a 60 % gloss on top.
+# (path alpha to keep, alpha to bake): the gloss keeps the 60 % path but is
+# baked opaque, because its tint now carries that 60 % -- see SitekickColor.Lift.
+HEAD_ALPHA = {"body": (1.0, 1.0), "body_gloss": (0.6, 1.0)}
+GLOSS_LIFT = 0.6
 
 EDITOR_SITEKICK_SCRIPT = "cb707e0445e2c3f41820bf43d1665600"
 EFFECT_LAYER_SCRIPT = "3caf9a3b18604de4aaaf61312ce3faa6"
@@ -256,10 +314,14 @@ def art(stem, char):
     until it animates) would still add an invisible sprite, and a transparent
     renderer's bounds would stretch the Sitekick's bounds, so it is dropped.
     """
+    return art_file(stem, art_source(char))
+
+
+def art_file(stem, svg):
+    """Rasterise an SVG to Assets/Sitekick/Sprites/sitekick_<stem>.png."""
     png = os.path.join(ART_DIR, "sitekick_%s.png" % stem)
     os.makedirs(ART_DIR, exist_ok=True)
-    subprocess.run(["rsvg-convert", "-z", str(ZOOM), "-o", png, art_source(char)],
-                   check=True)
+    subprocess.run(["rsvg-convert", "-z", str(ZOOM), "-o", png, svg], check=True)
 
     coverage = float(subprocess.check_output(
         ["magick", "identify", "-format", "%[fx:mean.a]", png]).decode())
@@ -274,6 +336,71 @@ def art(stem, char):
         f.write(text)
 
     return (png, meta_guid(png)), coverage
+
+
+def set_art(defs, href, colour, opacity=None, alpha=None):
+    """Give a clip's art one flat colour, and keep only one alpha class.
+
+    FFDec bakes the colour transform a parent placed the clip with into the
+    fills of its shapes, so the head's shade clips come out #7f7f7f and
+    #b2b2b2.  Both are the same grey ratios the reference bakes, which is why
+    they are replaced rather than only whitened: the layer has to multiply to
+    Tuesday's #D59A00 / #B27600 whatever the user's colour is.
+
+    `opacity` keeps just the paths drawn at that alpha (the shell is the solid
+    part, the gloss the 60 % one) and drops the rest; `alpha` re-bakes the
+    kept paths at that alpha, which is how the gloss ships opaque with the
+    60 % living in its tint instead of in the texture.
+    """
+    for g in defs.iter(W + "g"):
+        if g.get("id") != href.lstrip("#"):
+            continue
+
+        for parent in [g] + [e for e in g.iter() if e is not g]:
+            for path in list(parent.findall(W + "path")):
+                path_alpha = float(path.get("fill-opacity") or 1)
+                if opacity is not None and abs(path_alpha - opacity) > 1e-3:
+                    parent.remove(path)
+                    continue
+                if alpha is not None:
+                    path.set("fill-opacity", "%g" % alpha)
+                if colour:
+                    fill = (path.get("fill") or "").lower()
+                    if re.fullmatch(r"#[0-9a-f]{6}", fill):
+                        path.set("fill", colour)
+
+        for use in g.iter(W + "use"):
+            set_art(defs, use.get(XL + "href"), colour, opacity, alpha)
+
+
+def head_layers(temp_dir):
+    """Split the head into one SVG per display-list run, keeping the head's
+    viewport, so every layer rasterises to the same rect and pivot."""
+    source = art_source(HEAD_CHAR)
+    root = ET.parse(source).getroot()
+    os.makedirs(temp_dir, exist_ok=True)
+
+    out = []
+    for stem, char, colour, name, paint in HEAD_LAYERS:
+        doc = copy.deepcopy(root)
+        frame = doc.find(W + "g")
+        keep = None
+        for use in [u for u in frame.iter(W + "use")]:
+            if int(use.get(FF + "characterId")) == char and keep is None:
+                keep = use
+            else:
+                frame.remove(use)
+        if keep is None:
+            raise SystemExit("sprite %d does not place character %d" % (HEAD_CHAR, char))
+
+        keep_alpha, bake_alpha = HEAD_ALPHA.get(stem, (None, None))
+        set_art(doc.find(W + "defs"), keep.get(XL + "href"), colour,
+                keep_alpha, bake_alpha)
+
+        path = os.path.join(temp_dir, "%s.svg" % stem)
+        ET.ElementTree(doc).write(path, xml_declaration=True, encoding="UTF-8")
+        out.append((stem, char, colour, name, paint, path))
+    return out
 
 
 def sorting_group(sid, go, order):
@@ -309,8 +436,9 @@ MonoBehaviour:
 """ % (mid, go, EFFECT_LAYER_SCRIPT, layer)
 
 
-def editor_sitekick(mid, go, body, eyes, antenna, colored):
-    colors = "\n".join("  - {fileID: %d}" % c for c in colored)
+def editor_sitekick(mid, go, body, eyes, antenna, colored, shine):
+    colors = "\n".join("  - {fileID: %d}" % c for c in colored) or "  []"
+    lifts = "\n".join("  - {fileID: %d}" % c for c in shine) or "  []"
     return """--- !u!114 &%d
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +456,9 @@ MonoBehaviour:
   antennaObj: {fileID: %d}
   coloredRenderers:
 %s
-""" % (mid, go, EDITOR_SITEKICK_SCRIPT, body, eyes, antenna, colors)
+  shineRenderers:
+%s
+""" % (mid, go, EDITOR_SITEKICK_SCRIPT, body, eyes, antenna, colors, lifts)
 
 
 class Node:
@@ -339,6 +469,12 @@ class Node:
         self.sr = None
         self.sort = None
         self.layer = None
+        self.piece = None
+        self.art = None
+        self.guid = None
+        self.order = 0
+        self.parent = None
+        self.layers = []
         self.children = []
 
 
@@ -382,7 +518,7 @@ def prefab_yaml(frame):
 
     pieces = []
     skipped = []
-    for swf_name in ("pulse", "antenna", "knob", "washer", "head", "eye1", "eye2"):
+    for swf_name in ("pulse", "antenna", "knob", "washer", "eye1", "eye2"):
         entry = by_name[swf_name]
         name, stem, char, order = PIECES[swf_name]
         (n, coverage) = (piece_node(name, entry), None)
@@ -398,10 +534,37 @@ def prefab_yaml(frame):
         n.parent.children.append(n)
         pieces.append(n)
 
+    # the body shell is one object with one renderer per painted run, so each
+    # run can carry its own tint (see HEAD_LAYERS)
+    head = by_name["head"]
+    body = piece_node("Body", head)
+    body.order = BODY_ORDER
+    body.parent = root
+    body.layers = []
+    tinted = []
+    shine = []
+    for index, (stem, char, colour, name, paint, svg) in enumerate(head_layers(
+            os.path.join(ROOT, "Temp", "sitetones"))):
+        a, coverage = art_file(stem, svg)
+        if a is None:
+            skipped.append((name, coverage))
+            continue
+        if index == 0:
+            body.art, body.guid = a
+            continue
+        n = piece_node(name, head)
+        n.art, n.guid = a
+        n.order = BODY_ORDER + index
+        n.parent = body
+        body.children.append(n)
+        body.layers.append(n)
+        if paint == "tint":
+            tinted.append(n.sr)
+        elif paint == "shine":
+            shine.append(n.sr)
+
     for name, coverage in skipped:
         print("  %s draws nothing on frame 1 (alpha %.4f), left out" % (name, coverage))
-
-    body = next(p for p in pieces if p.name == "Body")
 
     root.children = [layers["Background"], layers["Behind"], antenna, body, eyes,
                      layers["InFront"], layers["Foreground"]]
@@ -436,8 +599,26 @@ def prefab_yaml(frame):
             rid=n.sr, go=n.go, enabled=1, order=n.order,
             sprite_id=21300000, sprite_guid=n.guid, alpha="1").rstrip("\n"))
 
+    # the body shell and its extra painted runs, which share the head placement
+    pos = (head["tx"] / TWIP * U, -head["ty"] / TWIP * U)
+    out.append(bp.go_block(body.go, body.name, [body.tr, body.sr]).rstrip("\n"))
+    out.append(bp.transform_block(body.tr, body.go, pos, (0, 0, 0, 1),
+                                  (head["sx"], head["sy"]),
+                                  [n.tr for n in body.children], root.tr).rstrip("\n"))
+    out.append(bp.SPRITE_RENDERER.format(
+        rid=body.sr, go=body.go, enabled=1, order=body.order,
+        sprite_id=21300000, sprite_guid=body.guid, alpha="1").rstrip("\n"))
+
+    for n in body.layers:
+        out.append(bp.go_block(n.go, n.name, [n.tr, n.sr]).rstrip("\n"))
+        out.append(bp.transform_block(n.tr, n.go, (0, 0), (0, 0, 0, 1), (1, 1),
+                                      [], body.tr).rstrip("\n"))
+        out.append(bp.SPRITE_RENDERER.format(
+            rid=n.sr, go=n.go, enabled=1, order=n.order,
+            sprite_id=21300000, sprite_guid=n.guid, alpha="1").rstrip("\n"))
+
     out.append(editor_sitekick(root.mono, root.go, body.go, eyes.go, antenna.go,
-                               [body.sr]).rstrip("\n"))
+                               [body.sr] + tinted, shine).rstrip("\n"))
     return "\n".join(out) + "\n"
 
 

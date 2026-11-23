@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sitekick probe</title>
+<style>
+  html, body { margin: 0; background: #fff; }
+  #stage { display: inline-block; }
+</style>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0/ruffle.js"></script>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+// Renders one SWF at its native 375x300 stage and lets the caller read the
+// pixels back, so a patched copy of sitekick.swf can act as the Flash
+// reference for a colour: sitekick_probe.html?swf=/Temp/skpatch/sitekick_probe.swf
+//
+//   await window.ready            // true once the player is created
+//   await window.grab()           // data: URL of the rendered canvas
+const q = new URLSearchParams(location.search);
+const swf = q.get('swf') || '/Temp/skpatch/sitekick_probe.swf';
+const W = parseInt(q.get('w') || '375', 10);
+const H = parseInt(q.get('h') || '300', 10);
+
+window.ready = new Promise((resolve) => {
+  const ruffle = window.RufflePlayer.newest();
+  const player = ruffle.createPlayer();
+  player.style.width = W + 'px';
+  player.style.height = H + 'px';
+  document.getElementById('stage').appendChild(player);
+  player.addEventListener('loadedmetadata', () => resolve(true));
+  player.load({ url: swf, autoplay: 'on', unmuteOverlay: 'hidden' });
+  window.player = player;
+});
+
+window.grab = async () => {
+  await window.ready;
+  // let a few frames play so every clip has run its frame-1 script
+  await new Promise((r) => setTimeout(r, 1200));
+  const root = window.player.shadowRoot || window.player;
+  const canvas = root.querySelector('canvas');
+  return canvas.toDataURL('image/png');
+};
+
+window.stageInfo = async () => {
+  await window.ready;
+  const root = window.player.shadowRoot || window.player;
+  const canvas = root.querySelector('canvas');
+  return { width: canvas.width, height: canvas.height };
+};
+</script>
+</body>
+</html>

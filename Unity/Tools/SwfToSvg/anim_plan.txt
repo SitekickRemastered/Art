@@ -9753,12 +9753,16 @@ END
 CHIP 99 31 1
 PART chip_0099_part_4
 K 0 -0.657565 0.67665 0 1 1 1
+SWAP chip_0099_part_4/sprite Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f001.svg Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f002.svg
 PART chip_0099_part_10
 K 0 -0.70094 0.39905 15.0003917 0.597158747 0.597158747 1
+SWAP chip_0099_part_10/sprite Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f001.svg Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f002.svg
 PART chip_0099_part_16
 K 0 0.13186 0.6757825 -104.999271 0.945338517 -0.405683694 1
+SWAP chip_0099_part_16/sprite Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f001.svg Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f002.svg
 PART chip_0099_part_22
 K 0 0.47886 0.7712075 -134.998389 1.25766719 -0.539720464 1
+SWAP chip_0099_part_22/sprite Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f001.svg Assets/Chips/0001-0100/Chip_0099/Sprites/chip_0099_part_948_f002.svg
 END
 CHIP 104 31 12
 PART chip_0104_part_1
