@@ -17,6 +17,16 @@ The builder places the stage centre on the Sitekick's eye centre.
 Pause points are read from the decompiled root timeline: a frame whose DoAction
 calls stop() halts the movie in Flash, and the player stops there too.
 
+The export ends at the root's idle loop rather than at the end of the timeline:
+every chip but 9, 11, 12, 13 and 16 jumps back to a labelled block from its
+display section, and the frames after that jump are the retract, which nothing
+in the game reaches (see `hover_loop.py`).  Chip 12 resets with a literal jump;
+chip 13's root stops on `display` while its fish keeps swimming, so
+`patch_chip13.py` holds the root for one fish cycle and those frames loop.  The
+loop range goes into `movie.json` for the player to repeat.  9 and 11 play their
+sequence once and hold the last frame; chip 16 does the same, because the
+snowman's hat only arrives on the last frames (see `patch_chip16.py`).
+
 Usage:  python3 Tools/SwfToSvg/export_chip_movies.py [--ids 7-16]
 """
 
@@ -36,7 +46,9 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-TMP = os.path.join(os.environ["HOME"], "sitekick-movies")
+# scratch stays inside the project (Temp/ is gitignored), so a run leaves
+# nothing behind outside it
+TMP = os.path.join(ROOT, "Temp", "swftosvg")
 FFDEC = ["flatpak", "run", "--command=ffdec.sh", "com.jpexs.decompiler.flash"]
 
 sys.path.insert(0, HERE)
@@ -46,7 +58,13 @@ import patch_chip7 as patch7
 import patch_chip8_tools as patch8
 import patch_chip9 as patch9
 import patch_chip10 as patch10
+import patch_chip11 as patch11
+import patch_chip13 as patch13
+import patch_chip14 as patch14
+import patch_chip15 as patch15
+import patch_chip16 as patch16
 import patch_stopped_clips as patch_stop
+import hover_loop
 
 TEMPLATE_SVG_META = os.path.join(
     ROOT, "Assets/Chips/0101-0200/Chip_0177/Sprites/chip_0177_back.svg.meta")
@@ -59,7 +77,15 @@ STAGE_UNITS_PER_PX = 0.0029333
 # and `skMain.effectHolder.removeMovieClip()`, so 62-71 are a collapsed dot the
 # player removes before it can draw.  Only the timeline play (which no script
 # stops) keeps them, so the export ends where the effect does.
-LAST_VISIBLE_FRAME = {8: 61}
+LAST_VISIBLE_FRAME = {8: 61,
+                      # the hole has closed by 132 and 132..152 are one pose
+                      9: 132,
+                      11: 35}   # the monster is fully open on 34-35; 36+ is its retract
+
+# Chips with no movie in `SWF/`: those are the site's effect movies, and these
+# only exist in the extracted chip library.
+LIBRARY_SWF = {36: os.path.join("..", "Source", "Chip Libraries", "Old Chips",
+                                "Effects", "chip_0036.swf")}
 
 SOUND_META = """fileFormatVersion: 2
 guid: {guid}
@@ -248,6 +274,8 @@ def main():
 
     for chip in range(lo, hi + 1):
         swf = os.path.join(ROOT, "SWF", "chip_%04d.swf" % chip)
+        if not os.path.exists(swf) and chip in LIBRARY_SWF:
+            swf = os.path.join(ROOT, LIBRARY_SWF[chip])
         if not os.path.exists(swf):
             print(chip, "MISSING", swf)
             continue
@@ -281,6 +309,30 @@ def main():
             # chip 10's bubble is parked on the effect's first frame and squints
             # at root 9; that pass runs the freeze as well
             swf = patch10.patched(swf, work)
+        elif chip == 11:
+            # chip 11's monster is parked on its first frame until root 14 sends
+            # it through the transformation, then holds its own stop; that pass
+            # runs the freeze as well
+            swf = patch11.patched(swf, work)
+        elif chip == 13:
+            # chip 13's root stops on 11 while the fish keeps swimming; that pass
+            # holds the root for one fish cycle so those frames can loop
+            swf = patch13.patched(swf, work, source_xml)
+        elif chip == 14:
+            # the site starts at display (33), parks the spider at 21 and jumps
+            # the root to hover (3); that pass bakes the parked pose
+            swf = patch14.patched(swf, work, source_xml)
+        elif chip == 15:
+            # the site starts at display (3), parks soundwaveSK on transformed
+            # (17) and jumps the root to hover (4); that pass bakes the pose
+            swf = patch15.patched(swf, work, source_xml)
+        elif chip == 16:
+            # the site's display call has no root label here, so Flash leaves the
+            # root on 1 and `body` parks on display (39); FFDec walking `body`
+            # from 1 in lockstep reaches that same pose on the last root frame,
+            # so nothing is baked -- the pass only freezes the stopped clips and
+            # the export plays the whole 1..39 timeline
+            swf = patch16.patched(swf, work)
         else:
             # clips that stop themselves and no script restarts are frozen at
             # their parked frame instead of playing out and looping
@@ -293,7 +345,73 @@ def main():
         run(*FFDEC, "-swf2xml", swf, os.path.join(work, "xml", "lib.xml"))
 
         sounds, _, frames = timeline(source_xml)
+        # The idle section is a label the root jumps back to; everything after
+        # that jump is the retract, which only an outside caller can reach (see
+        # hover_loop.py).  The export ends at the loop and the player repeats it.
+        # 14 and 15 used to drop their cues because the parked pose skipped them;
+        # with the park off the clips play, so both cues fire again
+        drop_sounds = False
+        if chip == 13:
+            # the stop is authored as the held root, not a backward jump
+            loop = patch13.loop()
+            cue_limit = patch13.HOLD_AT
+        elif chip == 14:
+            # the display path parks the spider before its two internal cues
+            loop = patch14.loop()
+            cue_limit = None
+        elif chip == 15:
+            # both cues sit behind the park (sprite 33 frame 2, root 32)
+            loop = patch15.loop()
+            cue_limit = None
+        elif chip == 16:
+            # no cut here, and no loop: the hat growing in IS the chip's
+            # animation and the finished snowman is the last frame.  The root's
+            # `gotoAndStop("hover")` on 21 marks a hover block that starts
+            # before the hat is placed (body places it on 36), so looping it
+            # replays a hatless snowman for ever and the export never reaches
+            # the pose the chip is for.  Play 1..39 once and hold the last
+            # frame, which the player does when `loop` is absent.
+            loop = None
+            cue_limit = None
+        elif chip in (37, 53):
+            # both are pulled out of the effect library by extract_effect.py: an
+            # AS3 class whose animation is the symbol's own timeline, with the
+            # behaviour (click, hover) in the class, which a movie cannot run.
+            # Chip 53's class loops `start`..`endStart` while it is worn, so that
+            # block is its movie.  Chip 37 has no idle motion at all -- the jar
+            # fills (2..31) and empties (33..75) only when clicked -- so it plays
+            # the whole cycle and loops where root 75 returns to `start`.
+            loop = (1, 54) if chip == 53 else (1, 75)
+            cue_limit = None
+        elif chip == 36:
+            # the movie waits on frame 1 for a click on its mask, and its swords
+            # then start `flipRight`/`sliceLeft`, each jumping back to `drawn`
+            # (14), with the mask sheathing them back to 1.  Nothing in the
+            # gallery can hit those buttons, and every clip is a single frame,
+            # so the only motion in the whole movie is that root sequence: the
+            # export plays all of it -- draw, both attacks, sheath -- and loops
+            # on the sheathed pose at 1, where root 52 jumps
+            loop = (1, 51)
+            cue_limit = None
+        elif chip == 9:
+            # the punch sequence is played once, all the way through: the hole
+            # opens, the hand and the antenna come out, both go away and the
+            # hole closes; the player holds the last frame instead of looping
+            loop = None
+            cue_limit = None
+        elif chip == 11:
+            # plays once and ends with the monster fully open, which it holds
+            loop = None
+            cue_limit = None
+        else:
+            loop = hover_loop.find(root_tags(source_xml), os.path.join(work, "scr", "scripts"))
+            cue_limit = None
         pauses = pause_frames(os.path.join(work, "scr", "scripts"))
+        if chip == 36:
+            # its stop()s wait for the player to click the mask or a sword; the
+            # export plays the whole cycle by itself, so a pause would hold it
+            # on the drawn pose for good
+            pauses = []
 
         chip_dir = glob.glob(os.path.join(ROOT, "Assets/Chips", "*", "Chip_%04d" % chip))
         if not chip_dir:
@@ -321,6 +439,17 @@ def main():
         keep = LAST_VISIBLE_FRAME.get(chip)
         if keep:
             frame_files = frame_files[:keep]
+        if loop:
+            frame_files = frame_files[:loop[1]]
+        # cues and pauses past the cut belong to the retract the movie never plays
+        # (chip 13's loop frames hold the root, so nothing new fires in them)
+        last = len(frame_files)
+        keep = min(last, cue_limit) if cue_limit else last
+        sounds = [s for s in sounds if s["frame"] <= keep]
+        if drop_sounds:
+            # both cues live in the spider's skipped intro (frames 2 and 14)
+            sounds = []
+        pauses = [p for p in pauses if p <= keep]
         names = []
         stage = None
         for n, src in enumerate(frame_files, 1):
@@ -402,7 +531,7 @@ def main():
 
         manifest = {
             "chip": chip,
-            "source": "SWF/chip_%04d.swf" % chip,
+            "source": os.path.relpath(swf, ROOT).replace(os.sep, "/"),
             "fps": 12.0,
             "frames": names,
             "stage_px": stage,
@@ -414,6 +543,9 @@ def main():
             "sounds": cues,
             "pauses": pauses,
         }
+        if loop:
+            # 1-based, inclusive: the player replays these instead of finishing
+            manifest["loop"] = list(loop)
         with open(os.path.join(out, "movie.json"), "w", encoding="utf-8") as f:
             json.dump(manifest, f, indent=1)
             f.write("\n")
@@ -421,8 +553,9 @@ def main():
             with open(manifest_meta_path, "w", encoding="utf-8") as f:
                 f.write(manifest_meta)
 
-        print("%d: %d frames  %d sounds (%d cues)  pauses %s"
-              % (chip, len(names), len(clips), len(cues), pauses))
+        print("%d: %d frames  %d sounds (%d cues)  pauses %s  loop %s"
+              % (chip, len(names), len(clips), len(cues), pauses,
+                 ("%d..%d" % tuple(loop)) if loop else "-"))
 
 
 if __name__ == "__main__":

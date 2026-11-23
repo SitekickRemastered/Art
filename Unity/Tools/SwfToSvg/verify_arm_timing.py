@@ -124,11 +124,13 @@ def same_frame(want, got):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default=os.path.expanduser(
-        "~/sitekick-movies/0008/xml/lib.src.xml"),
+    ap.add_argument("--src", default=os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..", "..",
+        "Temp", "swftosvg", "0008", "xml", "lib.src.xml"),
         help="the pristine decompile the retainers are read from")
-    ap.add_argument("--patched", default=os.path.expanduser(
-        "~/sitekick-movies/0008/chip_0008_tools.xml"),
+    ap.add_argument("--patched", default=os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..", "..",
+        "Temp", "swftosvg", "0008", "chip_0008_tools.xml"),
         help="the patched XML the export was made from")
     args = ap.parse_args()
 

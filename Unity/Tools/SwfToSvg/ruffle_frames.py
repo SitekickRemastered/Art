@@ -18,8 +18,8 @@ frame scripts are dropped: their art effects are authored into the SWF by
 or hiding the movie.
 
     # build, capture and diff in one go
-    ruffle_frames.py ~/sitekick-movies/0008/chip_0008_tools.xml \
-        --out ../.tmp-review/c0008 --frames 45-61 --capture --cols 5
+    ruffle_frames.py Temp/swftosvg/0008/chip_0008_tools.xml \
+        --out Temp/swftosvg/review/c0008 --frames 45-61 --capture --cols 5
 
     # or do the two halves by hand
     ruffle_frames.py <patched.xml> --out /tmp/chip8-frames --frames 1-71

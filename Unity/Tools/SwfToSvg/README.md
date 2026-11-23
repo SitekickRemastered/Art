@@ -58,9 +58,14 @@ The movies are judged in Ruffle, not in the decompiler's frames (see `AGENTS.md`
 pixels.  `--capture` runs the whole thing headlessly and prints one line per frame:
 
 ```bash
-python3 Tools/SwfToSvg/ruffle_frames.py ~/sitekick-movies/0008/chip_0008_tools.xml \
-    --out ../.tmp-review/c0008 --frames 45-61 --capture --cols 5
+python3 Tools/SwfToSvg/ruffle_frames.py Temp/swftosvg/0008/chip_0008_tools.xml \
+    --out Temp/swftosvg/review/c0008 --frames 45-61 --capture --cols 5
 ```
+
+Scratch lives under `Temp/swftosvg/` inside the project (gitignored): the export
+tools' work dirs are `<chip>/`, `extract_effect.py` caches its library XML in
+`lib/`, and `ruffle_review.py` writes its frozen SWFs and grid pages to
+`review/c<chip>/`.  Nothing is written outside the project.
 
 `--out` gets `fNNN.swf` per frame plus `shots/frames-NNN-NNN.png` per page
 (`--shot-dir` moves those).  The browser is Brave (flatpak) when it is installed,

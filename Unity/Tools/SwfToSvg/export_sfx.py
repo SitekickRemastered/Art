@@ -28,7 +28,9 @@ import uuid
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 FFDEC = ["flatpak", "run", "--command=ffdec.sh", "com.jpexs.decompiler.flash"]
-TMP = os.path.join(os.environ["HOME"], "sitekick-sfx")
+# scratch inside the project: Temp/ is gitignored, so a run leaves nothing
+# behind outside the Unity folder
+TMP = os.path.join(ROOT, "Temp", "swftosvg", "sfx")
 DEST = os.path.join(ROOT, "Assets/Audio/Sfx")
 MAP_MD = os.path.join(ROOT, "Logs/audio-map.md")
 MAP_JSON = os.path.join(ROOT, "Logs/audio-map.json")

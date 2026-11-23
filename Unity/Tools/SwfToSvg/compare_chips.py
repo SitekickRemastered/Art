@@ -19,7 +19,7 @@ from PIL import Image
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 UNITY = os.path.join(ROOT, "Logs/pilot/unity")
-TRUTH = os.path.join(os.environ["HOME"], "sitekick-movies")
+TRUTH = os.path.join(ROOT, "Temp", "swftosvg")      # the export's own work dirs
 OUT = os.path.join(ROOT, "Logs/chip-movie-compare.md")
 
 # the movie rectangle in the gallery camera, from ChipMovieBuilder's registration

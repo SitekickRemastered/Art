@@ -11,15 +11,23 @@ two-frame clip like chip 8's `bottom` alternates every frame.
 This pass finds the stopped clips and freezes the ones no script can reach:
 
   * the clip is defined, has at least two frames and stops on frame k,
-  * frames after k draw something (otherwise there is nothing wrong to fix),
+  * frames after k draw something, *or* k is the last frame -- a stop before the
+    end leaves art FFDec plays on into, and a stop on the end leaves none but
+    still loops back to frame 1, because dropping the action is exactly what the
+    freeze does,
   * the clip is actually placed on the timeline, and
   * no script mentions any instance name that clip is placed under.  A name that
     appears anywhere in the ActionScript is left alone: that clip is script-
     driven and needs its jumps authored by hand (as chip 8's bottom, antenna and
     tool are in patch_chip8_tools.py), not frozen.
 
-A frozen clip keeps frames 1..k (their actions dropped) and is repointed at
-every placement, so it renders exactly its parked state for the whole movie.
+A frozen clip is repointed at every placement and renders its parked state for
+the whole movie.  A stop before the end keeps frames 1..k (their actions
+dropped); a stop on the last frame has nothing to cut to -- k frames with the
+action gone would just loop 1..k again -- so its frames are merged into the one
+pose at k, which is what Ruffle holds.  That is chip 11's fringe (sprite 36),
+five frames of moves ending on the spiky outline, which used to cycle and read
+as a smooth cap.
 
 Usage:  patch_stopped_clips.py <in.swf> <out.swf>
 """
@@ -64,6 +72,21 @@ def stop_frame(frames):
                 if b"\x07" in bytes.fromhex(tag.get("actionBytes") or ""):
                     return i + 1
     return None
+
+
+def held_frames(frames, k):
+    """The single frame a frozen clip shows.
+
+    Cutting at a stop before the end keeps frames 1..k, which for the parks
+    these chips use is one frame anyway.  A stop *on* the last frame cannot be
+    cut that way -- writing all k frames without their action loops them again
+    -- so they are merged: a sprite timeline is incremental, so replaying every
+    frame's tags in order without the ShowFrames between them is exactly the
+    display list of frame k.
+    """
+    if k < len(frames):
+        return frames[:k]
+    return [[tag for frame in frames for tag in frame if is_art(tag)]]
 
 
 def jumps_later(frames, k):
@@ -155,7 +178,8 @@ def freeze(tags, text, stems=()):
         k = stop_frame(frames)
         if k is None or len(frames) < 2:
             continue
-        if not any(any(is_art(t) for t in f) for f in frames[k:]):
+        # a stop before the end is only visible if something is drawn after it
+        if k != len(frames) and not any(any(is_art(t) for t in f) for f in frames[k:]):
             continue
         if sid not in placed:
             continue
@@ -170,7 +194,7 @@ def freeze(tags, text, stems=()):
             skipped.append((sid, "script: " + ", ".join(touched)))
             continue
         repoint(tags, sid, next_id)
-        define(tags, next_id, frames[:k])
+        define(tags, next_id, held_frames(frames, k))
         frozen.append((sid, next_id, len(frames), k))
         next_id += 1
     return frozen, skipped

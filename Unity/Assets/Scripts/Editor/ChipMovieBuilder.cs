@@ -57,6 +57,7 @@ namespace Sitekick
 			public float units_per_px;
 			public SoundCueJson[] sounds;
 			public int[] pauses;
+			public int[] loop;
 		}
 
 		/// <summary>
@@ -158,9 +159,12 @@ namespace Sitekick
 				}
 
 				var pauses = ( manifest.pauses ?? Array.Empty<int>() ).ToList();
-				var path = Build( chip, dir, sprites, scale, cues, pauses, manifest.fps, vectorMaterial );
+				var loop = manifest.loop ?? Array.Empty<int>();
+				var path = Build( chip, dir, sprites, scale, cues, pauses, loop, manifest.fps, vectorMaterial );
 				report.AppendLine( chip + ": " + sprites.Length + " frames, " + cues.Count + " sounds, pauses ["
-					+ string.Join( ",", pauses ) + "], scale " + scale.ToString( "0.0000" ) + " -> " + path );
+					+ string.Join( ",", pauses ) + "], loop ["
+					+ ( loop.Length > 1 ? loop[ 0 ] + ".." + loop[ 1 ] : "once" )
+					+ "], scale " + scale.ToString( "0.0000" ) + " -> " + path );
 			}
 
 			AssetDatabase.SaveAssets();
@@ -189,7 +193,7 @@ namespace Sitekick
 		}
 
 		static string Build( int chip, string dir, Sprite[] sprites, float scale,
-			List<ChipMoviePlayer.Cue> cues, List<int> pauses, float fps, Material material )
+			List<ChipMoviePlayer.Cue> cues, List<int> pauses, int[] loop, float fps, Material material )
 		{
 			var name = "Chip_" + chip.ToString( "0000" ) + "_Effect";
 			var path = dir + "/" + name + ".prefab";
@@ -221,6 +225,8 @@ namespace Sitekick
 				player.fps = fps > 0f ? fps : 12f;
 				player.sounds = cues;
 				player.pauses = pauses;
+				player.loopFrom = loop.Length > 1 ? loop[ 0 ] : 0;
+				player.loopTo = loop.Length > 1 ? loop[ 1 ] : 0;
 				player.pauseSeconds = 0.75f; // holds long enough to read, then carries on
 				player.audioSource = audio;
 

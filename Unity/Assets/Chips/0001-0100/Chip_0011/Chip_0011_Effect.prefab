@@ -208,24 +208,6 @@ MonoBehaviour:
   - {fileID: 3286163911610860551, guid: 016a087a3f264119b7296add8982ad1e, type: 3}
   - {fileID: 3286163911610860551, guid: cd60f45926304f8c95642809520a95a7, type: 3}
   - {fileID: 3286163911610860551, guid: 516cad86839a4a2794562344cc919486, type: 3}
-  - {fileID: 3286163911610860551, guid: b5d3cdd89288432687965e3a7834b0cb, type: 3}
-  - {fileID: 3286163911610860551, guid: 8e73732a67494a0fb59d649f3c05fa77, type: 3}
-  - {fileID: 3286163911610860551, guid: b42a52b6ba5c4c3885494736dbccb47c, type: 3}
-  - {fileID: 3286163911610860551, guid: d1c40e03af784ce2adf87d6f0a81aac4, type: 3}
-  - {fileID: 3286163911610860551, guid: 4c0cdebed3c74a978aba353175db72cc, type: 3}
-  - {fileID: 3286163911610860551, guid: 652bd6a3a2ae4c2ba250b96563572fd9, type: 3}
-  - {fileID: 3286163911610860551, guid: 691ac1789de5418193addfb48503793b, type: 3}
-  - {fileID: 3286163911610860551, guid: 38e3dbf5eee04c929223d733d797a0c1, type: 3}
-  - {fileID: 3286163911610860551, guid: 1126f8a3e51b4dce9f97c835cb21773f, type: 3}
-  - {fileID: 3286163911610860551, guid: dd386174bd4343818d36d864d980ce6d, type: 3}
-  - {fileID: 3286163911610860551, guid: a32a2926dda94fe586d1b4fd05718023, type: 3}
-  - {fileID: 3286163911610860551, guid: 620ae988d4a347a8bde0e092e9248b3a, type: 3}
-  - {fileID: 3286163911610860551, guid: 555592055b3f4a748ec95ee50ef54dc9, type: 3}
-  - {fileID: 3286163911610860551, guid: 891f1bafed9046b091ae6f8cf4d4fb2f, type: 3}
-  - {fileID: 3286163911610860551, guid: da48e0f5c5a34f33a601d2592408f6ba, type: 3}
-  - {fileID: 3286163911610860551, guid: 2597dffc771f44f0bb90ed7f4b65fb64, type: 3}
-  - {fileID: 3286163911610860551, guid: 257017efdf3f44d9bc4ec946581cc548, type: 3}
-  - {fileID: 3286163911610860551, guid: 5153761e8a2947839f0a95bfcd5eb3ee, type: 3}
   fps: 12
   sounds:
   - frame: 5
@@ -233,6 +215,8 @@ MonoBehaviour:
   - frame: 16
     clip: {fileID: 8300000, guid: cc1f6f66aea649e09633300a04a9dc2d, type: 3}
   pauses: 01000000
+  loopFrom: 0
+  loopTo: 0
   pauseSeconds: 0.75
   audioSource: {fileID: 4310376237789535572}
 --- !u!1 &7955501438119231117

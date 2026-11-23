@@ -6,7 +6,7 @@ the SWF the export was made from (chip 8's hand-authored patch, every other
 chip's stopped-clip freeze), writes one frozen SWF per frame, and prints the
 grid page that renders them plus the diff command.
 
-    ruffle_review.py --ids 7-16 --out ../.tmp-review
+    ruffle_review.py --ids 7-16
     # open the printed ruffle_frames.html?base=... pages, screenshot each,
     # then:  ruffle_frames.py --diff <page>.png --first-frame 1 --cols 8
 """
@@ -24,7 +24,7 @@ import patch_stopped_clips as patch_stop
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-TMP = os.path.join(os.environ["HOME"], "sitekick-movies")
+TMP = os.path.join(ROOT, "Temp", "swftosvg")      # scratch, inside the project
 
 
 def source_xml(chip, work):
@@ -44,7 +44,7 @@ def source_xml(chip, work):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ids", default="7-16")
-    ap.add_argument("--out", default=os.path.join(ROOT, "..", ".tmp-review"))
+    ap.add_argument("--out", default=os.path.join(TMP, "review"))
     ap.add_argument("--stage", default="375x300")
     ap.add_argument("--cols", type=int, default=8)
     args = ap.parse_args()
@@ -63,7 +63,10 @@ def main():
         os.makedirs(out, exist_ok=True)
         for frame in range(1, frames + 1):
             ruffle_frames.build(xml, os.path.join(out, "f%03d.swf" % frame), frame, out)
-        base = "/.tmp-review/c%04d/f" % chip
+        # the grid page is served from the repo root, so the SWFs' URL is their
+        # path relative to it
+        served = os.path.relpath(out, os.path.join(ROOT, "..")).replace(os.sep, "/")
+        base = "/" + served
         print("chip %d: %d frames  ->  ../Unity/Tools/SwfToSvg/ruffle_frames.html"
               "?base=%s&from=1&count=%d&cols=%d" % (chip, frames, base, frames, args.cols),
               flush=True)

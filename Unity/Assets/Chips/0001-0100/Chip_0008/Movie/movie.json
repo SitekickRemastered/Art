@@ -37,33 +37,7 @@
   "frame_032.svg",
   "frame_033.svg",
   "frame_034.svg",
-  "frame_035.svg",
-  "frame_036.svg",
-  "frame_037.svg",
-  "frame_038.svg",
-  "frame_039.svg",
-  "frame_040.svg",
-  "frame_041.svg",
-  "frame_042.svg",
-  "frame_043.svg",
-  "frame_044.svg",
-  "frame_045.svg",
-  "frame_046.svg",
-  "frame_047.svg",
-  "frame_048.svg",
-  "frame_049.svg",
-  "frame_050.svg",
-  "frame_051.svg",
-  "frame_052.svg",
-  "frame_053.svg",
-  "frame_054.svg",
-  "frame_055.svg",
-  "frame_056.svg",
-  "frame_057.svg",
-  "frame_058.svg",
-  "frame_059.svg",
-  "frame_060.svg",
-  "frame_061.svg"
+  "frame_035.svg"
  ],
  "stage_px": [
   375.0,
@@ -78,14 +52,14 @@
   {
    "frame": 2,
    "clip": "SFX/chip_0008_sfx_63_frame_002.mp3"
-  },
-  {
-   "frame": 46,
-   "clip": "SFX/chip_0008_sfx_72_frame_046.mp3"
   }
  ],
  "pauses": [
   1,
   2
+ ],
+ "loop": [
+  16,
+  35
  ]
 }

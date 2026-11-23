@@ -21,7 +21,8 @@ from lxml import etree
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 OUT = os.path.join(ROOT, "Logs", "chip-stops.md")
-BASES = [os.path.join(os.environ["HOME"], "sitekick-movies")]
+# the work dirs an export leaves behind, inside the project
+BASES = [os.path.join(ROOT, "Temp", "swftosvg")]
 
 STOP = re.compile(r"\bstop\s*\(\s*\)\s*;")
 

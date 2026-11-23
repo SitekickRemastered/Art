@@ -31,33 +31,7 @@
   "frame_026.svg",
   "frame_027.svg",
   "frame_028.svg",
-  "frame_029.svg",
-  "frame_030.svg",
-  "frame_031.svg",
-  "frame_032.svg",
-  "frame_033.svg",
-  "frame_034.svg",
-  "frame_035.svg",
-  "frame_036.svg",
-  "frame_037.svg",
-  "frame_038.svg",
-  "frame_039.svg",
-  "frame_040.svg",
-  "frame_041.svg",
-  "frame_042.svg",
-  "frame_043.svg",
-  "frame_044.svg",
-  "frame_045.svg",
-  "frame_046.svg",
-  "frame_047.svg",
-  "frame_048.svg",
-  "frame_049.svg",
-  "frame_050.svg",
-  "frame_051.svg",
-  "frame_052.svg",
-  "frame_053.svg",
-  "frame_054.svg",
-  "frame_055.svg"
+  "frame_029.svg"
  ],
  "stage_px": [
   375.0,
@@ -80,5 +54,9 @@
  ],
  "pauses": [
   1
+ ],
+ "loop": [
+  3,
+  29
  ]
 }

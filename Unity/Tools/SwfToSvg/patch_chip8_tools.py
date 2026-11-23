@@ -58,8 +58,9 @@ keeps their playheads moving instead, and that is what made the chip flicker:
     hand in from the display frame on.
   * `antenna` (71) extends over five frames and stops; FFDec ran on into the
     retract half and looped, waving the antenna for the whole movie.  It is
-    authored as frames 1..5 followed by the extended state for the rest of the
-    movie (7101).
+    authored as the settled frame 5 alone (7101), flattened into a one-frame
+    clip: frames 1..5 as the clip's opening frames replayed the drop on every
+    pass of the 16..35 loop, which starts two frames into the extend.
   * tool 5 is `tool` (44), a two-frame clip that also stops on frame 1; it is
     replaced by a single-frame copy (4401).
 
@@ -79,7 +80,9 @@ selects has to become the clip's own frame on that root frame: `tools` and
 `tools2` are re-emitted with one frame per root frame showing the playhead the
 script would have left them on (7301, 8201) -- each frame carrying the delta
 from the one before, since the timeline is incremental -- and `bottom` (8300)
-places both from its first frame, tools2 with nothing on screen before 40.
+places both from its first frame, tools2 with nothing on screen before the
+loop (root 16) -- it is the seventh hand, and the loop frames must show it even
+though the file's own timeline only adds it on the display frame.
 Without that the arms stay in the hover pose for the rest of the movie -- 19
 frames of mismatch from root frame 40 on.
 
@@ -400,7 +403,7 @@ def retimed(tags, sid, new_id, playheads, fresh_at=None):
     return len(raw)
 
 
-def arm_playheads(frames, hover, retract, display=40, release=53):
+def arm_playheads(frames, hover, retract, display=40, release=53, loop_start=16):
     """What the two arm clips show on each root frame, following the script.
 
     root 40   tools/tools2 -> "hover"
@@ -408,6 +411,13 @@ def arm_playheads(frames, hover, retract, display=40, release=53):
 
     The straight playhead already agrees up to the display frame, so only the
     two jumps reorder anything.
+
+    `tools` (hand2..hand6) plays from the start.  `tools2` is the seventh hand
+    and only exists once the script's `bottom.gotoAndStop(2)` on the display
+    frame has run, so the intro does not show it -- but the movie loops back
+    over 16..35 *after* that jump, and the seventh hand is the one holding the
+    oil can.  Leaving it out of the loop is what made the export look armless
+    beside Ruffle, which shows all six hands there.
     """
     tools, tools2 = [], []
     for n in range(1, frames + 1):
@@ -417,8 +427,10 @@ def arm_playheads(frames, hover, retract, display=40, release=53):
             tools.append(hover[0] + (n - display))
         else:
             tools.append(retract[0] + (n - release))
-        if n < display:
+        if n < loop_start:
             tools2.append(None)
+        elif n < display:
+            tools2.append(hover[1] + (n - loop_start))
         elif n < release:
             tools2.append(hover[1] + (n - display))
         else:
@@ -440,7 +452,7 @@ def author_arms(tags):
     retract = (labels(sprite(73, tags))["retract"], labels(sprite(82, tags))["retract"])
     tools, tools2 = arm_playheads(root_frames, hover, retract)
     retimed(tags, 73, 7301, tools)
-    retimed(tags, 82, 8201, tools2, fresh_at=39)   # tools2 starts on root 40
+    retimed(tags, 82, 8201, tools2, fresh_at=15)   # tools2 starts on the loop
 
     bottom = frames_of(sprite(83, tags))
     frame = copy.deepcopy(without_actions(bottom)[0])
@@ -455,16 +467,16 @@ def author_arms(tags):
 
 
 def author_antenna(tags):
-    """`antenna` (71) extends over five frames then stops on frame 5.
+    """`antenna` (71) extends over four frames, then stops on frame 5.
 
     FFDec rolls on into the retract half and loops, so the antenna waves up and
-    down for the whole movie.  Hold the extended state instead.
+    down for the whole movie.  Hold the settled pose instead: frame 5 is the
+    frame the sprite's own `stop` sits on, so one frame flattened from it cannot
+    replay the drop.  Keeping frames 1..5 as the clip's opening frames replayed
+    it on every pass of the 16..35 loop, because the loop starts two frames into
+    the extend.
     """
-    antenna = without_actions(frames_of(sprite(71, tags)))
-    movie_frames = sum(1 for s in tags if s.get("type") == "ShowFrameTag")
-    play = movie_frames - 15 + 1          # placed on root frame 15
-    hold = max(0, play - len(antenna[:5]))
-    define(tags, 7101, antenna[:5] + [[] for _ in range(hold)])
+    define(tags, 7101, [flattened(tags, 71, 5)])
     flat = [t for frame in frames_of(sprite(73, tags)) for t in frame]
     assert place_char(flat, 71, 7101) == 1, "antenna placement"
 

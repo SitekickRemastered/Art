@@ -224,10 +224,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c7848224b4d04e99ab20bc9736c5244b, type: 3}
   - frame: 32
     clip: {fileID: 8300000, guid: 908c0c279ce74babbeed01fc8c75a865, type: 3}
-  - frame: 47
-    clip: {fileID: 8300000, guid: dca4b3717fe54f118b7af31a97a63004, type: 3}
-  - frame: 60
-    clip: {fileID: 8300000, guid: 391c6288bc154744be512a173898a252, type: 3}
   pauses: 01000000
   pauseSeconds: 0.75
   audioSource: {fileID: 247557636355463347}

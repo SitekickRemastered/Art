@@ -36,6 +36,16 @@ CHIPS = os.path.join(ROOT, "Assets", "Chips")
 SCALE = 6.94          # exported pixels per SWF unit
 PPU = 400             # sprite pixels per unit, matches ChipSpriteImporter
 U = SCALE / PPU       # Unity units per SWF unit
+
+# Where a chip effect's own stage centre belongs on the Sitekick.  sitekick.swf
+# creates `effectHolder` on its root timeline (`_global.skMain = this`) and loads
+# the chip's effect.swf into it at (0, 0), so the effect's 375x300 stage lands
+# 1:1 on the Sitekick's stage.  The body's registration (sprite 214, placed at
+# (3758, 2784) twips by the root's `sitekick` object) is therefore at stage
+# (187.9, 139.2), and the stage centre -- where every chip effect is drawn -- is
+# (-0.4, +10.8) px from it.  Effect art anchored on the registration point sits
+# 10.8 px too high on the face.
+STAGE_OFFSET = (-0.4, 10.8)
 SPRITE_LOCAL_ID = 3286163911610860551  # constant local id of an SVGImporter sprite
 CHIP_EFFECT_SCRIPT = "e058694190c354a4ab26742ffed98388"
 PREFAB_SUFFIX = "_Effect.prefab"
@@ -350,7 +360,9 @@ def prefab_yaml(chip, dump, controller_guid=None, extras_guids=None):
         sr = ids.next()
         centre, _ = base["centre"], None
         blocks.append(go_block(go, base["name"], [tr, sr]))
-        blocks.append(transform_block(tr, go, (centre[0] * U, -centre[1] * U),
+        blocks.append(transform_block(tr, go,
+                                      ((centre[0] + STAGE_OFFSET[0]) * U,
+                                       -(centre[1] + STAGE_OFFSET[1]) * U),
                                       (0, 0, 0, 1), (1, 1), [], root_tr))
         blocks.append(SPRITE_RENDERER.format(
             rid=sr, go=go, enabled=1, order=base["order"],
@@ -400,8 +412,9 @@ def prefab_yaml(chip, dump, controller_guid=None, extras_guids=None):
 
         blocks.append(go_block(ex_go, "chip_%04d_extras" % chip,
                                [ex_tr] + ([ex_anim] if ex_anim else [])))
-        blocks.append(transform_block(ex_tr, ex_go, (0, 0), (0, 0, 0, 1), (1, 1),
-                                      ex_children, root_tr))
+        blocks.append(transform_block(ex_tr, ex_go,
+                                      (STAGE_OFFSET[0] * U, -STAGE_OFFSET[1] * U),
+                                      (0, 0, 0, 1), (1, 1), ex_children, root_tr))
         if ex_anim:
             blocks.append(animator_block(ex_anim, ex_go, extras_guids["extras"]))
         blocks.extend(ex_blocks)
@@ -416,7 +429,10 @@ def prefab_yaml(chip, dump, controller_guid=None, extras_guids=None):
         pos, rot, scale = part["pos"], part["rot"], part["scale"]
         centre = part["centre"]
         blocks.append(go_block(go, part["name"], [tr]))
-        blocks.append(transform_block(tr, go, pos, rot, scale, [str_], root_tr))
+        blocks.append(transform_block(tr, go,
+                                      (pos[0] + STAGE_OFFSET[0] * U,
+                                       pos[1] - STAGE_OFFSET[1] * U),
+                                      rot, scale, [str_], root_tr))
         blocks.append(go_block(sgo, "sprite", [str_, sr]))
         blocks.append(transform_block(str_, sgo, (centre[0] * U, -centre[1] * U),
                                       (0, 0, 0, 1), (1, 1), [], tr))
