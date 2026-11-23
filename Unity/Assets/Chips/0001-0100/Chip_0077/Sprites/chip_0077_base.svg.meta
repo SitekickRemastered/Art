@@ -40,14 +40,14 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteName: chip_0077_baseSprite
-    SpritePivot: {x: 0.5, y: 0.5}
+    SpritePivot: {x: NaN, y: NaN}
     SpriteAlignment: 0
     SpriteBorder: {x: 0, y: 0, z: 0, w: 0}
     SpriteRect:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 183.93005
-      height: 55.65744
+      width: 0
+      height: 0
     SpriteID: cc89c0812082bc900b9da3b8ab5fa2c5
     PhysicsOutlines: []
