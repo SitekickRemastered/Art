@@ -10,7 +10,7 @@ ScriptedImporter:
   script: {fileID: 12408, guid: 0000000000000000e000000000000000, type: 0}
   svgType: 0
   texturedSpriteMeshType: 0
-  svgPixelsPerUnit: 125.9649
+  svgPixelsPerUnit: 57.636
   gradientResolution: 64
   alignment: 0
   customPivot: {x: 0, y: 0}
@@ -48,6 +48,6 @@ ScriptedImporter:
       x: 0
       y: 0
       width: 15.836654
-      height: 15.3808975
+      height: 15.379961
     SpriteID: 4ce41360d2a3a04d88e8cafeaea89b78
     PhysicsOutlines: []
