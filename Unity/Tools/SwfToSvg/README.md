@@ -202,9 +202,24 @@ python3 Tools/SwfToSvg/particle_check.py --chip 151 --reference   # + the Ruffle
 ```
 
 It checks the columns' spacing against `x_swf`, that a held capture spawned
-nothing, that a live one holds at least a third of `mean burst x mean lifetime`
-flakes with an x spread over half the stage, and prints the body-relative group
-centre `measure_particles.py` reads from the capture.
+nothing, that a live one holds at least half of `mean burst x mean lifetime` in
+the spawner's own `LiveCount` with an x spread over half the stage, and prints
+the body-relative group centre `measure_particles.py` reads from the capture.
+A live run waits `maxLifetime + 2` seconds so the stream reaches steady state,
+keeps the chip's held capture beside it as the floor's baseline, and refuses to
+grade a report older than its own Unity launch.  Repeats: `--seed N` reseeds the
+editor (batchmode otherwise repeats one draw) and `--repeat 5 --seed 1` prints
+the distribution.
+
+Five seeded runs each: chip 786 holds 14/17/16/8/10 live over its 7 s window
+(mean 13.0, spawner floor 5.6) and 1109 12-17 over 10 s (mean 15.0, floor 6.9),
+against a baked pose that alone measures 7 blobs under the stream mask -- which
+is why the gate is the component's `LiveCount` and the capture only has to
+corroborate it.  With 786's field block deleted the run reports `no particle
+field` and 6 blobs, and fails.  Counts quoted as typical earlier -- 152 `live 27
+of 96`, 153 `live 16 of 96`, 151 17 blobs -- were one unseeded draw each at the
+old 4.5 s window: reproducible, not representative.  `--repeat` is what turns
+them into a distribution, and no other chip has one yet.
 
 
 ## Prefab placement

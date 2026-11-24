@@ -41,6 +41,8 @@ namespace Sitekick
 		static int last = -1;
 		static int wraps;
 		static string tintHex;
+		static int seed = -1;              // --seed: reseed so two runs are not the same sample
+		static float liveSeconds = 4.5f;   // --live-seconds: how long a stream is given to fill
 		static GameObject spawned;
 
 		static float start;
@@ -89,6 +91,23 @@ namespace Sitekick
 					continue;
 				}
 
+				if ( args[ i ] == "--live-seconds" )
+				{
+					float s;
+					if ( float.TryParse( args[ i + 1 ], System.Globalization.NumberStyles.Float,
+						System.Globalization.CultureInfo.InvariantCulture, out s ) )
+						liveSeconds = s;
+					continue;
+				}
+
+				if ( args[ i ] == "--seed" )
+				{
+					int s;
+					if ( int.TryParse( args[ i + 1 ], out s ) )
+						seed = s;
+					continue;
+				}
+
 				if ( args[ i ] != "--chip" )
 					continue;
 
@@ -132,7 +151,11 @@ namespace Sitekick
 				// A spawned stream does have one -- `onTimer` is a 1 s Timer -- so a held
 				// capture still measures the authored pose at 0.5 s, while a live one has
 				// to run long enough to hold several bursts
-				var hold = field != null && !holdAnimators ? 4.5f : 0.5f;
+				// a stream is given long enough to reach steady state (the caller
+				// passes maxLifetime + 2 s): a short window undercounts the chips
+				// whose particles live for seconds, and a count that never
+				// separates from the baked columns cannot prove the spawner works
+				var hold = field != null && !holdAnimators ? liveSeconds : 0.5f;
 				if ( Time.time - start > hold )
 					Finish( null );
 				return;
@@ -164,6 +187,12 @@ namespace Sitekick
 				else
 					gallery.ApplyColor( ChipColorPanel.Parse( tintHex ) );
 			}
+
+			// A spawned stream draws from UnityEngine.Random, which batchmode seeds
+			// identically on every launch: without an explicit seed every "live"
+			// capture is the same sample, however many runs are made.
+			if ( seed >= 0 )
+				UnityEngine.Random.InitState( seed );
 
 			button.onClick.Invoke();
 			var instance = GameObject.Find( "Chip_" + Chip.ToString( "0000" ) + "_Effect" );
@@ -311,6 +340,10 @@ namespace Sitekick
 				if ( field != null )
 					lines.Add( "particle field " + field.ArtCount + " symbol(s)  live " + field.LiveCount
 						+ " of " + field.Capacity + ( holdAnimators ? "  held" : "" ) );
+				if ( seed >= 0 )
+					lines.Add( "seed " + seed );
+				if ( field != null && !holdAnimators )
+					lines.Add( "live window " + liveSeconds.ToString( "0.0" ) + " s" );
 				// where each renderer actually sits, so a missing or covered piece of
 				// art is visible in the report instead of only in the capture
 				foreach ( var r in art )

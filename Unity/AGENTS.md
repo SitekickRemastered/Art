@@ -724,20 +724,39 @@
   page plus the throwaway `Logs/skcomp` scripts: it asserts the four columns sit
   `x_swf` apart (2.386 units = 137.5 SWF px, a span of 17.89 units) within 0.01
   units, prints each renderer's size in SWF px (0.651 units / 2.5 = 15.0 x 16.7),
-  fails a held capture that spawned anything, and with `--live` requires at least
-  a third of the rule's expected concurrency plus an x spread of half the stage
-  -- four columns read a count of 4 and a spread of 0, so the stand-in cannot
-  pass as a stream.  `--reference` drives `sitekick_particles.html` headless
+  fails a held capture that spawned anything, and with `--live` requires the
+  spawner's own `LiveCount` to reach half the rule's expected concurrency plus an
+  x spread of half the stage.  That count has to come from the component, not the
+  capture: chip 786's four baked coins measure 7 blobs under the stream mask (10
+  real coins merge into 8), so no blob floor separates them, while `LiveCount` is
+  0 for anything that is not spawning and a prefab with the field block deleted
+  fails outright.  The window is `maxLifetime + 2` s rather than a fixed 4.5:
+  with a 1 s tick and whole-second lifetimes that is where every age class that
+  can still be alive is represented, so the count matches the rule, where 4.5 s
+  undercounted 1109 by about 30% and sampled 786 anywhere from 4 to 19.  Five
+  seeded runs each (`--seed N --repeat 5`): 786 14/17/16/8/10 live over 7 s
+  against a floor of 5.6, 1109 12-17 over 10 s against 6.9; with 786's field
+  block removed the run reports `no particle field` and 6 blobs against the held
+  pose's 7, and fails.  Batchmode seeds `UnityEngine.Random` identically on every
+  launch, so a repeat without `--seed` measures one draw however many times it is
+  run, and `run_unity` now refuses a report older than its own launch because
+  `--live` without `--unity` used to grade the previous capture.  `--reference` drives `sitekick_particles.html` headless
   through `ruffle_frames.py`'s `serve`/`browser_command`/`capture_page`.
   Particle-for-particle comparison is impossible by construction -- Ruffle's
   `Math.random` is unseeded, so no two runs (and no capture against the export)
   put the flakes in the same places -- which is why a live check asserts the
   *distribution* (count against `mean burst x mean lifetime`, x spread and
   stdev against the stage width) and the held check asserts the authored
-  columns in `report.txt`.  The chip 152/153 runs read `live 27 of 96` and
-  `live 16 of 96` against 25 expected, with 25 and 17 blobs and a spread of 6.4
-  body widths where the stage is 6.5; 151's `--live` capture is 17 blobs and
-  6.34.  The `--reference` capture is what the held numbers are judged against:
+  columns in `report.txt`.  The counts this file quoted for chips 151, 152 and
+  153 -- `live 27 of 96` on 152, `live 16 of 96` on 153, 17 blobs with a 6.34
+  spread on 151 -- are one draw each, taken at the old fixed 4.5 s window with
+  the unseeded batchmode default.  Re-running them reproduces those exact
+  numbers instead of varying, which is the signature of a single sample: they
+  describe what one draw looked like, not what the chip usually holds, and 4.5 s
+  undercounts every chip whose particles live for several seconds.  Measured
+  distributions exist only for 786 and 1109 so far (five seeded runs each,
+  above); the other six want `--repeat 5 --seed 1` before a count from them is
+  quoted as typical.  The `--reference` capture is what the held numbers are judged against:
   at `at=x,0` the composite reads the group **+0.1404** body heights above the
   body centre with a 15.3 SWF px flake, the `--hold` capture **+0.1638** with a
   17.4 px one, so the difference is 0.023 body heights (1.3 px) -- the body mask,

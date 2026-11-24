@@ -36,8 +36,10 @@ import glob
 import json
 import os
 import re
+import statistics
 import subprocess
 import sys
+import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
@@ -78,7 +80,7 @@ def report_path(cid, live):
         cid, "_live" if live else ""), "report.txt")
 
 
-def run_unity(cid, live):
+def run_unity(cid, live, seed=None, live_seconds=None):
     """Run the play-mode check with the right flags for a particle chip."""
     lock = os.path.join(ROOT, "Unity", "Temp", "UnityLockfile")
     if os.path.exists(lock):
@@ -88,11 +90,25 @@ def run_unity(cid, live):
             "--chip", str(cid), "--stage"]
     if not live:
         args.append("--hold")
+    if seed is not None:
+        # batchmode seeds UnityEngine.Random the same way on every launch, so a
+        # second run without this measures the first one's sample again
+        args += ["--seed", str(seed)]
+    if live_seconds is not None:
+        args += ["--live-seconds", "%.1f" % live_seconds]
     log = os.path.join(ROOT, "Unity", "Logs", "p%04d_%s.log" % (cid, "live" if live else "hold"))
     print("running Unity: %s" % " ".join(args))
+    started = time.time()
     subprocess.run(args + ["-logFile", log], check=False)
     out = os.path.join(ROOT, "Unity", "Logs", "chip_%04d_play" % cid)
-    if live and os.path.isdir(out):
+    report = os.path.join(out, "report.txt")
+    if not os.path.exists(report) or os.path.getmtime(report) < started:
+        # a launch that died leaves the previous run's report behind; grading it
+        # would print numbers that were not measured this time (this happened:
+        # `--live` without `--unity` re-measured one capture five times)
+        raise SystemExit("FAIL: Unity wrote no new report; see %s"
+                         % os.path.relpath(log, ROOT))
+    if live:
         import shutil
         dst = out + "_live"
         shutil.rmtree(dst, ignore_errors=True)
@@ -161,11 +177,97 @@ def reference(cid, cdir, data, browser=None):
     return shot
 
 
+def live_window(rule):
+    """How long the stream is given before the capture.
+
+    With a 1 s spawn tick and whole-second lifetimes, `maxLifetime + 2` is where
+    every age class that can still be alive is represented, i.e. the count the
+    rule's `mean burst x mean lifetime` describes.  The old fixed 4.5 s window
+    sampled 786 two to three lifetimes short of that and undercounted 1109 by
+    about 30%.
+    """
+    life = rule.get("lifetime", [3, 8])
+    return max(4.5, float(life[1]) + 2.0)
+
+
+def hold_baseline(cid):
+    """Blobs the chip's own authored pose puts on the stage.
+
+    The live floor has to clear this or a prefab whose particle field was
+    dropped would still pass: chip 786's four baked coins read 7 blobs under the
+    stream mask, more than a third of its rule.  The hold capture is kept beside
+    the live one and re-taken when the prefab changes.
+    """
+    here = os.path.join(ROOT, "Unity", "Logs", "chip_%04d_play_hold" % cid)
+    report = os.path.join(here, "report.txt")
+    prefabs = glob.glob(os.path.join(chip_dir(cid) or "", "*.prefab"))
+    stale = (not os.path.exists(report)) or (
+        prefabs and os.path.getmtime(prefabs[0]) > os.path.getmtime(report))
+    if stale:
+        out = run_unity(cid, False, None)
+        import shutil
+        shutil.rmtree(here, ignore_errors=True)
+        shutil.copytree(out, here)
+    stage = os.path.join(here, "stage.png")
+    m = measure_capture(stage, stream=True) if os.path.exists(stage) else None
+    return (m or {}).get("count", 0)
+
+
+def repeat_live(cid, reps, seed0):
+    """Run the editor N times with different seeds and report the distribution.
+
+    One live capture is a single sample of `Math.random`, so whether a chip holds
+    a stream cannot be judged from it: the spread of the counts can.
+    """
+    rule = spawn_rule(cid)
+    burst = rule.get("burst", 10)
+    life = rule.get("lifetime", [3, 8])
+    rule_mean = (burst - 1) / 2.0 * (sum(life) / 2.0) / rule.get("intervalSeconds", 1.0)
+    window = live_window(rule)
+    held = hold_baseline(cid)
+    spawner_floor = max(rule_mean / 2.0, 3.0)
+    paint_floor = max(held, 4.0)
+    print("window %.1f s   held baseline %d blob(s)   floors spawner %.1f live, capture %.0f blob(s)"
+          % (window, held, spawner_floor, paint_floor))
+    rows = []
+    for i in range(reps):
+        seed = seed0 + i
+        out = run_unity(cid, True, seed, window)
+        report = os.path.join(out, "report.txt")
+        field = field_line(report)
+        stage = os.path.join(out, "stage.png")
+        m = measure_capture(stage, stream=True) if os.path.exists(stage) else None
+        row = {"seed": seed,
+               "live": field["live"] if field else -1,
+               "blobs": (m or {}).get("count", 0),
+               "spread": (m or {}).get("spread", 0.0)}
+        rows.append(row)
+        print("rep %d  seed %-6d live %-3d  blobs %-3d  spread %.2f  %s"
+              % (i + 1, seed, row["live"], row["blobs"], row["spread"],
+                 "ok" if (row["live"] >= spawner_floor and row["blobs"] >= paint_floor
+                          and row["spread"] >= 0.5) else "BELOW the floor"))
+    blobs = [r["blobs"] for r in rows]
+    lives = [r["live"] for r in rows]
+    passed = sum(1 for r in rows if (r["live"] >= spawner_floor and r["blobs"] >= paint_floor
+                                     and r["spread"] >= 0.5))
+    print("")
+    print("blobs  n %d  mean %.1f  sd %.1f  min %d  max %d   (floor %.0f, held pose %d)"
+          % (len(blobs), statistics.mean(blobs), statistics.pstdev(blobs), min(blobs), max(blobs),
+             paint_floor, held))
+    print("live   n %d  mean %.1f  sd %.1f  min %d  max %d"
+          % (len(lives), statistics.mean(lives), statistics.pstdev(lives), min(lives), max(lives)))
+    print("RESULT: %s  %d of %d reps over the floor"
+          % ("OK" if passed == len(rows) else "FAIL", passed, len(rows)))
+    return 0 if passed == len(rows) else 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--chip", type=int, required=True)
     ap.add_argument("--unity", action="store_true", help="run the play-mode check first")
     ap.add_argument("--live", action="store_true", help="measure the spawner, not the held pose")
+    ap.add_argument("--seed", type=int, help="reseed UnityEngine.Random before the effect spawns")
+    ap.add_argument("--repeat", type=int, help="run --unity --live N times and report the distribution")
     ap.add_argument("--reference", action="store_true", help="also capture the Ruffle composite")
     ap.add_argument("--browser", help="Chromium-family command for --reference")
     args = ap.parse_args()
@@ -177,8 +279,18 @@ def main():
     if not ((data.get("clips") or {}).get("particles")):
         raise SystemExit("chip %d has no spawned particles" % args.chip)
 
+    if args.repeat:
+        if not (args.live and args.unity):
+            raise SystemExit("--repeat needs --unity --live")
+        return repeat_live(args.chip, args.repeat, args.seed if args.seed is not None else 1)
+
+    rule = spawn_rule(args.chip)
+    window = live_window(rule) if args.live else None
+    # measured before the live run so the baseline is the prefab as it is now
+    held = hold_baseline(args.chip) if args.live else 0
+
     if args.unity:
-        run_unity(args.chip, args.live)
+        run_unity(args.chip, args.live, args.seed, window)
 
     report = report_path(args.chip, args.live)
     if not os.path.exists(report):
@@ -226,10 +338,24 @@ def main():
               % (w, h, w / U, h / U))
 
     field = field_line(report)
-    rule = spawn_rule(args.chip)
     burst = rule.get("burst", 10)
     life = rule.get("lifetime", [3, 8])
     expected_live = (burst - 1) / 2.0 * (sum(life) / 2.0) / rule.get("intervalSeconds", 1.0)
+    # The spawner's own counter is the exact measure of the stream: the held pose
+    # reads 7 blobs under the stream mask, so no blob floor separates the baked
+    # coins from a stream (10 coins merge into 8 blobs), while `LiveCount` is 0
+    # for anything that is not spawning.  The capture is the corroboration that
+    # the copies are drawn, not the gate.
+    spawner_floor = max(expected_live / 2.0, 3.0)
+    paint_floor = max(held, 4.0)
+    if args.live:
+        print("rule: window %.1f s, about %.0f live, held pose %d blob(s); "
+              "floors spawner %.1f live, capture %.0f blob(s)"
+              % (window, expected_live, held, spawner_floor, paint_floor))
+    if args.live and not field:
+        # a prefab whose particle field was dropped still draws the baked columns
+        print("FAIL the report has no particle field: the prefab has no spawner")
+        ok = False
     if field:
         print("field: %d symbol(s), %d live of %d%s"
               % (field["symbols"], field["live"], field["capacity"],
@@ -241,6 +367,10 @@ def main():
             return 1
         if not args.live and field["live"] != 0:
             print("FAIL held capture spawned particles: %d live" % field["live"])
+            ok = False
+        if args.live and field["live"] < spawner_floor:
+            print("FAIL spawner: %d live, floor %.1f (about %.0f by this window)"
+                  % (field["live"], spawner_floor, expected_live))
             ok = False
 
     # a chip that also draws a backdrop (153, 1133) has that art in the same
@@ -266,9 +396,9 @@ def main():
             print("capture: %d blob(s), x spread %.2f body widths%s"
                   % (m["count"], m["spread"], centre))
             if args.live:
-                if m["count"] < expected_live / 3.0:
-                    print("FAIL field: %d blobs on stage, the rule expects about %.0f"
-                          % (m["count"], expected_live))
+                if m["count"] < paint_floor:
+                    print("FAIL capture: %d blobs on stage, the held pose alone draws %d"
+                          % (m["count"], held))
                     ok = False
                 if m["spread"] < 0.5:
                     print("FAIL field: x spread %.2f body widths, the rule is uniform over the stage"
@@ -276,6 +406,9 @@ def main():
                     ok = False
         else:
             print("capture: no blobs found outside the body")
+            if args.live:
+                print("FAIL field: nothing spawned on stage")
+                ok = False
 
     if args.reference:
         shot = reference(args.chip, cdir, data, args.browser)
