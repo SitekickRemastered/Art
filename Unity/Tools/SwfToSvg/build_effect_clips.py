@@ -83,6 +83,55 @@ def class_source(lib, cls):
     return None
 
 
+def spawn_rule(txt, lib, wrappers):
+    """The stream a spawned-particle effect starts, read from its own AS3.
+
+    `effect_NNNNN.onStaged` starts `new Timer(1000)` and `onTimer` adds
+    `int(Math.random() * 10)` particles per tick; each particle class tweens
+    itself over `3 + int(Math.random() * 6)` seconds.  Both numbers are Flash's
+    rule, not the export's, so the runtime spawner reads them from here rather
+    than hard-coding them (`build_particle_fields.py` writes them into the
+    prefab).
+    """
+    m = re.search(r"new Timer\((\d+)\)", txt)
+    interval = int(m.group(1)) / 1000.0 if m else 1.0
+
+    burst = None
+    timer = re.search(r"function onTimer\([^)]*\)[^{]*\{(.*?)\n\s*\}", txt, re.S)
+    if timer:
+        b = re.search(r"Math\.random\(\)\s*\*\s*(\d+)", timer.group(1))
+        if b:
+            burst = int(b.group(1))
+
+    lifetime = None
+    for cls in wrappers:
+        body = class_source(lib, cls)
+        if not body:
+            continue
+        # LeafMC has two random ints (a frame pick and the fall length), so the
+        # duration variable has to come from the Tween call itself rather than
+        # from the first Math.random() in init().
+        t = re.search(r"new Tween\([^;]*?,(?:(\d+) \+ )?(\w+),\s*true\)", body)
+        if not t:
+            continue
+        base, var = int(t.group(1) or 0), t.group(2)
+        # FlakeMC/BubbleMC: `3 + _loc1_` seconds.  CoinMC is the bare variable,
+        # i.e. a 0..n-1 s fall, which is why this reads the expression instead
+        # of assuming the shared formula.
+        n = re.search(r"var %s:int = Math\.random\(\)\s*\*\s*(\d+)" % var, body)
+        if n:
+            spread = int(n.group(1))
+            lifetime = [base, base + spread - 1]
+            break
+
+    rule = {"intervalSeconds": interval}
+    if burst is not None:
+        rule["burst"] = burst
+    if lifetime:
+        rule["lifetime"] = lifetime
+    return rule
+
+
 def particle_symbol(lib, cls):
     """Symbol class + direction of a spawned particle.
 
@@ -144,6 +193,10 @@ def main():
                 entry["particles"].append({
                     "cls": name, "wrapper": cls, "symbol": sym,
                     "frames": lib["frames"].get(sym, 1), "dir": direction})
+
+            if entry["particles"]:
+                entry["spawn"] = spawn_rule(txt, lib,
+                                            [p["wrapper"] for p in entry["particles"]])
 
             if entry["back"] or entry["front"] or entry["particles"]:
                 prev = out.get(str(chip))

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sitekick particle composite reference</title>
+<style>
+  html, body { margin: 0; background: #7a7a12; overflow: hidden; }
+  #stack { position: relative; width: 375px; height: 300px; }
+  #stack > div { position: absolute; left: 0; top: 0; width: 375px; height: 300px; }
+  #art svg { position: absolute; }
+</style>
+<script src="/Unity/Logs/pilot/ruffle/package/ruffle.js"></script>
+</head>
+<body>
+<div id="stack">
+  <div id="base"></div>
+  <div id="art"></div>
+</div>
+<script>
+// Renders sitekick.swf at 1:1 and drops copies of an effect's particle art on
+// top of it at given SWF stage positions, so a screenshot is the Flash
+// reference for where a spawned particle sits on the Sitekick.  Positions are
+// stage coordinates in SWF px: (0,0) is the stage centre, y grows downwards,
+// which is the frame the chip's 375x300 effect stage lands in.
+//
+//   sitekick_particles.html?art=/Unity/Assets/.../chip_0151_particle_0_f001.svg
+//                          &at=0,-39;0,150&scale=1&pad=0
+//
+// `pad` widens the capture with empty margin on every side, so a particle the
+// SWF would clip above or below its 300 px stage can still be measured; a chip
+// effect's own stage is 375x300, so the default (0) is the truthful framing.
+//
+// `window.ready` resolves once the Sitekick has loaded and the copies are placed.
+const q = new URLSearchParams(location.search);
+const BASE = q.get('base') || '/Unity/SWF/sitekick.swf';
+const ART = q.get('art');
+const AT = (q.get('at') || '').split(';').filter(Boolean).map((p) => p.split(',').map(Number));
+const SCALE = parseFloat(q.get('scale') || '1');
+const PAD = parseInt(q.get('pad') || '0', 10);
+const W = 375;
+const H = 300;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stack = document.getElementById('stack');
+  stack.style.width = (W + PAD * 2) + 'px';
+  stack.style.height = (H + PAD * 2) + 'px';
+  for (const id of ['base', 'art']) {
+    const el = document.getElementById(id);
+    el.style.left = PAD + 'px';
+    el.style.top = PAD + 'px';
+  }
+});
+
+function mount(id, url) {
+  const ruffle = window.RufflePlayer.newest();
+  const player = ruffle.createPlayer();
+  player.style.width = W + 'px';
+  player.style.height = H + 'px';
+  document.getElementById(id).appendChild(player);
+  const loaded = new Promise((resolve) => {
+    player.addEventListener('loadedmetadata', () => resolve(true));
+  });
+  player.load({ url: url, autoplay: 'on', unmuteOverlay: 'hidden', wmode: 'window' });
+  return loaded;
+}
+
+async function place() {
+  if (!ART) return;
+  const text = await (await fetch(ART)).text();
+  const host = document.getElementById('art');
+  const vb = /viewBox="([^"]+)"/.exec(text)[1].split(/[\s,]+/).map(Number);
+  for (const [x, y] of AT) {
+    const holder = document.createElement('div');
+    holder.innerHTML = text.replace(/<\?xml[^>]*\?>/, '');
+    const svg = holder.querySelector('svg');
+    const w = vb[2] * SCALE;
+    const h = vb[3] * SCALE;
+    svg.setAttribute('width', w + 'px');
+    svg.setAttribute('height', h + 'px');
+    svg.setAttribute('viewBox', vb.join(' '));
+    // one SVG user unit is one SWF px here, so the art keeps its native size;
+    // the viewBox's min corner carries the part's own origin offset
+    svg.style.left = (W / 2 + x + vb[0] * SCALE) + 'px';
+    svg.style.top = (H / 2 + y + vb[1] * SCALE) + 'px';
+    host.appendChild(svg);
+  }
+}
+
+window.ready = Promise.all([mount('base', BASE), place()]);
+</script>
+</body>
+</html>

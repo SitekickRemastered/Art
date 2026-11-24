@@ -224,7 +224,11 @@
     "symbol": 1368,
     "wrapper": "Donut4_MC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 6,
+   "intervalSeconds": 1.0
+  }
  },
  "1110": {
   "back": {
@@ -287,7 +291,11 @@
     "symbol": 1296,
     "wrapper": "Blossom2MC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0
+  }
  },
  "1135": {
   "back": {
@@ -711,7 +719,15 @@
     "symbol": 761,
     "wrapper": "FlakeMC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0,
+   "lifetime": [
+    3,
+    8
+   ]
+  }
  },
  "152": {
   "back": null,
@@ -725,7 +741,15 @@
     "symbol": 759,
     "wrapper": "BubbleMC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0,
+   "lifetime": [
+    3,
+    8
+   ]
+  }
  },
  "153": {
   "back": null,
@@ -743,7 +767,15 @@
     "symbol": 757,
     "wrapper": "HeartMC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0,
+   "lifetime": [
+    3,
+    8
+   ]
+  }
  },
  "177": {
   "back": {
@@ -799,7 +831,11 @@
     "symbol": 1284,
     "wrapper": "Star_MC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 6,
+   "intervalSeconds": 1.0
+  }
  },
  "349": {
   "back": {
@@ -941,7 +977,15 @@
     "symbol": 335,
     "wrapper": "LeafMC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0,
+   "lifetime": [
+    5,
+    14
+   ]
+  }
  },
  "459": {
   "back": {
@@ -1221,7 +1265,15 @@
     "symbol": 3634,
     "wrapper": "CoinMC"
    }
-  ]
+  ],
+  "spawn": {
+   "burst": 10,
+   "intervalSeconds": 1.0,
+   "lifetime": [
+    0,
+    5
+   ]
+  }
  },
  "788": {
   "back": {

@@ -33,6 +33,9 @@ namespace Sitekick
 
 		static ChipMoviePlayer player;
 		static bool isStatic;              // no movie player: one drawing, most chips
+		static bool holdAnimators;         // --hold: measure the prefab's authored pose
+		static bool stageFrame;            // --stage: capture the whole 375x300 effect stage
+		static ChipParticleField field;    // set when the effect spawns a particle stream
 		static SpriteRenderer[] art;
 		static int samples;
 		static int last = -1;
@@ -71,6 +74,18 @@ namespace Sitekick
 				if ( args[ i ] == "--color" )
 				{
 					tintHex = args[ i + 1 ];
+					continue;
+				}
+
+				if ( args[ i ] == "--hold" )
+				{
+					holdAnimators = true;
+					continue;
+				}
+
+				if ( args[ i ] == "--stage" )
+				{
+					stageFrame = true;
 					continue;
 				}
 
@@ -113,8 +128,12 @@ namespace Sitekick
 
 			if ( isStatic )
 			{
-				// a static effect has no clock: give the sprites a moment to load, then look
-				if ( Time.time - start > 0.5f )
+				// a static effect has no clock: give the sprites a moment to load, then look.
+				// A spawned stream does have one -- `onTimer` is a 1 s Timer -- so a held
+				// capture still measures the authored pose at 0.5 s, while a live one has
+				// to run long enough to hold several bursts
+				var hold = field != null && !holdAnimators ? 4.5f : 0.5f;
+				if ( Time.time - start > hold )
 					Finish( null );
 				return;
 			}
@@ -151,9 +170,27 @@ namespace Sitekick
 			spawned = instance;
 			player = instance != null ? instance.GetComponentInChildren<ChipMoviePlayer>( true ) : null;
 			isStatic = player == null;
+			field = instance != null ? instance.GetComponentInChildren<ChipParticleField>( true ) : null;
 			if ( isStatic )
 			{
 				// most chips have no timeline: the prefab is a single drawing to look at
+				if ( holdAnimators && instance != null )
+				{
+					// an effect whose parts animate (chip 151's falling flakes) would be
+					// measured at whatever frame the 0.5 s hold-up lands on; stopping the
+					// animators before their first update keeps the authored placement, so
+					// the numbers can be compared with a 1:1 reference
+					foreach ( var animator in instance.GetComponentsInChildren<Animator>( true ) )
+						animator.enabled = false;
+
+					// a spawned effect's runtime field would spawn (and hide the authored
+					// pose) on its first update, which is inside this same hold-up: turn
+					// it off here so the capture is the pose the prefab was built with
+					foreach ( var field in instance.GetComponentsInChildren<ChipParticleField>( true ) )
+						field.enabled = false;
+				}
+
+
 				art = instance != null ? instance.GetComponentsInChildren<SpriteRenderer>( true ) : new SpriteRenderer[ 0 ];
 				if ( art.Length == 0 )
 				{
@@ -263,10 +300,17 @@ namespace Sitekick
 						bounds.Encapsulate( r.bounds );
 				}
 
-				lines.Add( "static effect  no ChipMoviePlayer  renderers " + art.Length
+				lines.Add( "static effect  no ChipMoviePlayer" + ( holdAnimators ? "  animators held" : "" )
+					+ "  renderers " + art.Length
 					+ "  sprites " + sprites.Count
 					+ "  bounds " + bounds.size.ToString( "0.00" ) + " @ " + bounds.center.ToString( "0.00" ) );
 				lines.Add( "drawn " + string.Join( ",", sprites.ToArray() ) );
+
+				// a spawned-particle effect is a stream, not a drawing: report the rule
+				// it runs and how many it is holding right now
+				if ( field != null )
+					lines.Add( "particle field " + field.ArtCount + " symbol(s)  live " + field.LiveCount
+						+ " of " + field.Capacity + ( holdAnimators ? "  held" : "" ) );
 				// where each renderer actually sits, so a missing or covered piece of
 				// art is visible in the report instead of only in the capture
 				foreach ( var r in art )
@@ -372,6 +416,8 @@ namespace Sitekick
 
 			Directory.CreateDirectory( OutDir );
 			Capture( "resting.png", null );
+			if ( stageFrame && spawned != null )
+				Capture( "stage.png", StageBounds( spawned ) );
 			if ( player != null && player.target != null )
 				Capture( "resting-close.png", player.target.bounds );
 			else if ( art != null && art.Length > 0 && art[ 0 ] != null )
@@ -404,6 +450,27 @@ namespace Sitekick
 				if ( a[ i ] != b[ i ] )
 					return false;
 			return true;
+		}
+
+		/// <summary>
+		/// The effect's own 375x300 stage in world space.
+		///
+		/// A spawned particle is placed anywhere on the stage -- the flakes' x is
+		/// random across all 375 px -- so a capture framed on the art that happens to
+		/// be in the prefab misses most of what the effect draws.  The effect's root
+		/// origin is the stage centre shifted by STAGE_OFFSET, so this is the rect the
+		/// chip's Flash stage lands in on the Sitekick.
+		/// </summary>
+		static Bounds StageBounds( GameObject instance )
+		{
+			const float u = 0.01735f;
+			var centre = instance.transform.TransformPoint( new Vector3( -0.4f * u, -10.8f * u, 0f ) );
+			// the gallery's effect layers are scaled, so the stage rect has to be
+			// scaled with them or the capture frames a corner of it
+			var scale = instance.transform.lossyScale;
+			var size = new Vector3( 375f * u * Mathf.Abs( scale.x ),
+				300f * u * Mathf.Abs( scale.y ), 0f );
+			return new Bounds( centre, size );
 		}
 
 		/// <summary>Saves the play view, or just `bounds` when given, as one PNG.</summary>
