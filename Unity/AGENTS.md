@@ -524,6 +524,23 @@
 
 - Chip art lives under `Assets/Chips/<range>/Chip_XXXX/`: `Sprites/` (static
   icon, one SVG per chip), `Movie/` (baked animation frames), `SFX/`.
+- **Every chip sprite is an SVG; no PNG copy belongs next to it.**  Chips 161,
+  177 and 286 carried `chip_XXXX_front.png` / `_back.png` beside the SVGs they
+  were rasterised from -- 1600 px at 400 ppu, 4 units wide, byte-identical to a
+  fresh `rsvg-convert` of the SVG (mean |diff| 0.00, ink IoU 1.000) -- and three
+  effect prefabs pointed at the PNG.  The SVGs are now the sprites.  Two things
+  to know when doing that on another chip:
+  * a gradient SVG sprite needs `Assets/Materials/ChipMovie-Vector.mat`
+    (`Unlit/VectorGradient`, fileID 2100000, guid `31d1e238...`) on the
+    renderer: under the built-in sprite material 161's dungeon came out black --
+    the same trap chips 20 and 42 hit from the other direction;
+  * the SVG importer crops the sprite to the drawing's geometry bbox, not the
+    viewBox, so a heading with empty margin shifts when it stops being a PNG.
+    Set `svgPixelsPerUnit` to `viewBox width / 4` (the PNG's 4-unit width) and
+    move the child by `(bboxCentre - viewBoxCentre) * 4 / viewBoxWidth *` its
+    own local scale, y negated (SVG is y-down).  Of the six, only 161's and
+    177's front needed it (`f = 1.41` and `1.29`); 286's back took 0.004 and
+    the three `back`/`front` pairs whose bbox already equals the viewBox none.
 - **Where an effect sits on the Sitekick.**  `sitekick.swf` creates
   `effectHolder` on its own root (`_global.skMain = this`, frame 1) and loads the
   chip's `effect.swf` into it at (0, 0) (`funcLoadDisplay` sets only
@@ -539,6 +556,215 @@
   the effect at the stage centre, `compare.png` is that against the gallery
   capture).  Both use 0.01735 units per SWF pixel, so the offset is the only
   difference -- the size was never wrong.
+- **Every static effect sprite is placed from its art bbox with that offset**,
+  and 805 prefabs written before `STAGE_OFFSET` existed were not: they sat
+  exactly `(0.4, 10.8)` px high, which is `dy = +0.18738`, `dx = +0.00694` in
+  prefab units (`U = 6.94/400`).  The rule that holds for a single-renderer
+  static effect is
+  `local = ((bboxCx - 0.4) * U, -(bboxCy + 10.8) * U)` on the art child, and it
+  is the rule the Ruffle-checked chips 17-35 reproduce to 0.00000 (17, 18, 20,
+  22-30, 35 all match exactly), so it is the convention, not a coincidence.
+  Chips 101 upward matched the same formula *without* the offset, i.e. 10.8 px
+  high on the face, from 101 to 1375 -- 805 prefabs.  They were corrected in
+  place (only the art child's `m_LocalPosition` line changes; a scan of all 828
+  single-renderer static prefabs now reads 0 off the convention).  Two traps:
+  * don't reach for `build_prefabs.py --write` to do it.  Its rewrite also
+    changes the sprite's `.meta` (`svgPixelsPerUnit` to 400, `svgType` 0 -> 1,
+    sprite rect in px) and always writes the built-in sprite material, so it
+    would undo chips 161/177/286's PNG->SVG repoint and any vector material;
+  * the formula only applies where the renderer's sprite *is* the chip's
+    `_effect.svg`.  Chips 161, 177 and 286 draw `_back.svg`/`_front.svg` from a
+    hand-measured `front`/`back` pair with its own bbox compensation
+    (`(bboxCentre - viewBoxCentre) * 4 / viewBoxWidth * localScale`, y negated);
+    rebuilding those from the effect canonical svg moves them a whole body
+    height, so they are excluded.
+- **The same omission is still in every non-static prefab built before
+  `STAGE_OFFSET`** -- the single-renderer pass above never touched them.
+  Counted from chip 138 up: 143 extras-style prefabs (`chip_XXXX_extras` at
+  (0, 0) instead of (-0.00694, -0.18738)) and 222 part-animated ones (part node
+  at the track translation with no offset).  Two shapes, and the fix differs:
+  * `chip_XXXX_extras` carries back/front/particle layers; shifting the node is
+    enough for back/front, but particles also need their authored
+    `x_swf * U` (the builder writes it, the old prefabs have every particle at
+    x = 0 -- chip 151's four snow columns all fell down the centre line);
+  * a part-animated chip's `Animations/Chip_XXXX.anim` bakes the track position
+    into the `m_PositionCurves` keys, and an Animator overrides the node's
+    static `m_LocalPosition` every frame, so shifting the prefab node alone
+    changes nothing.  Add the offset to every position key too (x - 0.00694,
+    y - 0.18738); 36 keys for chip 145, one per frame.
+  Chip 145 was fixed first (prefab node + all 36 keys; the gallery capture moves
+  by exactly (-0.017, -0.469) world units, i.e. the offset times the preview's
+  2.5 scale, and `ChipPlayCheck --chip 145` still reads `renderers 1 sprites 1`).
+  Chip 151 was fixed as well (extras node + the four particle nodes and their
+  clip keys; the four columns now sit at -206.25/-68.75/+68.75/+206.25 SWF px,
+  17.9 units of preview width where they used to be stacked).  Its check is the
+  particle composite in the Ruffle-reference section (it reads the group 10.8 px
+  high at the pivot and on the stage centre after the fix), and its flake sprite
+  also needed the import scale corrected (171.7241 -> 57.6361, 0.336x -> 1.0x,
+  15x16.7 px): the prefab's 128 px compensation is bbox-centre based, so the
+  node centres stayed at -3.737/2.227/8.191/14.155, -0.484.
+  The rest of the class (380 prefabs) was then swept with
+  `Tools/SwfToSvg/fix_stage_offset.py`: it rebuilds each chip's expected
+  un-offset node positions from the effect json (track matrix for a part, the
+  base SVG's bbox centre for a base, `(0, 0)` for extras/particles), classifies
+  a file as old / already fixed / neither, and only rewrites the position
+  lines and position keys.  It is idempotent (`--write`, then a dry run reports
+  every chip as already offset).  Dry run before writing: 0 chips that fit
+  neither shape.  Excluded and left alone: 75 chips with no `effect.json` and
+  no renderer -- 139, 223-296 and a few later ones (1228, 1245, 1301) whose
+  `chip_XXXX_effect.svg` is an empty viewBox -- and the 161/177/286 hand-built
+  back/front pairs.  Chip 213's `Orange`/`Purple`/`Yellow` clips name nodes
+  (`chip_0213_orange`, `*_ring`) that do not exist in its prefab; those curves
+  were deliberately left untouched as inert, while its live `Chip_0213.anim`
+  (part_1/5/9) was shifted.
+  Verification: 28,072 position keys across 270 clips differ from HEAD by
+  exactly the offset (particle clips: x set to `x_swf * U`, y untouched), with
+  the Euler/scale/float sections byte-identical; 2,218 `m_LocalPosition` lines
+  changed across 382 prefabs and no other line type; `ChipArtValidate` loads
+  all 1375 prefabs / 2144 renderers; `ChipPlayCheck --chip 152` shows its four
+  particle columns spread over 18.49 preview units, and `--chip 146` still
+  renders one sprite.  The first batch wrote positions with `%g` (6
+  significant digits, <= 5e-6 units of error); `fmt()` now keeps 7 decimals.
+  The validator's one remaining problem is unrelated and pre-dates this pass:
+  `Chip_1236/Sprites/chip_1236_back.svg` does not import as a Sprite, so that
+  prefab's single renderer has no sprite.
+- **A spawned-particle effect has no timeline, so it is checked with a
+  body-relative composite rather than a frame diff.**  Chip 151's flakes are
+  `new FlakeMC()`s added by `effect_000151.onTimer`; the effect SWF draws
+  nothing on its own and `ruffle_frames.py` has no frame to freeze.
+  `Tools/SwfToSvg/sitekick_particles.html` is its reference: it plays
+  `sitekick.swf` in Ruffle at 1:1 and drops copies of the chip's particle SVG at
+  SWF stage coordinates -- one SVG unit per SWF px, origin at the stage centre,
+  `?art=<svg>&at=x,y;x,y&scale=` -- which is the chip 145 static composite's
+  375x300 setup with the flake art in place of the effect SVG.
+  `ChipPlayCheck --hold` is the capture side: it disables the spawned effect's
+  Animators before their first update, so the prefab is measured at its authored
+  pose, the only state a still composite can match, since the flakes tween
+  ±3.47 units about their node.  With the prefab's own placement put into the
+  page and `Tools/SwfToSvg/measure_particles.py` reading both (body = largest ink
+  blob, flakes = light blobs clear of the body's columns, every figure divided
+  by body height so the two zooms cancel): the group's centre against the body's
+  centre is -0.053 body heights at the pivot (pre-fix) and +0.140 at the stage
+  centre (post-fix), 11 px on a 57 px body, against -0.032 and +0.164 in the
+  `--hold` captures.  So the 10.8 px / 0.469 preview-unit fix is carried into the
+  gallery, and the leftover 0.02 body heights (~1.2 px) is the body mask --
+  Ruffle's black silhouette including its outline against Unity's white shell --
+  which cancels in the before/after difference (`Logs/skcomp/c151_compare.png`,
+  `c151_ppu.png`).  A pre-fix capture needs the old prefab: write
+  `git show HEAD:./Assets/Chips/0101-0200/Chip_0151/Chip_0151_Effect.prefab`
+  over the working copy, run, then put the working copy back (verify it, the
+  file is the fix).
+- **Those four columns are a spread over the library canvas, not the SWF's spawn
+  rule.**  `corus/effects/FlakeMC.init` sets
+  `x = Math.random() * stage.stageWidth` (0..375), `y = -25` (25 px above the
+  stage), `scaleX = scaleY = Math.random()` and tweens `y` to `stageHeight + 25`
+  (300) over `3 + Math.random() * 5` s, linear, while `effect_000151.onTimer`
+  adds `Math.random() * 10` flakes a second.  `build_chips.py` cannot port a
+  random field, so it spreads `PARTICLES = 4` copies evenly over the *library's*
+  550x400 canvas (`x_swf = -STAGE_SWF[0]/2 + (n + 0.5) * STAGE_SWF[0]/PARTICLES`,
+  i.e. -206.25/-68.75/+68.75/+206.25), and the outer two are outside the 375 px
+  stage the effect is drawn on -- the composite shows two flakes where the
+  prefab has four.  The fall is ±200 px over 3.5/4.5/5.5/6.5 s against the SWF's
+  +175 -> -150 px, and every copy draws at scale 1 where the SWF randomises 0..1.
+  The group's *origin* is therefore what the offset fix can be judged against;
+  the columns, the fall length and the scale are stand-ins (chips 152, 153, 322,
+  452, 786, 1109 and 1133 share the builder's spread).
+- **A spawned particle is a stream, and `ChipParticleField` runs the SWF's rule.**
+  The four columns are now the authored pose only: the prefabs carry a runtime
+  field (`Assets/Scripts/ChipParticleField.cs`, guid `3f7c1a5e...`) written by
+  `Tools/SwfToSvg/build_particle_fields.py` from each chip's
+  `Sprites/chip_XXXX_effect.json` and `effect_clips.json`.  It spawns a random x
+  across the 375 px stage, `scale = Math.random()` (0..1), 25 px past the stage
+  edge, tweens linearly to the other side and plays the symbol's frames at the
+  movie's 31 fps on each particle's own playhead -- the clip keeps running while
+  it falls, which the bake never did (only frame 1 of each symbol was
+  referenced and no particle `.anim` carries an `m_Sprite` track, so all eight
+  chips drew a still flake/bubble).  Data per chip: one
+  entry per *distinct* symbol (151/152/153/322/452/786 one, 1133 two, 1109
+  four), each with every exported frame; `rising` from the class (`BubbleMC`
+  starts at `stageHeight + 25`, `FlakeMC` at `-25`); and the burst read out of
+  the effect class rather than assumed -- `onStaged` starts `new Timer(1000)` and
+  `onTimer` adds `int(Math.random() * 10)`, i.e. 0..9 a second, mean 4.5, while
+  the tween length is `3 + int(Math.random() * 6)` = 3..8 *whole* seconds.  The
+  chips differ: 322 and 1109 burst 0..5, 452's `LeafMC` falls 5..14 s and 786's
+  `CoinMC` 0..5 s (a coin can be gone the tick it spawned).  The field hides the
+  baked `particle_0..3` nodes on its **first update**, not in `Awake`, because
+  `ChipPlayCheck --hold` disables the component in the frame the effect is
+  instantiated: the authored pose stays the state a held capture measures.
+  Spawn density follows: `mean burst x mean lifetime` is about 25 live flakes
+  for 151 where the bake held four, and peaks near 70 at 9/s over 8 s, which is
+  why the pool is 96.
+- **A particle renders at the size of the art it was drawn from.**  Its prefab
+  node sits at scale 1, so the only size control is the sprite's
+  `svgPixelsPerUnit`, which must be `PPU / SCALE` = **57.6361** (= 1 / 0.01735,
+  one SWF px in world units).  Chip 151 shipped 171.7241 (0.336x, a 5.1 px flake
+  instead of 15) and the same export rule left most of the class wrong:
+  `audit_sprite_scale.py` read 24 of the 32 particle renderers at 0.40-0.67x --
+  152 0.49 (2.0x small), 153 0.40 (2.5x), 322 0.67, 452 0.59, 1109 0.44-0.50,
+  1133 0.40-0.44; only 786 was already right at 1.003.  The tool takes the
+  intended size from `size_px` in the effect json and the rendered size from the
+  viewBox and ppu, prints the ratio, and `--write` pins **every frame of the
+  symbol**, not just frame 1: a per-frame ppu made the 128 flake frames differ
+  (171.7241 / 173.2174 / 174.7368 over one identical viewBox) and an animated
+  particle would have pulsed in size.  1,746 metas now read 57.636x and all 32
+  renderers report 1.000x.  The sprite child's offset is `bboxCentre * U` and
+  does not depend on ppu, so only the meta line moves; the node centres stay at
+  -3.737/2.227/8.191/14.155, -0.484.
+- **A spawned effect is framed by its stage, and one command checks it.**
+  Particles start 25 px outside the 375x300 stage and land anywhere across it,
+  so a capture framed on the renderers in the prefab -- or on the one column the
+  gallery camera keeps in view when the sitekick sits 5.2 units off centre --
+  cannot show the stream.  `ChipPlayCheck --stage` writes `stage.png`: the
+  effect's own 375x300 SWF px centred on the stage (`STAGE_OFFSET` from the
+  instance origin) and scaled by the layer's `lossyScale`, since the gallery
+  draws effects at 2.5x.  `sitekick_particles.html?pad=` does the same on the
+  Ruffle side by widening the canvas.
+  `Tools/SwfToSvg/particle_check.py --chip 151 [--unity] [--live]
+  [--reference]` is the whole check now, and replaces the hand-built composite
+  page plus the throwaway `Logs/skcomp` scripts: it asserts the four columns sit
+  `x_swf` apart (2.386 units = 137.5 SWF px, a span of 17.89 units) within 0.01
+  units, prints each renderer's size in SWF px (0.651 units / 2.5 = 15.0 x 16.7),
+  fails a held capture that spawned anything, and with `--live` requires at least
+  a third of the rule's expected concurrency plus an x spread of half the stage
+  -- four columns read a count of 4 and a spread of 0, so the stand-in cannot
+  pass as a stream.  `--reference` drives `sitekick_particles.html` headless
+  through `ruffle_frames.py`'s `serve`/`browser_command`/`capture_page`.
+  Particle-for-particle comparison is impossible by construction -- Ruffle's
+  `Math.random` is unseeded, so no two runs (and no capture against the export)
+  put the flakes in the same places -- which is why a live check asserts the
+  *distribution* (count against `mean burst x mean lifetime`, x spread and
+  stdev against the stage width) and the held check asserts the authored
+  columns in `report.txt`.  The chip 152/153 runs read `live 27 of 96` and
+  `live 16 of 96` against 25 expected, with 25 and 17 blobs and a spread of 6.4
+  body widths where the stage is 6.5; 151's `--live` capture is 17 blobs and
+  6.34.  The `--reference` capture is what the held numbers are judged against:
+  at `at=x,0` the composite reads the group **+0.1404** body heights above the
+  body centre with a 15.3 SWF px flake, the `--hold` capture **+0.1638** with a
+  17.4 px one, so the difference is 0.023 body heights (1.3 px) -- the body mask,
+  Ruffle's black silhouette against Unity's white shell -- which is the same
+  residual the chip 151 work reported.
+- **The particle frames are needed, not dead art.**  Before the field only frame
+  1 of each symbol was referenced, so 1,714 of the 1,746 particle metas were
+  weight in the build with nothing drawing them.  They are all referenced now.
+  The cost to watch is texture memory rather than correctness: 151 carries 128
+  frames, 152/153 160, 322 40, 452 50, 786 8, 1109 200 per symbol (four symbols)
+  and 1133 200 (two).  Thinning to the SWF's 31 fps is the lever if import time
+  or memory becomes a problem; nothing needs pruning.
+- **Small particles are not blurry, and that is checked by the import scale.**
+  Every particle sprite's texture is 4.9-8.7 pixels per SVG unit with
+  `sampleCount: 4` (151: a 116 px texture over a 22.4 unit box for 15 px of ink,
+  so about 2x the pixels the 1440 capture uses), so the import is not what limits
+  a 15 px flake; the edge difference against Ruffle is its rasteriser, and the
+  5x zoom panel `Logs/skcomp/c151_ppu.png` is the visual check.  The size,
+  though, is measured: 15.0 x 16.7 SWF px in both panels and in `report.txt`.
+- **The measurements live in the repo.**  `Logs/` is gitignored, so the chip 151
+  check's `Logs/skcomp/measure_flakes.py`, `panel151.py` and `panel151_ppu.py` could not be
+  re-run from a clean clone even though this file quoted their numbers.
+  `Tools/SwfToSvg/measure_particles.py` is the tracked version: the same
+  body-relative group centre (normalised by body height) plus what a stream
+  needs -- blob count, mean blob height in SWF px, and x spread and stdev as
+  fractions of body width, which is how a uniform `Math.random()` field is told
+  from four fixed columns.
 - `ChipMovieBuilder.Anchor` still holds the old assumption: it puts the movie's
   stage centre at (0.1, -2.25) px from the body pivot, 13.05 px above the
   holder's (-0.4, +10.8).  Chips 7-16 were measured against standalone Ruffle
@@ -2228,6 +2454,22 @@
   RESULT OK; 0.0416 units per SWF px.  Design composite vs capture
   (`Logs/chip_0100_play/compare.png`): white-face ratio 4.43, and at that scale the
   stripes, both hooks and the brow all sit where the capture has them.
+- Chip 137 is static: one renderer, one frame, `chip_0137_effect.svg` (viewBox
+  `-9 -27.6 25.65 25.7`) -- a googly eye drawn over the face: a pale, faintly
+  pink sclera inside a thick brown outline, an orange iris with yellow spots, a
+  black pupil and a white catchlight.  Nothing to place and nothing to cut, and
+  the `STAGE_OFFSET` pass had already put it at `bounds (0.95, 0.95, 0.50) @
+  (5.35, 0.17)`.  It was drawn **black**: the SVG's sclera and iris are the
+  chip's first two `url(#gradient...)` fills after chip 100
+  (`radialGradient` `#95420f` -> `#d3751c` both times), and the prefab carried
+  the built-in sprite material.  Swapping the renderer's `m_Materials` entry for
+  `ChipMovie-Vector.mat` (fileID 2100000, guid `31d1e238...`) is the whole fix:
+  `Logs/chip_0137_play/resting-close.png` now shows the shaded eye, matching a
+  plain `rsvg-convert` of the same SVG (`art-ref.png`), and the near-black pixels
+  are down to 10,368 of 1.56M (the pupil and the outlines, which are black in
+  the art).  Gallery check after it: `renderers 1  sprites 1  bounds (0.95, 0.95,
+  0.50) @ (5.35, 0.17)`, sprite drawn, RESULT OK.  This is the class the chip 20 /
+  chip 42 notes describe, not a placement or colour-layer fault.
 - Two whole-run audits from the chip 20 / chip 99 double report.  **Gradients:**
   of the ticked chips 17-100, only chip 20's *effect* art carries gradient fills
   (`url(#gradient)` in `<chip>_effect.svg`); the other gradient references live in
@@ -2235,6 +2477,34 @@
   56, 59, 66 and now 20 use `ChipMovie-Vector.mat`; nothing else needs it before
   chip 100 -- but check every new effect SVG for gradient fills, because a wrong
   material renders black and the SVG-vs-Ruffle art check cannot see it.
+  **Gradients past chip 100 (the sweep from 76 up), now done.**  The scan walks
+  every chip 76-1500, per `SpriteRenderer`: resolve its `m_Sprite` guid to the
+  `.svg`, require a real gradient reference (`url(#gradient`,
+  `#radialGradient`, `#linearGradient`) and look at that renderer's own
+  `m_Materials` entry.  `url(#clipPath0)` is a clip path, not a gradient -- chips
+  76 and 83 have only that and render fine on the built-in material.  The scan
+  found **390 chips / 560 renderers** drawing a gradient on the built-in sprite
+  material, and all 560 were swapped to `ChipMovie-Vector.mat`; a re-scan now
+  reads **0** left, with 588 renderers on the vector material in total.  The
+  swap is per renderer, not per file, and that matters: chips 221 (1 of 4) and
+  300 (1 of 6) each have exactly one gradient part, so their other renderers
+  keep `10754` and must.  Others are all-gradient and take every renderer: 466
+  (5), 770 (8), 863 (36), 1133 (5), 706/707 (4), 844 (12), 1069 (12).  Verify
+  the split with the same per-renderer scan rather than `grep`ping the file.
+  Evidence, all `ChipPlayCheck` `RESULT: OK` with the same bounds before and
+  after (the pass touches no transform):
+  * 164 -- four stars over the hair read as black tetrahedra before and as
+    four cyan/orange gradient stars after (`Logs/chip_0164_play/
+    before-resting-close.png` vs `resting-close.png`);
+  * 175 -- the twelve-star tiara now matches a plain `rsvg-convert` of
+    `chip_0175_effect.svg` star for star, yellow->pink through cyan and purple
+    (`Logs/chip_0175_play/resting-close.png` vs `Logs/chip_0175_ref.png`);
+  * 200 -- the striped limb stops being a black stub and shows its grey banding
+    (`Logs/chip_0200_play/`);
+  * 466 -- five renderers, one black teardrop with a sliver of blue becomes a
+    filled cyan radial-gradient drop (`renderers 5  sprites 5`, same bounds).
+  A clean re-scan afterwards reports 0 bad YAML preambles, 0 dangling sprite
+  guids and 0 single-renderer static prefabs off the placement convention.
   **Multi-frame parts:** 148 chips in the plan have a part symbol with more than
   one frame, so their sprite has to swap inside the clip.  Only chip 99 does
   today; chip 57 is the one already ticked whose clip still holds a single pose
@@ -2300,21 +2570,81 @@
   knob, chip 44/72's spare pieces.  Chip 74 is the check: the shins follow the
   colour and the boots stay grey, which is the "ankle to knee" the colour is
   meant to cover.
-- **The arms need a hand cut.**  Chips 72 and 73 put the *whole* arm -- hand
-  included -- in the one `fill` clip, so Flash would colour the fist too, and
-  there is no separate hand piece in the art to leave alone.  Both take
-  `--hand` (`apply_color_layers.HANDS`: `72: "x>87"`, `73: "slope -0.409,32.4"`): every
-  tinted piece is written twice, once clipped to the rest of the drawing
-  (tinted) and once clipped to the hand side (untinted, its own white/grey
-  art), and the copy is emitted *in place* rather than as a layer at the end,
-  or its white fill lands on the black outlines.  Chip 74 needs no cut because
-  its boots really are opaque pieces outside the fill.  At the default white a
-  cut chip is unchanged to within the seam's antialiasing: 0.004 % of pixels
-  for 72, 0.009 % for 73.  The spec is either an axis-aligned side (`x>87`,
-  `y<40`, ...) or `slope m,b` for the line `y = m*x + b`, hand below it -- 73's
-  wrist runs diagonally and a horizontal cut there swallows half the forearm.
-  Unity honours both: the rect and polygon `clipPath`s were checked in play mode,
-  the fist staying white/grey while the forearm tints.
+- **Only the hands and feet stay as drawn; the limb between them and the joint
+  takes the colour.**  Chips 72 and 73 put the *whole* arm -- hand included --
+  in the one `fill` clip, so Flash would colour the fist too, and there is no
+  separate hand piece in the art to leave alone; chip 74 needs no cut, because
+  its boots and bolts really are opaque pieces outside the fill and stay grey
+  by the rule above.  So 72 and 73 take a hand cut (`apply_color_layers.HANDS`),
+  and the cut is **the seam the drawing already has**: `72` is the boxing
+  glove's own silhouette (`shape2/6/2` -- thumb, knuckles, fingers and the cuff
+  behind them, its lower edge is the wrist line), `73` is the fist's top
+  outline (`shape2/7/6`'s points).  A straight line is not good enough: `x>87`
+  on 72 left a white band up the sleeve's right end, and `slope -0.409,32.4` on
+  73 cut a diagonal white strip and a grey wedge through the forearm because it
+  ran through the mass rather than along the fist's black arc -- "the large
+  mass between the hands/feet/joints is supposed to be fully coloured, not
+  arbitrarily cut off".  A hand spec is one or more shapes separated by `;`:
+  `outline shape2/7/3` (group, its 8th path, that path's 4th subpath, closed),
+  `rect x,y,w,h`, `poly x,y x,y ...`, or the old `x>87` / `y<40` / `slope m,b`
+  line cuts.  The shapes are unioned and may overshoot the drawing freely --
+  the hand copy only draws where the run has art -- they just must not reach
+  into the mass.
+- **One shape per hand, because the union goes through an even-odd clip.**  The
+  shapes are subpaths of one `clipPath` and the mass is that union knocked
+  out of a rect (`clip-rule="evenodd"`), so where two shapes *overlap* the
+  even-odd rule cancels them instead of merging: 72's glove, cut as the
+  silhouette plus a knuckle band, a lobe and a right-hand rect, had the overlaps
+  tinted -- a coloured knuckle in the middle of the hand -- while the rect that
+  reached the art's edge took the forearm's bottom-right corner out of the
+  colour with it.  `outline shape2/6/2` alone covers the whole glove and stops
+  at the wrist line, so one shape is both the fix and the seam: overlapping
+  specs need a `poly` that traces the outline they were approximating.
+- **The hand copy and the tint are disjoint clips, not an overlay.**  A tinted
+  run is written twice: clipped to the hand as an untinted layer, and clipped
+  to the rest of the drawing's bbox with the hand shapes knocked out of it
+  (`clip-rule="evenodd"` on that clipPath, named `rest`).  Drawing the untinted
+  copy *over* the tint instead re-composites every translucent shade on the
+  hand side: chip 73's fist came out a grey step darker at white (0.96 % of the
+  composite's pixels, worst 39 levels), which is exactly the defect the old
+  per-piece copy produced as a grey wedge.  Copying a whole *run* rather than
+  each piece is what keeps the layer count down (72: four layers, 73: seven);
+  the pieces of one run have to stay together anyway.  Unity's importer honours
+  the even-odd clip -- checked in play mode, where the fist's 50 % shade renders
+  `#CCCCCC`, the single-composite grey, not a blue-tinted one -- and at the
+  default white the composite is unchanged to within the seam's antialiasing
+  (72: 5 of 319k px differ, worst 6; 73: 8; 74: none).
+- **The grey crease and edge lines take the colour too.**  They are drawn inside
+  the fill clip in the SWF, so `paint()` multiplies them: Ruffle shows a darker
+  shade of the colour there, not a grey line lying on top of it.  FFDec exports
+  them flat and unclipped, so on 72 (the `#9e9e9e` band along the sleeve), 73
+  (the `#666666` creases) and 74 (the `#666666` shin seams) they stayed grey
+  while everything around them tinted -- "you missed the gray lines, those
+  should be colored, not overlayed gray".  `split_fill_layers.grey_stroke`
+  counts a stroke as shading when its colour is grey (r=g=b between 30 and
+  225), which moves it into the tinted run and multiplies it to `(20,41,102)`
+  for `#666666` under `3366FF` -- the values Ruffle renders.  Black outlines
+  stay black, and the opaque grey *fills* that are really art outside the clip
+  (74's boots, 73's shoulder knob) stay grey, so the rule is opt-in per chip
+  (`apply_color_layers.TINT_STROKES = {72, 73, 74}`) rather than global: no
+  other exported chip has been checked for it.
+- **A coloured chip is checked against Ruffle with the fill recoloured.**  The
+  effect's own `paint()` only ever tints the fill clip, so a reference is
+  `extract_effect.py` on the chip, the fill shape's solid colour rewritten (72:
+  1026, 73: 1021, 74: 1016), `-xml2swf`, and a screenshot through
+  `ruffle_preview.html?swf=...&w=750&h=600` (the library stages are 550x400 and
+  would crop the art).  What it shows is that **Flash paints the whole fill
+  clip, fist included**: the hand cut is a deliberate difference from the site,
+  asked for because only hands, feet and joints are meant to stay as drawn.
+  Measured as colour-mask IoU against the painted render (art ink IoU 0.96-0.97
+  first, so the alignment is good): 72 0.89, 73 0.60, 74 0.94.  Everything
+  tinted in our layers that Ruffle does not paint is 2.7 % / 1.9 % / 2.7 % of
+  the colour pixels -- seam antialiasing -- while what Ruffle paints and we do
+  not is 8.4 % (72's glove) and 38.2 % (73's whole fist), plus 3.0 % on 74
+  (its boot toes' antialiasing).  `Logs/chipcolor-review/chips-72-74-colour.png`
+  holds the whole comparison per chip: Ruffle as drawn, Ruffle painted, our
+  layers.  The sleeve band across 72's arm (the `#9e9e9e` stroke) does stay grey
+  under colour on both sides, so the opaque-art rule holds there too.
 - **The Sitekick body is a white/grey template tinted to Tuesday's palette.**
   The reference is not `sitekick.swf`'s runtime paint but **Tuesday.swf's
   sitekick, which is baked at its own colour**: at `#FFCC00` (100/80/0) its flat
@@ -2385,6 +2715,66 @@
   six for 45).  Chip 99 needed nothing: its `fill_1` was already its own
   renderer (the white dome, order 1) after the four-wing split, so it is just
   listed in `coloredRenderers`.
+- `apply_color_layers.check_prefab` refuses to write a prefab that is not real
+  Unity YAML, or that points a renderer at a sprite that does not exist.  Both
+  faults happened together on 72/73/74 and lived only in the prefab file, so
+  nothing failed until the chip was drawn in game: the written prefab had lost
+  its `%YAML` preamble and every block's `--- !u!` header (`1 &100001` instead
+  of `--- !u!1 &100001`), and its four/five/seven `m_Sprite` refs named guids
+  from an earlier split, so Unity still loaded the components and gave every
+  renderer a null sprite.  `ChipPlayCheck --chip 72` is the check that sees it
+  -- `renderers 4  sprites 0`, `FAIL the static effect draws nothing` -- while
+  the prefab itself reads as complete.  A re-split deletes the old `_L*.svg`
+  and mints a new guid per sprite (`sprite_meta`), so the patch has to be built
+  from the `.svg.meta` files on disk, never from a listing of a previous run.
+  The writer also appended to the old tint list instead of replacing it, so 72
+  carried five copies of `L1` and four dead ids and 74 two dead ids;
+  `coloredRenderers` is now the prefab's existing renderers, once each.
+- The other half of that guard: a block header with **no body**.  Every
+  colour-layer chip had stray `--- !u!114 &100020`-style lines with no
+  `MonoBehaviour:` after them -- 36 of them across 11 prefabs (29, 38, 42, 44,
+  45, 54, 58, 64, 72, 73, 74, 99), every id unreferenced.  A mid-file one
+  truncates Unity's load: chip 74 reported `renderers 1  sprites 1` where its
+  prefab has five renderers, and drew only the root sprite -- and
+  `ChipPlayCheck` still said `RESULT OK`, because one sprite *was* drawn.  After
+  deleting them all twelve chips load every renderer: 74 5/5, 45 8/8, 73 7/7,
+  99 6/6, 38 5/5, 72 4/4, 42 4/4, 58 4/4, 44 3/3, 29/54/64 2/2.
+  `check_prefab` misses this variant -- it looks for headers that lost their
+  `--- !u!`, not headers whose body is empty -- so the scan has to also look for
+  `^--- !u!\d+ &-?\d+\n(?=--- !u!|$)`.
+  The variant was the layer writer's, not the library's: a sweep of all 1375
+  `Chip_*_Effect.prefab` files finds **2144 declared `!u!212` blocks and 2144
+  loaded SpriteRenderers, 0 empty headers, 0 orphan renderer blocks, 0 duplicate
+  object ids, 0 malformed headers, 0 null sprites, 0 disabled renderers**, so
+  the twelve fixed colour-layer chips were the whole class.  Two entry points
+  keep it that way: `python3 Tools/check_renderer_counts.py` (text scan; writes
+  `Logs/chip-renderer-counts-py.txt`) and the Unity batch
+  `-executeMethod ChipRendererCountCheck.RunFromCommandLine` (loads every
+  prefab and compares the live `GetComponentsInChildren<SpriteRenderer>(true)`
+  count with the declared blocks; writes `Logs/chip-renderer-counts.txt`, exits
+  1 on any under-load).  Run both after any change that writes prefab YAML --
+  `ChipArtValidate` alone will not catch it, because one drawn sprite is enough
+  for `ChipPlayCheck` to pass.
+- **Tint under the vector material** (checked after the 390-chip material pass).
+  Only twelve chips have colour layers at all -- 29, 38, 42, 44, 45, 54, 58,
+  64, 72, 73, 74, 99 -- and exactly one of them, chip 42, also has a gradient
+  sprite; there the gradient layer is `L3` (renderer 100016) and it is *not* in
+  `coloredRenderers`, because the tinted layers L0/L2 are flat silver.  So no
+  shipped chip pairs a tint with a gradient fill.  `ChipColorCheck`
+  (`-executeMethod Sitekick.ChipColorCheck.RunFromCommandLine --chip N`, which
+  writes `Logs/chip-colour/report.txt` and `art.png` captured *after* the tint)
+  reads `RESULT OK` for 42 (two tinted renderers, vector material) and 74
+  (built-in material): `_Color` FFCC00 at spawn, follows a change to 3C66FF,
+  clears to white.  In pixels, 42 under FFCC00 goes from 39,731 silver px to
+  742 and 13,422 yellow to 140,005 with the red emblem untouched.  Tinting L3 as
+  well (temporary add to `coloredRenderers`, reverted) changed 72,489 px with
+  mean delta RGB **(0.0, -19.9, -26.0)** -- r untouched, g -20%, b to 0, i.e.
+  exactly the `_Color = (1, 0.8, 0)` multiply -- and all 21,476 pixels that had
+  blue > 40 went to blue 0, so the multiply lands on gradient-sampled pixels too
+  and the ramp survives it (`Logs/chip_0042_colour/art-with-gradient-layer.png`).
+  Gotcha: `ChipPlayCheck --color` is not a tint test.  Both chips' captures came
+  back byte-identical with and without `--color` (0 px changed), while
+  `ChipColorCheck` sees the block set, so read the tint from `ChipColorCheck`.
 - **Not coloured yet:** the movie chips 7, 8, 9, 10, 11, 12, 14, 16, 36, and
   chip 57.  Those chips are not painted by `BasePaint` at all: their own clips
   call the *site's* `paint(this,"shadow")` / `"shadow2"` / `"shadow3"` (or
@@ -2455,6 +2845,10 @@
   multiply of the chosen colour.  The body's greys are Tuesday's baked ratios,
   not `paint()`'s tones (see the template table above).  The washer, knob and
   eyes are not in `coloredRenderers` because nothing paints them.
+- `ChipPlayCheck` takes `--hold`: it stops the spawned effect's Animators
+  before their first update, so a chip whose parts animate is captured at the
+  prefab's authored pose instead of a random frame of its fall (chip 151's
+  flakes, see the particle composite above).
 - `ChipPlayCheck` takes `--color RRGGBB`: it types the value into the field,
   presses Apply (`apply.onClick.Invoke()`, the same listener the button fires),
   spawns the chip into that colour and writes the tint of every renderer to

@@ -130,6 +130,83 @@ clip moves.  Timing comes from the SWF: `verify_arm_timing.py` reads the root's
 frame actions, resolves the labels they name, and checks tag-for-tag that the arm
 sprites the export draws carry exactly that source clip frame on every root frame.
 
+### Effects that spawn their art
+
+A chip whose parts are created by ActionScript has no frames to freeze: chip 151's
+flakes are `new FlakeMC()`s added by a timer, so `ruffle_frames.py` has nothing to
+cut, and in the gallery the Animators are somewhere mid-fall.  For those the
+reference is a body-relative composite, `sitekick_particles.html`: Ruffle plays
+`sitekick.swf` at 1:1 and the page drops copies of the chip's particle SVG at SWF
+stage coordinates, one SVG unit per SWF pixel with the origin at the stage centre
+— the chip 145 static composite's 375x300 setup with the particle art in place of
+the effect SVG.
+
+```bash
+python3 -m http.server 8137            # repo root
+# http://127.0.0.1:8137/Unity/Tools/SwfToSvg/sitekick_particles.html
+#   ?art=/Unity/Assets/Chips/0101-0200/Chip_0151/Sprites/chip_0151_particle_0_f001.svg
+#   &at=-206.25,0;-68.75,0;68.75,0;206.25,0
+```
+
+`at` takes `x,y` pairs in SWF px relative to the stage centre (`0` is the centre,
+`206.25` a column 19 px off the right edge) and `scale` multiplies the art.  The
+gallery side is `ChipPlayCheck --hold`, which disables the spawned effect's
+Animators before their first update so the capture is the prefab's authored pose —
+the only state a still composite can match, since chip 151's flakes tween ±3.47
+units about their node.  `Tools/SwfToSvg/measure_particles.py` reads both: body = largest
+ink blob, flakes = light blobs clear of the body's columns, every figure divided by
+body height so the gallery's zoom cancels.  Chip 151 measures -0.053 body heights
+at the pivot and +0.140 at the stage centre in the composite, -0.032 and +0.164 in
+the captures, so the stage offset is carried and the ~0.02 body heights left over
+is the body mask (Ruffle's black silhouette against Unity's white shell).  A pre-fix capture means writing `git show HEAD:…Chip_0151_Effect.prefab` over the
+working copy and restoring it afterwards.
+
+`?pad=N` widens the capture by N empty pixels on every side, for a particle the
+SWF would clip above its 300 px stage (`FlakeMC` starts at -25).  `ChipPlayCheck
+--stage` is the Unity side of the same idea: it writes `stage.png`, the effect's
+whole 375x300 stage scaled by the layer's 2.5x, beside `resting.png`, and it
+reports the field's symbol count and live total.
+
+**The stream itself is the effect.**  The baked four columns are only the
+authored pose; the prefabs carry `ChipParticleField`, which spawns from the rule
+in the chip's ActionScript -- `Timer(1000)` firing `int(Math.random() * 10)`
+particles, each with a random x across the stage, `scale = Math.random()`, a
+start 25 px past the stage edge and a `3 + int(Math.random() * 6)` s linear
+tween -- and plays each symbol's frames at 31 fps on its own playhead.
+`build_particle_fields.py` writes that data into the eight particle prefabs
+(`--write`, idempotent) from `Sprites/chip_XXXX_effect.json`:
+
+```bash
+python3 Tools/SwfToSvg/build_particle_fields.py            # report
+python3 Tools/SwfToSvg/build_particle_fields.py --write    # patch prefabs
+```
+
+A particle's node is at scale 1, so the sprite's `svgPixelsPerUnit` *is* its
+size.  `audit_sprite_scale.py` compares the rendered size with the art's own
+`size_px` and rewrites the whole symbol when they differ (the class shipped
+1.5-2.5x too small; the value is 57.6361 = 1 / 0.01735):
+
+```bash
+python3 Tools/SwfToSvg/audit_sprite_scale.py           # table + FAIL
+python3 Tools/SwfToSvg/audit_sprite_scale.py --write   # pin ppu
+```
+
+And the whole check is one command, which measures `report.txt` and `stage.png`
+and can drive both sides itself:
+
+```bash
+python3 Tools/SwfToSvg/particle_check.py --chip 151               # measure what is there
+python3 Tools/SwfToSvg/particle_check.py --chip 151 --unity       # + run ChipPlayCheck --hold --stage
+python3 Tools/SwfToSvg/particle_check.py --chip 151 --live        # the spawner, not the pose
+python3 Tools/SwfToSvg/particle_check.py --chip 151 --reference   # + the Ruffle composite
+```
+
+It checks the columns' spacing against `x_swf`, that a held capture spawned
+nothing, that a live one holds at least a third of `mean burst x mean lifetime`
+flakes with an x spread over half the stage, and prints the body-relative group
+centre `measure_particles.py` reads from the capture.
+
+
 ## Prefab placement
 
 `build_prefabs.py` places each piece using the SWF matrix of the fullest animation
@@ -159,6 +236,17 @@ chip draws:
   its own animator/clip so they do not run in step, moving from one edge to the other
   and fading in and out — an endless rise or fall (chips 151/152, 153, 322, 452, 786,
   1109, 1133).
+- The copies are a stand-in for a random field, not a port of it.  Chip 151's
+  `FlakeMC.init` sets `x = Math.random() * stage.stageWidth` (0..375), `y = -25`
+  (25 px above the stage), `scaleX = scaleY = Math.random()` and tweens `y` to
+  `stageHeight + 25` over `3 + Math.random() * 5` s, and its `onTimer` adds
+  `Math.random() * 10` flakes a second.  `build_chips.py` spreads `PARTICLES = 4`
+  copies evenly over the *library's* 550x400 canvas instead
+  (`x_swf = -275 + (n + 0.5) * 137.5`), so -206.25 and +206.25 fall outside the
+  375 px stage the effect is drawn on, and gives them fixed 3.5/4.5/5.5/6.5 s falls
+  of ±200 px rather than the SWF's +175 → -150 px, at scale 1 rather than 0..1.
+  The group's origin is what a prefab can be judged against; the columns, the fall
+  length and the scale are approximations (`AGENTS.md`, chip 151).
 
 Output: `Tools/SwfToSvg/effect_clips.json` (regenerate after re-exporting the
 libraries; it is committed so the chip build does not need the actionscript).
