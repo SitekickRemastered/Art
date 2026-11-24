@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 100002}
   - component: {fileID: 100003}
   - component: {fileID: 100004}
+  - component: {fileID: 100031}
   m_Layer: 0
   m_Name: Chip_0786_Effect
   m_TagString: Untagged
@@ -84,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 100005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.00694, y: -0.18738, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 100007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.5784375, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -255,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 100013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.1928125, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -390,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 100019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.1928125, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -525,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 100025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.5784375, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -634,3 +635,36 @@ Animator:
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
+--- !u!114 &100031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7c1a5e9b2d4c8ea1f6d0b7c93e2a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  art:
+  - name: particle_0
+    rising: 0
+    frames:
+    - {fileID: 3286163911610860551, guid: 1b38cc4b2cea043e0f5e127305b147b3, type: 3}
+    - {fileID: 3286163911610860551, guid: f0e2aab9ec7af4cb62ef717e44faced3, type: 3}
+    - {fileID: 3286163911610860551, guid: 996ab7cfb32ba26215291ac719cce067, type: 3}
+    - {fileID: 3286163911610860551, guid: 66e63b5860f6378a8ee31df115a68f51, type: 3}
+    - {fileID: 3286163911610860551, guid: a7f768de0f4a14d547eddbd2afdef9ff, type: 3}
+    - {fileID: 3286163911610860551, guid: 9c0a102aefe2412e28d9b5aabb741ec3, type: 3}
+    - {fileID: 3286163911610860551, guid: bcdd5d1231052490d7b59e4d79ebac3f, type: 3}
+    - {fileID: 3286163911610860551, guid: 184049611d257ed0c3eb612061bef5e8, type: 3}
+  spawnInterval: 1
+  spawnBurst: 10
+  minLifetime: 0
+  maxLifetime: 5
+  stageWidth: 375
+  stageHeight: 300
+  margin: 25
+  frameRate: 31
+  capacity: 96
