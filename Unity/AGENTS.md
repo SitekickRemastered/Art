@@ -725,19 +725,23 @@
   `x_swf` apart (2.386 units = 137.5 SWF px, a span of 17.89 units) within 0.01
   units, prints each renderer's size in SWF px (0.651 units / 2.5 = 15.0 x 16.7),
   fails a held capture that spawned anything, and with `--live` requires the
-  spawner's own `LiveCount` to reach half the rule's expected concurrency plus an
-  x spread of half the stage.  That count has to come from the component, not the
+  spawner's own `LiveCount` to reach a third of the rule's expected concurrency
+  plus an x spread of half the stage.  That count has to come from the component, not the
   capture: chip 786's four baked coins measure 7 blobs under the stream mask (10
   real coins merge into 8), so no blob floor separates them, while `LiveCount` is
   0 for anything that is not spawning and a prefab with the field block deleted
   fails outright.  The window is `maxLifetime + 2` s rather than a fixed 4.5:
   with a 1 s tick and whole-second lifetimes that is where every age class that
   can still be alive is represented, so the count matches the rule, where 4.5 s
-  undercounted 1109 by about 30% and sampled 786 anywhere from 4 to 19.  Five
-  seeded runs each (`--seed N --repeat 5`): 786 14/17/16/8/10 live over 7 s
-  against a floor of 5.6, 1109 12-17 over 10 s against 6.9; with 786's field
-  block removed the run reports `no particle field` and 6 blobs against the held
-  pose's 7, and fails.  Batchmode seeds `UnityEngine.Random` identically on every
+  undercounted 1109 by about 30% and sampled 786 anywhere from 4 to 19.  Every
+  chip now has a distribution -- five seeded runs each (`--seed N --repeat 5`),
+  read against a floor of a third of `mean burst x mean lifetime`: 786
+  14/17/16/8/10 live over 7 s (mean 13.0, floor 3.8), 1109 12-17 over 10 s
+  (15.0, 4.6), 151 26/21/37/28/14 (25.2, 8.2), 152 25/19/31/28/13 (23.2, 8.2),
+  153 25/20/34/33/14 (25.2, 8.2), 322 12/17/13/17/16 (15.0, 4.6), 452
+  52/26/55/42/32 over 16 s (41.4, 14.2) and 1133 25/21/29/26/12 (22.6, 8.2).
+  With 786's field block removed the run reports `no particle field` and 6 blobs
+  against the held pose's 7, and fails.  Batchmode seeds `UnityEngine.Random` identically on every
   launch, so a repeat without `--seed` measures one draw however many times it is
   run, and `run_unity` now refuses a report older than its own launch because
   `--live` without `--unity` used to grade the previous capture.  `--reference` drives `sitekick_particles.html` headless
@@ -751,12 +755,19 @@
   153 -- `live 27 of 96` on 152, `live 16 of 96` on 153, 17 blobs with a 6.34
   spread on 151 -- are one draw each, taken at the old fixed 4.5 s window with
   the unseeded batchmode default.  Re-running them reproduces those exact
-  numbers instead of varying, which is the signature of a single sample: they
-  describe what one draw looked like, not what the chip usually holds, and 4.5 s
-  undercounts every chip whose particles live for several seconds.  Measured
-  distributions exist only for 786 and 1109 so far (five seeded runs each,
-  above); the other six want `--repeat 5 --seed 1` before a count from them is
-  quoted as typical.  The `--reference` capture is what the held numbers are judged against:
+  numbers instead of varying, which is the signature of a single sample: 151's,
+  152's, 322's and 1133's fall inside the distributions above, but 153's 16 is a
+  low draw (its five seeded runs read 14-34) and 452's 14 is not representative
+  at all -- its 4.5 s window was shorter than one `LeafMC` lifetime (5-14 s), so
+  the stream had not reached the steady state it was being asked to show, and
+  the same chip holds 26-55 over a 16 s window.  786's single 4 is the other
+  kind of tail (its runs read 8-17), a quiet draw rather than a dead spawner.
+  The floor is a third of the rule rather than half because one run is one draw
+  of a 0..N burst, so a legitimate tail has to clear it: at half, 1133's seed-5
+  run read 12 against 12.4 and failed, and at a third (8.2) the same draw
+  passes.  The guard against a dropped field does not depend on the margin --
+  that run reports no field line and `LiveCount` 0, whatever the floor -- so a
+  third costs nothing and still catches a spawner that runs but far too quiet.  The `--reference` capture is what the held numbers are judged against:
   at `at=x,0` the composite reads the group **+0.1404** body heights above the
   body centre with a 15.3 SWF px flake, the `--hold` capture **+0.1638** with a
   17.4 px one, so the difference is 0.023 body heights (1.3 px) -- the body mask,

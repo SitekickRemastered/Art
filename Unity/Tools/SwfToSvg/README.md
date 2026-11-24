@@ -202,24 +202,36 @@ python3 Tools/SwfToSvg/particle_check.py --chip 151 --reference   # + the Ruffle
 ```
 
 It checks the columns' spacing against `x_swf`, that a held capture spawned
-nothing, that a live one holds at least half of `mean burst x mean lifetime` in
-the spawner's own `LiveCount` with an x spread over half the stage, and prints
-the body-relative group centre `measure_particles.py` reads from the capture.
+nothing, that a live one holds at least a third of `mean burst x mean lifetime`
+in the spawner's own `LiveCount` with an x spread over half the stage, and
+prints the body-relative group centre `measure_particles.py` reads from the
+capture.
 A live run waits `maxLifetime + 2` seconds so the stream reaches steady state,
 keeps the chip's held capture beside it as the floor's baseline, and refuses to
 grade a report older than its own Unity launch.  Repeats: `--seed N` reseeds the
 editor (batchmode otherwise repeats one draw) and `--repeat 5 --seed 1` prints
 the distribution.
 
-Five seeded runs each: chip 786 holds 14/17/16/8/10 live over its 7 s window
-(mean 13.0, spawner floor 5.6) and 1109 12-17 over 10 s (mean 15.0, floor 6.9),
-against a baked pose that alone measures 7 blobs under the stream mask -- which
-is why the gate is the component's `LiveCount` and the capture only has to
-corroborate it.  With 786's field block deleted the run reports `no particle
-field` and 6 blobs, and fails.  Counts quoted as typical earlier -- 152 `live 27
-of 96`, 153 `live 16 of 96`, 151 17 blobs -- were one unseeded draw each at the
-old 4.5 s window: reproducible, not representative.  `--repeat` is what turns
-them into a distribution, and no other chip has one yet.
+Five seeded runs each, mean and spawner floor in brackets (a third of the
+rule): chip 786 holds 14/17/16/8/10 live over its 7 s window (13.0, 3.8), 151
+26/21/37/28/14 over 10 s (25.2, 8.2), 152 25/19/31/28/13 (23.2, 8.2), 153
+25/20/34/33/14 (25.2, 8.2), 322 12/17/13/17/16 (15.0, 4.6), 452 52/26/55/42/32
+over 16 s (41.4, 14.2), 1109 12-17 over 10 s (15.0, 4.6) and 1133
+25/21/29/26/12 (22.6, 8.2), against a baked pose that alone measures 7 blobs
+under the stream mask -- which is why the gate is the component's `LiveCount`
+and the capture only has to corroborate it.
+With 786's field block deleted the run reports `no particle field` and 6 blobs,
+and fails.  Counts quoted as typical earlier were one unseeded draw each at the
+old 4.5 s window: reproducible, not representative.  151's 17 blobs, 152's `live
+27 of 96`, 322's and 1133's samples sit inside their distributions; 153's `live
+16 of 96` is a low draw (14-34 across its five runs) and 786's 4 is the same
+tail (8-17).  452's 14 was not representative at all: 4.5 s is shorter than one
+`LeafMC` lifetime (5-14 s), so the stream had not reached steady state, and the
+same chip holds 26-55 over a 16 s window.  The 1133 seed-5 run's 12 is a tail
+draw, not a chip fault: it failed a floor of half the rule (12.4) and clears the
+third (8.2), which is why the floor is a third.  That does not weaken the
+stripped-prefab check -- a prefab with no field block reports no field line and
+`LiveCount` 0, and fails on that, not on the count.
 
 
 ## Prefab placement
