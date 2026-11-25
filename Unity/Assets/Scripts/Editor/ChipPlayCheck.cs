@@ -375,6 +375,15 @@ namespace Sitekick
 					lines.Add( "field stage " + field.StageWidth.ToString( "0.##", inv )
 						+ " x " + field.StageHeight.ToString( "0.##", inv ) + " px"
 						+ "  capture margin " + CaptureMargin.ToString( "0.00", inv ) );
+					// the spawn constants: a particle starts `margin` px past the stage
+					// and crosses it over its own lifetime, drawing at Math.random()
+					// scale while its symbol plays at the movie's frame rate
+					lines.Add( "field rule  particle margin " + field.Margin.ToString( "0.##", inv )
+						+ " px  symbol " + field.FrameRate.ToString( "0.##", inv ) + " fps"
+						+ "  lifetime " + field.MinLifetime.ToString( "0.##", inv )
+						+ ".." + field.MaxLifetime.ToString( "0.##", inv ) + " s"
+						+ "  burst 0.." + Mathf.Max( 0, field.Burst - 1 ) + " every "
+						+ field.Interval.ToString( "0.##", inv ) + " s" );
 				}
 				if ( seed >= 0 )
 					lines.Add( "seed " + seed );
@@ -385,6 +394,19 @@ namespace Sitekick
 					// property of these, while a capture merges and misses particles
 					lines.Add( "live x " + string.Join( ",", System.Array.ConvertAll( field.LiveX( ),
 						v => v.ToString( "0.00", System.Globalization.CultureInfo.InvariantCulture ) ) ) );
+					// every live particle's rule state, one line each: its start and end
+					// y, its age against its own lifetime, the scale it draws at and the
+					// symbol frame it is showing -- the parts the x spread cannot see
+					var live = System.Globalization.CultureInfo.InvariantCulture;
+					foreach ( var t in field.LiveTracks( ) )
+						lines.Add( "live particle  x " + t.x.ToString( "0.00", live )
+							+ "  y " + t.y.ToString( "0.00", live )
+							+ "  age " + t.age.ToString( "0.00", live )
+							+ "  life " + t.life.ToString( "0.00", live )
+							+ "  from " + t.from.ToString( "0.00", live )
+							+ "  to " + t.to.ToString( "0.00", live )
+							+ "  scale " + t.scale.ToString( "0.000", live )
+							+ "  frame " + t.frame + " of " + t.frames );
 				}
 				// where each renderer actually sits, so a missing or covered piece of
 				// art is visible in the report instead of only in the capture

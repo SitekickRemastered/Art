@@ -25,6 +25,14 @@ What it asserts, and why each one is in here:
   the count instead of failing legitimate quiet draws.  The capture corroborates
   with blobs at least the held pose's.  A baked effect reads 4 blobs and has no
   x values at all; a prefab with no field block has no `LiveCount` either.
+* **rule** -- the spread is one third of the rule, so the spawner also reports
+  every live particle (`live particle  x .. y .. age .. life .. from .. to ..
+  scale .. frame n of m`) and the constants it runs (`field rule`).  Each one
+  has to start `margin` px past the stage edge, end at the other side, cross
+  linearly over its own lifetime, draw at `Math.random()` scale and show the
+  frame its age puts it at in a symbol playing at the movie's frame rate.  A
+  fixed y, a half-speed fall and every particle at scale 1 all passed the
+  spread check; each fails here.
 * **pose** -- with `--hold` the authored pose is what is measured, so the group
   centre against the body can be compared with the composite reference; the
   number it prints is the body-height offset the chip 151 work used.
@@ -202,6 +210,44 @@ def spread_of(xs, stage):
             "stdev": statistics.pstdev(xs) / float(stage)}
 
 
+PARTICLE = re.compile(
+    r"^live particle\s+x (-?[\d.]+)\s+y (-?[\d.]+)\s+age ([\d.]+)\s+life ([\d.]+)"
+    r"\s+from (-?[\d.]+)\s+to (-?[\d.]+)\s+scale ([\d.]+)\s+frame (\d+) of (\d+)\s*$",
+    re.M)
+
+FIELD_RULE = re.compile(
+    r"^field rule\s+particle margin ([\d.]+) px\s+symbol ([\d.]+) fps"
+    r"\s+lifetime ([\d.]+)\.\.([\d.]+) s\s+burst 0\.\.(\d+) every ([\d.]+) s",
+    re.M)
+
+
+def live_particles(report):
+    """Every live particle's rule state, in the order the spawner listed it."""
+    try:
+        text = open(report, encoding="utf-8").read()
+    except OSError:
+        return []
+    return [{"x": float(m.group(1)), "y": float(m.group(2)), "age": float(m.group(3)),
+             "life": float(m.group(4)), "from": float(m.group(5)),
+             "to": float(m.group(6)), "scale": float(m.group(7)),
+             "frame": int(m.group(8)), "frames": int(m.group(9))}
+            for m in PARTICLE.finditer(text)]
+
+
+def field_rule(report):
+    """The spawn constants the field reports: margin, symbol rate, lifetime, burst."""
+    try:
+        text = open(report, encoding="utf-8").read()
+    except OSError:
+        return None
+    m = FIELD_RULE.search(text)
+    if not m:
+        return None
+    return {"margin": float(m.group(1)), "fps": float(m.group(2)),
+            "life": (float(m.group(3)), float(m.group(4))),
+            "burst": int(m.group(5)), "interval": float(m.group(6))}
+
+
 def capture_args(st):
     """(stage tuple, margin) for measuring a capture, from a report's line."""
     if not st:
@@ -229,6 +275,123 @@ def spread_floor(n, confidence=SPREAD_CONFIDENCE):
         else:
             hi = mid
     return lo
+
+
+def rule_problems(report, stage, export):
+    """What the spread gate cannot see: the start, the travel, the scale, the playhead.
+
+    The x spread says the spawn rule covers the stage.  It says nothing about
+    whether a particle starts 25 px past the edge, crosses the stage linearly
+    over its own lifetime, draws at `Math.random()` scale, or plays its symbol
+    at the movie's frame rate -- a field with a fixed y, a half-speed traverse
+    or every particle at scale 1 passed every earlier check.  Each of these is
+    read from the spawner's own `live particle` lines.  Returns a list of
+    sentences, empty when the rule holds.
+    """
+    parts = live_particles(report)
+    rule = field_rule(report)
+    if rule is None:
+        return ["the report has no `field rule` line, so the particle margin, "
+                "symbol rate and lifetime the field runs are unknown"]
+    if stage is None:
+        return []      # the unknown-stage failure is already reported once
+    if not parts:
+        return ["the report lists no live particles to audit"]
+
+    out = []
+    reach = stage["height"] / 2.0 + rule["margin"]
+    start = [p for p in parts if abs(abs(p["from"]) - reach) > 0.5]
+    if start:
+        out.append("%d of %d particles start %.2f px from the stage centre, not "
+                   "stage/2 + %.2f = %.2f"
+                   % (len(start), len(parts), start[0]["from"], rule["margin"], reach))
+    ends = [p for p in parts if abs(p["to"] + p["from"]) > 0.5]
+    if ends:
+        out.append("%d of %d particles end at %.2f after starting at %.2f, not the "
+                   "other side of the stage"
+                   % (len(ends), len(parts), ends[0]["to"], ends[0]["from"]))
+
+    lo, hi = rule["life"]
+    wrong_life = [p for p in parts if not lo - 0.01 <= p["life"] <= hi + 0.01]
+    if wrong_life:
+        out.append("%d of %d particles live %.2f s, outside the rule's %g..%g s"
+                   % (len(wrong_life), len(parts), wrong_life[0]["life"], lo, hi))
+
+    # a linear tween over the particle's own lifetime: the residual is what a
+    # constant y, a half-speed traverse or an eased tween shows up as
+    travel = 2.0 * reach
+    tol = max(1.0, 0.02 * travel)
+    rows = []
+    for p in parts:
+        t = min(1.0, p["age"] / p["life"]) if p["life"] > 0 else 1.0
+        rows.append((abs(p["y"] - (p["from"] + (p["to"] - p["from"]) * t)), p,
+                     p["from"] + (p["to"] - p["from"]) * t))
+    bad = [r for r in rows if r[0] > tol]
+    if bad:
+        r = max(bad, key=lambda x: x[0])
+        out.append("%d of %d particles are off a linear traverse (worst %.1f px: y %.1f "
+                   "where the tween puts it at %.1f, tolerance %.1f)"
+                   % (len(bad), len(parts), r[0], r[1]["y"], r[2], tol))
+
+    scales = [p["scale"] for p in parts]
+    outside = [s for s in scales if s < 0.0 or s > 1.001]
+    if outside:
+        out.append("%d of %d particles draw at scale %.3f, outside the rule's 0..1"
+                   % (len(outside), len(parts), outside[0]))
+    floor = spread_floor(len(scales))
+    if floor is not None and max(scales) - min(scales) < floor:
+        out.append("every particle draws at scale %.2f-%.2f (range %.3f, floor %.3f "
+                   "for %d): the rule draws Math.random() per spawn"
+                   % (min(scales), max(scales), max(scales) - min(scales), floor,
+                      len(scales)))
+
+    fps = export.get("fps")
+    if fps and abs(rule["fps"] - fps) > 0.01:
+        out.append("the report's symbol rate is %g fps, the chip's export says %g"
+                   % (rule["fps"], fps))
+    lengths = sorted(set(export.get("frames") or []))
+    wrong = [p for p in parts if lengths and p["frames"] not in lengths]
+    if wrong:
+        out.append("%d of %d particles play %d frame(s); the export has %s"
+                   % (len(wrong), len(parts), wrong[0]["frames"],
+                      "/".join(str(n) for n in lengths)))
+    still = [p for p in parts if p["frames"] < 2]
+    if still:
+        out.append("%d of %d particles have a single-frame symbol, so nothing animates"
+                   % (len(still), len(parts)))
+    late = []
+    for p in parts:
+        if p["frames"] < 2:
+            continue
+        want = int(p["age"] * rule["fps"]) % p["frames"]
+        d = abs(p["frame"] - want)
+        d = min(d, p["frames"] - d)
+        late.append((d, p, want))
+    bad = [r for r in late if r[0] > 1]
+    if bad:
+        d, p, want = max(bad, key=lambda x: x[0])
+        out.append("%d of %d particles are off the playhead (age %.2f s at %g fps is "
+                   "frame %d, the symbol shows %d)"
+                   % (len(bad), len(parts), p["age"], rule["fps"], want, p["frame"]))
+    return out
+
+
+def print_rule(report, stage, export):
+    """One line describing the rule the spawner actually ran."""
+    parts = live_particles(report)
+    rule = field_rule(report)
+    if not (parts and rule and stage):
+        return
+    ages = [p["age"] for p in parts]
+    scales = [p["scale"] for p in parts]
+    lives = [p["life"] for p in parts]
+    reach = stage["height"] / 2.0 + rule["margin"]
+    print("rule: %d track(s), start %.0f px from the centre (stage/2 + %g), ages "
+          "%.1f-%.1f s, life %g-%g s, scale %.2f-%.2f (floor %.2f), symbols %d-frame "
+          "at %g fps"
+          % (len(parts), reach, rule["margin"], min(ages), max(ages), min(lives),
+             max(lives), min(scales), max(scales), spread_floor(len(scales)) or 0.0,
+             parts[0]["frames"], rule["fps"]))
 
 
 def expected_columns(data):
@@ -341,7 +504,11 @@ def repeat_live(cid, reps, seed0):
     life = rule.get("lifetime", [3, 8])
     rule_mean = (burst - 1) / 2.0 * (sum(life) / 2.0) / rule.get("intervalSeconds", 1.0)
     window = live_window(rule)
-    hide = has_backdrop(effect_json(chip_dir(cid)))
+    data = effect_json(chip_dir(cid))
+    hide = has_backdrop(data)
+    symbols = (data.get("clips") or {}).get("particles") or []
+    export = {"fps": data.get("fps"),
+              "frames": [len(p.get("art") or []) for p in symbols if p.get("art")]}
     held = hold_baseline(cid, hide)
     spawner_floor = max(rule_mean / 3.0, 3.0)
     paint_floor = max(held, 4.0)
@@ -379,14 +546,18 @@ def repeat_live(cid, reps, seed0):
         # blobs are not a substitute: they understate it (151 reads 0.481 from 9
         # of 14 particles against 0.95 from the spawner's own x values)
         row["floor"] = spread_floor(sp["n"]) if sp else None
-        ok = row["live"] >= spawner_floor and row["known"]
+        # the parts of the rule the spread cannot see: start, travel, scale, playhead
+        row["rule"] = rule_problems(report, st, export)
+        ok = row["live"] >= spawner_floor and row["known"] and not row["rule"]
         if not backdrop:
             ok = (ok and row["blobs"] >= paint_floor and row["floor"] is not None
                   and row["stage"] >= row["floor"])
-        why = ("ok" if ok else
-               "NO live x line" if xs is None else
-               "NO field stage line" if row["width"] is None else
-               "BELOW the floor")
+        why = "ok"
+        if not ok:
+            why = ("RULE " + row["rule"][0][:60] if row["rule"] else
+                   "NO live x line" if xs is None else
+                   "NO field stage line" if row["width"] is None else
+                   "BELOW the floor")
         stamp = ("%.2f sd %.2f floor %.2f" % (row["stage"], row["stdev"], row["floor"])
                  if row["known"] else "unknown")
         print("rep %d  seed %-6d live %-3d  blobs %-3d  spawner %-24s  blobs %.2f  %s"
@@ -397,6 +568,7 @@ def repeat_live(cid, reps, seed0):
     if backdrop:
         print("capture: skipped, the prefab also draws %s" % backdrop)
     passed = sum(1 for r in rows if (r["live"] >= spawner_floor and r["known"]
+                                     and not r["rule"]
                                      and (backdrop is not None
                                           or (r["blobs"] >= paint_floor
                                               and r["floor"] is not None
@@ -573,6 +745,19 @@ def main():
             print("FAIL field: spawner x spread %.2f of the %g px stage with %d live "
                   "(floor %.2f), the rule is uniform over it"
                   % (sp["spread"], st["width"], sp["n"], floor))
+            ok = False
+
+    # the spread is one third of the rule: a particle also has to start past the
+    # stage, cross it linearly for its own lifetime, draw at a random scale and
+    # play its symbol at the movie's frame rate, and none of that is in the x
+    if args.live and field:
+        symbols = (data.get("clips") or {}).get("particles") or []
+        export = {"fps": data.get("fps"),
+                  "frames": [len(p.get("art") or []) for p in symbols if p.get("art")]}
+        if st is not None:
+            print_rule(report, st, export)
+        for why in rule_problems(report, st, export):
+            print("FAIL rule: " + why)
             ok = False
 
     # a chip that also draws a backdrop (153, 1133) has that art in the same

@@ -275,6 +275,35 @@ live.  Three more 786 draws (seeds 6-8) read 12 live at 0.81 (floor 0.45), 16 at
 0.95 (0.55) and 12 at 0.80 (0.45), so its six runs span 0.59-0.95 and the lowest
 is 0.35 above its floor.
 
+The spread is one third of the rule, so the check reads the rest from the
+spawner too.  `ChipParticleField.LiveTracks` reports every live particle and
+`ChipPlayCheck` writes the constants plus one line each:
+
+```
+field rule  particle margin 25 px  symbol 31 fps  lifetime 3..8 s  burst 0..9 every 1 s
+live particle  x 9.61  y 34.99  age 2.00  life 5.00  from 175.00  to -175.00  scale 0.643  frame 62 of 128
+```
+
+Each particle has to start `stageHeight/2 + margin` from the centre (175 px
+here, 25 px past the stage), end at the other side, live inside the field's
+lifetime range, and sit within 2% of the traverse of `from + (to - from) * age
+/ life` -- the residual a fixed y or a half-speed fall shows up as.  Scales must
+lie in 0..1 and span the same 0.1% floor as x (they come off the same uniform
+stream); the reported rate must match the chip's export (31 fps), each symbol
+must carry the export's frame count, and each particle's frame must be the one
+its age gives, within a frame.  A report without `field rule` fails the way one
+without `field stage` does, so older live captures are stale.
+
+Seed 9, one draw each, all eight pass -- 151 34 particles, 152/153 36, 322 24,
+452 58, 786 19, 1109 23, 1133 34, each starting at 175 px and ending at -175
+(152/153 from -175), scales 0.07-0.97 on 151/152/153/1133, 0.07-0.99 on
+322/1109, 0.01-0.99 on 452 and 0.18-0.93 on 786, against floors 0.61-0.85.
+Manipulated copies of a real 151 report each fail (rc 1): all y held at the
+start (30 of 34 off the traverse, worst 350 px), a half-speed fall (30 of 34,
+175 px), every scale at 1.000 ("range 0.000, floor 0.759 for 34"), the symbol
+at 15 fps ("the export says 31"), a start on the 150 px edge (34 of 34 wrong),
+and one frame per symbol ("play 1 frame(s); the export has 128").
+
 A baked pose is not rejected by extent -- it has `LiveCount` 0, so there are no
 x values to read, and its four authored columns measure 1.134-1.169 of the stage
 from the capture, wider than a field by construction.  `LiveCount` 0 and its

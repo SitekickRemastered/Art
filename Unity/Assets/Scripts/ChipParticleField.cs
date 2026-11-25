@@ -111,6 +111,14 @@ namespace Sitekick
 		public int LiveCount { get { var n = 0; foreach ( var p in pool ) if ( p.active ) n++; return n; } }
 		public int ArtCount { get { return art != null ? art.Length : 0; } }
 
+		/// <summary>The rest of the rule, so the check can audit it, not just the count.</summary>
+		public float Margin { get { return margin; } }
+		public float FrameRate { get { return frameRate; } }
+		public float MinLifetime { get { return minLifetime; } }
+		public float MaxLifetime { get { return maxLifetime; } }
+		public int Burst { get { return spawnBurst; } }
+		public float Interval { get { return spawnInterval; } }
+
 		/// <summary>
 		/// Each live particle's spawn x, in SWF px from the stage centre.
 		///
@@ -125,6 +133,56 @@ namespace Sitekick
 				if ( p.active )
 					xs.Add( p.x );
 			return xs.ToArray( );
+		}
+
+		/// <summary>One live particle's rule state, for the check to audit.</summary>
+		public struct Track
+		{
+			public float x;       // spawn x, SWF px from the stage centre
+			public float y;       // tween y now, SWF px from the stage centre
+			public float age;     // seconds since it spawned
+			public float life;    // its own lifetime, in seconds
+			public float from;    // the traverse's start y, past the stage edge
+			public float to;      // the traverse's end y, past the other edge
+			public float scale;   // the draw-time scale
+			public int frame;     // the symbol frame it is showing now
+			public int frames;    // the symbol's frame count
+		}
+
+		/// <summary>
+		/// Every live particle's rule state.
+		///
+		/// The x spread only says the spawn rule covers the stage; it cannot see
+		/// where a particle starts, how fast it travels for its own lifetime, what
+		/// size it draws at, or whether its symbol is playing.  A field with a
+		/// fixed y, a half-speed traverse or every particle at scale 1 would pass
+		/// an x-only check, so the check reads these instead.
+		/// </summary>
+		public Track[ ] LiveTracks( )
+		{
+			var rows = new List<Track>( );
+			var now = Time.time;
+			foreach ( var p in pool )
+			{
+				if ( !p.active )
+					continue;
+				var age = now - p.born;
+				var t = p.life > 0f ? Mathf.Clamp01( age / p.life ) : 1f;
+				var frames = p.art != null && p.art.frames != null ? p.art.frames.Length : 0;
+				rows.Add( new Track
+				{
+					x = p.x,
+					y = Mathf.Lerp( p.from, p.to, t ),
+					age = age,
+					life = p.life,
+					from = p.from,
+					to = p.to,
+					scale = p.scale,
+					frame = frames > 1 ? (int)( age * frameRate ) % frames : 0,
+					frames = frames
+				} );
+			}
+			return rows.ToArray( );
 		}
 
 		protected void Update( )

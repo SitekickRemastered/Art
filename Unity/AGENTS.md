@@ -796,6 +796,47 @@
   one without `live x` does, and `StageBounds` frames the capture from the same
   numbers, so an effect drawn on a wider stage is neither mis-framed nor
   mis-scaled.
+  **The spread is a third of the rule.**  The x spread only says where the
+  spawn rule draws; it cannot see that a particle starts 25 px past the edge,
+  crosses the stage linearly over its own lifetime, draws at `Math.random()`
+  scale or plays its symbol while it travels.  So `ChipParticleField.LiveTracks`
+  hands the check every live particle and `ChipPlayCheck` writes the constants
+  and one line per particle:
+
+  ```
+  field rule  particle margin 25 px  symbol 31 fps  lifetime 3..8 s  burst 0..9 every 1 s
+  live particle  x 9.61  y 34.99  age 2.00  life 5.00  from 175.00  to -175.00  scale 0.643  frame 62 of 128
+  ```
+
+  `particle_check` requires, per particle, `|from| = stageHeight/2 + margin`
+  (175 px on this stage, i.e. 25 px past the 150 px half-height, not the
+  stage's own edge), `to = -from`, a lifetime inside the field's `lifetime`
+  range, and `y` within 2% of the traverse (7 px here) of `from + (to - from)
+  * age / life` -- the residual a fixed y or a half-speed fall shows.  Scales
+  must lie in 0..1 and span the same 0.1% quantile floor as x, because they
+  come off the same uniform stream; the reported symbol rate must match the
+  chip's export (31 fps), each symbol must carry the export's frame count, and
+  each particle's frame must be the one its age puts it at, within a frame of
+  rounding.  A report without `field rule` fails as one without `field stage`
+  does, so a live capture taken before these lines is stale evidence.
+  Seed 9, one draw each, all eight pass: 151 34 particles, 152/153 36, 322 24,
+  452 58, 786 19, 1109 23, 1133 34, every one starting at 175 px and ending at
+  -175 (152/153 the other way, `from -175`), lifetimes inside each rule (786's
+  0..5 s, 452's 5..14 s) and scales 0.07-0.97 (151/152/153/1133), 0.07-0.99
+  (322/1109), 0.01-0.99 (452) and 0.18-0.93 (786) against floors 0.61-0.85.
+  The frame relation is what catches a still symbol: 152's sample reads frame 61
+  of 160 at age 2.00 s and 31 fps, one behind the 62 the age gives, which is why
+  the tolerance is a frame rather than exact.
+  Rewritten out of a real 151 report, each defect fails the run (rc 1): every
+  particle held at its start y -- 30 of 34 off the traverse, worst 350 px; a
+  half-speed fall -- 30 of 34, worst 175 px; every scale at 1.000 -- "range
+  0.000, floor 0.759 for 34"; the symbol at 15 fps -- "the report's symbol rate
+  is 15 fps, the chip's export says 31"; a start on the stage edge (150 px) --
+  34 of 34 wrong and 29 of 34 then off the traverse; one frame per symbol -- 34
+  of 34 "play 1 frame(s); the export has 128".  Deleting the `field rule` line
+  fails with "the particle margin, symbol rate and lifetime the field runs are
+  unknown".  `--repeat` applies the same gate per rep, so a batch cannot print a
+  distribution over a field that is traversing wrongly.
   A live report with no `live x` line fails outright (single run and `--repeat`
   alike): the capture is never the substitute, because on this same draw it
   reads 0.481 where the spawner reads 0.95.
