@@ -767,7 +767,76 @@
   run read 12 against 12.4 and failed, and at a third (8.2) the same draw
   passes.  The guard against a dropped field does not depend on the margin --
   that run reports no field line and `LiveCount` 0, whatever the floor -- so a
-  third costs nothing and still catches a spawner that runs but far too quiet.  The `--reference` capture is what the held numbers are judged against:
+  third costs nothing and still catches a spawner that runs but far too quiet.  Both chips that draw a layer of their own -- 153's `front` heart pile, 1133's
+  `back` -- used to make the live capture unreadable, because the blob count and
+  spread measured that art, so the capture was skipped and those two had no
+  spread assertion at all.  `ChipPlayCheck --hide-back` marks every renderer
+  whose sprite is not a particle, turns them off for `stage.png` only and
+  records `back hidden <sprite>  (stage.png only)` -- `resting.png`,
+  `resting-art.png` and `resting-close.png` stay the chip as it ships.
+  `particle_check` passes the flag whenever the chip's effect json has a
+  `back`/`front` clip and takes the held baseline the same way
+  (`Logs/chip_XXXX_play_hold_hidden`), so the capture floor and the spread apply
+  again.  Those layers sit almost entirely off the 375 px stage -- their art is
+  2784 and 4364 library px wide against a 550 px canvas -- so re-enabling them
+  moves the gallery captures by 2-5 px on 153/1133; the tight stage framing is
+  the only capture that counts them.
+  **The spread is read from the spawner, not the capture.**
+  `ChipParticleField.LiveX` returns each live particle's spawn x in SWF px from
+  the stage centre and `ChipPlayCheck` writes them as a `live x -154.90,...`
+  line; `particle_check` computes the range and stdev from those values as a
+  fraction of the effect's stage and gates on a floor that scales with the
+  count (below).  The stage is not assumed: `ChipParticleField` reads
+  `stageWidth`/`stageHeight` from the prefab (`build_particle_fields.py` writes
+  them), `ChipPlayCheck` reports them beside the x values as
+  `field stage 375 x 300 px  capture margin 1.10`, and the check divides by that
+  width and scales `stage.png` pixels with that margin (`STAGE_PX` and the old
+  `1.1` constant are gone).  A live report without the line fails with `the
+  width the spawn rule drew x in is unknown; 375 px is not assumed`, exactly as
+  one without `live x` does, and `StageBounds` frames the capture from the same
+  numbers, so an effect drawn on a wider stage is neither mis-framed nor
+  mis-scaled.
+  A live report with no `live x` line fails outright (single run and `--repeat`
+  alike): the capture is never the substitute, because on this same draw it
+  reads 0.481 where the spawner reads 0.95.
+  The capture cannot be trusted for it: blob detection merges particles where
+  the art overlaps (153's 36 live read as 29 blobs; 151's 14 as 9), and the two
+  extremes are usually the particles it loses.  Measured from the spawner over
+  seeds 3-5: 153 0.97/0.98/0.95 of the stage with stdev 0.24/0.29/0.25 (live
+  38/34/14) and 1133 0.80/0.96/0.60 with 0.23/0.27/0.17 (live 33/27/12; a
+  repeat of seed 3 gave 36 live at 0.97).  151's seed-5 draw is the clearest
+  case: 14 live span **0.95** of the stage (stdev 0.25), while its capture read
+  **0.481** from 9 blobs -- the blob figure was half the field and failed the
+  floor on a uniform draw.  The capture still prints its own `x spread ... of
+  the 375 SWF px stage` as corroboration, and at a full stream it reads slightly
+  *wider* than the spawner (153 1.032 against 0.97) because a blob box carries
+  the particle's own art width, ~10 px per side.
+  The rest of the class, same method (three seeded runs each, seeds 3-5, live
+  count in brackets): 152 0.97/0.98/0.93 (38/33/13), 322 0.68/0.82/0.89
+  (14/16/16), 452 0.99/0.96/0.89 (55/39/32), 786 0.80/0.59/0.61 (14/7/10) and
+  1109 0.68/0.82/0.89 (16/17/15) of the stage, stdev 0.17-0.30 over all of them.
+  786 is the tightest by far: its 7-live draw read 0.59, and 322/1109 reached
+  0.68 at 14-16 live.  A fixed half-stage floor is wrong for that tail: with `n`
+  points uniform on the stage the span has `P(<= r) = n*r**(n-1) -
+  (n-1)*r**n`, so 0.5 is missed by 31% of legitimate 4-live draws and 19% of
+  5-live ones, and 786's count floor (a third of 11.25 = 3.8) admits both.  The
+  gate is therefore the 0.1% quantile of that span distribution, computed per
+  run from its own count: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14,
+  0.55 at 16, 0.77 at 36 and 0.84 at 55, so a full stream still has to cross
+  most of the stage while a quiet draw is failed only for being improbable.
+  Every draw in the table clears it (786's 0.59 against 0.24 at 7; 1109's 0.68
+  against 0.55 at 16), and an x cluster inside +-5 px fails at both 10 live
+  (0.03 against 0.38) and 36 live (0.03 against 0.77).  Three more 786 draws
+  (seeds 6-8) put its six-run spread at 0.59-0.95: 12 live 0.81 (floor 0.45),
+  16 live 0.95 (0.55) and 12 live 0.80 (0.45) -- the low tail is the 7-live 0.59
+  and it sits 0.35 over its floor, so the count-scaled gate is not the binding
+  one on this chip after all.  Its 16-live capture read 0.59 while the spawner
+  read 0.95, the same 9-of-16 shortfall the blob measurement shows everywhere.
+  Extent alone does not reject a baked pose: with `LiveCount` 0 there are no x
+  values to read, and the four authored columns measure 1.134-1.169 of the
+  stage from the capture (wider than a field, by construction).  A baked effect
+  fails on `LiveCount` 0 and its 6-7 blobs instead.
+  The `--reference` capture is what the held numbers are judged against:
   at `at=x,0` the composite reads the group **+0.1404** body heights above the
   body centre with a 15.3 SWF px flake, the `--hold` capture **+0.1638** with a
   17.4 px one, so the difference is 0.023 body heights (1.3 px) -- the body mask,

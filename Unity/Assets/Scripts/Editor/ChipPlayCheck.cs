@@ -24,17 +24,22 @@ namespace Sitekick
 		public static int Chip = 16;   // the chip under test
 		public const float Seconds = 7f;
 
+		/// <summary>How much larger than the framed rect a capture is taken.</summary>
+		public const float CaptureMargin = 1.1f;
+
 		const string PhaseKey = "Sitekick.ChipPlayCheck.phase";
 
 		static readonly HashSet<int> distinct = new HashSet<int>();
 		static readonly List<int> stops = new List<int>();
 		static readonly List<int> cuePlays = new List<int>();
+		static SpriteRenderer[] backdrop;   // --hide-back: layers the stage capture turns off
 		static readonly StringBuilder trace = new StringBuilder();
 
 		static ChipMoviePlayer player;
 		static bool isStatic;              // no movie player: one drawing, most chips
 		static bool holdAnimators;         // --hold: measure the prefab's authored pose
 		static bool stageFrame;            // --stage: capture the whole 375x300 effect stage
+		static bool hideBack;              // --hide-back: drop a backdrop/overlay from the capture
 		static ChipParticleField field;    // set when the effect spawns a particle stream
 		static SpriteRenderer[] art;
 		static int samples;
@@ -88,6 +93,12 @@ namespace Sitekick
 				if ( args[ i ] == "--stage" )
 				{
 					stageFrame = true;
+					continue;
+				}
+
+				if ( args[ i ] == "--hide-back" )
+				{
+					hideBack = true;
 					continue;
 				}
 
@@ -221,6 +232,19 @@ namespace Sitekick
 
 
 				art = instance != null ? instance.GetComponentsInChildren<SpriteRenderer>( true ) : new SpriteRenderer[ 0 ];
+				if ( hideBack )
+				{
+					// A backdrop or overlay (chip 1133's Back_1133, chip 153's heart pile) is
+					// drawn in the same stage rect as a spawned stream, so a spread measured
+					// there would describe that art.  Only stage.png turns it off -- the
+					// resting captures stay the chip as it ships -- so the layers are picked
+					// here and toggled around that one capture.
+					var layers = new List<SpriteRenderer>();
+					foreach ( var r in art )
+						if ( r != null && r.sprite != null && !r.sprite.name.Contains( "particle" ) )
+							layers.Add( r );
+					backdrop = layers.ToArray();
+				}
 				if ( art.Length == 0 )
 				{
 					Finish( "the click spawned neither a movie player nor a sprite" );
@@ -334,16 +358,34 @@ namespace Sitekick
 					+ "  sprites " + sprites.Count
 					+ "  bounds " + bounds.size.ToString( "0.00" ) + " @ " + bounds.center.ToString( "0.00" ) );
 				lines.Add( "drawn " + string.Join( ",", sprites.ToArray() ) );
+				if ( backdrop != null && backdrop.Length > 0 )
+					lines.Add( "back hidden " + string.Join( ",",
+						System.Array.ConvertAll( backdrop, r => r != null && r.sprite != null ? r.sprite.name : "?" ) )
+						+ "  (stage.png only)" );
 
 				// a spawned-particle effect is a stream, not a drawing: report the rule
 				// it runs and how many it is holding right now
 				if ( field != null )
+				{
 					lines.Add( "particle field " + field.ArtCount + " symbol(s)  live " + field.LiveCount
 						+ " of " + field.Capacity + ( holdAnimators ? "  held" : "" ) );
+					// the domain the spawn rule draws x in, and how the capture is framed:
+					// both scale the spread, so neither is assumed downstream
+					var inv = System.Globalization.CultureInfo.InvariantCulture;
+					lines.Add( "field stage " + field.StageWidth.ToString( "0.##", inv )
+						+ " x " + field.StageHeight.ToString( "0.##", inv ) + " px"
+						+ "  capture margin " + CaptureMargin.ToString( "0.00", inv ) );
+				}
 				if ( seed >= 0 )
 					lines.Add( "seed " + seed );
 				if ( field != null && !holdAnimators )
+				{
 					lines.Add( "live window " + liveSeconds.ToString( "0.0" ) + " s" );
+					// the spawner's own x per live particle: the stream's spread is a
+					// property of these, while a capture merges and misses particles
+					lines.Add( "live x " + string.Join( ",", System.Array.ConvertAll( field.LiveX( ),
+						v => v.ToString( "0.00", System.Globalization.CultureInfo.InvariantCulture ) ) ) );
+				}
 				// where each renderer actually sits, so a missing or covered piece of
 				// art is visible in the report instead of only in the capture
 				foreach ( var r in art )
@@ -450,7 +492,17 @@ namespace Sitekick
 			Directory.CreateDirectory( OutDir );
 			Capture( "resting.png", null );
 			if ( stageFrame && spawned != null )
+			{
+				// the one capture the backdrop sits out: a stream's spread is measured
+				// here, and the layer would be counted as particles
+				if ( backdrop != null )
+					foreach ( var r in backdrop )
+						if ( r != null ) r.enabled = false;
 				Capture( "stage.png", StageBounds( spawned ) );
+				if ( backdrop != null )
+					foreach ( var r in backdrop )
+						if ( r != null ) r.enabled = true;
+			}
 			if ( player != null && player.target != null )
 				Capture( "resting-close.png", player.target.bounds );
 			else if ( art != null && art.Length > 0 && art[ 0 ] != null )
@@ -498,11 +550,16 @@ namespace Sitekick
 		{
 			const float u = 0.01735f;
 			var centre = instance.transform.TransformPoint( new Vector3( -0.4f * u, -10.8f * u, 0f ) );
+			// an effect that spawns particles carries its own stage, so the frame
+			// follows the chip rather than a constant; the rest of the gallery is
+			// drawn on the movie's 375x300 stage
+			var sw = field != null ? field.StageWidth : 375f;
+			var sh = field != null ? field.StageHeight : 300f;
 			// the gallery's effect layers are scaled, so the stage rect has to be
 			// scaled with them or the capture frames a corner of it
 			var scale = instance.transform.lossyScale;
-			var size = new Vector3( 375f * u * Mathf.Abs( scale.x ),
-				300f * u * Mathf.Abs( scale.y ), 0f );
+			var size = new Vector3( sw * u * Mathf.Abs( scale.x ),
+				sh * u * Mathf.Abs( scale.y ), 0f );
 			return new Bounds( centre, size );
 		}
 
@@ -519,7 +576,7 @@ namespace Sitekick
 			{
 				var b = bounds.Value;
 				var aspect = camera.aspect;
-				camera.orthographicSize = Mathf.Max( b.extents.y, b.extents.x / Mathf.Max( aspect, 0.01f ) ) * 1.1f;
+				camera.orthographicSize = Mathf.Max( b.extents.y, b.extents.x / Mathf.Max( aspect, 0.01f ) ) * CaptureMargin;
 				camera.transform.position = new Vector3( b.center.x, b.center.y, viewAt.z );
 			}
 

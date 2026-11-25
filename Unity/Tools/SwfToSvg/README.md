@@ -205,7 +205,14 @@ It checks the columns' spacing against `x_swf`, that a held capture spawned
 nothing, that a live one holds at least a third of `mean burst x mean lifetime`
 in the spawner's own `LiveCount` with an x spread over half the stage, and
 prints the body-relative group centre `measure_particles.py` reads from the
-capture.
+capture.  A chip that also draws a back/front layer (153, 1133) is captured
+with `--hide-back`: the play check turns those renderers off for `stage.png`
+only -- the resting captures stay the chip as it ships -- and records `back
+hidden <sprite>  (stage.png only)`.  The held baseline is taken the same way,
+so the spread is measured on the particles rather than on that art.  That art
+is far wider than the stage (2784 and 4364 library px on a 550 px canvas), so
+re-enabling it moves the gallery captures by only a few pixels.
+
 A live run waits `maxLifetime + 2` seconds so the stream reaches steady state,
 keeps the chip's held capture beside it as the floor's baseline, and refuses to
 grade a report older than its own Unity launch.  Repeats: `--seed N` reseeds the
@@ -232,6 +239,46 @@ draw, not a chip fault: it failed a floor of half the rule (12.4) and clears the
 third (8.2), which is why the floor is a third.  That does not weaken the
 stripped-prefab check -- a prefab with no field block reports no field line and
 `LiveCount` 0, and fails on that, not on the count.
+
+The spread is measured from the spawner, not the capture.  `ChipParticleField`
+reports each live particle's spawn x (report line `live x -154.90,...`) and
+`--repeat`/`--live` compute the range and stdev from those as a fraction of the
+effect's own stage, gated against the 0.1% quantile of the span of that many
+uniform draws.  The stage comes from the chip, never a constant: `ChipPlayCheck`
+writes `field stage 375 x 300 px  capture margin 1.10` beside the `live x`
+values (`ChipParticleField.stageWidth`/`stageHeight`, which
+`build_particle_fields.py` puts in the prefab), the spread is divided by that
+width, and `measure_particles.measure_stream(stage=, margin=)` scales the capture
+with it; a report without the line fails rather than assuming 375.  A live report with no `live x` line fails
+outright rather than falling back to the blobs -- the capture is corroboration
+only, and on the same draw it reads 0.481 where the spawner reads 0.95.  Blobs
+are only corroboration: merging
+loses particles (153's 36 live read as 29 blobs, 151's 14 as 9) and takes the
+extremes with them.  151's seed-5 draw is the case in point -- 14 live span 0.95
+of the stage from the spawner, 0.481 from 9 captured blobs, which failed the
+floor on a uniform field.  Over seeds 3-5 the spawner reads 153 0.97/0.98/0.95
+(live 38/34/14) and 1133 0.80/0.96/0.60 (live 33/27/12); at a full stream the
+capture reads slightly wider (1.03 against 0.97) because a blob box includes the
+particle's own art width.
+
+Same method on the rest, seeds 3-5 (live in brackets): 152 0.97/0.98/0.93
+(38/33/13), 322 0.68/0.82/0.89 (14/16/16), 452 0.99/0.96/0.89 (55/39/32), 786
+0.80/0.59/0.61 (14/7/10) and 1109 0.68/0.82/0.89 (16/17/15), stdev 0.17-0.30
+throughout.  786 is the lowest at 0.59 on a 7-live draw.  A fixed half-stage
+floor would be wrong there: `P(span <= r) = n*r**(n-1) - (n-1)*r**n` for `n`
+uniform points, so half the stage is missed by 31% of legitimate 4-live draws,
+and 786's count floor (3.8) allows them.  The floor is the 0.1% quantile of that
+span, per run: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14, 0.55 at 16,
+0.77 at 36, 0.84 at 55 -- tight for a full stream, forgiving of a quiet one.
+Every draw above clears it; an x cluster within +-5 px fails at 10 and at 36
+live.  Three more 786 draws (seeds 6-8) read 12 live at 0.81 (floor 0.45), 16 at
+0.95 (0.55) and 12 at 0.80 (0.45), so its six runs span 0.59-0.95 and the lowest
+is 0.35 above its floor.
+
+A baked pose is not rejected by extent -- it has `LiveCount` 0, so there are no
+x values to read, and its four authored columns measure 1.134-1.169 of the stage
+from the capture, wider than a field by construction.  `LiveCount` 0 and its
+6-7 blobs are what fail it.
 
 
 ## Prefab placement

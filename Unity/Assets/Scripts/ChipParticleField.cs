@@ -104,8 +104,28 @@ namespace Sitekick
 		protected float tick;
 
 		public int Capacity { get { return capacity; } }
+
+		/// <summary>The effect's SWF stage, in SWF px: the domain the rule draws in.</summary>
+		public float StageWidth { get { return stageWidth; } }
+		public float StageHeight { get { return stageHeight; } }
 		public int LiveCount { get { var n = 0; foreach ( var p in pool ) if ( p.active ) n++; return n; } }
 		public int ArtCount { get { return art != null ? art.Length : 0; } }
+
+		/// <summary>
+		/// Each live particle's spawn x, in SWF px from the stage centre.
+		///
+		/// The spread of the stream is a property of these values, not of the
+		/// capture: blob detection merges particles (`FlakeMC` art overlaps), so a
+		/// merged pair or a missed one at the edge moves the measured extremes.
+		/// </summary>
+		public float[ ] LiveX( )
+		{
+			var xs = new List<float>( );
+			foreach ( var p in pool )
+				if ( p.active )
+					xs.Add( p.x );
+			return xs.ToArray( );
+		}
 
 		protected void Update( )
 		{
