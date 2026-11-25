@@ -9,6 +9,8 @@ is the same check, driven from the chip's own data:
     python3 Tools/SwfToSvg/particle_check.py --chip 151 --unity      # + run Unity
     python3 Tools/SwfToSvg/particle_check.py --chip 152 --live       # spawner on
     python3 Tools/SwfToSvg/particle_check.py --chip 151 --reference  # + Ruffle page
+    python3 Tools/SwfToSvg/particle_check.py --chip 151 --unity --live \
+        --seed 3 --repeat 4 --write-baseline                         # record a batch
 
 What it asserts, and why each one is in here:
 
@@ -33,11 +35,10 @@ What it asserts, and why each one is in here:
   frame its age puts it at in a symbol playing at the movie's frame rate.  A
   fixed y, a half-speed fall and every particle at scale 1 all passed the
   spread check; each fails here.
-* **distribution** -- `--repeat` compares the batch's mean live count and mean
-  spread with `particle_baseline.json`, where the per-chip numbers live instead
-  of in the docs, and warns when the mean falls two stored standard deviations
-  below.  A warning, not a gate: one run is one draw of a 0..N burst, so a
-  legitimate quiet batch is possible even when every rep clears its floor.
+* **distribution** -- `--repeat` compares the batch's mean live count and spread
+  with `particle_baseline.json` and warns when either falls two stored standard
+  deviations below.  A warning, not a gate: one run is one draw of a 0..N burst.
+  `--write-baseline` records the batch that just ran as that chip's entry.
 * **pose** -- with `--hold` the authored pose is what is measured, so the group
   centre against the body can be compared with the composite reference; the
   number it prints is the body-height offset the chip 151 work used.
@@ -400,6 +401,42 @@ def print_rule(report, stage, export):
              parts[0]["frames"], rule["fps"]))
 
 
+def dump_baseline(db):
+    """The file's compact layout: one block per chip, its draws one line each."""
+    chips = ",\n".join(
+        '    "%s": {\n      "window": %s,\n      "live": %s,\n      "spread": %s\n    }'
+        % (cid, json.dumps(e["window"]), json.dumps(e["live"]), json.dumps(e["spread"]))
+        for cid, e in db["chips"].items())
+    return '{\n  "note": %s,\n  "chips": {\n%s\n  }\n}\n' % (
+        json.dumps(db["note"], ensure_ascii=False), chips)
+
+
+def save_baseline(cid, window, rows):
+    """Record a measured batch as the chip's stored distribution.
+
+    `rows` are the reps the run just took, each with `seed`, `live` and `stage`
+    (spread) plus `known` when it reported x values.  Only a batch where every
+    rep passed is worth storing -- a failed draw is not a baseline -- so the
+    caller gates it.  Other chips' entries and the note are left alone.
+    """
+    try:
+        db = json.load(open(BASELINE, encoding="utf-8"))
+    except (OSError, ValueError) as why:
+        # inventing a note here would write a file no one else can explain
+        raise SystemExit("cannot read %s: %s" % (os.path.relpath(BASELINE, ROOT), why))
+    known = [r for r in rows if r.get("known")]
+    if not known or not rows:
+        return None
+    entry = {"window": window,
+             "live": {"seeds": [r["seed"] for r in rows],
+                      "values": [r["live"] for r in rows]},
+             "spread": {"seeds": [r["seed"] for r in known],
+                        "values": [round(r["stage"], 4) for r in known]}}
+    db.setdefault("chips", {})[str(cid)] = entry
+    open(BASELINE, "w", encoding="utf-8").write(dump_baseline(db))
+    return entry
+
+
 def baseline_of(cid):
     """The stored distribution for a chip, or None."""
     try:
@@ -409,49 +446,28 @@ def baseline_of(cid):
     return (data.get("chips") or {}).get(str(cid))
 
 
-def baseline_stats(entry, key):
-    """mean/sd/n of one stored distribution, or None when it is too short to judge."""
-    rows = (entry or {}).get(key) or {}
-    vals = [float(v) for v in rows.get("values") or []]
-    if len(vals) < 2:
-        return None
-    return {"n": len(vals), "mean": statistics.mean(vals),
-            "sd": statistics.pstdev(vals), "min": min(vals), "max": max(vals),
-            "seeds": rows.get("seeds") or []}
-
-
-def baseline_note(cid, batch, key, label):
-    """Compare a batch's mean with the stored distribution; warn below mean - 2 sd.
+def baseline_note(entry, batch, key):
+    """Compare a batch's mean with the stored draws; warn below mean - 2 sd.
 
     The per-chip numbers live in `particle_baseline.json` instead of the prose,
-    so a batch that has drifted -- a rebuilt prefab with a narrower spawn, a
-    window that no longer reaches steady state -- says so when it is measured
-    instead of being compared by eye with a figure quoted in AGENTS.md.
+    so a batch that has drifted -- a rebuilt prefab, a window that no longer
+    reaches steady state -- says so when it is measured.
     """
-    entry = baseline_of(cid)
-    st = baseline_stats(entry, key) if entry else None
-    if not st:
-        print("baseline: no stored %s distribution for %d to compare" % (label, cid))
+    label = "live count" if key == "live" else key
+    vals = [float(v) for v in (entry or {}).get(key, {}).get("values") or []]
+    if len(vals) < 2:
+        print("baseline: no stored %s for this chip" % label)
         return
+    stored, sd = statistics.mean(vals), statistics.pstdev(vals)
+    low = stored - 2.0 * sd
     if len(batch) < 2:
-        print("baseline: %s stored %.2f sd %.2f (n %d); this batch is %d draw(s), "
-              "too few to compare"
-              % (label, st["mean"], st["sd"], st["n"], len(batch)))
+        print("baseline: %s stored %.2f (sd %.2f, n %d); one draw is not compared"
+              % (label, stored, sd, len(vals)))
         return
     mean = statistics.mean(batch)
-    low = st["mean"] - 2.0 * st["sd"]
-    if mean < low:
-        # a stored sd of a hundredth is common with four draws, and "72 sd" says
-        # less than the numbers do: name the distance only when it is meaningful
-        z = (st["mean"] - mean) / st["sd"] if st["sd"] >= 0.01 else None
-        where = ("%.1f sd below the stored" % z) if z else "below the stored"
-        print("baseline: %s mean %.2f over %d draw(s) is %s %.2f (sd %.2f over %d), "
-              "under %.2f -- WARN"
-              % (label, mean, len(batch), where, st["mean"], st["sd"], st["n"], low))
-    else:
-        print("baseline: %s mean %.2f over %d draw(s) against the stored %.2f (sd %.2f "
-              "over %d), low %.2f"
-              % (label, mean, len(batch), st["mean"], st["sd"], st["n"], low))
+    print("baseline: %s %.2f over %d draw(s), stored %.2f sd %.2f (n %d), low %.2f%s"
+          % (label, mean, len(batch), stored, sd, len(vals), low,
+             "  -- WARN" if mean < low else ""))
 
 
 def expected_columns(data):
@@ -553,7 +569,7 @@ def backdrop_of(report):
     return None
 
 
-def repeat_live(cid, reps, seed0):
+def repeat_live(cid, reps, seed0, write=False):
     """Run the editor N times with different seeds and report the distribution.
 
     One live capture is a single sample of `Math.random`, so whether a chip holds
@@ -654,8 +670,25 @@ def repeat_live(cid, reps, seed0):
                  min(stages), max(stages), label))
     # the stored per-chip distributions are the reference, not prose: a batch
     # that has drifted says so here (a warning, not a gate -- a draw is a draw)
-    baseline_note(cid, stages, "spread", "spread")
-    baseline_note(cid, lives, "live", "live count")
+    entry = baseline_of(cid)
+    baseline_note(entry, stages, "spread")
+    baseline_note(entry, lives, "live")
+    if write:
+        if passed != len(rows):
+            print("baseline: not written, %d of %d reps failed the gates"
+                  % (len(rows) - passed, len(rows)))
+        else:
+            entry = save_baseline(cid, window, rows)
+            if entry is None:
+                print("baseline: not written, no rep reported a spread")
+            else:
+                sp = entry["spread"]["values"]
+                lv = entry["live"]["values"]
+                print("baseline: wrote %d -- %d draw(s), seeds %d-%d, spread %.2f-%.2f, "
+                      "live %d-%d"
+                      % (cid, len(sp), min(entry["live"]["seeds"]),
+                         max(entry["live"]["seeds"]), min(sp), max(sp),
+                         min(lv), max(lv)))
 
     print("RESULT: %s  %d of %d reps over the floor"
           % ("OK" if passed == len(rows) else "FAIL", passed, len(rows)))
@@ -669,9 +702,14 @@ def main():
     ap.add_argument("--live", action="store_true", help="measure the spawner, not the held pose")
     ap.add_argument("--seed", type=int, help="reseed UnityEngine.Random before the effect spawns")
     ap.add_argument("--repeat", type=int, help="run --unity --live N times and report the distribution")
+    ap.add_argument("--write-baseline", action="store_true",
+                    help="with --repeat, record the batch as the chip's stored distribution")
     ap.add_argument("--reference", action="store_true", help="also capture the Ruffle composite")
     ap.add_argument("--browser", help="Chromium-family command for --reference")
     args = ap.parse_args()
+
+    if args.write_baseline and not args.repeat:
+        raise SystemExit("--write-baseline records the batch a --repeat run just took")
 
     cdir = chip_dir(args.chip)
     if not cdir:
@@ -683,7 +721,9 @@ def main():
     if args.repeat:
         if not (args.live and args.unity):
             raise SystemExit("--repeat needs --unity --live")
-        return repeat_live(args.chip, args.repeat, args.seed if args.seed is not None else 1)
+        return repeat_live(args.chip, args.repeat,
+                           args.seed if args.seed is not None else 1,
+                           write=args.write_baseline)
 
     rule = spawn_rule(args.chip)
     window = live_window(rule) if args.live else None

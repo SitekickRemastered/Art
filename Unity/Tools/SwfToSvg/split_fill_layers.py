@@ -82,17 +82,43 @@ def prune(node, keep):
     return clone
 
 
-def shading(element):
+def grey_stroke(element, low=30, high=225):
+    """A stroke drawn in grey: the crease and edge lines the effect tints too.
+
+    These lines are inside the fill clip in the SWF -- `paint()` multiplies
+    them, which is why Ruffle shows them as a darker shade of the colour and
+    not as a grey line over it.  FFDec exports them flat, with no clip around
+    them, so without this they sit on the colour untouched (chip 72's sleeve
+    band, 73's forearm creases, 74's shin seams).  Black outlines are not grey
+    and stay black; so do the opaque grey *fills* that are really art outside
+    the clip (74's boots).
+    """
+    stroke = element.get("stroke")
+    if not stroke or stroke in ("none", "#000000"):
+        return False
+    match = re.match(r"#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$", stroke)
+    if not match:
+        return False
+    r, g, b = (int(v, 16) for v in match.groups())
+    return r == g == b and low <= r <= high
+
+
+def shading(element, strokes=False):
     """True for a piece the colour darkens: a fill at less than full opacity.
 
     Opaque art outside a fill clip is *not* painted by the effect -- chip 74's
     feet, chip 73's shoulder knob -- so it must keep its own greys instead of
     being tinted.  A translucent piece is a shade drawn over the fill, and
     tinting it is what turns it into a darker shade of the colour.
+
+    `strokes` also counts a grey stroke, for the chips whose outlines FFDec
+    exported without the clip they are drawn inside (see `grey_stroke`).
     """
     tag = etree.QName(element).localname
     if tag != "path":
         return None
+    if strokes and grey_stroke(element):
+        return True
     fill = element.get("fill")
     opacity = element.get("fill-opacity")
     for decl in (element.get("style") or "").split(";"):
@@ -106,11 +132,11 @@ def shading(element):
     return float(opacity) < 0.999 if opacity else False
 
 
-def classify(node):
+def classify(node, strokes=False):
     """True/False when every piece under `node` agrees, None when mixed."""
     found = set()
     for element in node.iter():
-        value = shading(element)
+        value = shading(element, strokes)
         if value is not None:
             found.add(value)
     if not found:
@@ -118,46 +144,33 @@ def classify(node):
     return found.pop() if len(found) == 1 else None
 
 
-def runs(node, ids, inside, hand=None):
-    """[(cls, [elements])] for the drawing `node`, in draw order.
+def runs(node, ids, inside, strokes=False):
+    """[(tinted, [elements])] for the drawing `node`, in draw order.
 
-    `cls` is True for a piece the colour reaches, "hand" for the copy of one
-    that keeps its own art inside the hand cut, and False for art the colour
-    never touches.  A fill clip takes its whole subtree with it (Flash paints it
-    flat); anything else is cut by whether its pieces are shading, and each
-    piece keeps the groups above it.
-
-    The hand copy is emitted *in place*, right after the piece it copies: a
-    separate layer at the end would draw the hand's white fill over the black
-    outlines that belong above it.
+    `tinted` is True for a piece the colour reaches and False for art the
+    colour never touches.  A fill clip takes its whole subtree with it (Flash
+    paints it flat); anything else is cut by whether its pieces are shading, and
+    each piece keeps the groups above it.  The hand cut is the caller's job: it
+    copies a whole tinted run, so the pieces of one run stay together.
     """
     out = []
     for child in node:
         if is_group(child):
             if inside or short(child) in ids:
                 out.append((True, [copy.deepcopy(child)]))
-                if hand:
-                    out.append(("hand", [copy.deepcopy(child)]))
                 continue
-            kind = classify(child)
-            if kind is True:
-                out.append((True, [copy.deepcopy(child)]))
-                if hand:
-                    out.append(("hand", [copy.deepcopy(child)]))
-            elif kind is False:
-                out.append((False, [copy.deepcopy(child)]))
-            else:
-                for k, elements in runs(child, ids, False, hand):
+            kind = classify(child, strokes)
+            if kind is None:
+                for k, elements in runs(child, ids, False, strokes):
                     out.append((k, [prune(child, elements)]))
+            else:
+                out.append((kind, [copy.deepcopy(child)]))
         elif etree.QName(child).localname in DEFINITIONS:
             continue
         else:
             # a path (or anything else this group draws itself) sits in the run
             # at the point it is written
-            tinted = bool(inside or shading(child))
-            out.append((tinted, [copy.deepcopy(child)]))
-            if tinted and hand:
-                out.append(("hand", [copy.deepcopy(child)]))
+            out.append((bool(inside or shading(child, strokes)), [copy.deepcopy(child)]))
     return out
 
 
@@ -185,65 +198,128 @@ def anchor(root, box):
     return rect
 
 
-def cut_polygons(box, spec):
-    """(hand, rest) polygons for a cut spec, in user units.
+def hand_parts(root, spec):
+    """The shapes that make up the hand side of a cut, from a `hand` spec.
 
-    `spec` is "x>87" / "y>57" for an axis-aligned cut, or "slope m,b" for the
-    line y = m*x + b with the hand on the lower side -- chip 73's wrist runs
-    diagonally, and a straight horizontal cut there swallows half the forearm.
-    Both polygons are clipped to the drawing's geometry bbox, so they tile it.
+    A spec is one or more shapes separated by `;`, each one either
+
+      * `outline shape2/7/3` -- the drawing's *own* subpath: group `shape2`,
+        its 8th path, that path's 4th subpath (0-based).  Auto-closed, so an
+        open outline becomes the region it encloses.  This is the precise way
+        to cut a hand off: the seam is the black boundary the art already
+        draws, so no straight line can slice the mass beside it;
+      * `rect x,y,w,h` -- user units, for a plain slab;
+      * `poly x,y x,y ...` -- a closed polygon, for a seam no path follows;
+      * `x>87` / `y<40` / `slope m,b` -- the old axis and line cuts (hand on
+        the right/below the line), kept for a quick cut.
+
+    Several shapes are unioned.  Their outer extent does not matter: the hand
+    copy is only drawn where the run has art, so a shape may overshoot the
+    drawing freely -- it just must not reach into the mass.
     """
-    x0, y0, x1, y1 = box
-    if spec.startswith("slope"):
-        m, b = (float(v) for v in spec.split()[1].split(","))
-        # the line where it crosses the left and right edges of the box
-        yl, yr = m * x0 + b, m * x1 + b
-        hand = [(x0, yl), (x1, yr), (x1, y1), (x0, y1)]
-        rest = [(x0, yl), (x1, yr), (x1, y0), (x0, y0)]
-        return [hand], [rest]
-    axis, value = spec[0], float(spec[2:])
-    if axis == "x":
-        hand, rest = ((value, y0, x1 - value, y1 - y0), (x0, y0, value - x0, y1 - y0))
-    else:
-        hand, rest = ((x0, value, x1 - x0, y1 - value), (x0, y0, x1 - x0, value - y0))
-    if "<" in spec:
-        hand, rest = rest, hand
-    return [hand], [rest]
-
-
-def polygon_rects(shapes):
-    """[(x, y, w, h)] when every shape is an axis-aligned rect, else None."""
-    if not all(len(shape) == 4 and not isinstance(shape[0], tuple) for shape in shapes):
-        return None
-    for x, y, w, h in shapes:
-        if w <= 0 or h <= 0:
-            return None
+    shapes = []
+    for part in (p.strip() for p in spec.split(";")):
+        if not part:
+            continue
+        kind, _, rest = part.partition(" ")
+        if kind == "outline":
+            group, path, sub = rest.split("/")
+            shapes.append(("path", outline_path(root, group, int(path), int(sub))))
+        elif kind == "rect":
+            x, y, w, h = (float(v) for v in rest.split(","))
+            shapes.append(("rect", (x, y, w, h)))
+        elif kind == "poly":
+            points = [tuple(float(v) for v in pair.split(",")) for pair in rest.split()]
+            shapes.append(("path", "M" + " L".join("%.4f %.4f" % p for p in points) + " Z"))
+        elif kind == "slope" or kind[0] in "xy":
+            shapes.extend(line_cut(part))
+        else:
+            raise SystemExit("unknown hand shape " + part)
     return shapes
 
 
-def polygon_points(polygons):
-    return [[(x, y) for x, y in shape] for shape in polygons]
+def outline_path(root, group, path_index, sub_index):
+    """The `d` of one subpath of one path of one exported group, closed."""
+    for node in root.iter(G):
+        if short(node) != group:
+            continue
+        paths = [c for c in node if etree.QName(c).localname == "path"]
+        subpaths = [s for s in re.split(r"(?=M)", paths[path_index].get("d") or "")
+                    if s.strip()]
+        d = subpaths[sub_index].strip()
+        return d if d.rstrip().upper().endswith("Z") else d + " Z"
+    raise SystemExit("no group %s" % group)
 
 
-def clip_box(parent, shapes, name):
-    """defs > clipPath > shape(s), on `parent`, and the url to reference it."""
+def line_cut(spec):
+    """The old straight cuts, as shapes: hand is right of `x>` / below `y>`.
+
+    Kept for a quick cut on art with no boundary to follow.  `slope m,b` puts
+    the hand below the line y = m*x + b.
+    """
+    # a half-plane is written as a huge rectangle, in the art's own units
+    far = 10000.0
+    if spec.startswith("slope"):
+        m, b = (float(v) for v in spec.split()[1].split(","))
+        points = [(-far, m * -far + b), (far, m * far + b), (far, far), (-far, far)]
+        return [("path", "M" + " L".join("%.2f %.2f" % p for p in points) + " Z")]
+    axis, value = spec[0], float(spec[2:])
+    if "<" in spec:
+        # hand is left of / above the line
+        return [("rect", (-far, -far, value + far, 2 * far)) if axis == "x"
+                else ("rect", (-far, -far, 2 * far, value + far))]
+    return [("rect", (value, -far, far, 2 * far)) if axis == "x"
+            else ("rect", (-far, value, 2 * far, far))]
+
+
+def clip_box(parent, shapes, name, evenodd=False):
+    """defs > clipPath > shape(s), on `parent`, and the url to reference it.
+
+    `evenodd` turns the union into "the first shape minus the rest", which is
+    how the mass is clipped out of the drawing: the bbox rect with the hand
+    shapes knocked out of it.
+    """
     defs = etree.SubElement(parent, W + "defs")
     clip = etree.SubElement(defs, W + "clipPath")
     clip.set("id", name)
-    rects = polygon_rects(shapes)
-    if rects is not None:
-        for rect in rects:
+    if evenodd:
+        clip.set("clip-rule", "evenodd")
+    for kind, value in shapes:
+        if kind == "rect":
             shape = etree.SubElement(clip, W + "rect")
-            for key, value in zip(("x", "y", "width", "height"), rect):
-                shape.set(key, "%.4f" % value)
-        return "url(#%s)" % name
-    for points in polygon_points(shapes):
-        shape = etree.SubElement(clip, W + "path")
-        shape.set("d", "M" + " L".join("%.4f %.4f" % p for p in points) + " Z")
+            for key, number in zip(("x", "y", "width", "height"), value):
+                shape.set(key, "%.4f" % number)
+        else:
+            shape = etree.SubElement(clip, W + "path")
+            shape.set("d", value)
+        if evenodd:
+            shape.set("clip-rule", "evenodd")
     return "url(#%s)" % name
 
 
-def split(svg_path, fills, out_prefix, manifest_dir=None, hand=None):
+def grey_out(elements, grey):
+    """A hand copy drawn in `grey` instead of the white the fill clip uses.
+
+    The hand is kept as drawn, and the drawing's own white is what the fill
+    clip paints: 73's fist sits under a coloured sleeve as a white blob, which
+    is much brighter than the rest of the chip (`HAND_FILL` in
+    `apply_color_layers`).  Only the hand copy is touched; its shade and crease
+    strokes stay what the art draws, so a 50 % grey over this lands on 179 and
+    the creases on 102, which is the grey the SWF itself shows there.
+    """
+    for element in elements:
+        for node in element.iter():
+            if etree.QName(node).localname not in ("path", "g", "rect"):
+                continue
+            if (node.get("fill") or "").lower() == "#ffffff":
+                node.set("fill", grey)
+            style = node.get("style")
+            if style and "#ffffff" in style.lower():
+                node.set("style", re.sub(r"#ffffff", grey, style, flags=re.I))
+
+
+def split(svg_path, fills, out_prefix, manifest_dir=None, hand=None, tint_strokes=False,
+          hand_fill=None):
     root = etree.parse(svg_path).getroot()
     box = bbox.bbox(svg_path)
     ids = set(fills)
@@ -252,10 +328,13 @@ def split(svg_path, fills, out_prefix, manifest_dir=None, hand=None):
     if missing:
         raise SystemExit("%s: no group for %s" % (svg_path, ", ".join(sorted(missing))))
 
-    hand_shapes, rest = cut_polygons(box, hand) if hand else (None, None)
-    chunks = merge(runs(root, ids, False, hand))
+    hand_shapes = hand_parts(root, hand) if hand else None
     layers = []
-    for index, (kind, elements) in enumerate(chunks):
+
+    def write(kind, elements, clip, evenodd=False, name=None):
+        if kind == "hand" and hand_fill:
+            elements = copy.deepcopy(elements)
+            grey_out(elements, hand_fill)
         out = etree.Element(root.tag, nsmap=root.nsmap)
         for key, value in root.attrib.items():
             out.set(key, value)
@@ -264,16 +343,9 @@ def split(svg_path, fills, out_prefix, manifest_dir=None, hand=None):
                 out.append(copy.deepcopy(child))    # defs, gradients, ...
         if box:
             out.append(anchor(root, box))
-        if hand and kind is True:
-            # this piece takes the colour: everything but the hand
+        if clip:
             group = etree.SubElement(out, G)
-            group.set("clip-path", clip_box(out, rest, "rest"))
-            for child in elements:
-                group.append(child)
-        elif kind == "hand":
-            # the hand's own copy of it, drawn as the art has it
-            group = etree.SubElement(out, G)
-            group.set("clip-path", clip_box(out, hand_shapes, "hand"))
+            group.set("clip-path", clip_box(out, clip, name or kind, evenodd))
             for child in elements:
                 group.append(child)
         else:
@@ -283,11 +355,23 @@ def split(svg_path, fills, out_prefix, manifest_dir=None, hand=None):
         # is in it; a run of shading follows the colour by darkening it (the
         # tint is a multiply, so grey * colour is a darker colour).  Opaque art
         # outside a fill clip is not painted at all and keeps its own greys.
-        tint = kind is True
-        path = "%s_L%d.svg" % (out_prefix, index)
+        name = "L%d" % len(layers)
+        path = "%s_%s.svg" % (out_prefix, name)
         etree.ElementTree(out).write(path, xml_declaration=True, encoding="UTF-8")
-        layers.append({"layer": "L%d" % index, "fill": kind is True,
-                       "tint": bool(tint), "hand": kind == "hand", "path": path})
+        layers.append({"layer": name, "fill": kind is True,
+                       "tint": kind is True, "hand": kind == "hand", "path": path})
+
+    mass = [("rect", (box[0], box[1], box[2] - box[0], box[3] - box[1]))] if hand_shapes else None
+    for kind, elements in merge(runs(root, ids, False, tint_strokes)):
+        if kind is True and hand_shapes:
+            # the hand takes its own copy of the run, untinted, and the tinted
+            # copy is clipped to everything else.  The two have to be disjoint:
+            # drawing the hand *over* the tint re-composites a translucent
+            # shade (73's fist shading came out a grey step darker at white).
+            write(kind, elements, mass + hand_shapes, evenodd=True, name="rest")
+            write("hand", elements, hand_shapes, name="hand")
+        else:
+            write(kind, elements, None)
 
     manifest_dir = manifest_dir or os.path.dirname(out_prefix)
     os.makedirs(manifest_dir, exist_ok=True)
@@ -311,6 +395,9 @@ def main(argv):
     parser.add_argument("--out")
     parser.add_argument("--json", default=os.path.join(ROOT, "Logs", "color-targets.json"))
     parser.add_argument("--hand", help="keep this side as drawn, e.g. x>87 or y>57")
+    parser.add_argument("--tint-strokes", action="store_true",
+                        help="tint the grey crease/edge lines as well")
+    parser.add_argument("--hand-fill", help="draw the hand copy in this grey, e.g. #cccccc")
     args = parser.parse_args(argv)
 
     targets = json.load(open(args.json))
@@ -318,7 +405,8 @@ def main(argv):
     fills = args.fills.split(",") if args.fills else [t["group"] for t in chip["targets"]]
     svg = args.svg or default_svg(args.chip)
     out = args.out or os.path.splitext(svg)[0]
-    layers, manifest = split(svg, fills, out, hand=args.hand)
+    layers, manifest = split(svg, fills, out, hand=args.hand,
+                             tint_strokes=args.tint_strokes, hand_fill=args.hand_fill)
     for entry in layers:
         print("wrote", entry["path"], "fill" if entry["fill"] else ("tint" if entry["tint"] else ""))
     print("wrote", manifest)

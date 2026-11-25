@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sitekick composite reference</title>
+<style>
+  html, body { margin: 0; background: #7a7a12; overflow: hidden; }
+  #stack { position: relative; width: 375px; height: 300px; }
+  #stack > div { position: absolute; left: 0; top: 0; width: 375px; height: 300px; }
+</style>
+<script src="/Unity/Logs/pilot/ruffle/package/ruffle.js"></script>
+</head>
+<body>
+<div id="stack">
+  <div id="base"></div>
+  <div id="effect"></div>
+</div>
+<script>
+// Renders sitekick.swf and one chip effect on the same 375x300 stage, the
+// effect placed where the chip's own stage puts it (its origin is the stage
+// centre), so a screenshot is the Flash reference for where the art sits.
+//
+//   sitekick_composite.html?effect=/Unity/Logs/skcomp/chip_0145_f1.swf
+//
+// Two players are stacked; the sitekick is the lower one.  `window.ready`
+// resolves once both have loaded their metadata.
+const q = new URLSearchParams(location.search);
+const BASE = q.get('base') || '/Unity/SWF/sitekick.swf';
+const EFFECT = q.get('effect');
+const W = parseInt(q.get('w') || '375', 10);
+const H = parseInt(q.get('h') || '300', 10);
+
+function mount(id, url, transparent) {
+  const ruffle = window.RufflePlayer.newest();
+  const player = ruffle.createPlayer();
+  player.style.width = W + 'px';
+  player.style.height = H + 'px';
+  document.getElementById(id).appendChild(player);
+  const loaded = new Promise((resolve) => {
+    player.addEventListener('loadedmetadata', () => resolve(true));
+  });
+  // an effect movie carries its own opaque stage colour; transparent lets the
+  // sitekick underneath show through, the way the holder draws it
+  player.load({ url: url, autoplay: 'on', unmuteOverlay: 'hidden',
+                wmode: transparent ? 'transparent' : 'window' });
+  return loaded;
+}
+
+window.ready = mount('base', BASE, false).then(() => {
+  if (!EFFECT) return true;
+  return mount('effect', EFFECT, true);
+});
+</script>
+</body>
+</html>

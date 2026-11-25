@@ -216,11 +216,12 @@ python3 Tools/SwfToSvg/particle_check.py --chip 151               # measure what
 python3 Tools/SwfToSvg/particle_check.py --chip 151 --unity       # + run ChipPlayCheck --hold --stage
 python3 Tools/SwfToSvg/particle_check.py --chip 151 --live        # the spawner, not the pose
 python3 Tools/SwfToSvg/particle_check.py --chip 151 --reference   # + the Ruffle composite
+python3 Tools/SwfToSvg/particle_check.py --chip 151 --unity --live --seed 3 --repeat 4 --write-baseline
 ```
 
 It checks the columns' spacing against `x_swf`, that a held capture spawned
 nothing, that a live one holds at least a third of `mean burst x mean lifetime`
-in the spawner's own `LiveCount` with an x spread over half the stage, and
+in the spawner's own `LiveCount` with an x spread over the count-scaled floor, and
 prints the body-relative group centre `measure_particles.py` reads from the
 capture.  A chip that also draws a back/front layer (153, 1133) is captured
 with `--hide-back`: the play check turns those renderers off for `stage.png`
@@ -237,13 +238,14 @@ editor (batchmode otherwise repeats one draw) and `--repeat 5 --seed 1` prints
 the distribution.
 
 The per-chip live-count and spread distributions are checked in at
-`Tools/SwfToSvg/particle_baseline.json` -- one draw per seed with the window it
-was taken over -- and `--repeat` prints a batch's mean against the stored one,
-warning when it falls two stored sd below it rather than relying on a number
-quoted here.  The floor itself is a third of `mean burst x mean lifetime`,
-measured against a baked pose that alone puts 7 blobs under the stream mask --
-which is why the gate is the component's `LiveCount` and the capture only has
-to corroborate it.
+`Tools/SwfToSvg/particle_baseline.json` -- the recorded draws, one per seed,
+with the window they were taken over.  `--repeat` prints a batch's mean against
+the stored one and warns when it falls two stored sd below it;
+`--repeat ... --write-baseline` stores the batch that just ran as that chip's
+entry.  The floor itself is a third of `mean burst x mean lifetime`, measured
+against a baked pose that alone puts 7 blobs under the stream mask -- which is
+why the gate is the component's `LiveCount` and the capture only has to
+corroborate it.
 With 786's field block deleted the run reports `no particle field` and 6 blobs,
 and fails.  Counts quoted as typical earlier were one unseeded draw each at the
 old 4.5 s window: reproducible, not representative.  151's 17 blobs, 152's `live
@@ -271,22 +273,20 @@ outright rather than falling back to the blobs -- the capture is corroboration
 only, and on the same draw it reads 0.481 where the spawner reads 0.95.  Blobs
 are only corroboration: merging
 loses particles (153's 36 live read as 29 blobs, 151's 14 as 9) and takes the
-extremes with them.  151's seed-5 draw is the case in point -- 14 live span 0.95
+extremes with them.  151's 14-live draw is the case in point -- span 0.95
 of the stage from the spawner, 0.481 from 9 captured blobs, which failed the
 floor on a uniform field.  The per-chip draws, their seeds and stdev are in
 `particle_baseline.json`; at a full stream the capture reads slightly wider
 (1.03 against 0.97) because a blob box includes the particle's own art width.
 
-The same method measured the rest of the class, stored in that file.  786 is the
-lowest, at 0.59 on a 7-live draw.  A fixed half-stage
-floor would be wrong there: `P(span <= r) = n*r**(n-1) - (n-1)*r**n` for `n`
-uniform points, so half the stage is missed by 31% of legitimate 4-live draws,
-and 786's count floor (3.8) allows them.  The floor is the 0.1% quantile of that
-span, per run: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14, 0.55 at 16,
-0.77 at 36, 0.84 at 55 -- tight for a full stream, forgiving of a quiet one.
-Every stored draw clears it; an x cluster within +-5 px fails at 10 and at 36
-live.  786's stored draws span 0.59-0.95 over seeds 3-9 and its lowest sits 0.35
-above its floor.
+786 is the lowest in the file, so the floor has to admit its quiet draws.  A
+fixed half-stage floor would not: `P(span <= r) = n*r**(n-1) - (n-1)*r**n` for
+`n` uniform points, so half the stage is missed by 31% of legitimate 4-live
+draws, and 786's count floor (3.8) allows them.  The floor is the 0.1% quantile
+of that span, per run: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14, 0.55
+at 16, 0.77 at 36, 0.84 at 55 -- tight for a full stream, forgiving of a quiet
+one.  Every stored draw clears it; an x cluster within +-5 px fails at 10 and
+at 36 live.
 
 The spread is one third of the rule, so the check reads the rest from the
 spawner too.  `ChipParticleField.LiveTracks` reports every live particle and

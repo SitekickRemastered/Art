@@ -21,7 +21,15 @@
 // The decompiler's frame export is only SVG geometry; whether an animation
 // actually looks like the SWF is decided here.  window.player is exposed so the
 // page can be driven from a browser console (player.pause(), player.play()).
-const swf = new URLSearchParams(location.search).get("swf") || "../../../SWF/chip_0008.swf";
+const params = new URLSearchParams(location.search);
+const swf = params.get("swf") || "../../../SWF/chip_0008.swf";
+// a movie whose stage is bigger than 375x300 (a chip pulled out of a library
+// with room around its art, or the Sitekick itself) needs the box to match
+if (params.get("w") || params.get("h")) {
+  const stage = document.getElementById("stage");
+  stage.style.width = (params.get("w") || 375) + "px";
+  stage.style.height = (params.get("h") || 300) + "px";
+}
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 player.id = "ruffle";

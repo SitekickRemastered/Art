@@ -734,20 +734,20 @@
   units, prints each renderer's size in SWF px (0.651 units / 2.5 = 15.0 x 16.7),
   fails a held capture that spawned anything, and with `--live` requires the
   spawner's own `LiveCount` to reach a third of the rule's expected concurrency
-  plus an x spread of half the stage.  That count has to come from the component, not the
-  capture: chip 786's four baked coins measure 7 blobs under the stream mask (10
+  plus an x spread over the count-scaled floor.  That count has to come from the
+  component, not the capture: chip 786's four baked coins measure 7 blobs under the stream mask (10
   real coins merge into 8), so no blob floor separates them, while `LiveCount` is
   0 for anything that is not spawning and a prefab with the field block deleted
   fails outright.  The window is `maxLifetime + 2` s rather than a fixed 4.5:
   with a 1 s tick and whole-second lifetimes that is where every age class that
   can still be alive is represented, so the count matches the rule, where 4.5 s
   undercounted 1109 by about 30% and sampled 786 anywhere from 4 to 19.  Every
-  chip now has a distribution, and they are checked in at
-  `Tools/SwfToSvg/particle_baseline.json` (one draw per seed: live count,
-  spawner spread and the window it was taken over), read against a floor of a
-  third of `mean burst x mean lifetime`.  `--repeat` prints the batch's mean
-  against the stored one and warns when it falls two stored standard deviations
-  below, so the numbers are measured against a file rather than quoted here.
+  chip has a distribution, checked in at `Tools/SwfToSvg/particle_baseline.json`
+  (one draw per seed: live count, spawner spread, and the window it was taken
+  over).  `--repeat` prints the batch's mean against the stored one and warns
+  when it falls two stored standard deviations below; `--repeat ...
+  --write-baseline` records the batch it just ran as that chip's entry, so the
+  file is refreshed from real draws instead of hand-edited seeds.
   With 786's field block removed the run reports `no particle field` and 6 blobs
   against the held pose's 7, and fails.  Batchmode seeds `UnityEngine.Random` identically on every
   launch, so a repeat without `--seed` measures one draw however many times it is
@@ -775,7 +775,8 @@
   run read 12 against 12.4 and failed, and at a third (8.2) the same draw
   passes.  The guard against a dropped field does not depend on the margin --
   that run reports no field line and `LiveCount` 0, whatever the floor -- so a
-  third costs nothing and still catches a spawner that runs but far too quiet.  Both chips that draw a layer of their own -- 153's `front` heart pile, 1133's
+  third costs nothing and still catches a spawner that runs but far too quiet.
+  Both chips that draw a layer of their own -- 153's `front` heart pile, 1133's
   `back` -- used to make the live capture unreadable, because the blob count and
   spread measured that art, so the capture was skipped and those two had no
   spread assertion at all.  `ChipPlayCheck --hide-back` marks every renderer
@@ -852,16 +853,15 @@
   the art overlaps (153's 36 live read as 29 blobs; 151's 14 as 9), and the two
   extremes are usually the particles it loses.  Measured from the spawner; the
   per-chip draws, seeds and stdev are in `particle_baseline.json`.  151's
-  seed-5 draw is the clearest case: 14 live span **0.95** of the stage (stdev
+  14-live draw is the clearest case: span **0.95** of the stage (stdev
   0.25), while its capture read
   **0.481** from 9 blobs -- the blob figure was half the field and failed the
   floor on a uniform draw.  The capture still prints its own `x spread ... of
   the 375 SWF px stage` as corroboration, and at a full stream it reads slightly
   *wider* than the spawner (153 1.032 against 0.97) because a blob box carries
   the particle's own art width, ~10 px per side.
-  The same method measured the rest of the class, stored in that file.  786 is
-  the tightest by far -- its lowest draw is 0.59 at 7 live, and 322/1109 reach
-  0.68 at 14-16 live.  A fixed half-stage floor is wrong for that tail: with `n`
+  786 is the tightest in the file and 322/1109 come closest to it, so the floor
+  has to admit their quiet draws.  A fixed half-stage floor would not: with `n`
   points uniform on the stage the span has `P(<= r) = n*r**(n-1) -
   (n-1)*r**n`, so 0.5 is missed by 31% of legitimate 4-live draws and 19% of
   5-live ones, and 786's count floor (a third of 11.25 = 3.8) admits both.  The
@@ -869,11 +869,11 @@
   run from its own count: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14,
   0.55 at 16, 0.77 at 36 and 0.84 at 55, so a full stream still has to cross
   most of the stage while a quiet draw is failed only for being improbable.
-  Every stored draw clears it (786's 0.59 against 0.24 at 7; 1109's 0.68
-  against 0.55 at 16), and an x cluster inside +-5 px fails at both 10 live
+  Every stored draw clears the floor its own count sets (`--repeat` prints each
+  one), and an x cluster inside +-5 px fails at both 10 live
   (0.03 against 0.38) and 36 live (0.03 against 0.77).  786's stored draws span
-  0.59-0.95 over seeds 3-9, and its low tail sits 0.35 over its floor, so the
-  count-scaled gate is not the binding
+  low tail still clears its floor by a wide margin, so the count-scaled gate is
+  not the binding
   one on this chip after all.  Its 16-live capture read 0.59 while the spawner
   read 0.95, the same 9-of-16 shortfall the blob measurement shows everywhere.
   Extent alone does not reject a baked pose: with `LiveCount` 0 there are no x
@@ -2714,15 +2714,23 @@
   colour and the boots stay grey, which is the "ankle to knee" the colour is
   meant to cover.
 - **Only the hands and feet stay as drawn; the limb between them and the joint
-  takes the colour.**  Chips 72 and 73 put the *whole* arm -- hand included --
-  in the one `fill` clip, so Flash would colour the fist too, and there is no
-  separate hand piece in the art to leave alone; chip 74 needs no cut, because
-  its boots and bolts really are opaque pieces outside the fill and stay grey
-  by the rule above.  So 72 and 73 take a hand cut (`apply_color_layers.HANDS`),
-  and the cut is **the seam the drawing already has**: `72` is the boxing
+  takes the colour.**  Chip 72 puts the *whole* arm -- glove included -- in the
+  one `fill` clip, and the glove is drawn grey, so its own shading reads right
+  untinted; chip 74 needs no cut, because its boots and bolts really are opaque
+  pieces outside the fill and stay grey by the rule above.  Chip 73 has the
+  same cut on the fist, and the fist has to be drawn in a **grey** rather than
+  the fill clip's white: untinted, the white read as a bright blob under the
+  coloured sleeve ("the fist at the bottom seems much too bright"), and
+  colouring it instead paints the whole fist `(255, 204, 0)`, which is not what
+  the chip is either -- "the hand shouldn't be colored, it should be gray".
+  `apply_color_layers.HAND_FILL[73]` is that grey, `#cccccc`: the value the
+  chip's own shading is built on (the shoulder knob is the same), so the body
+  reads 204, its 50 % shade 179 and its creases 102.  Its lower half at FFCC00
+  is 18,792 px of that grey and no white at all.  Both chips take a hand cut
+  (`apply_color_layers.HANDS`),
+  and the cut is **the seam the drawing already has**: the boxing
   glove's own silhouette (`shape2/6/2` -- thumb, knuckles, fingers and the cuff
-  behind them, its lower edge is the wrist line), `73` is the fist's top
-  outline (`shape2/7/6`'s points).  A straight line is not good enough: `x>87`
+  behind them, its lower edge is the wrist line).  A straight line is not good enough: `x>87`
   on 72 left a white band up the sleeve's right end, and `slope -0.409,32.4` on
   73 cut a diagonal white strip and a grey wedge through the forearm because it
   ran through the mass rather than along the fist's black arc -- "the large
@@ -2770,7 +2778,14 @@
   stay black, and the opaque grey *fills* that are really art outside the clip
   (74's boots, 73's shoulder knob) stay grey, so the rule is opt-in per chip
   (`apply_color_layers.TINT_STROKES = {72, 73, 74}`) rather than global: no
-  other exported chip has been checked for it.
+  other exported chip has been checked for it.  Chip 73 still showed a grey
+  line down the sleeve after the rule went in, because only half of it had been
+  applied: the worktree held the 7-layer split and HEAD's 13-layer prefab, so
+  Unity kept drawing the old untinted art.  The re-split has to reach the
+  prefab (`apply_color_layers.py 72 73 74`) for the strokes to move layers;
+  after that run `ChipColorCheck --chip 73` reads `colored renderers: 2` ...
+  `RESULT OK` and the band renders `(190, 152, 0)` -- `#bebebe` under FFCC00 --
+  with the shoulder knob still grey, as drawn.
 - **A coloured chip is checked against Ruffle with the fill recoloured.**  The
   effect's own `paint()` only ever tints the fill clip, so a reference is
   `extract_effect.py` on the chip, the fill shape's solid colour rewritten (72:
@@ -2854,8 +2869,9 @@
   original's import settings, new guid) and rewrites the prefab: one renderer
   per run at consecutive sorting orders, and the fill *and* shading runs in
   `ChipEffect.coloredRenderers`.  Chips done this way: 29, 38, 42, 44, 45, 54,
-  58, 64, 72, 73, 74 (two runs each for 29/38/54/58/64, three for 42/44/72/73/74,
-  six for 45).  Chip 99 needed nothing: its `fill_1` was already its own
+  58, 64, 72, 73, 74 -- L0..L3 on 72, L0..L6 on 73, L0..L4 on 74, two layers
+  each for 29/38/54/58/64, four for 42, three for 44, eight for 45.  Chip 99
+  needed nothing: its `fill_1` was already its own
   renderer (the white dome, order 1) after the four-wing split, so it is just
   listed in `coloredRenderers`.
 - `apply_color_layers.check_prefab` refuses to write a prefab that is not real
@@ -2872,19 +2888,26 @@
   from the `.svg.meta` files on disk, never from a listing of a previous run.
   The writer also appended to the old tint list instead of replacing it, so 72
   carried five copies of `L1` and four dead ids and 74 two dead ids;
-  `coloredRenderers` is now the prefab's existing renderers, once each.
+  `coloredRenderers` is now the prefab's existing renderers, once each.  That
+  bug came back through the field line rather than the list build: replacing
+  `coloredRenderers:` alone leaves the entries that were under it, so 73 ended
+  up with two live ids and its five old ones below them -- `ChipColorCheck`
+  reported `colored renderers: 7` with five `missing` rows and `RESULT FAIL`.
+  `patch_prefab` now replaces the field *and* its entries, and `check_prefab`
+  refuses a tint list that names anything but a `!u!212` in the same file.
 - The other half of that guard: a block header with **no body**.  Every
   colour-layer chip had stray `--- !u!114 &100020`-style lines with no
-  `MonoBehaviour:` after them -- 36 of them across 11 prefabs (29, 38, 42, 44,
+  `MonoBehaviour:`   after them -- 36 of them across 11 prefabs (29, 38, 42, 44,
   45, 54, 58, 64, 72, 73, 74, 99), every id unreferenced.  A mid-file one
   truncates Unity's load: chip 74 reported `renderers 1  sprites 1` where its
   prefab has five renderers, and drew only the root sprite -- and
   `ChipPlayCheck` still said `RESULT OK`, because one sprite *was* drawn.  After
   deleting them all twelve chips load every renderer: 74 5/5, 45 8/8, 73 7/7,
   99 6/6, 38 5/5, 72 4/4, 42 4/4, 58 4/4, 44 3/3, 29/54/64 2/2.
-  `check_prefab` misses this variant -- it looks for headers that lost their
-  `--- !u!`, not headers whose body is empty -- so the scan has to also look for
-  `^--- !u!\d+ &-?\d+\n(?=--- !u!|$)`.
+  They were still there in HEAD (39 across the same twelve) when 73's re-split
+  went in, so the sweep is part of the tool now: `patch_prefab` drops
+  header-only blocks (`drop_empty_headers`), and `check_prefab` refuses to
+  write a prefab that has one.  Both scans read 0 after the pass.
   The variant was the layer writer's, not the library's: a sweep of all 1375
   `Chip_*_Effect.prefab` files finds **2144 declared `!u!212` blocks and 2144
   loaded SpriteRenderers, 0 empty headers, 0 orphan renderer blocks, 0 duplicate
@@ -2918,6 +2941,18 @@
   Gotcha: `ChipPlayCheck --color` is not a tint test.  Both chips' captures came
   back byte-identical with and without `--color` (0 px changed), while
   `ChipColorCheck` sees the block set, so read the tint from `ChipColorCheck`.
+- **Where the colour work stands.**  `color_targets.py` defaults to chips 1-100
+  and `apply_color_layers.chip_dir` builds a `0001-0100/Chip_NNNN` path, so no
+  chip past 100 has been split, checked or looked at one by one.  Scanning the
+  library (one 8 s XML pass, 246 of the 1375 chips have an `effect_NNNNNN`
+  class) puts a `/fill/` clip on 38 chips: 18 at 100 and under -- the eleven
+  layered ones, chip 99, and the six movie chips below -- and **20 from 101 to
+  250**: 128, 140, 141, 144, 146 (11 fills), 148, 157, 159, 160, 178, 199, 200
+  (2), 206, 211, 214 (5), 215, 218 (2), 219, 220 (4), 221.  Nothing past 250
+  has a fill clip at all, and the 1129 chips with no class in this library are
+  not effects from it.  So "missing the user's colour" past 100 is exact and
+  bounded: those 20 can be layered by the same pass once `chip_dir` resolves
+  the range folder; the rest never took the colour in the first place.
 - **Not coloured yet:** the movie chips 7, 8, 9, 10, 11, 12, 14, 16, 36, and
   chip 57.  Those chips are not painted by `BasePaint` at all: their own clips
   call the *site's* `paint(this,"shadow")` / `"shadow2"` / `"shadow3"` (or

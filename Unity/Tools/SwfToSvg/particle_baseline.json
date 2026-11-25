@@ -1,45 +1,45 @@
 {
-  "note": "Per-chip particle distributions, one draw per seed, measured by `python3 Tools/SwfToSvg/particle_check.py --chip N --unity --live --seed S`. The repeat run compares a batch's mean against the distribution here and warns when it falls two stored standard deviations below, so these numbers are checkable instead of quoted in prose. `values` are in the order of `seeds`; `window` is the live window the draws were taken over. Re-measure after a deliberate change (the draws do not reproduce exactly: each spawn consumes four Random calls, so the tick count shifts them).",
+  "note": "Per-chip particle distributions from `particle_check.py --repeat`: `values` line up with `seeds`, one draw per seed, each draw's live count and the spawner's spread as a fraction of the stage, over `window` seconds.  `--repeat` compares a batch's mean with these and warns when it falls two stored sd below; `--repeat ... --write-baseline` records a fresh batch.  Draws do not reproduce exactly -- each spawn consumes four Random calls -- so a refresh is a new sample, not the old one replayed.",
   "chips": {
     "151": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5, 9], "values": [37, 31, 14, 34]},
-      "spread": {"seeds": [3, 4, 5, 9], "values": [0.97, 0.96, 0.95, 0.96]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [30, 27, 13, 33]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.8, 0.96, 0.93, 0.9]}
     },
     "152": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5], "values": [38, 33, 13]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.97, 0.98, 0.93]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [38, 31, 14, 30]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.97, 0.98, 0.95, 0.9]}
     },
     "153": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5], "values": [38, 34, 14]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.97, 0.98, 0.95]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [34, 30, 12, 30]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.97, 0.96, 0.6, 0.9]}
     },
     "322": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5], "values": [14, 16, 16]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.68, 0.82, 0.89]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [15, 16, 15, 16]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.68, 0.82, 0.89, 0.91]}
     },
     "452": {
       "window": 16.0,
-      "live": {"seeds": [3, 4, 5], "values": [55, 39, 32]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.99, 0.96, 0.89]}
-    },
-    "786": {
-      "window": 7.0,
-      "live": {"seeds": [3, 4, 5, 6, 7, 8, 9], "values": [14, 7, 10, 12, 15, 12, 11]},
-      "spread": {"seeds": [3, 4, 5, 6, 7, 8, 9], "values": [0.8, 0.59, 0.61, 0.81, 0.95, 0.8, 0.72]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [55, 42, 30, 35]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.99, 0.98, 0.89, 0.89]}
     },
     "1109": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5], "values": [16, 17, 15]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.68, 0.82, 0.89]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [13, 17, 16, 14]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.68, 0.82, 0.89, 0.91]}
     },
     "1133": {
       "window": 10.0,
-      "live": {"seeds": [3, 4, 5], "values": [33, 27, 12]},
-      "spread": {"seeds": [3, 4, 5], "values": [0.8, 0.96, 0.6]}
+      "live": {"seeds": [3, 4, 5, 6], "values": [32, 32, 13, 33]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.8, 0.98, 0.93, 0.9]}
+    },
+    "786": {
+      "window": 7.0,
+      "live": {"seeds": [3, 4, 5, 6], "values": [15, 7, 11, 11]},
+      "spread": {"seeds": [3, 4, 5, 6], "values": [0.8005, 0.5903, 0.9469, 0.8149]}
     }
   }
 }
