@@ -236,20 +236,20 @@ grade a report older than its own Unity launch.  Repeats: `--seed N` reseeds the
 editor (batchmode otherwise repeats one draw) and `--repeat 5 --seed 1` prints
 the distribution.
 
-Five seeded runs each, mean and spawner floor in brackets (a third of the
-rule): chip 786 holds 14/17/16/8/10 live over its 7 s window (13.0, 3.8), 151
-26/21/37/28/14 over 10 s (25.2, 8.2), 152 25/19/31/28/13 (23.2, 8.2), 153
-25/20/34/33/14 (25.2, 8.2), 322 12/17/13/17/16 (15.0, 4.6), 452 52/26/55/42/32
-over 16 s (41.4, 14.2), 1109 12-17 over 10 s (15.0, 4.6) and 1133
-25/21/29/26/12 (22.6, 8.2), against a baked pose that alone measures 7 blobs
-under the stream mask -- which is why the gate is the component's `LiveCount`
-and the capture only has to corroborate it.
+The per-chip live-count and spread distributions are checked in at
+`Tools/SwfToSvg/particle_baseline.json` -- one draw per seed with the window it
+was taken over -- and `--repeat` prints a batch's mean against the stored one,
+warning when it falls two stored sd below it rather than relying on a number
+quoted here.  The floor itself is a third of `mean burst x mean lifetime`,
+measured against a baked pose that alone puts 7 blobs under the stream mask --
+which is why the gate is the component's `LiveCount` and the capture only has
+to corroborate it.
 With 786's field block deleted the run reports `no particle field` and 6 blobs,
 and fails.  Counts quoted as typical earlier were one unseeded draw each at the
 old 4.5 s window: reproducible, not representative.  151's 17 blobs, 152's `live
-27 of 96`, 322's and 1133's samples sit inside their distributions; 153's `live
-16 of 96` is a low draw (14-34 across its five runs) and 786's 4 is the same
-tail (8-17).  452's 14 was not representative at all: 4.5 s is shorter than one
+27 of 96`, 322's and 1133's samples sit inside their stored distributions; 153's
+`live 16 of 96` is a low draw and 786's 4 is the same tail.  452's 14 was not
+representative at all: 4.5 s is shorter than one
 `LeafMC` lifetime (5-14 s), so the stream had not reached steady state, and the
 same chip holds 26-55 over a 16 s window.  The 1133 seed-5 run's 12 is a tail
 draw, not a chip fault: it failed a floor of half the rule (12.4) and clears the
@@ -273,24 +273,20 @@ are only corroboration: merging
 loses particles (153's 36 live read as 29 blobs, 151's 14 as 9) and takes the
 extremes with them.  151's seed-5 draw is the case in point -- 14 live span 0.95
 of the stage from the spawner, 0.481 from 9 captured blobs, which failed the
-floor on a uniform field.  Over seeds 3-5 the spawner reads 153 0.97/0.98/0.95
-(live 38/34/14) and 1133 0.80/0.96/0.60 (live 33/27/12); at a full stream the
-capture reads slightly wider (1.03 against 0.97) because a blob box includes the
-particle's own art width.
+floor on a uniform field.  The per-chip draws, their seeds and stdev are in
+`particle_baseline.json`; at a full stream the capture reads slightly wider
+(1.03 against 0.97) because a blob box includes the particle's own art width.
 
-Same method on the rest, seeds 3-5 (live in brackets): 152 0.97/0.98/0.93
-(38/33/13), 322 0.68/0.82/0.89 (14/16/16), 452 0.99/0.96/0.89 (55/39/32), 786
-0.80/0.59/0.61 (14/7/10) and 1109 0.68/0.82/0.89 (16/17/15), stdev 0.17-0.30
-throughout.  786 is the lowest at 0.59 on a 7-live draw.  A fixed half-stage
+The same method measured the rest of the class, stored in that file.  786 is the
+lowest, at 0.59 on a 7-live draw.  A fixed half-stage
 floor would be wrong there: `P(span <= r) = n*r**(n-1) - (n-1)*r**n` for `n`
 uniform points, so half the stage is missed by 31% of legitimate 4-live draws,
 and 786's count floor (3.8) allows them.  The floor is the 0.1% quantile of that
 span, per run: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14, 0.55 at 16,
 0.77 at 36, 0.84 at 55 -- tight for a full stream, forgiving of a quiet one.
-Every draw above clears it; an x cluster within +-5 px fails at 10 and at 36
-live.  Three more 786 draws (seeds 6-8) read 12 live at 0.81 (floor 0.45), 16 at
-0.95 (0.55) and 12 at 0.80 (0.45), so its six runs span 0.59-0.95 and the lowest
-is 0.35 above its floor.
+Every stored draw clears it; an x cluster within +-5 px fails at 10 and at 36
+live.  786's stored draws span 0.59-0.95 over seeds 3-9 and its lowest sits 0.35
+above its floor.
 
 The spread is one third of the rule, so the check reads the rest from the
 spawner too.  `ChipParticleField.LiveTracks` reports every live particle and

@@ -33,6 +33,11 @@ What it asserts, and why each one is in here:
   frame its age puts it at in a symbol playing at the movie's frame rate.  A
   fixed y, a half-speed fall and every particle at scale 1 all passed the
   spread check; each fails here.
+* **distribution** -- `--repeat` compares the batch's mean live count and mean
+  spread with `particle_baseline.json`, where the per-chip numbers live instead
+  of in the docs, and warns when the mean falls two stored standard deviations
+  below.  A warning, not a gate: one run is one draw of a 0..N burst, so a
+  legitimate quiet batch is possible even when every rep clears its floor.
 * **pose** -- with `--hold` the authored pose is what is measured, so the group
   centre against the body can be compared with the composite reference; the
   number it prints is the body-height offset the chip 151 work used.
@@ -54,6 +59,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+BASELINE = os.path.join(HERE, "particle_baseline.json")
 CHIPS = os.path.join(ROOT, "Unity", "Assets", "Chips")
 UNITY = os.environ.get("UNITY", os.path.expanduser(
     "~/Unity/Hub/Editor/6000.3.24f1/Editor/Unity"))
@@ -394,6 +400,60 @@ def print_rule(report, stage, export):
              parts[0]["frames"], rule["fps"]))
 
 
+def baseline_of(cid):
+    """The stored distribution for a chip, or None."""
+    try:
+        data = json.load(open(BASELINE, encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return (data.get("chips") or {}).get(str(cid))
+
+
+def baseline_stats(entry, key):
+    """mean/sd/n of one stored distribution, or None when it is too short to judge."""
+    rows = (entry or {}).get(key) or {}
+    vals = [float(v) for v in rows.get("values") or []]
+    if len(vals) < 2:
+        return None
+    return {"n": len(vals), "mean": statistics.mean(vals),
+            "sd": statistics.pstdev(vals), "min": min(vals), "max": max(vals),
+            "seeds": rows.get("seeds") or []}
+
+
+def baseline_note(cid, batch, key, label):
+    """Compare a batch's mean with the stored distribution; warn below mean - 2 sd.
+
+    The per-chip numbers live in `particle_baseline.json` instead of the prose,
+    so a batch that has drifted -- a rebuilt prefab with a narrower spawn, a
+    window that no longer reaches steady state -- says so when it is measured
+    instead of being compared by eye with a figure quoted in AGENTS.md.
+    """
+    entry = baseline_of(cid)
+    st = baseline_stats(entry, key) if entry else None
+    if not st:
+        print("baseline: no stored %s distribution for %d to compare" % (label, cid))
+        return
+    if len(batch) < 2:
+        print("baseline: %s stored %.2f sd %.2f (n %d); this batch is %d draw(s), "
+              "too few to compare"
+              % (label, st["mean"], st["sd"], st["n"], len(batch)))
+        return
+    mean = statistics.mean(batch)
+    low = st["mean"] - 2.0 * st["sd"]
+    if mean < low:
+        # a stored sd of a hundredth is common with four draws, and "72 sd" says
+        # less than the numbers do: name the distance only when it is meaningful
+        z = (st["mean"] - mean) / st["sd"] if st["sd"] >= 0.01 else None
+        where = ("%.1f sd below the stored" % z) if z else "below the stored"
+        print("baseline: %s mean %.2f over %d draw(s) is %s %.2f (sd %.2f over %d), "
+              "under %.2f -- WARN"
+              % (label, mean, len(batch), where, st["mean"], st["sd"], st["n"], low))
+    else:
+        print("baseline: %s mean %.2f over %d draw(s) against the stored %.2f (sd %.2f "
+              "over %d), low %.2f"
+              % (label, mean, len(batch), st["mean"], st["sd"], st["n"], low))
+
+
 def expected_columns(data):
     """The x the prefab should place its columns at, in SWF px from the stage."""
     return [p.get("x_swf") for p in ((data.get("clips") or {}).get("particles") or [])]
@@ -592,6 +652,11 @@ def repeat_live(cid, reps, seed0):
               "from its live count)"
               % (len(stages), statistics.mean(stages), statistics.pstdev(stages),
                  min(stages), max(stages), label))
+    # the stored per-chip distributions are the reference, not prose: a batch
+    # that has drifted says so here (a warning, not a gate -- a draw is a draw)
+    baseline_note(cid, stages, "spread", "spread")
+    baseline_note(cid, lives, "live", "live count")
+
     print("RESULT: %s  %d of %d reps over the floor"
           % ("OK" if passed == len(rows) else "FAIL", passed, len(rows)))
     return 0 if passed == len(rows) else 1

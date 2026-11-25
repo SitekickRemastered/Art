@@ -742,12 +742,12 @@
   with a 1 s tick and whole-second lifetimes that is where every age class that
   can still be alive is represented, so the count matches the rule, where 4.5 s
   undercounted 1109 by about 30% and sampled 786 anywhere from 4 to 19.  Every
-  chip now has a distribution -- five seeded runs each (`--seed N --repeat 5`),
-  read against a floor of a third of `mean burst x mean lifetime`: 786
-  14/17/16/8/10 live over 7 s (mean 13.0, floor 3.8), 1109 12-17 over 10 s
-  (15.0, 4.6), 151 26/21/37/28/14 (25.2, 8.2), 152 25/19/31/28/13 (23.2, 8.2),
-  153 25/20/34/33/14 (25.2, 8.2), 322 12/17/13/17/16 (15.0, 4.6), 452
-  52/26/55/42/32 over 16 s (41.4, 14.2) and 1133 25/21/29/26/12 (22.6, 8.2).
+  chip now has a distribution, and they are checked in at
+  `Tools/SwfToSvg/particle_baseline.json` (one draw per seed: live count,
+  spawner spread and the window it was taken over), read against a floor of a
+  third of `mean burst x mean lifetime`.  `--repeat` prints the batch's mean
+  against the stored one and warns when it falls two stored standard deviations
+  below, so the numbers are measured against a file rather than quoted here.
   With 786's field block removed the run reports `no particle field` and 6 blobs
   against the held pose's 7, and fails.  Batchmode seeds `UnityEngine.Random` identically on every
   launch, so a repeat without `--seed` measures one draw however many times it is
@@ -764,12 +764,12 @@
   spread on 151 -- are one draw each, taken at the old fixed 4.5 s window with
   the unseeded batchmode default.  Re-running them reproduces those exact
   numbers instead of varying, which is the signature of a single sample: 151's,
-  152's, 322's and 1133's fall inside the distributions above, but 153's 16 is a
-  low draw (its five seeded runs read 14-34) and 452's 14 is not representative
-  at all -- its 4.5 s window was shorter than one `LeafMC` lifetime (5-14 s), so
-  the stream had not reached the steady state it was being asked to show, and
-  the same chip holds 26-55 over a 16 s window.  786's single 4 is the other
-  kind of tail (its runs read 8-17), a quiet draw rather than a dead spawner.
+  152's, 322's and 1133's sit inside the stored distributions, but 153's 16 is a
+  low draw and 452's 14 is not representative at all -- its 4.5 s window was
+  shorter than one `LeafMC` lifetime (5-14 s), so the stream had not reached the
+  steady state it was being asked to show, and the same chip holds 26-55 over a
+  16 s window.  786's single 4 is the other kind of tail, a quiet draw rather
+  than a dead spawner.
   The floor is a third of the rule rather than half because one run is one draw
   of a 0..N burst, so a legitimate tail has to clear it: at half, 1133's seed-5
   run read 12 against 12.4 and failed, and at a third (8.2) the same draw
@@ -850,21 +850,17 @@
   reads 0.481 where the spawner reads 0.95.
   The capture cannot be trusted for it: blob detection merges particles where
   the art overlaps (153's 36 live read as 29 blobs; 151's 14 as 9), and the two
-  extremes are usually the particles it loses.  Measured from the spawner over
-  seeds 3-5: 153 0.97/0.98/0.95 of the stage with stdev 0.24/0.29/0.25 (live
-  38/34/14) and 1133 0.80/0.96/0.60 with 0.23/0.27/0.17 (live 33/27/12; a
-  repeat of seed 3 gave 36 live at 0.97).  151's seed-5 draw is the clearest
-  case: 14 live span **0.95** of the stage (stdev 0.25), while its capture read
+  extremes are usually the particles it loses.  Measured from the spawner; the
+  per-chip draws, seeds and stdev are in `particle_baseline.json`.  151's
+  seed-5 draw is the clearest case: 14 live span **0.95** of the stage (stdev
+  0.25), while its capture read
   **0.481** from 9 blobs -- the blob figure was half the field and failed the
   floor on a uniform draw.  The capture still prints its own `x spread ... of
   the 375 SWF px stage` as corroboration, and at a full stream it reads slightly
   *wider* than the spawner (153 1.032 against 0.97) because a blob box carries
   the particle's own art width, ~10 px per side.
-  The rest of the class, same method (three seeded runs each, seeds 3-5, live
-  count in brackets): 152 0.97/0.98/0.93 (38/33/13), 322 0.68/0.82/0.89
-  (14/16/16), 452 0.99/0.96/0.89 (55/39/32), 786 0.80/0.59/0.61 (14/7/10) and
-  1109 0.68/0.82/0.89 (16/17/15) of the stage, stdev 0.17-0.30 over all of them.
-  786 is the tightest by far: its 7-live draw read 0.59, and 322/1109 reached
+  The same method measured the rest of the class, stored in that file.  786 is
+  the tightest by far -- its lowest draw is 0.59 at 7 live, and 322/1109 reach
   0.68 at 14-16 live.  A fixed half-stage floor is wrong for that tail: with `n`
   points uniform on the stage the span has `P(<= r) = n*r**(n-1) -
   (n-1)*r**n`, so 0.5 is missed by 31% of legitimate 4-live draws and 19% of
@@ -873,12 +869,11 @@
   run from its own count: 0.06 at 4 live, 0.24 at 7, 0.38 at 10, 0.50 at 14,
   0.55 at 16, 0.77 at 36 and 0.84 at 55, so a full stream still has to cross
   most of the stage while a quiet draw is failed only for being improbable.
-  Every draw in the table clears it (786's 0.59 against 0.24 at 7; 1109's 0.68
+  Every stored draw clears it (786's 0.59 against 0.24 at 7; 1109's 0.68
   against 0.55 at 16), and an x cluster inside +-5 px fails at both 10 live
-  (0.03 against 0.38) and 36 live (0.03 against 0.77).  Three more 786 draws
-  (seeds 6-8) put its six-run spread at 0.59-0.95: 12 live 0.81 (floor 0.45),
-  16 live 0.95 (0.55) and 12 live 0.80 (0.45) -- the low tail is the 7-live 0.59
-  and it sits 0.35 over its floor, so the count-scaled gate is not the binding
+  (0.03 against 0.38) and 36 live (0.03 against 0.77).  786's stored draws span
+  0.59-0.95 over seeds 3-9, and its low tail sits 0.35 over its floor, so the
+  count-scaled gate is not the binding
   one on this chip after all.  Its 16-live capture read 0.59 while the spawner
   read 0.95, the same 9-of-16 shortfall the blob measurement shows everywhere.
   Extent alone does not reject a baked pose: with `LiveCount` 0 there are no x

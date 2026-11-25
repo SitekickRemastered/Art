@@ -1,0 +1,45 @@
+{
+  "note": "Per-chip particle distributions, one draw per seed, measured by `python3 Tools/SwfToSvg/particle_check.py --chip N --unity --live --seed S`. The repeat run compares a batch's mean against the distribution here and warns when it falls two stored standard deviations below, so these numbers are checkable instead of quoted in prose. `values` are in the order of `seeds`; `window` is the live window the draws were taken over. Re-measure after a deliberate change (the draws do not reproduce exactly: each spawn consumes four Random calls, so the tick count shifts them).",
+  "chips": {
+    "151": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5, 9], "values": [37, 31, 14, 34]},
+      "spread": {"seeds": [3, 4, 5, 9], "values": [0.97, 0.96, 0.95, 0.96]}
+    },
+    "152": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5], "values": [38, 33, 13]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.97, 0.98, 0.93]}
+    },
+    "153": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5], "values": [38, 34, 14]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.97, 0.98, 0.95]}
+    },
+    "322": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5], "values": [14, 16, 16]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.68, 0.82, 0.89]}
+    },
+    "452": {
+      "window": 16.0,
+      "live": {"seeds": [3, 4, 5], "values": [55, 39, 32]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.99, 0.96, 0.89]}
+    },
+    "786": {
+      "window": 7.0,
+      "live": {"seeds": [3, 4, 5, 6, 7, 8, 9], "values": [14, 7, 10, 12, 15, 12, 11]},
+      "spread": {"seeds": [3, 4, 5, 6, 7, 8, 9], "values": [0.8, 0.59, 0.61, 0.81, 0.95, 0.8, 0.72]}
+    },
+    "1109": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5], "values": [16, 17, 15]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.68, 0.82, 0.89]}
+    },
+    "1133": {
+      "window": 10.0,
+      "live": {"seeds": [3, 4, 5], "values": [33, 27, 12]},
+      "spread": {"seeds": [3, 4, 5], "values": [0.8, 0.96, 0.6]}
+    }
+  }
+}
