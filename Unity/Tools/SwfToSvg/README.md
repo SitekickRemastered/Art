@@ -181,6 +181,23 @@ python3 Tools/SwfToSvg/build_particle_fields.py            # report
 python3 Tools/SwfToSvg/build_particle_fields.py --write    # patch prefabs
 ```
 
+`audit_particle_fields.py` is the no-Unity guard for that block: a prefab
+rebuild that drops it, or a re-export that renumbers the symbol frames,
+otherwise only shows up in a live Unity run.  It reads the eight prefabs and
+each chip's export and fails when the field is gone, when the root no longer
+lists its component, when `stageWidth`/`stageHeight` are missing, zero or not
+the 375x300 the effects are drawn on, when a symbol has no frames, a frame count
+the export did not write, or a frame guid that is not its sprite's meta guid:
+
+```bash
+python3 Tools/SwfToSvg/audit_particle_fields.py            # 8 chips in 0.27 s
+python3 Tools/SwfToSvg/audit_particle_fields.py --chip 151
+```
+
+On the current tree that is 151/152/153/322/452/786 one symbol each (128, 160,
+160, 40, 50 and 8 frames), 1133 two (400) and 1109 four (800), all at stage
+375x300, 31 fps and capacity 96.
+
 A particle's node is at scale 1, so the sprite's `svgPixelsPerUnit` *is* its
 size.  `audit_sprite_scale.py` compares the rendered size with the art's own
 `size_px` and rewrites the whole symbol when they differ (the class shipped

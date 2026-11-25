@@ -693,7 +693,15 @@
   instantiated: the authored pose stays the state a held capture measures.
   Spawn density follows: `mean burst x mean lifetime` is about 25 live flakes
   for 151 where the bake held four, and peaks near 70 at 9/s over 8 s, which is
-  why the pool is 96.
+  why the pool is 96.  `Tools/SwfToSvg/audit_particle_fields.py` is the
+  no-Unity guard on that block (0.27 s for all eight): a prefab rebuild that
+  drops it, or a re-export that renumbers its frames, used to show up only in a
+  live run.  It fails when the block is gone, when the root no longer lists its
+  component (an unreferenced block never runs), when `stageWidth`/`stageHeight`
+  are missing, zero or not the 375x300 the effects are drawn on, when a symbol
+  has no frames, a frame count other than the export's, or a frame guid that is
+  not that sprite's meta guid.  Current tree: 151/152/153/322/452/786 one
+  symbol (128/160/160/40/50/8 frames), 1133 two (400) and 1109 four (800).
 - **A particle renders at the size of the art it was drawn from.**  Its prefab
   node sits at scale 1, so the only size control is the sprite's
   `svgPixelsPerUnit`, which must be `PPU / SCALE` = **57.6361** (= 1 / 0.01735,
